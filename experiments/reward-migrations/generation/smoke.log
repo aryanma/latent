@@ -1,0 +1,3 @@
+{"event": "loaded", "seconds": 2.5873077500145882, "cases": 2, "model_class": "mlx_lm.models.qwen3_5_moe.Model"}
+{"event": "case", "index": 0, "question_id": "5", "status": "generated", "input_tokens": 1162, "output_tokens": 44, "finish_reason": "stop", "seconds": 1.7180164579767734}
+{"event": "case", "index": 1, "question_id": "24", "status": "generated", "input_tokens": 1198, "output_tokens": 63, "finish_reason": "stop", "seconds": 0.6496037909528241}

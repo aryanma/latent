@@ -1,0 +1,54 @@
+{
+  "provenance": {
+    "database_sha256": "92101be6d2a9f6adceea59d38f6d1c556087f9eea1432432a21268cb1348036d",
+    "query_sha256": "b54b51a70b39546e12ca068275e26bdc268e9b8333b0405bfc9b3f17a768ff52",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "b54b51a70b39546e12ca068275e26bdc268e9b8333b0405bfc9b3f17a768ff52",
+    "status": "ok",
+    "seconds": 0.064937,
+    "result_sha256": "3620005e10416fdbcab8883e14c2f9cafdb2b9adcaa75f9117b667fa0b9e3f3a",
+    "rows": 10,
+    "distinct_rows": 10,
+    "preview": [
+      [
+        "About the picture, post to some image hosting and put a link -- I'll convert it into a pasted-in picture.",
+        "eliavs"
+      ],
+      [
+        "+1, interesting question, you might find that soon you will have enough reputation :)",
+        "eliavs"
+      ],
+      [
+        "yup i have thanks to all that helped me!!",
+        "eliavs"
+      ],
+      [
+        "judging from the graph, the problem is not the lag. What you have plotted is roughly goodness of fit. So it seems that Weibull distribution is not apropriate for your data. I see that there is a bunch up near zero, do you have zero values in your data? In that case you will need to model zero values separately. So first suggestion would be to try Weibull for non zero values. Also why Weibull, is there particular reason, some reference from similar work perhaps?",
+        "eliavs"
+      ],
+      [
+        "well yes mainly from literature and other works on wind for the purpose of wind farms",
+        "eliavs"
+      ]
+    ],
+    "columns": [
+      "Text",
+      "DisplayName"
+    ]
+  }
+}

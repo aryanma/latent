@@ -1,0 +1,18 @@
+article code, article pre { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-size: 11px; overflow-wrap: anywhere; }
+article pre { background: #f7f7f5; border: 1px solid #e6e6e3; padding: 12px; white-space: pre-wrap; line-height: 1.6; }
+.witness { margin: 22px 0; border-top: 1px solid #bbb; border-bottom: 1px solid #bbb; padding: 10px 0; }
+.witness-row { display: flex; justify-content: space-between; gap: 14px; padding: 6px 0; }
+.witness-row strong { white-space: nowrap; font: 12px monospace; }
+figcaption { font-size: 13px; color: #555; margin: 9px 0 2px; }
+.research-table { overflow-x: auto; margin: 18px 0; }
+.research-table table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.research-table th, .research-table td { padding: 7px 10px 7px 0; border-bottom: 1px solid #ddd; text-align: left; vertical-align: top; }
+.research-table th { font-weight: normal; }
+.research-table thead { font-size: 12px; color: #555; }
+.research-table td:nth-child(2) { white-space: nowrap; font-size: 12px; font-family: monospace; }
+.research-table caption { font-size: 13px; text-align: left; margin-bottom: 10px; }
+.post-list { padding: 0; list-style: none; margin-top: 26px; }
+.post-list > li::before { content: none; }
+.post-list > li { border-top: 1px solid #ddd; padding-top: 14px; margin-bottom: 25px; }
+.post-list h2 { margin: 4px 0 7px; font-size: 17px; }
+.post-list .byline { margin-bottom: 5px; font-size: 13px; }

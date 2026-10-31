@@ -1,0 +1,36 @@
+{
+  "provenance": {
+    "database_sha256": "e4d361dbeec6591a4b315877c0c481da05c8ff5a3d389b34d6e17b6f15bee4e0",
+    "query_sha256": "22a1f25709748a761312fcc461c7a019cb5546a743e5574bb9f969b75ca40a6d",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "22a1f25709748a761312fcc461c7a019cb5546a743e5574bb9f969b75ca40a6d",
+    "status": "ok",
+    "seconds": 0.081257,
+    "result_sha256": "850960fa4501095a29ebe290bdefb234384b9518b044d87f8c1f43570863b8df",
+    "rows": 1,
+    "distinct_rows": 1,
+    "preview": [
+      [
+        0.7999999999999972
+      ]
+    ],
+    "columns": [
+      "(SELECT AVG(pa.ball_control) FROM Player_Attributes pa JOIN Player p ON pa.player_api_id = p.player_api_id WHERE p.player_name = 'Abdou Diallo') -\n  (SELECT AVG(pa.ball_control) FROM Player_Attributes pa JOIN Player p ON pa.player_api_id = p.player_api_id WHERE p.player_name = 'Aaron Appindangoye')"
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "experiment": "Latent / The reward boundary / 001",
+  "date": "2026-10-30",
+  "upstream_commit": "da0835f6c67baef58bdda18f2a3b037dfb3a1754",
+  "upstream_files_sha256": {
+    "LICENSE": "e67c5aa0074dfcaefd3c3a1aedb94cb539234aecd15d5a972574e3200e6252fe",
+    "data/tau2/domains/airline/db.json": "1af9fea6e03ca7ca15a22bb3fcaf3e351393e3fc9070b6777947da8996f7531b",
+    "data/tau2/domains/airline/split_tasks.json": "b22ced4d9a9850ac9aea31c53bdcb6d6009058140bd9acc7db37c1d36222ba8b",
+    "data/tau2/domains/airline/tasks.json": "ccd8ba737b4cc371415af70151187788f728d6108d0916e73bb4317b40542052",
+    "pyproject.toml": "80c3918930e23f14de11c948eec41c698c91ad10ddf61f0853f2c031beb4c525",
+    "src/tau2/data_model/semantic_communication.py": "3642c9710507a585a9b1391f6e5f92ee9c7d7c96b43599b33d757c92dbbbe47d",
+    "src/tau2/data_model/tasks.py": "99f67ed89291a3d378406ebfb0e3bb5f12a522eefe1d69c235d6af233e788e85",
+    "src/tau2/domains/airline/environment.py": "7835cc480159c6adbe71f471243c35f53559c867a438612888ee63897fb213a1",
+    "src/tau2/domains/airline/tools.py": "6ec01c8c362ab0242eff658fc79547cf9519b93422ab113b6930cb627d202779",
+    "src/tau2/environment/environment.py": "b3edf22c4d11234cc8794807a8c5ba47ef84555a9726243a0e8684b7821826ba",
+    "src/tau2/environment/toolkit.py": "3e897891e8878c3399aec72e42eb0eb5546642420c0c902b225421fc936b924a",
+    "src/tau2/evaluator/evaluator.py": "adc929736ee3d75186fcd5c7cf5d5a4036814a9b73a845f7a513b39a44e9bc93",
+    "src/tau2/evaluator/evaluator_action.py": "4347ec90fd09db73b9f7e46515220363f91f0c3b12aeddf7ece83346f49227f8",
+    "src/tau2/evaluator/evaluator_communicate.py": "74a530df5568e14619c649d107910e5b527097108f0f339a01800cf8b20d7150",
+    "src/tau2/evaluator/evaluator_env.py": "e883703cb57120ac193af7b6cf2c7e1d1394db80591600824275a54ec0114989"
+  },
+  "reproducibility": {
+    "all_outputs_byte_identical": true,
+    "audit_script_sha256": "99803ad1554614acbd0b03d11161f274f6ff0135d14d8397181497ec4d8ee213",
+    "files": {
+      "eligible-tasks.json": {
+        "byte_identical": true,
+        "bytes": 115193,
+        "sha256": "47db2081243fafcdfd8555b0e0ef79ea4c1323c2694db915a3d9e54f38e95e9a"
+      },
+      "results.json": {
+        "byte_identical": true,
+        "bytes": 350875,
+        "sha256": "6afe548871f662e2e7a3de4c51e5bff4af725767fe84f898da19ac121e9d3b2c"
+      },
+      "source-manifest.json": {
+        "byte_identical": true,
+        "bytes": 1603,
+        "sha256": "c6f9f7d0041aa7a1fe5bfd9c20700fdf302faee7f4e987a0205722951b6ca147"
+      },
+      "summary.json": {
+        "byte_identical": true,
+        "bytes": 7532,
+        "sha256": "57f338b7f097cc20173df233d5ac31c9f6ea78c6eec87df7d986513f074306a9"
+      },
+      "trajectory-evidence.json": {
+        "byte_identical": true,
+        "bytes": 1928025,
+        "sha256": "70f7453a7ed8b02e379df5863b07e91e7c0e3b91fe335bcf5c5af6475828c4e0"
+      }
+    },
+    "independent_process_runs": 2,
+    "model_calls_in_scoring": 0,
+    "network_attempts_during_imports_and_scoring": 0,
+    "scored_probes_per_run": 247,
+    "scoring_exceptions": 0,
+    "tool_execution_errors": 0,
+    "total_scored_probes": 494,
+    "upstream_worktree_clean": true
+  },
+  "artifact_sha256": {
+    "airline-tasks.json": "ccd8ba737b4cc371415af70151187788f728d6108d0916e73bb4317b40542052",
+    "eligible-tasks.json": "47db2081243fafcdfd8555b0e0ef79ea4c1323c2694db915a3d9e54f38e95e9a",
+    "replays.json": "4df7c2da8f4861485f3710ff2172e685bdd0b2e2f829c2d55f8565a138fdbdf7",
+    "reproducibility.json": "de98e68b5d9b6e7f79f26b8c76815fa23bac17eae539f7551855746b6fc4f787",
+    "results.json": "6afe548871f662e2e7a3de4c51e5bff4af725767fe84f898da19ac121e9d3b2c",
+    "source-manifest.json": "c6f9f7d0041aa7a1fe5bfd9c20700fdf302faee7f4e987a0205722951b6ca147",
+    "summary.json": "57f338b7f097cc20173df233d5ac31c9f6ea78c6eec87df7d986513f074306a9",
+    "trajectory-evidence.json": "70f7453a7ed8b02e379df5863b07e91e7c0e3b91fe335bcf5c5af6475828c4e0"
+  },
+  "harness_sha256": {
+    "AUDIT-LICENSE": "7258f614287478ceb2961dfd8eca126f6788673544622ab0605aaece8b5d7fe6",
+    "README.md": "755038d827d37d32fd5e3881de3f449351fae2a23137a06f996fb82b2f7434f5",
+    "UPSTREAM-LICENSE": "e67c5aa0074dfcaefd3c3a1aedb94cb539234aecd15d5a972574e3200e6252fe",
+    "requirements.lock.txt": "cbbdea2408b20ff152773f0b8d6a48d7c2ad2ad3cc9bdf4240fdc12258c15598",
+    "run_audit.py": "99803ad1554614acbd0b03d11161f274f6ff0135d14d8397181497ec4d8ee213",
+    "test_tripwires.py": "52d6f5579d3c58046171d58922fcfd6558ff2ab54eb2ad075de98ec10942503e",
+    "verify_repeats.py": "2dcbf46409e50af2c15ecc707c0788d16233cd4a38682c2404db65ef009c8191"
+  },
+  "interpretation": "Constructed scoring probes on 44 eligible tasks. No models or user simulator. Not a benchmark-wide failure rate or training result."
+}

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>Research notes — Latent λ</title>
+<meta name="description" content="The case for company-owned intelligence: environments, evaluations, post-training, inference, and the economics of research.">
+<link rel="canonical" href="https://aryanma.github.io/latent/notes.html">
+<meta property="og:title" content="Research notes — Latent λ">
+<meta property="og:description" content="The case for company-owned intelligence: environments, evaluations, post-training, inference, and the economics of research.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aryanma.github.io/latent/notes.html">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./style.css?v=20261031b">
+</head>
+<body>
+<main>
+<nav class="back" aria-label="Latent pages">
+  <a href="./">latent λ</a>
+  <a href="./reading.html">Reading</a>
+  <a href="./blog.html">Blog</a>
+  <a href="./careers.html">Careers</a>
+</nav>
+<h1 class="notes-title">The case for company-owned intelligence</h1>
+<p class="byline">Stephanie Gao &amp; Aryan Mahajan, October 2026</p>
+
+<p>We’re building a hyperscaler for company-owned intelligence. An organization’s operating knowledge should become something it can train, deploy, and improve. The research problem is turning that knowledge into reliable capability. The systems problem is making the process repeatable.</p>
+<p>YC’s <em>Own Your Intelligence</em> request describes this opening precisely: companies need help translating their work into evaluations and training, then maintaining the result across model generations. Frontier APIs remain useful alongside models a company controls. <a class="cite" href="#ref-17">[17]</a></p>
+
+<h2 id="opening">The market is open to contribution</h2>
+<p>Intelligence is an arms race. A team competing to build a more capable model has to decide where its next research hour goes. If an outside team can deliver a useful improvement sooner, buying that work can be the rational choice even when it is reproducible. Time to capability is part of the product.</p>
+<p>The market for useful data and environments is not zero-sum. More internal synthetic data does not automatically displace external research. An environment that exposes a new failure, a verifier that makes a difficult task trainable, or data that improves a specific capability can add value alongside the buyer’s own work. The relevant question is the marginal improvement it produces.</p>
+<p>This gives a small, technically strong team a concrete way in. Find a consequential problem, understand it deeply, and build a solution that improves the customer’s model. A supplier earns its place through original contributions and faster research cycles. That is the business we are building.</p>
+<p>There is concrete evidence of this division of labor. Baseten’s Environment Network connects enterprise customers with specialist teams that construct environments, tasks, and rubrics; Baseten handles training and inference. Its announcement identifies environment development as research-intensive work that needs more capable teams. <a class="cite" href="#ref-19">[19]</a></p>
+<p>Our entry point is that work. We bring experience in reinforcement learning with executable feedback and the virtual machines agents run in. We are building Latent around the ability to diagnose a failure, construct a learning problem, and deliver an improvement the customer can keep.</p>
+
+<h2 id="systems">Bespoke research, repeatable systems</h2>
+<p>Every business has its own tools, exceptions, and standards. Useful specialization begins by understanding them. The infrastructure around that work can become progressively more powerful: task generation, verifier auditing, environment resets, rollout scheduling, experiment tracking, and releases.</p>
+<p>A research engineer should accumulate tools that make each investigation more productive. An audit that catches one reward defect becomes a check across the task family. A reliable environment reset makes thousands of experiments possible. Domain expertise becomes more valuable when it is encoded in machinery other engineers can use.</p>
+<p>This is the meaning of hyperscale in our ambition: making the development and maintenance of specialized intelligence economical across many organizations. Customer knowledge remains private. The reusable asset for Latent is the engineering that makes each subsequent deployment faster to build and better to operate.</p>
+
+<h2 id="environments">Environments produce experience</h2>
+<p>A useful environment specifies initial state, available actions, state transitions, constraints, and a way to evaluate the outcome. It must let the policy try different decisions and encounter meaningful consequences. SWE-Gym demonstrates the executable version in software engineering; Silver and Sutton make the broader case for learning through interaction. <a class="cite" href="#ref-01">[1]</a> <a class="cite" href="#ref-02">[2]</a></p>
+<p>Start with a consequential failure in real work. Preserve the information available at each decision. Build a resettable task, vary the conditions, and test whether the learned behavior transfers. A replay of one recorded trajectory is not sufficient to model what would happen under a different action.</p>
+<p>Inspect complete trajectories before trusting a task. Check which observations led to a decision, whether tools behaved correctly, and how a successful run earned its reward. Simulation quality needs its own checks: UserProxyBench found that changing the simulated user could materially change an agent’s measured reward. <a class="cite" href="#ref-22">[22]</a></p>
+<p>Difficulty is relative to the learner. Under group-relative training objectives, tasks whose sampled responses all receive the same reward contribute little learning signal. RLVE adjusts problem difficulty as the policy improves and tests transfer to unseen task generators. Its small-model reasoning experiments suggest a useful research discipline: measure how much of the experience produces learning, then keep the curriculum moving. We see an opening in making that process reliable as models and workloads change. <a class="cite" href="#ref-28">[28]</a></p>
+
+<h2 id="evals">Make expert judgment executable</h2>
+<p>An evaluation suite is a specification of acceptable work. Check the finished artifact, the resulting state, and consequential actions along the way. An agent that reaches the correct final state through an unauthorized action has not completed the task correctly. Anthropic’s evaluation framework provides a useful structure for tasks, trials, graders, traces, and outcomes. <a class="cite" href="#ref-03">[3]</a></p>
+<p>The grader needs an evaluation too. Calibrate model judgments against experts, control for position and verbosity bias, and test legitimate alternative solutions. Hold out workflows and time periods. Keep release evaluation separate from the reward being optimized. Judge bias and reward overoptimization are measured problems with direct consequences for model quality. <a class="cite" href="#ref-04">[4]</a> <a class="cite" href="#ref-09">[9]</a></p>
+<p>The unit of progress is a verified improvement on unseen work. Track the expert time required to produce it. Better tools for extracting judgment, constructing tasks, and auditing rewards can make a small research team disproportionately productive.</p>
+
+<h2 id="training">Train the behavior that matters</h2>
+<p>Use the failure to choose the intervention. Missing information calls for better context. Broken tools need repair. Demonstrations, preferences, distillation, and interactive rewards provide different kinds of supervision. InstructGPT, DPO, and DeepSeek-R1 establish useful precedents in their respective settings. <a class="cite" href="#ref-05">[5]</a> <a class="cite" href="#ref-06">[6]</a> <a class="cite" href="#ref-15">[15]</a></p>
+<p>Specialization can amortize expensive reasoning over repeated work. Thinking Machines’ on-policy distillation experiments combine student-generated trajectories with dense teacher feedback. Its LoRA work shows how carefully configured adaptation can match full fine-tuning in the tested post-training regimes. These are practical tools for producing and maintaining many specialized models. <a class="cite" href="#ref-18">[18]</a> <a class="cite" href="#ref-07">[7]</a></p>
+<p>Intermediate checks are valuable when correctness can be assessed along the way. Process supervision in mathematics and our prior work on compiler and symbolic-execution feedback motivate this direction. The verification method has to fit the domain. <a class="cite" href="#ref-16">[16]</a> <a class="cite" href="#prior-work">[prior work]</a></p>
+
+<h2 id="inference">The economics are end to end</h2>
+<p>Measure cost per accepted task: inference, tools, retries, human review, and allocated training and operating costs. Measure latency under real concurrency. A lower token price has to survive those measurements.</p>
+<p>Specialized models can work alongside frontier models. Glean reports that its Waldo search-planning model reduced end-to-end latency by roughly 50% and token use by roughly 25% without quality regression in its system. This is a concrete example of owning a valuable part of the workload. <a class="cite" href="#ref-20">[20]</a></p>
+<p>Serving and training belong in the same engineering conversation. Efficient KV-cache management expands useful throughput; inference-time compute should be allocated according to difficulty. Fireworks’ account of its training engagements identifies integration and iteration speed as recurring bottlenecks. Faster experiments matter only when the results survive production. <a class="cite" href="#ref-10">[10]</a> <a class="cite" href="#ref-11">[11]</a> <a class="cite" href="#ref-21">[21]</a></p>
+
+<h2 id="ownership">Keep what the organization learns</h2>
+<p>The ownership package should include authorized training data, versioned environments and evaluations, reproducible recipes, exportable model artifacts where licenses permit, and deployment and rollback instructions. The customer controls release decisions and retains the means to improve the system.</p>
+<p>A new base model should be an opportunity to advance. Carry the customer’s tasks, judgments, and evaluation standards into the next training run and test the result again. Adapters are tied to their base architectures; migration requires engineering. The enduring asset is the reproducible knowledge behind the model.</p>
+<p>Start with a repeated workflow and work closely with its experts. Make the first deployment excellent, then reduce the effort required for the next. Paul Graham’s account of early user attention and Anthropic’s preference for simple, measurable systems are useful operating principles. <a class="cite" href="#ref-13">[13]</a> <a class="cite" href="#ref-14">[14]</a></p>
+
+<h2 id="verticals">Vertical models and writing</h2>
+<p>A vertical foundation model earns that description by transferring across a family of tasks. Stripe’s payments model offers a precedent for reusable domain representations. Our interest is in learning capabilities that make each new task easier to solve, while preserving the organization-specific expertise built on top. <a class="cite" href="#ref-12">[12]</a></p>
+<p>Writing is a particularly interesting test of judgment. An editor’s revisions contain information about factuality, argument, audience, and voice. These objectives deserve separate evaluations. Research on diversity-aware preference training provides an empirical starting point for improving prose without collapsing stylistic range. <a class="cite" href="#ref-08">[8]</a></p>
+<p>The company’s central commitment is broader: an organization should be able to turn its experience into intelligence it controls, and retain that advantage as the technology advances.</p>
+
+<h2 id="first-proof">The first proof can be narrow</h2>
+<p>A research company can begin with a claim somebody else can test: a defined task family, unseen evaluation cases, working artifacts, and a full account of cost. Licensed public tasks and contributions shared for that purpose provide a starting point. Nomos specialized an existing Qwen model and released its reasoning harness. LLM-VeriOpt released a small compiler specialist with training and evaluation artifacts. These are useful precedents for turning a bounded research result into something others can inspect and build on. <a class="cite" href="#ref-23">[23]</a> <a class="cite" href="#ref-24">[24]</a></p>
+<p>The experiment has to identify where the improvement comes from. Compare better instructions, retrieved examples, tool access, and search before attributing a gain to changed weights. Hold the context and evaluation budget constant where possible. Measure previous capabilities after each update. Recent work on continual learning shows how much the result can change when a stronger training and merging baseline is introduced. <a class="cite" href="#ref-25">[25]</a></p>
+<p>For writing, the valuable observation is an editorial decision: what the author kept, what they rejected, and why. A useful first system would learn from those decisions and improve the next piece. Test it on later drafts and new topics. Ask authors blindly which version they would publish, then measure the work required to reach an accepted draft. Human studies show that perceived authenticity can diverge from automated style measurements; research on better-rated feedback still leaves the effect on subsequent revisions to be established. <a class="cite" href="#ref-26">[26]</a> <a class="cite" href="#ref-27">[27]</a></p>
+<p>The ambition is to make this process repeatable: acquire useful feedback, turn it into a measurable capability, and let its owner retain the result. Each successful experiment should improve the machinery for the next.</p>
+
+<h2 id="prior-work">Prior work</h2>
+<p>Aryan coauthored <a href="https://journals.sagepub.com/doi/pdf/10.3233/FAIA240968">CoTran: An LLM-Based Code Translator Using Reinforcement Learning with Feedback from Compiler and Symbolic Execution</a> (ECAI 2024), with Prithwish Jana, Piyush Jha, Haoyang Ju, Gautham Kishore, and Vijay Ganesh. CoTran combines supervised fine-tuning and reinforcement learning with compiler and symbolic-execution-based testing feedback.</p>
+<p class="before-list">Selected papers citing this work:</p>
+<ul>
+  <li><a href="https://arxiv.org/html/2504.09691v1">Migrating Code At Scale With LLMs At Google</a> (FSE 2025). Celal Ziftci and colleagues at Google discuss CoTran in §6 and cite its preprint.</li>
+  <li><a href="https://arxiv.org/pdf/2504.09246">Type-Constrained Code Generation with Language Models</a> (PLDI 2025). Coauthored by Dawn Song and Koushik Sen at UC Berkeley, and Martin Vechev at ETH Zurich. Reference 34 cites the ECAI paper.</li>
+  <li><a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2025/Archive/EECS-2025-174.pdf">LLM-Based Code Translation Needs Formal Compositional Reasoning</a> (2025). Coauthored by Sanjit A. Seshia and Alvin Cheung at UC Berkeley, and Somesh Jha at Wisconsin–Madison. The paper discusses CoTran’s compiler and symbolic-execution feedback and cites the preprint.</li>
+  <li><a href="https://arxiv.org/html/2601.16661v1">Revisiting the Role of Natural Language Code Comments in Code Translation</a> (FASE 2026). Coauthored by Anamitra Roy Choudhury and Vijay Arya at IBM Research India. The paper discusses CoTran in §2 and Appendix A; reference 13 in this preprint cites the ECAI paper.</li>
+</ul>
+
+<h2 id="references">References</h2>
+<ol class="reference-list">
+              <li id="ref-01"><div><a href="https://storage.googleapis.com/deepmind-media/Era-of-Experience%20/The%20Era%20of%20Experience%20Paper.pdf">Welcome to the Era of Experience</a><small>David Silver &amp; Richard S. Sutton, 2025</small><p>A forward-looking case for agents learning through interaction and experience.</p></div></li>
+              <li id="ref-02"><div><a href="https://arxiv.org/abs/2412.21139">Training Software Engineering Agents and Verifiers with SWE-Gym</a><small>Jiayi Pan et al., 2024</small><p>Executable software environments connect agent trajectories, training, and verification.</p></div></li>
+              <li id="ref-03"><div><a href="https://www.anthropic.com/research/demystifying-evals-for-ai-agents">Demystifying evals for AI agents</a><small>Anthropic, 2026</small><p>Tasks, trials, graders, traces, and outcomes; a practical vocabulary for reliable evaluation.</p></div></li>
+              <li id="ref-04"><div><a href="https://arxiv.org/abs/2306.05685">Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena</a><small>Lianmin Zheng et al., 2023</small><p>Evidence of position, verbosity, and self-enhancement biases in model-based judging.</p></div></li>
+              <li id="ref-05"><div><a href="https://arxiv.org/abs/2203.02155">Training language models to follow instructions with human feedback</a><small>Long Ouyang et al., OpenAI, 2022</small><p>InstructGPT: demonstrations and preferences improve alignment to user intent on the studied tasks.</p></div></li>
+              <li id="ref-06"><div><a href="https://arxiv.org/abs/2305.18290">Direct Preference Optimization: Your Language Model is Secretly a Reward Model</a><small>Rafael Rafailov, Archit Sharma, Eric Mitchell, Stefano Ermon, Christopher D. Manning &amp; Chelsea Finn, 2023</small><p>A direct objective for learning from preferences without a separate RL optimization loop.</p></div></li>
+              <li id="ref-07"><div><a href="https://thinkingmachines.ai/blog/lora/">LoRA Without Regret</a><small>John Schulman, Thinking Machines Lab, 2025</small><p>When properly configured LoRA can match full fine-tuning in the tested post-training regimes.</p></div></li>
+              <li id="ref-08"><div><a href="https://arxiv.org/abs/2503.17126">Modifying Large Language Model Post-Training for Diverse Creative Writing</a><small>John Joon Young Chung, Vishakh Padmakumar, Melissa Roemmele, Yuqian Sun &amp; Max Kreminski, 2025</small><p>Diversity-aware preference objectives preserve more variation in the authors’ writing experiments.</p></div></li>
+              <li id="ref-09"><div><a href="https://arxiv.org/abs/2210.10760">Scaling Laws for Reward Model Overoptimization</a><small>Leo Gao, John Schulman &amp; Jacob Hilton, 2022</small><p>In the studied setup, excessive proxy optimization can reduce gold-standard reward.</p></div></li>
+              <li id="ref-10"><div><a href="https://arxiv.org/abs/2309.06180">Efficient Memory Management for Large Language Model Serving with PagedAttention</a><small>Woosuk Kwon et al., 2023</small><p>The memory-management work underlying vLLM’s serving throughput improvements.</p></div></li>
+              <li id="ref-11"><div><a href="https://arxiv.org/abs/2408.03314">Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters</a><small>Charlie Snell, Jaehoon Lee, Kelvin Xu &amp; Aviral Kumar, 2024</small><p>Inference-time strategies should account for task difficulty and the available compute budget.</p></div></li>
+              <li id="ref-12"><div><a href="https://stripe.com/blog/using-ai-optimize-payments-performance-payments-intelligence-suite">Using AI to optimize payments performance with the Payments Intelligence Suite</a><small>John Affaki, Stripe, 2025</small><p>A domain model built around payments data and reusable representations for downstream decisions.</p></div></li>
+              <li id="ref-13"><div><a href="https://paulgraham.com/ds.html">Do Things that Don’t Scale</a><small>Paul Graham, 2013</small><p>Recruit users manually and learn through extraordinary attention to their actual work.</p></div></li>
+              <li id="ref-14"><div><a href="https://www.anthropic.com/research/building-effective-agents">Building effective agents</a><small>Anthropic, 2024</small><p>Favor simple, composable patterns; introduce complexity when performance justifies it.</p></div></li>
+              <li id="ref-15"><div><a href="https://arxiv.org/abs/2501.12948">DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning</a><small>DeepSeek-AI, 2025</small><p>RL-based reasoning gains on verifiable tasks; a reference point, not evidence about literary taste.</p></div></li>
+              <li id="ref-16"><div><a href="https://arxiv.org/abs/2305.20050">Let’s Verify Step by Step</a><small>Hunter Lightman et al., including John Schulman &amp; Ilya Sutskever, OpenAI, 2023</small><p>Process supervision improved mathematical reasoning in the studied setting.</p></div></li>
+              <li id="ref-17"><div><a href="https://www.ycombinator.com/rfs">Requests for Startups — Winter 2027</a><small>Jon Xu, Diana Hu &amp; Jared Friedman, Y Combinator, accessed October 29, 2026</small><p>Own Your Intelligence; Vertical Foundation Models; LLMs That Write Well. The current RFS page can change.</p></div></li>
+              <li id="ref-18"><div><a href="https://thinkingmachines.ai/blog/on-policy-distillation/">On-Policy Distillation</a><small>Kevin Lu and collaborators, Thinking Machines Lab, 2025</small><p>Student-generated trajectories and dense teacher feedback; experiments on reasoning and restoring behavior after domain adaptation.</p></div></li>
+              <li id="ref-19"><div><a href="https://www.baseten.co/blog/introducing-the-baseten-environment-network/">Introducing the Baseten Environment Network</a><small>Charles O’Neill, Max Kirkby, Mudith Jayasekara &amp; Ardin Lo, Baseten, October 2026</small><p>A concrete division of labor between specialist environment teams and a training and inference provider.</p></div></li>
+              <li id="ref-20"><div><a href="https://www.glean.com/blog/waldo-launch">Glean Waldo: An agentic search model that pairs with LLMs</a><small>Eddie Zhou, Kunal Patil, Abhilash Samantapudi &amp; Julie Mills, Glean, 2026</small><p>Company-reported latency and token savings from a specialized search planner working alongside frontier models.</p></div></li>
+              <li id="ref-21"><div><a href="https://fireworks.ai/blog/llm-fine-tuning-bottlenecks">The fine-tuning bottleneck isn’t the algorithm</a><small>Fireworks, March 2026</small><p>Integration, experiment cadence, and selecting the appropriate training method in customer deployments.</p></div></li>
+              <li id="ref-22"><div><a href="https://arxiv.org/abs/2609.38043">UserProxyBench: Evaluating LLM User Simulators for Agent Benchmarks and Training</a><small>Ashish Jain &amp; Armaan Sandhu, 2026</small><p>Evidence that simulator fidelity can alter measured agent performance, motivating evaluation of the environment itself.</p></div></li>
+              <li id="ref-23"><div><a href="https://huggingface.co/NousResearch/nomos-1">Nomos 1</a><small>Nous Research &amp; Hillclimb, 2025</small><p>A mathematical specialization with released weights, a reasoning harness, and a base-model comparison under the same harness.</p></div></li>
+              <li id="ref-24"><div><a href="https://samainsworth.github.io/LLM-VeriOpt-CGO2026.pdf">LLM-VeriOpt: Verification-Guided Reinforcement Learning for LLM-Based Compiler Optimization</a><small>Xiangxin Fang, Jiaqin Kang, Rodrigo Rocha, Sam Ainsworth &amp; Lev Mukhanov, CGO 2026</small><p>Small-model specialization using compiler workloads and verifier feedback. The reported speedup is relative to unoptimized code, not general superiority over production compilers.</p></div></li>
+              <li id="ref-25"><div><a href="https://arxiv.org/abs/2610.05872">Off-Policy Merging Beats On-Policy Self-Distillation for Continual Learning</a><small>Chen Henry Wu, Thomas Zhang &amp; Aditi Raghunathan, 2026</small><p>Evidence from math and synthetic-knowledge experiments for testing earlier-checkpoint updates and merging against on-policy adaptation.</p></div></li>
+              <li id="ref-26"><div><a href="https://arxiv.org/abs/2604.24444">Can You Make It Sound Like You? Post-Editing LLM-Generated Text for Personal Style</a><small>Connor Baumler, Calvin Bao, Huy Nghiem, Xinchen Yang, Marine Carpuat &amp; Hal Daumé III, 2026</small><p>A preregistered study distinguishing authors’ perceived authenticity from automated style measurements.</p></div></li>
+              <li id="ref-27"><div><a href="https://arxiv.org/abs/2609.04824">Generating Constructive Feedback on Stories via Reinforcement Learning</a><small>Maja Stahl, Timon Ziegenbein &amp; Henning Wachsmuth, 2026</small><p>Actionability-focused rewards improved human ratings of advice; the study does not measure the quality of later revisions.</p></div></li>
+              <li id="ref-28"><div><a href="https://proceedings.mlr.press/v306/zeng26j.html">RLVE: Scaling Up Reinforcement Learning for Language Models with Adaptive Verifiable Environments</a><small>Zhiyuan Zeng and collaborators, ICML 2026; first preprint 2025</small><p>Adaptive difficulty and task diversity in controlled reasoning environments, with evaluation on held-out generators.</p></div></li>
+            </ol>
+<nav class="notes-end" aria-label="Continue reading">
+  <a href="./reading.html">The full reading list</a>
+  <a href="./blog.html">Blog</a>
+  <a href="./">Back to Latent</a>
+  <a href="./careers.html">Careers</a>
+</nav>
+</main>
+</body>
+</html>

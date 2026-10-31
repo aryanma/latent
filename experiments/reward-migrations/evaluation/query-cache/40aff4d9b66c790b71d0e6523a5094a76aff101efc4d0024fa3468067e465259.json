@@ -1,0 +1,54 @@
+{
+  "provenance": {
+    "database_sha256": "17185981cd747f6cdc374cb02a6096db3130e6ec2ddc582fe1686a28fb4c4c8a",
+    "query_sha256": "28d04125116141be5eb01855a744c584227e153e4eca7d4c0b98b719a6bfb8a8",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "28d04125116141be5eb01855a744c584227e153e4eca7d4c0b98b719a6bfb8a8",
+    "status": "ok",
+    "seconds": 0.000232,
+    "result_sha256": "f518d171b96fa782769e4b268520d31fca777d0483538b95bc7f88d62e84668a",
+    "rows": 19,
+    "distinct_rows": 1,
+    "preview": [
+      [
+        2.76083,
+        101.738
+      ],
+      [
+        2.76083,
+        101.738
+      ],
+      [
+        2.76083,
+        101.738
+      ],
+      [
+        2.76083,
+        101.738
+      ],
+      [
+        2.76083,
+        101.738
+      ]
+    ],
+    "columns": [
+      "lat",
+      "lng"
+    ]
+  }
+}

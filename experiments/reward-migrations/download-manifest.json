@@ -1,0 +1,471 @@
+{
+  "format": "latent-reward-migration-sources/v1",
+  "created": "2026-10-31",
+  "files": [
+    {
+      "path": "bird-mini-dev/README.md",
+      "url": "https://huggingface.co/datasets/birdsql/bird_mini_dev/resolve/5b256b5a9c17478f06ed6912612e9a14d17065c8/README.md",
+      "sha256": "ca606afa71af7ed78b6cb72dccb9108d28ff8e3eaefc521cec044337b5e2d639",
+      "bytes": 6442,
+      "group": "core",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "path": "bird-mini-dev/data/manifest.json",
+      "url": "https://huggingface.co/datasets/birdsql/bird_mini_dev/resolve/5b256b5a9c17478f06ed6912612e9a14d17065c8/data/manifest.json",
+      "sha256": "66ddb0e39e4ee6a443abff8e8f915674ec1602a36e9f1c763f4750414bcf4611",
+      "bytes": 2195,
+      "group": "core",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "path": "bird-mini-dev/data/mini_dev_sqlite.jsonl",
+      "url": "https://huggingface.co/datasets/birdsql/bird_mini_dev/resolve/5b256b5a9c17478f06ed6912612e9a14d17065c8/data/mini_dev_sqlite.jsonl",
+      "sha256": "926af2a0d1b47e5d0d15a7aa8a34d4721007f4550a881555b6a89496b54a2606",
+      "bytes": 471159,
+      "group": "core",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "path": "bird-mini-dev/archive/README.md",
+      "url": "https://huggingface.co/datasets/birdsql/bird_mini_dev/resolve/5b256b5a9c17478f06ed6912612e9a14d17065c8/archive/README.md",
+      "sha256": "b1f48da7dcf7b2d17f6335c5860448b566e33d29fc6121561c6924bb225d1394",
+      "bytes": 583,
+      "group": "core",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "path": "bird-mini-dev/archive/bird_mini_dev_2025-07-04/README.md",
+      "url": "https://huggingface.co/datasets/birdsql/bird_mini_dev/resolve/5b256b5a9c17478f06ed6912612e9a14d17065c8/archive/bird_mini_dev_2025-07-04/README.md",
+      "sha256": "04f8bce831346b750b4042b274a050f897bba1e7e69029dc14d0cfba381022a5",
+      "bytes": 10737,
+      "group": "core",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "path": "bird-mini-dev/archive/bird_mini_dev_2025-07-04/data/mini_dev_sqlite-00000-of-00001.json",
+      "url": "https://huggingface.co/datasets/birdsql/bird_mini_dev/resolve/5b256b5a9c17478f06ed6912612e9a14d17065c8/archive/bird_mini_dev_2025-07-04/data/mini_dev_sqlite-00000-of-00001.json",
+      "sha256": "88ceb0710163cae46a256ecea8f0a8c98286599530b60587fda5c3cfe57d45d2",
+      "bytes": 278513,
+      "group": "core",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "path": "bird-mini-dev/baseline_inference/README.md",
+      "url": "https://huggingface.co/datasets/birdsql/bird_mini_dev/resolve/5b256b5a9c17478f06ed6912612e9a14d17065c8/baseline_inference/README.md",
+      "sha256": "dec14c3835fb08406e58312ba0eca13e00cea621c185bc3cf2852ab9c14726ca",
+      "bytes": 1613,
+      "group": "core",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "path": "bird-mini-dev/baseline_inference/mini_dev_sqlite.jsonl",
+      "url": "https://huggingface.co/datasets/birdsql/bird_mini_dev/resolve/5b256b5a9c17478f06ed6912612e9a14d17065c8/baseline_inference/mini_dev_sqlite.jsonl",
+      "sha256": "b060ee9cb69be62a052f5e40367afeb2cf08f345f15ca318fd9a0f9bf52d53ef",
+      "bytes": 4929463,
+      "group": "core",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "path": "arcwise-plat-hf/README.md",
+      "url": "https://huggingface.co/datasets/uiuc-kang-lab/arcwise-plat/resolve/8e6eb6e18487a9dabaf761bb9e62b1234e340301/README.md",
+      "sha256": "5eddd1cdade68d8e427d01c67ba22e750ee91b1076afdeec03ade5e484d24043",
+      "bytes": 1414,
+      "group": "core",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "path": "arcwise-plat-hf/arcwise_plat_full_with_diff.json",
+      "url": "https://huggingface.co/datasets/uiuc-kang-lab/arcwise-plat/resolve/8e6eb6e18487a9dabaf761bb9e62b1234e340301/arcwise_plat_full_with_diff.json",
+      "sha256": "baefe2ca4fbab86c000df72aad9eaa563f7d422e425af2cbff071f656ea4eea8",
+      "bytes": 332246,
+      "group": "core",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "path": "arcwise-plat-hf/arcwise_plat_sql_only_with_diff.json",
+      "url": "https://huggingface.co/datasets/uiuc-kang-lab/arcwise-plat/resolve/8e6eb6e18487a9dabaf761bb9e62b1234e340301/arcwise_plat_sql_only_with_diff.json",
+      "sha256": "010c91bf9c06730769877df700c2ce79c88f242041f46f3089de49a3ed402a2c",
+      "bytes": 287689,
+      "group": "core",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "path": "mini-dev-github/.gitignore",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/.gitignore",
+      "sha256": "e2eb93a61ffd7877ea5c751abcb3a618e8e2e9a2073a27f66d4114fe10819f86",
+      "bytes": 9,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/README.md",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/README.md",
+      "sha256": "29a66ebe19085aceaa94beb49b05f03e09eb09784b409078b8615e8500fa869e",
+      "bytes": 20074,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/evaluation/SQLite_example_result.txt",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/evaluation/SQLite_example_result.txt",
+      "sha256": "887e277c44ac123007074c0f0226fed306a81fc1aa511d6d2b4111daa2e320a4",
+      "bytes": 567,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/evaluation/__pycache__/evaluation_utils.cpython-310.pyc",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/evaluation/__pycache__/evaluation_utils.cpython-310.pyc",
+      "sha256": "7785b2039e8c5f39f33b7ed16c62e9660802a5ff1ea42b109c4769be3c1c38b9",
+      "bytes": 3860,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/evaluation/__pycache__/evaluation_utils.cpython-311.pyc",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/evaluation/__pycache__/evaluation_utils.cpython-311.pyc",
+      "sha256": "264b857f3111710815e6023cff5f3fa99dedd8ede042e7c5f9d803dfe90f9b34",
+      "bytes": 6856,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/evaluation/evaluation_ex.py",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/evaluation/evaluation_ex.py",
+      "sha256": "da1bbcd4530be83692d7c650c814ea9704bb710d0c953eb75d02ccb38233cf89",
+      "bytes": 4779,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/evaluation/evaluation_f1.py",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/evaluation/evaluation_f1.py",
+      "sha256": "ba2700ee09b0c34d7e203788544757e6e6d6c99c0425bb92b3daa3927eee29bf",
+      "bytes": 7829,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/evaluation/evaluation_utils.py",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/evaluation/evaluation_utils.py",
+      "sha256": "f6943d249caac5aeaef9bce21d43dbf29dcef85a0c965a76df032a9542f308bf",
+      "bytes": 4314,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/evaluation/evaluation_ves.py",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/evaluation/evaluation_ves.py",
+      "sha256": "c23d606c002fd9eb75c17ce3cbabdc26d0a791b8291615a75cbf5e9c98ae67df",
+      "bytes": 7535,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/evaluation/run_evaluation.sh",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/evaluation/run_evaluation.sh",
+      "sha256": "22e9f3e0254cf92895c40b08e08f52c846be76a8b22479f413f9ff3714c1ee87",
+      "bytes": 2700,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/TA_output/predict_mini_dev_gpt-35-turbo_cot_SQLite.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/TA_output/predict_mini_dev_gpt-35-turbo_cot_SQLite.json",
+      "sha256": "b055397306e17aaf934c55d7a2d9e78a475fdeea657ae26093a3a56f7c59320f",
+      "bytes": 127329,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/TA_output/predict_mini_dev_gpt-4-o_cot_SQLite.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/TA_output/predict_mini_dev_gpt-4-o_cot_SQLite.json",
+      "sha256": "a49977f96af06c06bd002d50bceb3b43937789c3ff76226ac7bd604b6357ede8",
+      "bytes": 135392,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/TA_output/predict_mini_dev_gpt-4-turbo_cot_SQLite.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/TA_output/predict_mini_dev_gpt-4-turbo_cot_SQLite.json",
+      "sha256": "068935fde3c832fcb9e534bcf127ef9b15b06db0685d4e17d43b6cfa2daf49c9",
+      "bytes": 131505,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/TA_output/predict_mini_dev_meta-llama-3-70b-instruct2_cot_SQLite.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/TA_output/predict_mini_dev_meta-llama-3-70b-instruct2_cot_SQLite.json",
+      "sha256": "5ec377aba06301b223a9617bb347fa4ff74ed6b90745e8c3c1ad5d04b5d1e519",
+      "bytes": 120769,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-35-turbo-instruct_mysql.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-35-turbo-instruct_mysql.json",
+      "sha256": "17217abff0f3e680fb024551b84695db2446bd817bc6b05ba21c763bf9baec88",
+      "bytes": 116394,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-35-turbo-instruct_postgresql.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-35-turbo-instruct_postgresql.json",
+      "sha256": "df1edf6aac3c01cf93041bcd7b60378efe6f7359f19add6d2af2345bef092bf9",
+      "bytes": 119919,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-35-turbo-instruct_sqlite.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-35-turbo-instruct_sqlite.json",
+      "sha256": "a4a5f5e12d19d3fa742d0f3111723bd1dca50b29887eb705438580efe6dcc04b",
+      "bytes": 118857,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-35-turbo_mysql.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-35-turbo_mysql.json",
+      "sha256": "4da2832e4e3116d7b88424fb97540bdf40d8c9d75423a09ab08d46e1cbbf3384",
+      "bytes": 120545,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-35-turbo_postgresql.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-35-turbo_postgresql.json",
+      "sha256": "fa363fe3c3fc45d97cb47e6ec15133b291acccd750e5136b6e7b4d1c8d13a4be",
+      "bytes": 123664,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-35-turbo_sqlite.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-35-turbo_sqlite.json",
+      "sha256": "cfb1ec56c697378c74b91a87718209a939c4bc45d8bb5f0ab06bc95e8684773b",
+      "bytes": 121149,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4-32k_mysql.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4-32k_mysql.json",
+      "sha256": "240cd0ac0d7b6789dbc6febc982167481ea2c1e8687264c69a26c9d8cb0ff2d1",
+      "bytes": 125735,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4-32k_postgresql.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4-32k_postgresql.json",
+      "sha256": "0fba1bfbeb487d641c8ae1e8bb01f762b2d29ddfb7c14dbd94e832f53cc10270",
+      "bytes": 128512,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4-32k_sqlite.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4-32k_sqlite.json",
+      "sha256": "7ee53fcc67b9eaca363efb53ddb94dabd61526dafc09d835d832989e4911a1ca",
+      "bytes": 127003,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4-turbo_mysql.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4-turbo_mysql.json",
+      "sha256": "35a28d8ef7bc2d1a70cf9457bcd14823cad1c9d5020a5fd607e5a02ba0e69f4c",
+      "bytes": 123527,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4-turbo_postgresql.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4-turbo_postgresql.json",
+      "sha256": "428fd115a67a76d6312ea205aab64764b5a09444587588eda442a94cfee65211",
+      "bytes": 124091,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4-turbo_sqlite.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4-turbo_sqlite.json",
+      "sha256": "ef9fcb0470d9710c8a9674fd35874ec0986925e27a4d5d9ccece8bff606fb5df",
+      "bytes": 126113,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4_mysql.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4_mysql.json",
+      "sha256": "cfa228b0389a62bf8ffbd6e73d9d4f6d1076e1f740725d93f8ae3a22d6930bcf",
+      "bytes": 126123,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4_postgresql.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4_postgresql.json",
+      "sha256": "cd39466740516d2d4672e8421010edab4816ff9875781f44df100840b41eaa49",
+      "bytes": 129012,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4_sqlite.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_gpt-4_sqlite.json",
+      "sha256": "afb13727cd9ba01aa4a4761769567b80746581e13895b63e54e6a5cc38d0c1a6",
+      "bytes": 126649,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_meta-llama-3-70b-instruct-2_mysqljson.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_meta-llama-3-70b-instruct-2_mysqljson.json",
+      "sha256": "cd91865598bb44c09eca60102c5f3bb98bee9ee77d16cbcd0a6e9be78a1488fe",
+      "bytes": 122547,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_meta-llama-3-70b-instruct-2_postgresql.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_meta-llama-3-70b-instruct-2_postgresql.json",
+      "sha256": "32d005d4529798c3be39a5af000454728404e840ce2205506bb9514232ad6330",
+      "bytes": 129436,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_meta-llama-3-70b-instruct-2_sqlite.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_meta-llama-3-70b-instruct-2_sqlite.json",
+      "sha256": "d4e0efbafaa26435c2110559b7a24c91efa272ce82b6ec6d2a7176019582e1ae",
+      "bytes": 122527,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_meta-llama-3-8b-instruct-2_mysql.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_meta-llama-3-8b-instruct-2_mysql.json",
+      "sha256": "fbfaa60cc82ff10f09ac789e77f6a4692ae3944a8d227326621f4f221d2e38fa",
+      "bytes": 123329,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_meta-llama-3-8b-instruct-2_postgresql.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_meta-llama-3-8b-instruct-2_postgresql.json",
+      "sha256": "aa8d2ecc9d70a14d315648a939eb0e9104a2b1e4bd09047391ed9539865f8876",
+      "bytes": 124982,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_meta-llama-3-8b-instruct-2_sqlite.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_meta-llama-3-8b-instruct-2_sqlite.json",
+      "sha256": "e1bd066794d120ff766d010a5cf4e4118e48404c4b0168fce4dfaf362a975301",
+      "bytes": 124587,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_mistralai-mixtral-8x7b-instru-4_mysql.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_mistralai-mixtral-8x7b-instru-4_mysql.json",
+      "sha256": "109e4999e88c81bdf316ead215ebc4224a51bf4b1fd8aeec77025cba0b1c1d48",
+      "bytes": 136574,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_mistralai-mixtral-8x7b-instru-4_postgresql.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_mistralai-mixtral-8x7b-instru-4_postgresql.json",
+      "sha256": "862dffc4cdca4875650841a456b698e515e978125f5b28f798022e88176562cb",
+      "bytes": 139756,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_mistralai-mixtral-8x7b-instru-4_sqlite.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_mistralai-mixtral-8x7b-instru-4_sqlite.json",
+      "sha256": "53cdf9142e3f2e49941eb7b50ebbea90361b2c5b46de37d5ba1c244187d643a2",
+      "bytes": 135903,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_phi-3-medium-128k-instruct-1_mysql.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_phi-3-medium-128k-instruct-1_mysql.json",
+      "sha256": "683863b61e811fa700bbcdecf891374a10d17abfb122db35c73563031ab3bf2d",
+      "bytes": 134998,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_phi-3-medium-128k-instruct-1_postgresql.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_phi-3-medium-128k-instruct-1_postgresql.json",
+      "sha256": "8defb4399ab3393200cfba510024df7d9cf2cff8c9c7df647e3309cf751ac82d",
+      "bytes": 132468,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/exp_result/sql_output_kg/predict_mini_dev_phi-3-medium-128k-instruct-1_sqlite.json",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/exp_result/sql_output_kg/predict_mini_dev_phi-3-medium-128k-instruct-1_sqlite.json",
+      "sha256": "5e1a3a37cb174cbe62ff3bd269b293b6473c99da34f3fe3ac6f186dd5a1a7ff5",
+      "bytes": 129207,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/src/gpt_request.py",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/src/gpt_request.py",
+      "sha256": "b59de869ba18b879acbb15d26a6e747e82ae00732279c1ad8155de8b4ef07fde",
+      "bytes": 7150,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/src/prompt.py",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/src/prompt.py",
+      "sha256": "0689391533ddf372a85a1c1a21eac46438b1a73b2a2d7e083171cb5219596c23",
+      "bytes": 1529,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "mini-dev-github/llm/src/table_schema.py",
+      "url": "https://raw.githubusercontent.com/bird-bench/mini_dev/1c49a375e76c471e218564da3f4617513d33e371/llm/src/table_schema.py",
+      "sha256": "1eaeac090fd5506cddf2bbff6afb6e0d26715f6200f6f7f91f1ab9c6e605b11b",
+      "bytes": 7590,
+      "group": "legacy",
+      "license": "No repository LICENSE found; fetch-only, do not imply redistribution grant"
+    },
+    {
+      "path": "bird-mini-dev-previous/mini_dev_sqlite.json",
+      "url": "https://huggingface.co/datasets/birdsql/bird_mini_dev/resolve/f65faf4ae3b638c1fa6df1d3370c8d92c8366301/data/mini_dev_sqlite-00000-of-00001.json",
+      "sha256": "88ceb0710163cae46a256ecea8f0a8c98286599530b60587fda5c3cfe57d45d2",
+      "bytes": 278513,
+      "group": "core",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "path": "bird-dev-20240627.zip",
+      "url": "https://bird-bench.oss-cn-beijing.aliyuncs.com/dev.zip",
+      "sha256": "cdd6d19faeb45a23970b98d3ef6c40a87987c95459c2cf12076897a60cf5a630",
+      "bytes": 346207293,
+      "group": "core",
+      "license": "BIRD dataset CC BY-SA 4.0; preserve upstream notices"
+    },
+    {
+      "path": "nl2sql-v0.3.0.zip",
+      "url": "https://zenodo.org/api/records/23445116/files/beskvladimir-create/nl2sql-onprem-bench-v0.3.0.zip/content",
+      "sha256": "5d7fb3b19d67e4cab3cc9e6f248bb357f343aafe2fe369edcce4e072d009368b",
+      "bytes": 11086240,
+      "group": "candidates",
+      "license": "MIT result/harness files; BIRD data separate"
+    }
+  ],
+  "database_manifest": "bird-db-manifest.json"
+}

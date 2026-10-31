@@ -1,0 +1,23 @@
+{
+  "same_fields": [
+    "driver_sha256",
+    "system_prompt",
+    "environment_manifest_digest",
+    "per_turn_generation_limit",
+    "episode_generation_limit",
+    "max_steps",
+    "seed",
+    "temperature",
+    "task_ids"
+  ],
+  "all_equal": true,
+  "first_episode_initial_prompt_byte_identical": true,
+  "first_prompt_sha256": "b97e52bd536a3ee284f347701a24ead1d809ddd7647ae6db7f253977303f7b01",
+  "runtime_differences": "model constants; current model additionally streams hashes across4shards and records its verified native-compatible renderer. Prompt bytes and decoding/budgets remain the same.",
+  "model_revisions": {
+    "base": "21457c6f51ed54a7c16e988c0844db973815c137",
+    "sft": "21457c6f51ed54a7c16e988c0844db973815c137",
+    "8b": "383413e909f3bc5303ce195ebbdf0339c5a1a2a3",
+    "current": "38740b847e4cb78f352aba30aa41c76e08e6eb46"
+  }
+}

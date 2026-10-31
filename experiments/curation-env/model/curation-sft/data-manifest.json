@@ -1,0 +1,485 @@
+{
+  "source_sha256": "047c741e5df2fd85ca71fdc7972366091f914a6d7df020a1497c7c73efbfd13f",
+  "prompt_variant": "v2",
+  "train_worlds": 96,
+  "validation_worlds": 12,
+  "train_seeds": [
+    10000,
+    10095
+  ],
+  "validation_seeds": [
+    20000,
+    20011
+  ],
+  "families": [
+    "labels",
+    "duplicates",
+    "permissions",
+    "leakage",
+    "versions",
+    "pair"
+  ],
+  "private_task_data_in_model_input": false,
+  "examples": "one exact visible expert action per full observed prefix",
+  "loss": "next action JSON tokens plus im_end only; no prompt or padding loss",
+  "worlds": {
+    "train": [
+      {
+        "id": "labels-10000",
+        "fingerprint": "dfda838cd1ac17345a3b37d0a89cf3307efa706dd57fb89d8dc2bb7da3a08f6e"
+      },
+      {
+        "id": "duplicates-10001",
+        "fingerprint": "0a8137c89f201f81a9da366ed043ccca667be281f8dc58394e29644b08100fed"
+      },
+      {
+        "id": "permissions-10002",
+        "fingerprint": "8bc18b56e49928807e95d91fe4be633bf2b332325696c01713131276ef5817ec"
+      },
+      {
+        "id": "leakage-10003",
+        "fingerprint": "90868072f6061516c223e2a07b929eed5de21b31239dbd7e9bacb1ac932b3207"
+      },
+      {
+        "id": "versions-10004",
+        "fingerprint": "1ded1a1b2baa44780b586f01835bbbb614b53a6000bee64c38920d27739490e3"
+      },
+      {
+        "id": "pair-10005",
+        "fingerprint": "8936064ae1277c96ce47f648b319ce8f0a38a2adee176658c509dfff690e672c"
+      },
+      {
+        "id": "labels-10006",
+        "fingerprint": "62b45518a80fa68b2967e816a245cec9f1dae5a46324b02fd406572e4eeb8c1a"
+      },
+      {
+        "id": "duplicates-10007",
+        "fingerprint": "da2d143914e353cc2fb1782bfe7d4e17849d9a92001749335459f8f51a0293f8"
+      },
+      {
+        "id": "permissions-10008",
+        "fingerprint": "487a25aa72f069f5e930b7a5aa32b70220a7055990b76b46adcaefa5bf645be4"
+      },
+      {
+        "id": "leakage-10009",
+        "fingerprint": "3bb474a8e8c5e3060b8c02b17a466b076db440bcbff0a04da804d5d0fc95b594"
+      },
+      {
+        "id": "versions-10010",
+        "fingerprint": "442db224f2b4fcbcfcc1f8d3bf2494770d091ee9baf4fbc26827cd52c253d1de"
+      },
+      {
+        "id": "pair-10011",
+        "fingerprint": "7ebe49fb1538214bfea1b23d7b078dbea488f888bdff4cffa42cd8a3f6dbb70c"
+      },
+      {
+        "id": "labels-10012",
+        "fingerprint": "c48c582ad773daebfbbc1b3ffd8d1df473e57422335d117c47e2c7855bafbb86"
+      },
+      {
+        "id": "duplicates-10013",
+        "fingerprint": "2ce962a322a6e9a7845eb55882fa8d81fc26672225ba81d9b92788607b1c48d6"
+      },
+      {
+        "id": "permissions-10014",
+        "fingerprint": "59ace4039cf5129c54a0d1a3908b42e87c43d8c7e78974c7e3c189471b51a3d6"
+      },
+      {
+        "id": "leakage-10015",
+        "fingerprint": "f2ffea143b3d6fbd28236af830a84fd686a3f6378d9883861c7149d018ca4d60"
+      },
+      {
+        "id": "versions-10016",
+        "fingerprint": "d4613c28c362ee849da5bde0588eeb51faf59c70464276309953a8acb2123d8a"
+      },
+      {
+        "id": "pair-10017",
+        "fingerprint": "e1704c3772952de774a1b8434804ff2d7803bcc216d11a97f56cf166f72de89e"
+      },
+      {
+        "id": "labels-10018",
+        "fingerprint": "57410ff541c690f8f5bfe9d3675751eb297799313993c96b21f6675b48badd90"
+      },
+      {
+        "id": "duplicates-10019",
+        "fingerprint": "da0e52434d66fb18eba89c343ffcee4211ae2364576ee7a346998a00cd1711f0"
+      },
+      {
+        "id": "permissions-10020",
+        "fingerprint": "83142765126d025cd46e87a4ea39fb25dc6d4db5e62b098f2fe2713233aae129"
+      },
+      {
+        "id": "leakage-10021",
+        "fingerprint": "f4c0d76bb73f0a48066d8568f0d4930781192c7bd39a8f937a3983654dbfcb20"
+      },
+      {
+        "id": "versions-10022",
+        "fingerprint": "5a4e92a7681266d71969fea3deb7fcc764ca17a9cfdf4b48729dd732e420b97c"
+      },
+      {
+        "id": "pair-10023",
+        "fingerprint": "aa9461b5de86ae4da98506168806d57a28ff0a75b7a0c296bf839748f6d41385"
+      },
+      {
+        "id": "labels-10024",
+        "fingerprint": "25ad267e6357f18a6026cdd5d91a3141c572bc34431f67aefe55db714cc95265"
+      },
+      {
+        "id": "duplicates-10025",
+        "fingerprint": "c40ccba8d4968c1981cfbb4b67187725cedc2d841c67b163f562396eeb42de55"
+      },
+      {
+        "id": "permissions-10026",
+        "fingerprint": "7c1110202b276d218d865984f5d8de7ff4461474bc7008d8da776302fd1879f6"
+      },
+      {
+        "id": "leakage-10027",
+        "fingerprint": "e281891f06dd5582d4e5783036ada0b46b308f5795e9d70b247d08d21f8421ef"
+      },
+      {
+        "id": "versions-10028",
+        "fingerprint": "aecd8098bd1c20c26b0a9dd4fde339e20ecab410fa0f27d96fdd3a4b07e979af"
+      },
+      {
+        "id": "pair-10029",
+        "fingerprint": "a12d312153afe2167f495f0e5852f9e9c620a0fa66de3991d39fb478cdd3ac9b"
+      },
+      {
+        "id": "labels-10030",
+        "fingerprint": "bd93cf2d6e0ea23f100db25b38acfdf6ee88b2e7db50da27860b3a22bb12cebf"
+      },
+      {
+        "id": "duplicates-10031",
+        "fingerprint": "d897f4b9221a8b7d24cfe27a8fd4e94279c191b15c85073dc4f0d8efe8e69a2e"
+      },
+      {
+        "id": "permissions-10032",
+        "fingerprint": "5dcd8c747de87f2c3d282242669b4cfa43bfeafd5835ac69817a6440e1ed4372"
+      },
+      {
+        "id": "leakage-10033",
+        "fingerprint": "1b24309acc529c434afc6e3903bf67653db509db08be26ef8a5de1e3750f5517"
+      },
+      {
+        "id": "versions-10034",
+        "fingerprint": "5392a748f52adf3b05a13594e5f71277914e1b901328fa418dcab0fc2508531d"
+      },
+      {
+        "id": "pair-10035",
+        "fingerprint": "7e03f59352609044411008d7222938130df8db0da3469d666d2138046daac537"
+      },
+      {
+        "id": "labels-10036",
+        "fingerprint": "5aa0b819795bd39484bbc32b6e5825e6108f17fbbc8a647ed625654afc8bcbb6"
+      },
+      {
+        "id": "duplicates-10037",
+        "fingerprint": "68b4613705e81dff6e1e13922128b893e7bad2891723c92c41e2e522dc833bb1"
+      },
+      {
+        "id": "permissions-10038",
+        "fingerprint": "16449fe5a151facd516aecea8e32d43b310ef9d072c83539833dc7cda514921f"
+      },
+      {
+        "id": "leakage-10039",
+        "fingerprint": "0140e1182697b5e339cb3828e99fc4050ce589a22304b00b4e9657493f447b1b"
+      },
+      {
+        "id": "versions-10040",
+        "fingerprint": "f0af3c3e849d63fffd1151068ff6a423629630b84696aa85c54173ac537e9393"
+      },
+      {
+        "id": "pair-10041",
+        "fingerprint": "6ed697c51c3d178b8ff2d62d96829cc15351fb254270fc2dfc0df110f8ec778d"
+      },
+      {
+        "id": "labels-10042",
+        "fingerprint": "06f4b076b0a0b5b4bbf72f36a784f9972fedc989a8833b7b180ad0be4e68a675"
+      },
+      {
+        "id": "duplicates-10043",
+        "fingerprint": "6dfe76d5c72cc77373fc828d2f6b33f1c612e355af330b8cbc08f03dea6422de"
+      },
+      {
+        "id": "permissions-10044",
+        "fingerprint": "50b384ea4dd0f5c3603f2aaf2f53ea3fbb2a845b1771b7a3f8cfb40ab280638e"
+      },
+      {
+        "id": "leakage-10045",
+        "fingerprint": "54f720143f0e18657c67be51cab199a23bf9e9d54ae7f515408a8e7d96ab2773"
+      },
+      {
+        "id": "versions-10046",
+        "fingerprint": "ffe5ddaca8aaa4ffa64ae1b2126c792301309141d8b19e6f56f124bd479aad46"
+      },
+      {
+        "id": "pair-10047",
+        "fingerprint": "8bd90839c5a1a988c368eb11ae2abaee94878f428dfa9ff6ba320d273ebe4ae3"
+      },
+      {
+        "id": "labels-10048",
+        "fingerprint": "2502496ddcbf20e4c2794811449433f67d055663b549a06affba4924d6883a91"
+      },
+      {
+        "id": "duplicates-10049",
+        "fingerprint": "1ad42b05f2d3b840a3fb0bd608b6f7b495386098d8e0cd85bead08ca4ab13a93"
+      },
+      {
+        "id": "permissions-10050",
+        "fingerprint": "58c7a8370d751a93707b3fe768a1a271a1c8f370032007cd531baf7508cdb94a"
+      },
+      {
+        "id": "leakage-10051",
+        "fingerprint": "cc5cb33dd8c2187fa17a06e8c9d30c9f4a9d6ec10bfc43c8b7f153f2280e529a"
+      },
+      {
+        "id": "versions-10052",
+        "fingerprint": "d88384b008ebb8213d08a7cb0c1a19eb7bb1b7b521f0e12cce3bf2f94426ecd5"
+      },
+      {
+        "id": "pair-10053",
+        "fingerprint": "9bb066541edceecb5ae35fe1ee9c99aba982d70f01ea92196624a9f176829072"
+      },
+      {
+        "id": "labels-10054",
+        "fingerprint": "3cf69b67fbfec59d5208bc9d662bfec64c9dae0d65f1008a82ff51ed23d832d3"
+      },
+      {
+        "id": "duplicates-10055",
+        "fingerprint": "74eed6db3f89dce70d83ba95789ecd3166f4c9ed317aeb30f1eed302dcc2fa34"
+      },
+      {
+        "id": "permissions-10056",
+        "fingerprint": "8f976729cd7a52e94128422d7f063556d82638b5a25a63a766bcf708f5ff9d78"
+      },
+      {
+        "id": "leakage-10057",
+        "fingerprint": "678e0f9760f33379766952ca0608579ed1bc23fba84339215e9f61187c9445bd"
+      },
+      {
+        "id": "versions-10058",
+        "fingerprint": "8d4b011ee2b637f2f9cad169f9f7e3aa71e1e180e1de41abf65a668efa0e8d5f"
+      },
+      {
+        "id": "pair-10059",
+        "fingerprint": "11d08c12b6292ecb94a0a65ec36037df4865eba4bdca6cf36ac5c96e6540e1ce"
+      },
+      {
+        "id": "labels-10060",
+        "fingerprint": "cd15dfa4c15b6b8695b13da4c7cd1834df44359575dfc4e24282be39c7d39967"
+      },
+      {
+        "id": "duplicates-10061",
+        "fingerprint": "a830e6fb1fe45f9f9d49153160c9830a46cc32fb76b1331de89d23b3fdffa275"
+      },
+      {
+        "id": "permissions-10062",
+        "fingerprint": "92c177fd798d1fdd57652c42e493dd987853f43b4ff8525cf8c00de31f98a768"
+      },
+      {
+        "id": "leakage-10063",
+        "fingerprint": "578cafd0f8f047bdbab0f161d74877edfd3fd5a81573e75575bf9ab870e74684"
+      },
+      {
+        "id": "versions-10064",
+        "fingerprint": "c829e562c44a05e4155a6e2fdc9bc442a252cd88dc46ecbaa35f9f522c157622"
+      },
+      {
+        "id": "pair-10065",
+        "fingerprint": "592ee2cd47d7427da98f657ae5f54df8d67358be5a2c6196408e8a63228b0d06"
+      },
+      {
+        "id": "labels-10066",
+        "fingerprint": "d5b9741d18530728b2a8f99439a780630e80a697f5bec36730e4037786d1e62b"
+      },
+      {
+        "id": "duplicates-10067",
+        "fingerprint": "3f2f0f074adaad1d782b60e0dccf80ca71733fbd362ab8b314053f732584c242"
+      },
+      {
+        "id": "permissions-10068",
+        "fingerprint": "14abbf95166ec427bbe1a172666c4470254cfa9767419cd85f8df99ac11dd673"
+      },
+      {
+        "id": "leakage-10069",
+        "fingerprint": "7a70af26085bd23850454d412dc791d27e92229a1c9a807ae77a12bdde8e0e9d"
+      },
+      {
+        "id": "versions-10070",
+        "fingerprint": "c497024fbd167b4576ef17c09721ebef783ba3bb6365942a33d87a59aff3d9a8"
+      },
+      {
+        "id": "pair-10071",
+        "fingerprint": "df6354b5d197cf71618ab0d924294ada8d187123cddd00b9297cf47ad0ba0c88"
+      },
+      {
+        "id": "labels-10072",
+        "fingerprint": "d7180aaebd74f22a9b6ad0c64164ff1f7520c5fc9f9208f376a567c4b9f3b265"
+      },
+      {
+        "id": "duplicates-10073",
+        "fingerprint": "bda8be1179ff22cca3453df15ccbc3f286b5e5d694390c3d0c39e8d6f88eda5d"
+      },
+      {
+        "id": "permissions-10074",
+        "fingerprint": "708c16841c890c3741d0fe1ae47ec835ba59ee2dfb4753078e4fb67f547a4b20"
+      },
+      {
+        "id": "leakage-10075",
+        "fingerprint": "1aae20c7b9e5dba0f991404e2d7b3e45e0123c7ab5ddc6c773ce9c0989dfd502"
+      },
+      {
+        "id": "versions-10076",
+        "fingerprint": "6dbb9ccd9c291fe6c3f3c9cebc9641cb9cd6ffb1819e42c4e5394da54150c388"
+      },
+      {
+        "id": "pair-10077",
+        "fingerprint": "bba617016d5073ab9f0a909be39c4c9a8e32d2a15ba911aa7c616b0e76136df6"
+      },
+      {
+        "id": "labels-10078",
+        "fingerprint": "f267da0534bcb61956e4f5ef64b304a839f881e22cc33d88605d10736a18483c"
+      },
+      {
+        "id": "duplicates-10079",
+        "fingerprint": "9d7eab35600755e4dff4726d9c74c3629bfa339c7d9c5d986369dc9376fff883"
+      },
+      {
+        "id": "permissions-10080",
+        "fingerprint": "c00048f554b83d22ba2cf524549f193241b54520d65445683ad9a2cf3f753725"
+      },
+      {
+        "id": "leakage-10081",
+        "fingerprint": "8a609d5ba72c76475bff99be3e5a9c6bf50294d95e34627a1b8346d4f178faa1"
+      },
+      {
+        "id": "versions-10082",
+        "fingerprint": "821fa8571df8e373a8ba3c66ff8569df507178720495bb03a0a7a73cdfd035d8"
+      },
+      {
+        "id": "pair-10083",
+        "fingerprint": "14a5e582e49be3ea58903d200f3ac4a2bc712dc6a6d088546e881c3a2fa807a0"
+      },
+      {
+        "id": "labels-10084",
+        "fingerprint": "4c09b23bfc5608272a74f903423fc60fb8d7ba67b4c838dff5bff70bad93777f"
+      },
+      {
+        "id": "duplicates-10085",
+        "fingerprint": "16b640d914340b0ce7a8878effb757007a251deb6631c0e0d71e16b78db98433"
+      },
+      {
+        "id": "permissions-10086",
+        "fingerprint": "814d78340d5be7c55e7ab5ce8ad05245f89367750ef98542bcb96b9be6ddf027"
+      },
+      {
+        "id": "leakage-10087",
+        "fingerprint": "2b156596d5981dd007b52518ef5ebea48ab45bbf825ad9c3078657063e4a0b6b"
+      },
+      {
+        "id": "versions-10088",
+        "fingerprint": "5af2f2be303fa953837c08989e91b2683f8e2d62ccd44c1f0caf2afc93089e72"
+      },
+      {
+        "id": "pair-10089",
+        "fingerprint": "7ee3159e3e152556ca233d7e03dc5e5f48ee0a24f46655971090d532666b8690"
+      },
+      {
+        "id": "labels-10090",
+        "fingerprint": "01d3004e04efe346f3626dacb8737030c79a3a52f627ffd45e3b6d4f7b341d69"
+      },
+      {
+        "id": "duplicates-10091",
+        "fingerprint": "d743574fc59caa45b7c18ed72f0ffa69a777efe99f9cd86159fd6d4b8a7ddbbf"
+      },
+      {
+        "id": "permissions-10092",
+        "fingerprint": "4d45f7c69ba1d22126c5d7a8658770d981bc0ac4fda3d71857ba21488224729a"
+      },
+      {
+        "id": "leakage-10093",
+        "fingerprint": "40ca75aaf4137ac6f62ca009ce9ea5e0d3abfe446b1ebfb3c46948386dfd5626"
+      },
+      {
+        "id": "versions-10094",
+        "fingerprint": "68101086016a5a38e4d233db2fcbbcd977532256c6aab6921548b4897e433657"
+      },
+      {
+        "id": "pair-10095",
+        "fingerprint": "5e500ffc9e758b6931d29f7ef93757fc2c5129aae83b0aae9461e67166f45d23"
+      }
+    ],
+    "valid": [
+      {
+        "id": "labels-20000",
+        "fingerprint": "eb082b48300ade80eb83ed311c91f8fbff1551aa049a4934e95359a83214d386"
+      },
+      {
+        "id": "duplicates-20001",
+        "fingerprint": "c7627289fd491b8c31fe25cba6cb193dd0f2a9686b75d7efdec86bb6bc04647b"
+      },
+      {
+        "id": "permissions-20002",
+        "fingerprint": "658f76ae5bb18cd4e264099ce1fcf6e141e12c039966aa9541a71d56dda4b589"
+      },
+      {
+        "id": "leakage-20003",
+        "fingerprint": "e8507dd303c3585d8ce710b62fd3a864a633e6afcb32f651f38c6e14eabfee5b"
+      },
+      {
+        "id": "versions-20004",
+        "fingerprint": "a37aad70de9bc7279fbefc6800ffe514e35dc932903021fef0e5bf90c018c88d"
+      },
+      {
+        "id": "pair-20005",
+        "fingerprint": "038e205cf7b0ce3f40e61bd1d2f3adbfd5f075cfce22bbad1c02af831bb029bf"
+      },
+      {
+        "id": "labels-20006",
+        "fingerprint": "22ae807c3c37bb7f0b1998b05ac49867acb4dd90fe8cabb9266bc9d7c59b85cc"
+      },
+      {
+        "id": "duplicates-20007",
+        "fingerprint": "ef035a3c351920114238d7e78322df6d43758db6531e5ef3aa136b3fb0dc42b2"
+      },
+      {
+        "id": "permissions-20008",
+        "fingerprint": "51df69d7f4248a864a0f87c133ebcbc58ee35244e4a6c7969ed511a702fd127a"
+      },
+      {
+        "id": "leakage-20009",
+        "fingerprint": "3676a702cc4d3829a6f0cd5aea28910e079a114e6419ee8fe4040dce71fd2006"
+      },
+      {
+        "id": "versions-20010",
+        "fingerprint": "8d8c816cbeb4769b47d14b85111ceb5eeca06bb0d7b8ad53e32546fca4a91dea"
+      },
+      {
+        "id": "pair-20011",
+        "fingerprint": "928c7dd34c4f5b9100089032e2fbd85c06b9b0bfe25665770c20fd126922baad"
+      }
+    ]
+  },
+  "splits": {
+    "train": {
+      "examples": 592,
+      "min_tokens": 1162,
+      "max_tokens": 4015,
+      "total_tokens": 1451342,
+      "supervised_tokens": 39033,
+      "max_action_tokens": 220,
+      "jsonl_sha256": "9e4bd4e0f08970617ae1d7c918f809c8b3a0b078a09f7358e742bcb6b4eaa4b6"
+    },
+    "valid": {
+      "examples": 74,
+      "min_tokens": 1162,
+      "max_tokens": 4036,
+      "total_tokens": 181368,
+      "supervised_tokens": 4873,
+      "max_action_tokens": 215,
+      "jsonl_sha256": "f0e3df262c0d7a47eb85c64a226869bfc27262fec7264f9575c8e045223c7bbb"
+    }
+  },
+  "max_seq_length": 4096,
+  "network_attempts": []
+}

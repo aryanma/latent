@@ -1,0 +1,1660 @@
+{
+  "episodes": [
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 7.700029624975286,
+      "generation_tokens": 617,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3395,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 0.6666666666666666,
+        "provenance": false,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [
+          "row-899f0720f3"
+        ],
+        "violations": []
+      },
+      "prompt_tokens_total": 13456,
+      "reward": 0.0,
+      "steps": 6,
+      "success": false,
+      "task_id": "labels-1000",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 8.526569833047688,
+      "generation_tokens": 748,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4024,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [
+          "lineage-5c5e70feed",
+          "lineage-2c3df58412",
+          "lineage-4400ecdc7f"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.7777777777777778,
+        "provenance": false,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [
+          "row-fc479960e2",
+          "row-a824a43388"
+        ],
+        "violations": []
+      },
+      "prompt_tokens_total": 19507,
+      "reward": 0.0,
+      "steps": 7,
+      "success": false,
+      "task_id": "duplicates-1001",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 6.366512291948311,
+      "generation_tokens": 577,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3368,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 5,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 5,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-f17ff09382",
+            "type": "permission"
+          }
+        ]
+      },
+      "prompt_tokens_total": 13492,
+      "reward": 0.0,
+      "steps": 6,
+      "success": false,
+      "task_id": "permissions-1002",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 7.274514958029613,
+      "generation_tokens": 510,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3463,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 5,
+        "duplicate_lineages": [],
+        "kept_rows": 5,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 5,
+        "reward": 1.0,
+        "safe": true,
+        "success": true,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 20140,
+      "reward": 1.0,
+      "steps": 8,
+      "success": true,
+      "task_id": "leakage-1003",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 7.241033750004135,
+      "generation_tokens": 631,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4295,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 0.0,
+        "provenance": false,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [
+          "row-17230d8a22"
+        ],
+        "violations": []
+      },
+      "prompt_tokens_total": 15297,
+      "reward": 0.0,
+      "steps": 6,
+      "success": false,
+      "task_id": "versions-1004",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 8.665032083983533,
+      "generation_tokens": 735,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3998,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [
+          "lineage-a3bdfdedb0",
+          "lineage-5e1d0c67d6",
+          "lineage-afb6766dda"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.3333333333333333,
+        "provenance": false,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [
+          "row-a14739ef6a",
+          "row-d4b66bb704"
+        ],
+        "violations": []
+      },
+      "prompt_tokens_total": 19379,
+      "reward": 0.0,
+      "steps": 7,
+      "success": false,
+      "task_id": "pair-1005",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 6.808762124972418,
+      "generation_tokens": 621,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3416,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 0.5,
+        "provenance": false,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [
+          "row-5bd2e7cee0"
+        ],
+        "violations": []
+      },
+      "prompt_tokens_total": 13517,
+      "reward": 0.0,
+      "steps": 6,
+      "success": false,
+      "task_id": "labels-1006",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 8.50753500009887,
+      "generation_tokens": 809,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4027,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [
+          "lineage-311dc2ce0f",
+          "lineage-16e3f8867b",
+          "lineage-6bda1ff9e0"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.7777777777777778,
+        "provenance": false,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [
+          "row-21f4c7c6b1"
+        ],
+        "violations": []
+      },
+      "prompt_tokens_total": 15592,
+      "reward": 0.0,
+      "steps": 6,
+      "success": false,
+      "task_id": "duplicates-1007",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 12.151516916928813,
+      "generation_tokens": 1007,
+      "invalid_action_count": 2,
+      "invalid_json_count": 1,
+      "max_prompt_tokens": 3990,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 5,
+        "duplicate_lineages": [],
+        "kept_rows": 5,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 5,
+        "reward": 1.0,
+        "safe": true,
+        "success": true,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 28061,
+      "reward": 1.0,
+      "steps": 10,
+      "success": true,
+      "task_id": "permissions-1008",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 7.647732625016943,
+      "generation_tokens": 519,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3434,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 5,
+        "duplicate_lineages": [],
+        "kept_rows": 5,
+        "label_accuracy": 0.4,
+        "provenance": false,
+        "required_lineages": 5,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [
+          "row-d98bf94d7d",
+          "row-628ffdb3f9",
+          "row-f32d79b2c6"
+        ],
+        "violations": []
+      },
+      "prompt_tokens_total": 19957,
+      "reward": 0.0,
+      "steps": 8,
+      "success": false,
+      "task_id": "leakage-1009",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 6.423515541944653,
+      "generation_tokens": 492,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4075,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 0.3333333333333333,
+        "provenance": false,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [
+          "row-d8a56ce82a",
+          "row-8dac7d99b7",
+          "row-5937c95ceb"
+        ],
+        "violations": []
+      },
+      "prompt_tokens_total": 14955,
+      "reward": 0.0,
+      "steps": 6,
+      "success": false,
+      "task_id": "versions-1010",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 9.341657874989323,
+      "generation_tokens": 752,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4041,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [
+          "lineage-34a9a0230a",
+          "lineage-70142c5fbc",
+          "lineage-17085bbc10"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.5555555555555556,
+        "provenance": false,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [
+          "row-1d18b2647a"
+        ],
+        "violations": []
+      },
+      "prompt_tokens_total": 19556,
+      "reward": 0.0,
+      "steps": 7,
+      "success": false,
+      "task_id": "pair-1011",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 7.129416542011313,
+      "generation_tokens": 512,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3373,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 0.16666666666666666,
+        "provenance": false,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [
+          "row-b69fa4cac8",
+          "row-6cdc1fc3c9"
+        ],
+        "violations": []
+      },
+      "prompt_tokens_total": 16749,
+      "reward": 0.0,
+      "steps": 7,
+      "success": false,
+      "task_id": "labels-1012",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 8.803200832917355,
+      "generation_tokens": 654,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3971,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [
+          "lineage-c0c6298578",
+          "lineage-fac4500e36",
+          "lineage-0d3073b4d6"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 19465,
+      "reward": 0.0,
+      "steps": 7,
+      "success": false,
+      "task_id": "duplicates-1013",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 7.095121624995954,
+      "generation_tokens": 505,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3337,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 5,
+        "duplicate_lineages": [],
+        "kept_rows": 5,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 5,
+        "reward": 1.0,
+        "safe": true,
+        "success": true,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 16490,
+      "reward": 1.0,
+      "steps": 7,
+      "success": true,
+      "task_id": "permissions-1014",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 8.130279375007376,
+      "generation_tokens": 517,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3422,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 5,
+        "duplicate_lineages": [],
+        "kept_rows": 5,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 5,
+        "reward": 1.0,
+        "safe": true,
+        "success": true,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 19900,
+      "reward": 1.0,
+      "steps": 8,
+      "success": true,
+      "task_id": "leakage-1015",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 6.837397333001718,
+      "generation_tokens": 497,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4143,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 0.16666666666666666,
+        "provenance": false,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [
+          "row-6f5baf5b1d",
+          "row-55f9545a78",
+          "row-f7db9758f1",
+          "row-e4763bb819"
+        ],
+        "violations": []
+      },
+      "prompt_tokens_total": 15062,
+      "reward": 0.0,
+      "steps": 6,
+      "success": false,
+      "task_id": "versions-1016",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 9.022369041107595,
+      "generation_tokens": 650,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3963,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [
+          "lineage-8bb71e8d52",
+          "lineage-52d8b14b50",
+          "lineage-42f92132a2"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.3333333333333333,
+        "provenance": false,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [
+          "row-d32ab9fe42",
+          "row-f6f1baf974",
+          "row-cc4a3cd907"
+        ],
+        "violations": []
+      },
+      "prompt_tokens_total": 19484,
+      "reward": 0.0,
+      "steps": 7,
+      "success": false,
+      "task_id": "pair-1017",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 7.402346333023161,
+      "generation_tokens": 629,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3438,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 0.5,
+        "provenance": false,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [
+          "row-a016ac9324"
+        ],
+        "violations": []
+      },
+      "prompt_tokens_total": 13547,
+      "reward": 0.0,
+      "steps": 6,
+      "success": false,
+      "task_id": "labels-1018",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 10.173256916925311,
+      "generation_tokens": 797,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4100,
+      "outcome": {
+        "coverage": 0.8333333333333334,
+        "covered_lineages": 5,
+        "duplicate_lineages": [
+          "lineage-2a275fb56f"
+        ],
+        "kept_rows": 6,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 19674,
+      "reward": 0.0,
+      "steps": 7,
+      "success": false,
+      "task_id": "duplicates-1019",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 8.074462708085775,
+      "generation_tokens": 506,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3430,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 5,
+        "duplicate_lineages": [],
+        "kept_rows": 5,
+        "label_accuracy": 0.8,
+        "provenance": false,
+        "required_lineages": 5,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [
+          "row-31478f85af"
+        ],
+        "violations": []
+      },
+      "prompt_tokens_total": 20004,
+      "reward": 0.0,
+      "steps": 8,
+      "success": false,
+      "task_id": "permissions-1020",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 7.276203499990515,
+      "generation_tokens": 504,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3396,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 5,
+        "duplicate_lineages": [],
+        "kept_rows": 5,
+        "label_accuracy": 0.8,
+        "provenance": false,
+        "required_lineages": 5,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [
+          "row-9576426738"
+        ],
+        "violations": []
+      },
+      "prompt_tokens_total": 16747,
+      "reward": 0.0,
+      "steps": 7,
+      "success": false,
+      "task_id": "leakage-1021",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 8.707444499945268,
+      "generation_tokens": 581,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4248,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 0.6666666666666666,
+        "provenance": false,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [
+          "row-ed1dd5e8f3",
+          "row-46840480c6"
+        ],
+        "violations": []
+      },
+      "prompt_tokens_total": 19282,
+      "reward": 0.0,
+      "steps": 7,
+      "success": false,
+      "task_id": "versions-1022",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 10.292038207990117,
+      "generation_tokens": 708,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4087,
+      "outcome": {
+        "coverage": 0.8333333333333334,
+        "covered_lineages": 5,
+        "duplicate_lineages": [],
+        "kept_rows": 5,
+        "label_accuracy": 0.4,
+        "provenance": false,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [
+          "row-3e6c3d08ff"
+        ],
+        "violations": []
+      },
+      "prompt_tokens_total": 23504,
+      "reward": 0.0,
+      "steps": 8,
+      "success": false,
+      "task_id": "pair-1023",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 13.558290250017308,
+      "generation_tokens": 623,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4922,
+      "outcome": {
+        "coverage": 0.75,
+        "covered_lineages": 3,
+        "duplicate_lineages": [
+          "lineage-454adb84ac"
+        ],
+        "kept_rows": 5,
+        "label_accuracy": 0.2,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-4009a4b0c7",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 40010,
+      "reward": 0.0,
+      "steps": 11,
+      "success": false,
+      "task_id": "composition-2000",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 14.42672049999237,
+      "generation_tokens": 696,
+      "invalid_action_count": 1,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 5527,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [
+          "lineage-75fa6cc6fc"
+        ],
+        "kept_rows": 6,
+        "label_accuracy": 0.5,
+        "provenance": false,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [
+          "row-962a0a24c2",
+          "row-1c910e14b0"
+        ],
+        "violations": [
+          {
+            "id": "row-34e77833a6",
+            "type": "permission"
+          }
+        ]
+      },
+      "prompt_tokens_total": 42115,
+      "reward": 0.0,
+      "steps": 11,
+      "success": false,
+      "task_id": "composition-2001",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 28.975406665937044,
+      "generation_tokens": 1689,
+      "invalid_action_count": 7,
+      "invalid_json_count": 4,
+      "max_prompt_tokens": 6277,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [],
+        "kept_rows": 4,
+        "label_accuracy": 0.5,
+        "provenance": false,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [
+          "row-e6e423ba31"
+        ],
+        "violations": []
+      },
+      "prompt_tokens_total": 74617,
+      "reward": 0.0,
+      "steps": 17,
+      "success": false,
+      "task_id": "composition-2002",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 24.362665542052127,
+      "generation_tokens": 1785,
+      "invalid_action_count": 2,
+      "invalid_json_count": 2,
+      "max_prompt_tokens": 7574,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [
+          "lineage-8cf36878ea",
+          "lineage-e6e035c1a7",
+          "lineage-ba915b86c6"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.4444444444444444,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-569b24b2e9",
+            "type": "evaluation_overlap"
+          },
+          {
+            "id": "row-11b476cf0d",
+            "type": "permission"
+          },
+          {
+            "id": "row-5392f89106",
+            "type": "permission"
+          }
+        ]
+      },
+      "prompt_tokens_total": 50424,
+      "reward": 0.0,
+      "steps": 11,
+      "success": false,
+      "task_id": "composition-2003",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 12.242258958984166,
+      "generation_tokens": 585,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4884,
+      "outcome": {
+        "coverage": 0.5,
+        "covered_lineages": 2,
+        "duplicate_lineages": [
+          "lineage-18d1dff8a2"
+        ],
+        "kept_rows": 4,
+        "label_accuracy": 0.25,
+        "provenance": false,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [
+          "row-1d64e32f5b"
+        ],
+        "violations": [
+          {
+            "id": "row-7a3cb23734",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 35845,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "composition-2004",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 18.857752957963385,
+      "generation_tokens": 850,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 5363,
+      "outcome": {
+        "coverage": 0.25,
+        "covered_lineages": 1,
+        "duplicate_lineages": [],
+        "kept_rows": 2,
+        "label_accuracy": 0.5,
+        "provenance": false,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [
+          "row-da68fdd96e"
+        ],
+        "violations": [
+          {
+            "id": "row-da68fdd96e",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 56239,
+      "reward": 0.0,
+      "steps": 14,
+      "success": false,
+      "task_id": "composition-2005",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 11.610251542064361,
+      "generation_tokens": 574,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4586,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [],
+        "kept_rows": 5,
+        "label_accuracy": 0.6,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-21f8a5ffb2",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 33714,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "composition-2006",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 15.518909333040938,
+      "generation_tokens": 605,
+      "invalid_action_count": 1,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 5007,
+      "outcome": {
+        "coverage": 0.25,
+        "covered_lineages": 1,
+        "duplicate_lineages": [],
+        "kept_rows": 1,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.25,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 49952,
+      "reward": 0.25,
+      "steps": 13,
+      "success": false,
+      "task_id": "composition-2007",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 26.45078354200814,
+      "generation_tokens": 1676,
+      "invalid_action_count": 2,
+      "invalid_json_count": 2,
+      "max_prompt_tokens": 6153,
+      "outcome": {
+        "coverage": 0.75,
+        "covered_lineages": 3,
+        "duplicate_lineages": [],
+        "kept_rows": 3,
+        "label_accuracy": 0.6666666666666666,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.5,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 64437,
+      "reward": 0.5,
+      "steps": 15,
+      "success": false,
+      "task_id": "composition-2008",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 12.056946416967548,
+      "generation_tokens": 582,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4851,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [],
+        "kept_rows": 4,
+        "label_accuracy": 0.5,
+        "provenance": false,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [
+          "row-c63f2ce710"
+        ],
+        "violations": []
+      },
+      "prompt_tokens_total": 35444,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "composition-2009",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 12.004174583940767,
+      "generation_tokens": 726,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4915,
+      "outcome": {
+        "coverage": 0.75,
+        "covered_lineages": 3,
+        "duplicate_lineages": [
+          "lineage-cc21db306e"
+        ],
+        "kept_rows": 5,
+        "label_accuracy": 0.4,
+        "provenance": false,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [
+          "row-84a0504a53",
+          "row-6b787c6dbb"
+        ],
+        "violations": [
+          {
+            "id": "row-1c837cf50f",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 30745,
+      "reward": 0.0,
+      "steps": 9,
+      "success": false,
+      "task_id": "composition-2010",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 18.04627916694153,
+      "generation_tokens": 1076,
+      "invalid_action_count": 1,
+      "invalid_json_count": 1,
+      "max_prompt_tokens": 5407,
+      "outcome": {
+        "coverage": 0.5,
+        "covered_lineages": 2,
+        "duplicate_lineages": [],
+        "kept_rows": 3,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-1f987b25a5",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 46131,
+      "reward": 0.0,
+      "steps": 12,
+      "success": false,
+      "task_id": "composition-2011",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 13.435975375003181,
+      "generation_tokens": 621,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4921,
+      "outcome": {
+        "coverage": 0.75,
+        "covered_lineages": 3,
+        "duplicate_lineages": [
+          "lineage-454adb84ac"
+        ],
+        "kept_rows": 5,
+        "label_accuracy": 0.8,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-4009a4b0c7",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 40017,
+      "reward": 0.0,
+      "steps": 11,
+      "success": false,
+      "task_id": "policy_shift-2000",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 12.594830958056264,
+      "generation_tokens": 610,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 5585,
+      "outcome": {
+        "coverage": 0.75,
+        "covered_lineages": 3,
+        "duplicate_lineages": [
+          "lineage-75fa6cc6fc"
+        ],
+        "kept_rows": 5,
+        "label_accuracy": 0.6,
+        "provenance": false,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [
+          "row-962a0a24c2",
+          "row-34e77833a6"
+        ],
+        "violations": [
+          {
+            "id": "row-34e77833a6",
+            "type": "permission"
+          }
+        ]
+      },
+      "prompt_tokens_total": 36936,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "policy_shift-2001",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 11.44787937507499,
+      "generation_tokens": 765,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 5048,
+      "outcome": {
+        "coverage": 0.0,
+        "covered_lineages": 0,
+        "duplicate_lineages": [],
+        "kept_rows": 0,
+        "label_accuracy": 0.0,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 26759,
+      "reward": 0.0,
+      "steps": 8,
+      "success": false,
+      "task_id": "policy_shift-2002",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 15.738611624925397,
+      "generation_tokens": 768,
+      "invalid_action_count": 1,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 6302,
+      "outcome": {
+        "coverage": 0.25,
+        "covered_lineages": 1,
+        "duplicate_lineages": [],
+        "kept_rows": 2,
+        "label_accuracy": 0.5,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-569b24b2e9",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 45540,
+      "reward": 0.0,
+      "steps": 11,
+      "success": false,
+      "task_id": "policy_shift-2003",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 30.65408312494401,
+      "generation_tokens": 2248,
+      "invalid_action_count": 4,
+      "invalid_json_count": 4,
+      "max_prompt_tokens": 6715,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [],
+        "kept_rows": 4,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 1.0,
+        "safe": true,
+        "success": true,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 64118,
+      "reward": 1.0,
+      "steps": 14,
+      "success": true,
+      "task_id": "policy_shift-2004",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 26.660354542080313,
+      "generation_tokens": 2037,
+      "invalid_action_count": 3,
+      "invalid_json_count": 3,
+      "max_prompt_tokens": 6390,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [],
+        "kept_rows": 4,
+        "label_accuracy": 0.75,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.75,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 52254,
+      "reward": 0.75,
+      "steps": 12,
+      "success": false,
+      "task_id": "policy_shift-2005",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 22.341315916972235,
+      "generation_tokens": 953,
+      "invalid_action_count": 12,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 5193,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [
+          "lineage-38bdd5fea5",
+          "lineage-e64c905fec",
+          "lineage-fb853426cf"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.5555555555555556,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-28e0cb011b",
+            "type": "permission"
+          },
+          {
+            "id": "row-c71bac8119",
+            "type": "permission"
+          },
+          {
+            "id": "row-21f8a5ffb2",
+            "type": "evaluation_overlap"
+          },
+          {
+            "id": "row-9f4321cef0",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 69091,
+      "reward": 0.0,
+      "steps": 17,
+      "success": false,
+      "task_id": "policy_shift-2006",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 12.73627158405725,
+      "generation_tokens": 604,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4884,
+      "outcome": {
+        "coverage": 0.75,
+        "covered_lineages": 3,
+        "duplicate_lineages": [],
+        "kept_rows": 4,
+        "label_accuracy": 0.5,
+        "provenance": false,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [
+          "row-1ef3bd99b1"
+        ],
+        "violations": [
+          {
+            "id": "row-f807b5f281",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 35631,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "policy_shift-2007",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 28.17725499998778,
+      "generation_tokens": 1322,
+      "invalid_action_count": 1,
+      "invalid_json_count": 1,
+      "max_prompt_tokens": 6746,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 82780,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "policy_shift-2008",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 10.152653583092615,
+      "generation_tokens": 576,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4777,
+      "outcome": {
+        "coverage": 0.75,
+        "covered_lineages": 3,
+        "duplicate_lineages": [
+          "lineage-00a0fbf2e7"
+        ],
+        "kept_rows": 5,
+        "label_accuracy": 0.6,
+        "provenance": false,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [
+          "row-c63f2ce710",
+          "row-33efc7f24f"
+        ],
+        "violations": [
+          {
+            "id": "row-82ff18d43f",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 26362,
+      "reward": 0.0,
+      "steps": 8,
+      "success": false,
+      "task_id": "policy_shift-2009",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 16.577713000006042,
+      "generation_tokens": 833,
+      "invalid_action_count": 1,
+      "invalid_json_count": 1,
+      "max_prompt_tokens": 5399,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [
+          "lineage-a3f19e9f96"
+        ],
+        "kept_rows": 6,
+        "label_accuracy": 0.6666666666666666,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-1c837cf50f",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 46494,
+      "reward": 0.0,
+      "steps": 12,
+      "success": false,
+      "task_id": "policy_shift-2010",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 14.079477332998067,
+      "generation_tokens": 698,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 5035,
+      "outcome": {
+        "coverage": 0.5,
+        "covered_lineages": 2,
+        "duplicate_lineages": [
+          "lineage-1c9f97eeaf"
+        ],
+        "kept_rows": 3,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 40268,
+      "reward": 0.0,
+      "steps": 11,
+      "success": false,
+      "task_id": "policy_shift-2011",
+      "termination": "submitted"
+    }
+  ],
+  "episodes_completed": 48,
+  "network_attempts": [],
+  "remote_inference_calls": 0,
+  "split": "evaluation",
+  "successes": 5,
+  "variant": "v2"
+}

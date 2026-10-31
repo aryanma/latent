@@ -1,0 +1,48 @@
+{
+  "provenance": {
+    "database_sha256": "92101be6d2a9f6adceea59d38f6d1c556087f9eea1432432a21268cb1348036d",
+    "query_sha256": "ef9a5583ed1030fd56d31cda01329f31a25557f868036ec755c19e4d638a2f39",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "ef9a5583ed1030fd56d31cda01329f31a25557f868036ec755c19e4d638a2f39",
+    "status": "ok",
+    "seconds": 0.010859,
+    "result_sha256": "7cba60b2c8e4d72c64185b426cf5eaf4027f121fca0fb320a4414d0417671e54",
+    "rows": 5,
+    "distinct_rows": 5,
+    "preview": [
+      [
+        "Reminds me that in my early days as a referee i spent *far* too long reviewing a statistical paper that was eventually rejected by that particular journal, but the other referees and I suggested a more useful application for the method, and I also sketched an algebraic proof to replace an unsatisfactory simulation study in the manuscript. The authors have since got two published papers out of it. I'm not *annoyed* by that, but an acknowledgement such as \"we thank referees of an earlier version of the paper for helpful comments\" would have been good manners."
+      ],
+      [
+        "If you're going to use R, I'd recommend embedding your R code in an Sweave document that produces your report.  That way the R code stays with the report."
+      ],
+      [
+        "As a non-expert, I think that the key to the entire debate is that people actually reason like Bayesians. You have to be trained to think like a frequentist, and even then it's easy to slip up and either reason or present your reasoning as if it were Bayesian. \"There's a 95% chance that the value is within this confidence interval.\" Enough said."
+      ],
+      [
+        "In the linear regression model the dependent variable $y$ is considered continuous, whereas in logistic regression it is categorical, i.e., discrete. In application, the former is used in regression settings while the latter is used for binary classification or multi-class classification (where it is called multinomial logistic regression)."
+      ],
+      [
+        "Did anyone else notice that the tour guide changes colors between the second and third frames?"
+      ]
+    ],
+    "columns": [
+      "Text"
+    ]
+  }
+}

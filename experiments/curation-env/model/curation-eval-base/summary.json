@@ -1,0 +1,1600 @@
+{
+  "episodes": [
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 1.8484286669408903,
+      "generation_tokens": 218,
+      "invalid_action_count": 2,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 2297,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 0.0,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 16800,
+      "reward": 0.0,
+      "steps": 9,
+      "success": false,
+      "task_id": "labels-1000",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 4.439260542043485,
+      "generation_tokens": 662,
+      "invalid_action_count": 6,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3785,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [
+          "lineage-5c5e70feed",
+          "lineage-2c3df58412",
+          "lineage-4400ecdc7f"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 32813,
+      "reward": 0.0,
+      "steps": 11,
+      "success": false,
+      "task_id": "duplicates-1001",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 2.697248375043273,
+      "generation_tokens": 409,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 2703,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 5,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 5,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-f17ff09382",
+            "type": "permission"
+          }
+        ]
+      },
+      "prompt_tokens_total": 20427,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "permissions-1002",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 1.0756950411014259,
+      "generation_tokens": 127,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 2039,
+      "outcome": {
+        "coverage": 0.8,
+        "covered_lineages": 4,
+        "duplicate_lineages": [],
+        "kept_rows": 4,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 5,
+        "reward": 0.8,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 10272,
+      "reward": 0.8,
+      "steps": 6,
+      "success": false,
+      "task_id": "leakage-1003",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 1.7959001250565052,
+      "generation_tokens": 234,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 2451,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 0.5,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.5,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 15573,
+      "reward": 0.5,
+      "steps": 8,
+      "success": false,
+      "task_id": "versions-1004",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 2.245355707942508,
+      "generation_tokens": 347,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 2762,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [
+          "lineage-a3bdfdedb0",
+          "lineage-5e1d0c67d6",
+          "lineage-afb6766dda"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.0,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 16748,
+      "reward": 0.0,
+      "steps": 8,
+      "success": false,
+      "task_id": "pair-1005",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 3.8254447089275345,
+      "generation_tokens": 557,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3173,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 0.0,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 29561,
+      "reward": 0.0,
+      "steps": 13,
+      "success": false,
+      "task_id": "labels-1006",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 4.811726749991067,
+      "generation_tokens": 766,
+      "invalid_action_count": 4,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4086,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [
+          "lineage-311dc2ce0f",
+          "lineage-16e3f8867b",
+          "lineage-6bda1ff9e0"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 31306,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "duplicates-1007",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 1.9673888330580667,
+      "generation_tokens": 285,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 2408,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 5,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 5,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-eab4c7da77",
+            "type": "permission"
+          }
+        ]
+      },
+      "prompt_tokens_total": 15116,
+      "reward": 0.0,
+      "steps": 8,
+      "success": false,
+      "task_id": "permissions-1008",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 3.2033424159744754,
+      "generation_tokens": 462,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 2849,
+      "outcome": {
+        "coverage": 0.2,
+        "covered_lineages": 1,
+        "duplicate_lineages": [],
+        "kept_rows": 1,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 5,
+        "reward": 0.2,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 23310,
+      "reward": 0.2,
+      "steps": 11,
+      "success": false,
+      "task_id": "leakage-1009",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 4.745414250064641,
+      "generation_tokens": 673,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3443,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 0.5,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.5,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 34285,
+      "reward": 0.5,
+      "steps": 14,
+      "success": false,
+      "task_id": "versions-1010",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 4.561835082946345,
+      "generation_tokens": 705,
+      "invalid_action_count": 5,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3085,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [
+          "lineage-34a9a0230a",
+          "lineage-70142c5fbc",
+          "lineage-17085bbc10"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.0,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 25262,
+      "reward": 0.0,
+      "steps": 11,
+      "success": false,
+      "task_id": "pair-1011",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 2.191416542045772,
+      "generation_tokens": 252,
+      "invalid_action_count": 2,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 2310,
+      "outcome": {
+        "coverage": 0.8333333333333334,
+        "covered_lineages": 5,
+        "duplicate_lineages": [],
+        "kept_rows": 5,
+        "label_accuracy": 0.0,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 16804,
+      "reward": 0.0,
+      "steps": 9,
+      "success": false,
+      "task_id": "labels-1012",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 4.045887500047684,
+      "generation_tokens": 545,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3190,
+      "outcome": {
+        "coverage": 0.5,
+        "covered_lineages": 3,
+        "duplicate_lineages": [],
+        "kept_rows": 3,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.5,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 26269,
+      "reward": 0.5,
+      "steps": 11,
+      "success": false,
+      "task_id": "duplicates-1013",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 2.2824822909897193,
+      "generation_tokens": 255,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 2363,
+      "outcome": {
+        "coverage": 0.8,
+        "covered_lineages": 4,
+        "duplicate_lineages": [],
+        "kept_rows": 5,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 5,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-34cbc96778",
+            "type": "permission"
+          }
+        ]
+      },
+      "prompt_tokens_total": 17240,
+      "reward": 0.0,
+      "steps": 9,
+      "success": false,
+      "task_id": "permissions-1014",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 7.6562396249501035,
+      "generation_tokens": 1040,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3978,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 47596,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "leakage-1015",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 5.332470541005023,
+      "generation_tokens": 506,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3188,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 43864,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "versions-1016",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 2.857352291001007,
+      "generation_tokens": 378,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3490,
+      "outcome": {
+        "coverage": 0.6666666666666666,
+        "covered_lineages": 4,
+        "duplicate_lineages": [],
+        "kept_rows": 4,
+        "label_accuracy": 0.0,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 18483,
+      "reward": 0.0,
+      "steps": 7,
+      "success": false,
+      "task_id": "pair-1017",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 1.2935416660038754,
+      "generation_tokens": 142,
+      "invalid_action_count": 1,
+      "invalid_json_count": 1,
+      "max_prompt_tokens": 2072,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 0.0,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 10304,
+      "reward": 0.0,
+      "steps": 6,
+      "success": false,
+      "task_id": "labels-1018",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 5.466394792078063,
+      "generation_tokens": 775,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3774,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [
+          "lineage-26a38657c3",
+          "lineage-2a275fb56f",
+          "lineage-79c8c957ba"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 34311,
+      "reward": 0.0,
+      "steps": 13,
+      "success": false,
+      "task_id": "duplicates-1019",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 4.015398083021864,
+      "generation_tokens": 561,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3055,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 5,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 5,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-832f48c950",
+            "type": "permission"
+          }
+        ]
+      },
+      "prompt_tokens_total": 26620,
+      "reward": 0.0,
+      "steps": 12,
+      "success": false,
+      "task_id": "permissions-1020",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 2.0349115419667214,
+      "generation_tokens": 274,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 2254,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 5,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 1.0,
+        "provenance": true,
+        "required_lineages": 5,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-4b3a506091",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 14255,
+      "reward": 0.0,
+      "steps": 8,
+      "success": false,
+      "task_id": "leakage-1021",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 4.860157959046774,
+      "generation_tokens": 690,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3213,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 0.5,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.5,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 31929,
+      "reward": 0.5,
+      "steps": 14,
+      "success": false,
+      "task_id": "versions-1022",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 2.4489260830450803,
+      "generation_tokens": 343,
+      "invalid_action_count": 1,
+      "invalid_json_count": 1,
+      "max_prompt_tokens": 2658,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [
+          "lineage-8004699f70",
+          "lineage-0a2cdd0bfd",
+          "lineage-6fbe64575b"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.0,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 16443,
+      "reward": 0.0,
+      "steps": 8,
+      "success": false,
+      "task_id": "pair-1023",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 6.785973875084892,
+      "generation_tokens": 754,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3892,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 51260,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "composition-2000",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 3.4412187919951975,
+      "generation_tokens": 450,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3199,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [
+          "lineage-75fa6cc6fc",
+          "lineage-a7f75230e8",
+          "lineage-b0bf365c8e"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.0,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-34e77833a6",
+            "type": "permission"
+          },
+          {
+            "id": "row-65f0d92a38",
+            "type": "evaluation_overlap"
+          },
+          {
+            "id": "row-2ecf30e5e2",
+            "type": "evaluation_overlap"
+          },
+          {
+            "id": "row-5fcac1599a",
+            "type": "permission"
+          }
+        ]
+      },
+      "prompt_tokens_total": 23567,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "composition-2001",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 5.539235458010808,
+      "generation_tokens": 651,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3876,
+      "outcome": {
+        "coverage": 0.5,
+        "covered_lineages": 2,
+        "duplicate_lineages": [
+          "lineage-4622ce9f81"
+        ],
+        "kept_rows": 4,
+        "label_accuracy": 0.0,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-be298f10a7",
+            "type": "permission"
+          },
+          {
+            "id": "row-127c72862c",
+            "type": "permission"
+          }
+        ]
+      },
+      "prompt_tokens_total": 41136,
+      "reward": 0.0,
+      "steps": 15,
+      "success": false,
+      "task_id": "composition-2002",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 9.273426041007042,
+      "generation_tokens": 1283,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4786,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 56593,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "composition-2003",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 10.100519792060368,
+      "generation_tokens": 1445,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 5085,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 58871,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "composition-2004",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 9.339009874965996,
+      "generation_tokens": 1271,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4756,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 56329,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "composition-2005",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 7.491849791025743,
+      "generation_tokens": 934,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3962,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [
+          "lineage-38bdd5fea5",
+          "lineage-e64c905fec",
+          "lineage-fb853426cf"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.0,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-28e0cb011b",
+            "type": "permission"
+          },
+          {
+            "id": "row-c71bac8119",
+            "type": "permission"
+          },
+          {
+            "id": "row-21f8a5ffb2",
+            "type": "evaluation_overlap"
+          },
+          {
+            "id": "row-9f4321cef0",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 49022,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "composition-2006",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 12.21524704201147,
+      "generation_tokens": 1743,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 5636,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 62470,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "composition-2007",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 2.6065072920173407,
+      "generation_tokens": 273,
+      "invalid_action_count": 4,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 2671,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [
+          "lineage-01aa2f667d",
+          "lineage-a10d0532e4",
+          "lineage-8ad77ee0c2"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.0,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-067e402717",
+            "type": "evaluation_overlap"
+          },
+          {
+            "id": "row-e03826727c",
+            "type": "permission"
+          },
+          {
+            "id": "row-e4dfa11758",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 19369,
+      "reward": 0.0,
+      "steps": 9,
+      "success": false,
+      "task_id": "composition-2008",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 9.258995292009786,
+      "generation_tokens": 1240,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4582,
+      "outcome": {
+        "coverage": 0.0,
+        "covered_lineages": 0,
+        "duplicate_lineages": [],
+        "kept_rows": 0,
+        "label_accuracy": 0.0,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 53260,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "composition-2009",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 9.971008750027977,
+      "generation_tokens": 1296,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4794,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 56483,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "composition-2010",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 7.614374083001167,
+      "generation_tokens": 1075,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4411,
+      "outcome": {
+        "coverage": 0.0,
+        "covered_lineages": 0,
+        "duplicate_lineages": [],
+        "kept_rows": 1,
+        "label_accuracy": 0.0,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-1f987b25a5",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 40403,
+      "reward": 0.0,
+      "steps": 14,
+      "success": false,
+      "task_id": "composition-2011",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 9.981254833983257,
+      "generation_tokens": 1266,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4773,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 56556,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "policy_shift-2000",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 3.735749457962811,
+      "generation_tokens": 454,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3208,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [
+          "lineage-75fa6cc6fc",
+          "lineage-a7f75230e8",
+          "lineage-b0bf365c8e"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.3333333333333333,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-34e77833a6",
+            "type": "permission"
+          },
+          {
+            "id": "row-65f0d92a38",
+            "type": "evaluation_overlap"
+          },
+          {
+            "id": "row-2ecf30e5e2",
+            "type": "evaluation_overlap"
+          },
+          {
+            "id": "row-5fcac1599a",
+            "type": "permission"
+          }
+        ]
+      },
+      "prompt_tokens_total": 23605,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "policy_shift-2001",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 2.183064791955985,
+      "generation_tokens": 264,
+      "invalid_action_count": 3,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 2509,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [
+          "lineage-4014210c96",
+          "lineage-4b004dce3d",
+          "lineage-4622ce9f81"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.5555555555555556,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-42f5744f47",
+            "type": "evaluation_overlap"
+          },
+          {
+            "id": "row-be298f10a7",
+            "type": "permission"
+          },
+          {
+            "id": "row-127c72862c",
+            "type": "permission"
+          }
+        ]
+      },
+      "prompt_tokens_total": 14214,
+      "reward": 0.0,
+      "steps": 7,
+      "success": false,
+      "task_id": "policy_shift-2002",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 10.116072457982227,
+      "generation_tokens": 1284,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4788,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 56612,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "policy_shift-2003",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 3.6629907080205157,
+      "generation_tokens": 540,
+      "invalid_action_count": 4,
+      "invalid_json_count": 4,
+      "max_prompt_tokens": 2884,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [
+          "lineage-18d1dff8a2",
+          "lineage-53907974fd",
+          "lineage-1eeb87d570"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.5555555555555556,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-6ca2b9b626",
+            "type": "permission"
+          },
+          {
+            "id": "row-7a3cb23734",
+            "type": "evaluation_overlap"
+          },
+          {
+            "id": "row-c1efb08f6e",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 19942,
+      "reward": 0.0,
+      "steps": 9,
+      "success": false,
+      "task_id": "policy_shift-2004",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 7.472742457990535,
+      "generation_tokens": 766,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 4193,
+      "outcome": {
+        "coverage": 0.75,
+        "covered_lineages": 3,
+        "duplicate_lineages": [
+          "lineage-da1e111175"
+        ],
+        "kept_rows": 6,
+        "label_accuracy": 0.3333333333333333,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-da68fdd96e",
+            "type": "evaluation_overlap"
+          },
+          {
+            "id": "row-263e87f762",
+            "type": "permission"
+          }
+        ]
+      },
+      "prompt_tokens_total": 49786,
+      "reward": 0.0,
+      "steps": 17,
+      "success": false,
+      "task_id": "policy_shift-2005",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 2.701402625069022,
+      "generation_tokens": 284,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 2803,
+      "outcome": {
+        "coverage": 0.75,
+        "covered_lineages": 3,
+        "duplicate_lineages": [
+          "lineage-38bdd5fea5",
+          "lineage-e64c905fec",
+          "lineage-fb853426cf"
+        ],
+        "kept_rows": 8,
+        "label_accuracy": 0.5,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-28e0cb011b",
+            "type": "permission"
+          },
+          {
+            "id": "row-c71bac8119",
+            "type": "permission"
+          },
+          {
+            "id": "row-21f8a5ffb2",
+            "type": "evaluation_overlap"
+          },
+          {
+            "id": "row-9f4321cef0",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 19814,
+      "reward": 0.0,
+      "steps": 9,
+      "success": false,
+      "task_id": "policy_shift-2006",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 3.447881625033915,
+      "generation_tokens": 408,
+      "invalid_action_count": 5,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 2867,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [
+          "lineage-199b65f4a2",
+          "lineage-9a20ec794f",
+          "lineage-14adaed467"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.4444444444444444,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-f807b5f281",
+            "type": "evaluation_overlap"
+          },
+          {
+            "id": "row-fd43c07f9f",
+            "type": "permission"
+          }
+        ]
+      },
+      "prompt_tokens_total": 22473,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "policy_shift-2007",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 2.7151247919537127,
+      "generation_tokens": 273,
+      "invalid_action_count": 4,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 2672,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [
+          "lineage-01aa2f667d",
+          "lineage-a10d0532e4",
+          "lineage-8ad77ee0c2"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.5555555555555556,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-067e402717",
+            "type": "evaluation_overlap"
+          },
+          {
+            "id": "row-e03826727c",
+            "type": "permission"
+          },
+          {
+            "id": "row-e4dfa11758",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 19378,
+      "reward": 0.0,
+      "steps": 9,
+      "success": false,
+      "task_id": "policy_shift-2008",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 7.301913583069108,
+      "generation_tokens": 738,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3598,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 49533,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "policy_shift-2009",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 3.3036447919439524,
+      "generation_tokens": 384,
+      "invalid_action_count": 5,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 2825,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [
+          "lineage-a3f19e9f96",
+          "lineage-a815f981ee",
+          "lineage-cc21db306e"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.5555555555555556,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-76152b0c3e",
+            "type": "permission"
+          },
+          {
+            "id": "row-141ffd248f",
+            "type": "permission"
+          },
+          {
+            "id": "row-1c837cf50f",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 22293,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "policy_shift-2010",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 2.7427415000274777,
+      "generation_tokens": 330,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 2875,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [
+          "lineage-1c9f97eeaf",
+          "lineage-aeb5b2d8d9",
+          "lineage-9b315148a6"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.5555555555555556,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-f0b7c83d8b",
+            "type": "permission"
+          },
+          {
+            "id": "row-1f987b25a5",
+            "type": "evaluation_overlap"
+          }
+        ]
+      },
+      "prompt_tokens_total": 17400,
+      "reward": 0.0,
+      "steps": 8,
+      "success": false,
+      "task_id": "policy_shift-2011",
+      "termination": "submitted"
+    }
+  ],
+  "episodes_completed": 48,
+  "network_attempts": [],
+  "remote_inference_calls": 0,
+  "split": "evaluation",
+  "successes": 0,
+  "variant": "v2"
+}

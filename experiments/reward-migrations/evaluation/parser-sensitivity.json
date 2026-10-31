@@ -1,0 +1,3600 @@
+{
+  "kind": "post-hoc parser sensitivity, not the primary extraction policy",
+  "parser_sha256": "727b4ad7c1c95a5c6aefc2a24e66e9ea7f9991efb1c682747245008e30d0138e",
+  "admission": {
+    "cases": 357,
+    "artifact_files_checked": 379,
+    "artifact_freeze_sha256": "0818a16cf6538b0d72a0c6d5bbf4c90592a1546c91e2abfdb1838fedc0c6074e",
+    "predictions_sha256": "c2bf6344a213feeca8a76384847a669431a21895c098398ff1b30f01439a1a61",
+    "same_messages_under_both_task_versions": true,
+    "all_raw_outputs_preserved": true,
+    "all_database_hashes_match": true,
+    "prompt_and_token_artifacts_bound_to_candidates": true
+  },
+  "summary": {
+    "cases": 357,
+    "outer_fences_extracted": 50,
+    "matrix": {
+      "1->1": 212,
+      "0->0": 104,
+      "1->0": 24,
+      "0->1": 15,
+      "unresolved": 2
+    },
+    "cache_hits": 306,
+    "old_accepted": 236,
+    "new_accepted": 227
+  },
+  "rows": [
+    {
+      "question_id": "5",
+      "sql": "SELECT COUNT(*)\nFROM satscores s\nJOIN schools sch ON s.cds = sch.CDSCode\nWHERE s.AvgScrMath > 400\n  AND sch.Virtual = 'F';",
+      "candidate": "5b000207f8ebb8bcd991f7cbb0ae4875990f0d04aa685ffc5e8534d895d8e15a",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "24",
+      "sql": "SELECT DISTINCT s.School\nFROM frpm f\nJOIN satscores s ON f.CDSCode = s.cds\nWHERE f.`Percent (%) Eligible Free (K-12)` > 0.1\n  AND s.NumGE1500 >= 1500;",
+      "candidate": "571666dcf4323a102e7f5b177879355456f6491581f8697ccac767b895ff30b0",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "sql_error"
+    },
+    {
+      "question_id": "26",
+      "sql": "SELECT\n    s.School,\n    s.Street,\n    s.City,\n    s.State,\n    s.Zip\nFROM\n    schools s\nJOIN\n    frpm f ON s.CDSCode = f.CDSCode\nWHERE\n    s.County = 'Monterey'\n    AND f.`School Type` = 'High School'\n    AND f.`FRPM Count (Ages 5-17)` > 800;",
+      "candidate": "820706038b442fd65b911ba94927bf843f6a5974d1fed89317f3e252e1263ca4",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "36",
+      "sql": "SELECT AdmFName1, AdmLName1\nFROM schools\nJOIN satscores ON schools.CDSCode = satscores.cds\nORDER BY satscores.NumGE1500 DESC\nLIMIT 1;",
+      "candidate": "e408d6a084cf30c3958cdf62cdc8a1ba78504e0c97f97f09a4032bc1b1df3a58",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "39",
+      "sql": "SELECT AVG(s.NumTstTakr)\nFROM satscores s\nJOIN schools sc ON s.cds = sc.CDSCode\nWHERE sc.County = 'Fresno'\n  AND strftime('%Y', sc.OpenDate) = '1980';",
+      "candidate": "0096c9994cec02f84cf21336bbba54ace07aa1ebf545f433a5fe43c16395dff6",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "40",
+      "sql": "SELECT s.Phone\nFROM schools s\nJOIN satscores st ON s.CDSCode = st.cds\nWHERE s.District = 'Fresno Unified'\nORDER BY st.AvgScrRead ASC\nLIMIT 1;",
+      "candidate": "577f7cc65092d52da616463817f804f7ee5dab0ef3d594024c5157d06cc2289c",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "45",
+      "sql": "SELECT s.School, AVG(st.AvgScrWrite) AS AverageWritingScore\nFROM schools s\nJOIN satscores st ON s.CDSCode = st.cds\nWHERE s.AdmFName1 = 'Ricci' AND s.AdmLName1 = 'Ulrich'\nGROUP BY s.School;",
+      "candidate": "88b66fbd421814758196140518609d50439ac10dbc9b774d8ab3509621d6a398",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "46",
+      "sql": "SELECT\n  s.School,\n  f.`Enrollment (K-12)`\nFROM schools s\nJOIN frpm f ON s.CDSCode = f.CDSCode\nWHERE s.DOC = '31'\nORDER BY f.`Enrollment (K-12)` DESC\nLIMIT 1;",
+      "candidate": "7e55b54f160215686895c5444c7bd9e3b82989538b7ce6213b350c399d9a01a5",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "47",
+      "sql": "SELECT CAST(SUM(CASE WHEN strftime('%Y', OpenDate) = '1980' THEN 1 ELSE 0 END) AS REAL) / 12.0\nFROM schools\nWHERE County = 'Alameda' AND DOC = '52';",
+      "candidate": "c3b7e38b437a95665f61578645392dff41ad437d0cabb5e3ebd9ddfa8cd560f3",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "48",
+      "sql": "SELECT\n  SUM(CASE WHEN DOC = '54' THEN 1 ELSE 0 END) * 1.0 / SUM(CASE WHEN DOC = '52' THEN 1 ELSE 0 END) AS ratio\nFROM schools\nWHERE County = 'Orange County';",
+      "candidate": "9eab8c9684a65fb30cd3d9a35123f85aa32de1cd4dd3614b1351df1ad6afc7d1",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "50",
+      "sql": "SELECT s.MailStreet, s.School\nFROM satscores st\nJOIN schools s ON st.cds = s.CDSCode\nORDER BY st.AvgScrMath DESC\nLIMIT 1 OFFSET 6;",
+      "candidate": "09392b5a2209a0040d1eb4f9f8eef1ac3e413f4d5aadd0b25a9835e4ddf69ed1",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "79",
+      "sql": "SELECT County, COUNT(*) as school_count\nFROM schools\nWHERE Virtual = 'F'\n  AND County IN ('San Diego', 'Santa Barbara')\nGROUP BY County\nORDER BY school_count DESC\nLIMIT 1;",
+      "candidate": "5c5ec6a5df35cae266b1bba3931ef743605e8079f130a89598546155bbced46a",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "82",
+      "sql": "SELECT GSoffered\nFROM schools\nWHERE ABS(Longitude) = (SELECT MAX(ABS(Longitude)) FROM schools);",
+      "candidate": "70176ebd18fffc55f256bd97cdfabaac0ce6144414e8ae02e8508c507bbf65d9",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "89",
+      "sql": "SELECT COUNT(DISTINCT a.account_id)\nFROM account a\nJOIN disp d ON a.account_id = d.account_id\nJOIN client c ON d.client_id = c.client_id\nJOIN district dist ON c.district_id = dist.district_id\nWHERE dist.A3 = 'Východní Čechy'\n  AND d.type = 'POPLATEK PO OBRATU';",
+      "candidate": "b7bb0ecbbc3bcd4a8f216567f1522f16aa144b0f8ad9045114aa3c97bc58cd78",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "92",
+      "sql": "SELECT COUNT(DISTINCT d.district_id)\nFROM district d\nJOIN client c ON d.district_id = c.district_id\nWHERE c.gender = 'F'\n  AND d.A11 > 6000\n  AND d.A11 < 10000;",
+      "candidate": "1afb38d2887172ee11958d60414be04571c9f4385889bb59c904c2ad3db6b3e1",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "93",
+      "sql": "SELECT COUNT(*)\nFROM client c\nJOIN district d ON c.district_id = d.district_id\nWHERE c.gender = 'M'\n  AND d.A3 = 'North Bohemia'\n  AND d.A11 > 8000;",
+      "candidate": "44b5eb175251f789d54efca12da5621519784b558561bf2da54c452a5780cd43",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "98",
+      "sql": "SELECT a.account_id\nFROM account a\nJOIN loan l ON a.account_id = l.account_id\nWHERE l.status = 'Y'\n  AND strftime('%Y', l.date) = '1997'\n  AND a.frequency = 'POPLATEK TYDNE'\nORDER BY l.amount ASC\nLIMIT 1;",
+      "candidate": "ebb01506734c6e507332642e2cf10ee060f45907c049ef9f3f3d2d70036bfc6b",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "99",
+      "sql": "SELECT l.account_id\nFROM loan l\nJOIN account a ON l.account_id = a.account_id\nWHERE l.duration > 12\n  AND strftime('%Y', a.date) = '1993'\nORDER BY l.amount DESC\nLIMIT 1;",
+      "candidate": "281ff1d8cf60b2c4b19becbacad24cb2169e750d9fd06b38b859f0991156e37e",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "100",
+      "sql": "SELECT COUNT(*)\nFROM client c\nJOIN account a ON c.district_id = a.district_id\nJOIN district d ON c.district_id = d.district_id\nWHERE c.gender = 'F'\n  AND c.birth_date < '1950-01-01'\n  AND d.A2 = 'Sokolov';",
+      "candidate": "36833cb1309bd5756b7ae529cf62cb5dbfeba465b68e246fee0cde3a76c23f45",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "112",
+      "sql": "SELECT d.A2\nFROM client c\nJOIN account a ON c.district_id = a.district_id\nJOIN district d ON a.district_id = d.district_id\nWHERE c.gender = 'F' AND c.birth_date = '1976-01-29';",
+      "candidate": "ea9d759f075fb753e823b94a57197f22297a088528d236d6e9257165769390b1",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "115",
+      "sql": "SELECT\n  SUM(CASE WHEN c.gender = 'M' THEN 1 ELSE 0 END) * 100.0 / COUNT(c.client_id) AS percentage\nFROM client c\nJOIN district d ON c.district_id = d.district_id\nWHERE d.A3 = 'south Bohemia'\n  AND d.A4 = (\n    SELECT MAX(A4)\n    FROM district\n    WHERE A3 = 'south Bohemia'\n  );",
+      "candidate": "34778cb6f3fe677e652159173df1faad642fe552287611002173cf7edb0a093b",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "116",
+      "sql": "SELECT\n  ((b2.balance - b1.balance) * 100.0 / b1.balance) AS increase_rate\nFROM\n  (\n    SELECT t.balance\n    FROM trans t\n    JOIN loan l ON t.account_id = l.account_id\n    WHERE l.status = 'CONTRACT'\n      AND l.date = '1993-07-05'\n      AND t.date = '1993-03-22'\n    LIMIT 1\n  ) AS b1,\n  (\n    SELECT t.balance\n    FROM trans t\n    JOIN loan l ON t.account_id = l.account_id\n    WHERE l.status = 'CONTRACT'\n      AND l.date = '1993-07-05'\n      AND t.date = '1998-12-27'\n    LIMIT 1\n  ) AS b2;",
+      "candidate": "4d8affa76b8bf9cdcff35ac850c2bebec836cb0abf948e959de0cd2e6b383ff7",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "117",
+      "sql": "SELECT\n  SUM(CASE WHEN status = 'A' THEN amount ELSE 0 END) * 100.0 / SUM(amount) AS percentage\nFROM loan;",
+      "candidate": "2d2de520e465092efdf7e6269f8192b81a74e5e4af54333c97b33921c367a46a",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "118",
+      "sql": "SELECT\n  SUM(CASE WHEN status = 'C' THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS percentage\nFROM loan\nWHERE amount < 100000;",
+      "candidate": "b2d5b62fee08667e150f3c2711eacdc0531945edb982a1f73e0c723c1e070400",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "136",
+      "sql": "SELECT COUNT(*)\nFROM loan l\nJOIN account a ON l.account_id = a.account_id\nWHERE a.frequency = 'POPLATEK MESICNE'\n  AND l.amount >= 250000\n  AND l.status = 'Y'\n  AND l.date BETWEEN '1995-01-01' AND '1997-12-31';",
+      "candidate": "6040b9c525142fac6e225b9b57f744c27d45bc8c266422a99ee816c76223d1d2",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "137",
+      "sql": "SELECT COUNT(*)\nFROM account a\nJOIN loan l ON a.account_id = l.account_id\nJOIN district d ON a.district_id = d.district_id\nWHERE d.A2 = '1'\n  AND l.status IN ('C', 'D');",
+      "candidate": "a7faadb07eac0770a1f87df7ce0ae9dc5ff57d7a5b832a9f0894bd16d5db52ad",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "138",
+      "sql": "SELECT COUNT(*)\nFROM client\nWHERE gender = 'M'\n  AND district_id = (\n    SELECT district_id\n    FROM district\n    ORDER BY A15 DESC\n    LIMIT 1 OFFSET 1\n  );",
+      "candidate": "88529124e6a54412bcffc5c5cdbef3816758d609063e7b7544b422276d5904a0",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "149",
+      "sql": "SELECT DISTINCT a.frequency\nFROM account a\nJOIN district d ON a.district_id = d.district_id\nWHERE a.frequency != 'OWNER'\n  AND d.A11 > 8000\n  AND d.A11 <= 9000;",
+      "candidate": "c26a7274a38d064660dffb278a7764e523a4a2322b0a400f764f16917c6a4aa7",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "159",
+      "sql": "SELECT t.*\nFROM trans t\nJOIN account a ON t.account_id = a.account_id\nJOIN disp d ON a.account_id = d.account_id\nWHERE d.client_id = 3356\n  AND t.operation = 'VYBER';",
+      "candidate": "bfcc1db4749a0bfc6c73681044bcc1721a140dfd6329df764f67a261b5be9235",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 1,
+      "transition": "0->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "173",
+      "sql": "SELECT o.k_symbol, SUM(o.amount)\nFROM `order` o\nWHERE o.account_id = 3\nGROUP BY o.k_symbol;",
+      "candidate": "2a7a5c65d9c976e6cea0626696c196a0bc3714ec950eb07687efa8b8691dadeb",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "186",
+      "sql": "SELECT\n  100.0 * SUM(CASE WHEN c.gender = 'M' THEN 1 ELSE 0 END) / COUNT(*)\nFROM client c\nJOIN disp d ON c.client_id = d.client_id\nJOIN account a ON d.account_id = a.account_id\nWHERE a.frequency = 'POPLATEK TYDNE';",
+      "candidate": "8014d8e34fde6e546e17b58248f175d8d652c3ca3baf1dc20572d85376930c14",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 1,
+      "transition": "0->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "192",
+      "sql": "SELECT AVG(l.amount)\nFROM loan l\nJOIN trans t ON l.account_id = t.account_id\nWHERE l.status IN ('C', 'D')\n  AND t.k_symbol = 'POPLATEK PO OBRATU';",
+      "candidate": "d6ee96b8b9d029b231ce7ef0b6d11dd76ee6bd72951f67ce1109b658d773b1e1",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "194",
+      "sql": "SELECT c.client_id, c.birth_date\nFROM client c\nJOIN disp d ON c.client_id = d.client_id\nJOIN card ca ON d.disp_id = ca.disp_id\nWHERE ca.type = 'gold'\n  AND d.type = 'OWNER';",
+      "candidate": "a2b481d5bce9c2ff07943fb35db57c48ec7a7e4400f4f2f73dffee7639980dc4",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "195",
+      "sql": "SELECT bond_type\nFROM bond\nGROUP BY bond_type\nORDER BY COUNT(bond_type) DESC\nLIMIT 1;",
+      "candidate": "64c7ab21f4538f8f4a13403846b14d4e06f1188c2320a3081835547dfaea175f",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "200",
+      "sql": "SELECT m.label\nFROM molecule m\nJOIN bond b ON m.molecule_id = b.molecule_id\nWHERE b.bond_type = '#' AND m.label = '+';",
+      "candidate": "75f22c2b34ea387226fbe22b5ae59bc32c773590400548734e630739eb35286d",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "206",
+      "sql": "SELECT DISTINCT a.element\nFROM connected c\nJOIN atom a ON c.atom_id = a.atom_id\nWHERE c.bond_id = 'TR004_8_9'\nUNION\nSELECT DISTINCT a.element\nFROM connected c\nJOIN atom a ON c.atom_id2 = a.atom_id\nWHERE c.bond_id = 'TR004_8_9';",
+      "candidate": "380e3301af0dea4cde10a85812e55c1c506fb2042d213f6f7643b0b8470714ee",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "207",
+      "sql": "SELECT DISTINCT a.element\nFROM atom a\nJOIN connected c ON a.atom_id = c.atom_id\nJOIN bond b ON c.bond_id = b.bond_id\nWHERE b.bond_type = '=';",
+      "candidate": "0b0c8ad3b56304aeccbd335d2e75a777113a10aeb86cfe4834fb32439a06a60c",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 1,
+      "transition": "0->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "212",
+      "sql": "SELECT element\nFROM atom\nJOIN molecule ON atom.molecule_id = molecule.molecule_id\nWHERE molecule.label = '-'\nGROUP BY element\nORDER BY COUNT(element) ASC\nLIMIT 1;",
+      "candidate": "4bb9984b955f662a124cd72cbf383ffcb8da41b828141c087048dd4fad315dc0",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "213",
+      "sql": "SELECT b.bond_type\nFROM connected c\nJOIN bond b ON c.bond_id = b.bond_id\nWHERE (c.atom_id = 'TR004_8' AND c.atom_id2 = 'TR004_20')\n   OR (c.atom_id = 'TR004_20' AND c.atom_id2 = 'TR004_8');",
+      "candidate": "b6092091855c3009426eea609ce5d532af1e6cd209323ae304bd8515208e1c2a",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "218",
+      "sql": "SELECT\n  100.0 * SUM(CASE WHEN a.element = 'f' THEN 1 ELSE 0 END) / COUNT(DISTINCT m.molecule_id)\nFROM molecule m\nJOIN atom a ON m.molecule_id = a.molecule_id\nWHERE m.label = '+';",
+      "candidate": "c9277a0ccf48ba5be6454be2d80a138acc69a539f967d5113ed4d5d24ba2b2d3",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "220",
+      "sql": "SELECT DISTINCT a.element\nFROM molecule m\nJOIN atom a ON m.molecule_id = a.molecule_id\nWHERE m.label = 'TR000'\nORDER BY a.element ASC\nLIMIT 3;",
+      "candidate": "e87b181d8d6fe1c55f1f47167b2001ae34bdb595a217355c9c06371825770c4b",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "226",
+      "sql": "SELECT ROUND(SUM(CASE WHEN bond_type = '=' THEN 1 ELSE 0 END) * 100.0 / COUNT(bond_id), 5) AS percent FROM bond WHERE molecule_id = 'TR008';",
+      "candidate": "2fe2c2737f2b2d842324211b5ac7c56c4c1a9edb6fd2c65ebcfebe766146385b",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "227",
+      "sql": "SELECT ROUND(SUM(CASE WHEN label = '+' THEN 1 ELSE 0 END) * 100.0 / COUNT(molecule_id), 3) AS percent FROM molecule;",
+      "candidate": "051ee50ed004a7d8a71019012de655ea7ea899a7ec03b16555afbe4c67533e42",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "228",
+      "sql": "SELECT ROUND(SUM(CASE WHEN element = 'h' THEN 1.0 ELSE 0.0 END) * 100.0 / COUNT(atom_id), 4) AS percent FROM atom WHERE molecule_id = 'TR206'",
+      "candidate": "422993e15fa5011b2316718b7ec3b0b763cdbf31454beb766157ecb480f6b271",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "232",
+      "sql": "SELECT m.molecule_id\nFROM molecule m\nJOIN bond b ON m.molecule_id = b.molecule_id\nWHERE m.label = '-' AND b.bond_type = '-'\nGROUP BY m.molecule_id\nORDER BY m.molecule_id\nLIMIT 3;",
+      "candidate": "0f63f3c5a750fdc155dee5078863ae97b30948ae192369104eb3468ae03b6359",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "234",
+      "sql": "SELECT COUNT(*)\nFROM bond b\nJOIN connected c ON b.bond_id = c.bond_id\nWHERE b.molecule_id = 'TR009'\n  AND (c.atom_id = 'TR009_12' OR c.atom_id2 = 'TR009_12');",
+      "candidate": "7d7c46d76679a6399dcc44a2cfd902b8a29ea0df234a590854a3a7d75568dee8",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "236",
+      "sql": "SELECT b.bond_type, c.atom_id, c.atom_id2\nFROM bond b\nJOIN connected c ON b.bond_id = c.bond_id\nWHERE b.bond_id = 'TR001_6_9';",
+      "candidate": "4fc3af60eee8dc1798ad97fecfefbb3d2a914da6f9f3060271184348ab8e73e0",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "239",
+      "sql": "SELECT COUNT(*) FROM connected WHERE atom_id = 'TR_19';",
+      "candidate": "00690f00b83edc7ded2e81ffefe215179f02220f8a33ea9b3f179a0958447bf7",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "240",
+      "sql": "SELECT DISTINCT a.element\nFROM molecule m\nJOIN atom a ON m.molecule_id = a.molecule_id\nWHERE m.label = 'TR004';",
+      "candidate": "2a9b2ef9e408c5c54f184d26558e1323acf0db8104ce3f7eece70f349926fba0",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "242",
+      "sql": "SELECT DISTINCT m.label\nFROM molecule m\nJOIN atom a ON m.molecule_id = a.molecule_id\nWHERE SUBSTR(a.atom_id, 7, 2) BETWEEN '21' AND '25'\nAND m.label = '+';",
+      "candidate": "9512f8b9fe256d25429c6101f56cde08d98f17558e1bd6c27e5885203823050d",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "243",
+      "sql": "SELECT DISTINCT b.bond_id\nFROM bond b\nJOIN connected c ON b.bond_id = c.bond_id\nJOIN atom a ON c.atom_id = a.atom_id\nWHERE a.element = 'p'\nAND b.bond_id IN (\n    SELECT c2.bond_id\n    FROM connected c2\n    JOIN atom a2 ON c2.atom_id = a2.atom_id\n    WHERE a2.element = 'n'\n);",
+      "candidate": "16ea205f578da5fc75effb08235530aec792ec65c47432317498d26484aff25f",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "245",
+      "sql": "SELECT AVG(bond_count) AS average_bonds\nFROM (\n    SELECT a.atom_id, COUNT(c.bond_id) AS bond_count\n    FROM atom a\n    LEFT JOIN connected c ON a.atom_id = c.atom_id\n    WHERE a.element = 'i'\n    GROUP BY a.atom_id\n) AS subquery;",
+      "candidate": "4ec866143b18f535280fabfc5f4062810a87a233fb8d15ec1f2f4448b4e5bf24",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "253",
+      "sql": "SELECT DISTINCT a.element\nFROM bond b\nJOIN connected c ON b.bond_id = c.bond_id\nJOIN atom a ON c.atom_id = a.atom_id\nWHERE b.bond_type = '#';",
+      "candidate": "c220d9cdacb5c0a20068de68e702231b8701ef9b8dee3002d4718c14adcea73e",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "255",
+      "sql": "SELECT ROUND(SUM(CASE WHEN m.label = '+' THEN 1 ELSE 0 END) * 100.0 / COUNT(b.bond_id), 5) AS proportion\nFROM bond b\nJOIN molecule m ON b.molecule_id = m.molecule_id\nWHERE b.bond_type = '-';",
+      "candidate": "f5f494b2082606f40857a526267175723ebdfe09fe0248ac820fdc019e4f03ed",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "260",
+      "sql": "SELECT COUNT(*)\nFROM atom a\nJOIN molecule m ON a.molecule_id = m.molecule_id\nJOIN bond b ON m.molecule_id = b.molecule_id\nJOIN connected c ON a.atom_id = c.atom_id\nWHERE b.bond_type = '#'\n  AND a.element IN ('p', 'br');",
+      "candidate": "ab5b2d9642e8a451f417b1a418a1e6529e914baf12dced470ce7ba3f5dee6c3f",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "263",
+      "sql": "SELECT CAST(SUM(CASE WHEN a.element = 'cl' THEN 1 ELSE 0 END) AS REAL) * 100.0 / COUNT(a.atom_id) AS percent\nFROM atom a\nJOIN connected c ON a.atom_id = c.atom_id\nJOIN bond b ON c.bond_id = b.bond_id\nWHERE b.bond_type = '-';",
+      "candidate": "7da672a295001c4819ed5e0d82784126b2d49167bca3916935f8b966ad59c13a",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "268",
+      "sql": "SELECT a.element\nFROM bond b\nJOIN connected c ON b.bond_id = c.bond_id\nJOIN atom a ON c.atom_id = a.atom_id\nWHERE b.bond_id = 'TR001_10_11';",
+      "candidate": "de9e908d71bd6462098218793ebd94ae27782b12644f2cdef7de9027e0fe87be",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "282",
+      "sql": "SELECT\n  m.label,\n  CAST(SUM(CASE WHEN a.element = 'h' THEN 1 ELSE 0 END) AS REAL) / COUNT(a.atom_id) AS ratio\nFROM molecule m\nJOIN atom a ON m.molecule_id = a.molecule_id\nWHERE m.molecule_id = 'TR006'\nGROUP BY m.label;",
+      "candidate": "9b9f9a71206b202391ee2e15b115800bed6cb48c6301f54c8831b05ecb2af2ee",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "327",
+      "sql": "SELECT m.label\nFROM molecule m\nJOIN atom a ON m.molecule_id = a.molecule_id\nWHERE m.label = '-'\nGROUP BY m.molecule_id, m.label\nHAVING COUNT(a.atom_id) > 5;",
+      "candidate": "554fe3a282b16e71e96dd90f3a15ebd24594130f2d3c9ece13a0afb51dbed0ef",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "345",
+      "sql": "SELECT DISTINCT l.status\nFROM cards c\nJOIN legalities l ON c.uuid = l.uuid\nWHERE c.types = 'Artifact'\n  AND c.side IS NULL\n  AND l.format = 'vintage';",
+      "candidate": "f824f99f7fecaf4c9e4284a25b30d1aac23f5e7d5c561ad7ebb0124e6987d8bf",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "346",
+      "sql": "SELECT c.id, c.artist\nFROM cards c\nJOIN legalities l ON c.uuid = l.uuid\nWHERE (c.power = '*' OR c.power IS NULL)\n  AND l.format = 'commander'\n  AND l.status = 'Legal';",
+      "candidate": "214c09ff3dd4ed733f675c65f112ef8104f18d3a78228ce3f61b19f5ea5c0fa0",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "347",
+      "sql": "SELECT\n    c.id,\n    r.text AS ruling_text,\n    CASE\n        WHEN c.hasContentWarning = 1 THEN 'Yes'\n        ELSE 'No'\n    END AS has_missing_or_degraded_properties\nFROM cards c\nJOIN rulings r ON c.uuid = r.uuid\nWHERE c.artist = 'Stephen Daniele'\n    AND c.hasContentWarning = 1;",
+      "candidate": "3856c299805cd533f18ca2018b145822c8f565aad92129ecadf9f103bbe37cfe",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "352",
+      "sql": "SELECT (SUM(CASE WHEN fd.language = 'Chinese Simplified' THEN 1 ELSE 0 END) * 100.0 / COUNT(fd.id)) AS percentage\nFROM foreign_data fd;",
+      "candidate": "0bc52233f27feaf6d97127f51d3ac1ca83311c71ea36f297b8451da7556194be",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "356",
+      "sql": "SELECT COUNT(*) FROM cards WHERE power = '*';",
+      "candidate": "2567091abe3d664fe36db82aad2cd89ba3a64b5c7cb81f04efc3f8e8e9d33c14",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "358",
+      "sql": "SELECT borderColor FROM cards WHERE name = 'Ancestor''s Chosen'",
+      "candidate": "48d155a44511ec32cddc615529a248a8716785e8b3de2fe1f1842dd807291553",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "366",
+      "sql": "SELECT l.format, l.status\nFROM cards c\nJOIN legalities l ON c.uuid = l.uuid\nWHERE c.name = 'Benalish Knight';",
+      "candidate": "079ca1320a31452c7cfaed3590bd1057b89637598526748d9caf977888120e57",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "368",
+      "sql": "SELECT CAST(SUM(CASE WHEN borderColor = 'borderless' THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(id) FROM cards",
+      "candidate": "60aebf740a5b6f9a10242fbe7bb1f52d0271e8f56c700b6fb84bb8fb4b8b69ac",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "377",
+      "sql": "SELECT COUNT(*)\nFROM cards\nWHERE originalType = 'Summon - Angel'\n  AND subtypes != 'Angel';",
+      "candidate": "152c3e41b92027b4d69a06a17d61a57069426314cb5a2db5e33665eab9da4192",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "379",
+      "sql": "SELECT id FROM cards WHERE duelDeck = 'a';",
+      "candidate": "89cc0c12eb9bdf28e120d538b19f1069dd56bed1ffedf6f0cca3f67cac729435",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "383",
+      "sql": "SELECT COUNT(*) FROM cards WHERE uuid IN (SELECT uuid FROM legalities WHERE status = 'Banned') AND borderColor = 'white';",
+      "candidate": "62e9d77e561cb910ca82bcd093a775acff8cad78c632fa8d9cf3608ec9515c6c",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 1,
+      "transition": "0->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "391",
+      "sql": "SELECT DISTINCT c.name\nFROM cards c\nJOIN foreign_data fd ON c.uuid = fd.uuid\nWHERE c.originalType = 'Artifact'\n  AND c.colors = 'B';",
+      "candidate": "ae9fec395acb7088904bf8980a4fef4c587b5a4c33ca40adb625024ed8305c0a",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "397",
+      "sql": "SELECT manaCost\nFROM cards\nWHERE layout = 'normal'\n  AND frameVersion = '2003'\n  AND borderColor = 'black'\n  AND availability = 'mtgo,paper';",
+      "candidate": "f84990ccdd924b31369dadb093930cb48de55122fa3e158bb090976e759af982",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "405",
+      "sql": "SELECT COUNT(*)\nFROM set_translations st\nJOIN sets s ON st.setCode = s.code\nWHERE st.language = 'Portuguese (Brasil)'\n  AND s.block = 'Commander';",
+      "candidate": "1fa12739d5092acda85b2015095428c8352e4d5fe3e428012ee42b668217ce0a",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "407",
+      "sql": "SELECT DISTINCT subtypes, supertypes\nFROM cards\nWHERE subtypes IS NOT NULL AND supertypes IS NOT NULL\nAND uuid IN (\n    SELECT uuid\n    FROM foreign_data\n    WHERE language = 'German'\n);",
+      "candidate": "dfac9fb55235461f6098aa5501b5337d9af41d348e512ea6d3c84fc650c87ced",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "409",
+      "sql": "SELECT COUNT(*)\nFROM cards c\nJOIN rulings r ON c.uuid = r.uuid\nJOIN legalities l ON c.uuid = l.uuid\nWHERE r.text = 'This is a triggered mana ability.'\n  AND l.format = 'premodern'\n  AND c.side IS NULL;",
+      "candidate": "e6b47cbca431e9cc1009964a245199320832b7f9c32e611015be334c36c1a8ea",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "414",
+      "sql": "SELECT DISTINCT st.language\nFROM sets s\nJOIN set_translations st ON s.code = st.setCode\nWHERE s.baseSetSize = 180\n  AND s.block = 'Ravnica';",
+      "candidate": "6e67035ef60e30d8dbdccdb9c3327da77189d71387add7353b691e8b096efa3f",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "415",
+      "sql": "SELECT\n  (COUNT(CASE WHEN c.hasContentWarning = 0 THEN 1 END) * 100.0 / COUNT(c.id)) AS percentage\nFROM cards c\nJOIN legalities l ON c.uuid = l.uuid\nWHERE l.format = 'commander'\n  AND l.status = 'legal';",
+      "candidate": "090518d5e33b5457de9e859159684db5426b4ffd5c64bf2e3d250c45f6cc6a09",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "416",
+      "sql": "SELECT\n  100.0 * SUM(CASE WHEN fd.language = 'French' THEN 1 ELSE 0 END) / COUNT(*)\nFROM cards c\nJOIN foreign_data fd ON c.uuid = fd.uuid\nWHERE c.power IS NULL OR c.power = '*';",
+      "candidate": "72a26ee5eeb2e14d09aa969a87eee0e04bb7f94fc84a907857d03d5db9547e2a",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "422",
+      "sql": "SELECT language FROM foreign_data WHERE multiverseid = 149934;",
+      "candidate": "b258058d020b10fbaf9784a35bbd773fbce1301943263e108234bc079dc3849f",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "427",
+      "sql": "SELECT DISTINCT language\nFROM set_translations\nWHERE setCode = 'ARC'\nAND translation = 'Archenemy';",
+      "candidate": "6be8c1b0544d1d151f720fbf4366d8687e97e432628e4e9b3e47a85a75126827",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "440",
+      "sql": "SELECT DISTINCT fd.language\nFROM foreign_data fd\nJOIN cards c ON fd.uuid = c.uuid\nWHERE c.name = 'A Pedra Fellwar';",
+      "candidate": "f6fdd5febc94da5c5a09940148febd448266b85ae40e39cab3d1b526c4f6dd1a",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "459",
+      "sql": "SELECT name, convertedManaCost\nFROM cards\nWHERE name IN ('Serra Angel', 'Shrine Keeper')\nORDER BY convertedManaCost DESC\nLIMIT 1;",
+      "candidate": "5a25aa65cf97569bea541f9e925d846f03c5caaeb0b54bb5f2abe63e81a45bd4",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "462",
+      "sql": "SELECT st.translation\nFROM cards c\nJOIN foreign_data fd ON c.uuid = fd.uuid\nJOIN set_translations st ON c.setCode = st.setCode\nWHERE c.name = 'Ancestor''s Chosen'\n  AND fd.language = 'Italian';",
+      "candidate": "b5a26ba7cec2dfd1df6877baca1c639ddb41fdef4d0d3ac008e9b4a42813bbca",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "466",
+      "sql": "SELECT COUNT(*) FROM cards WHERE setCode IN (SELECT setCode FROM set_translations WHERE translation = 'Hauptset Zehnte Edition') AND artist = 'Adam Rex';",
+      "candidate": "59f202c2d86c04320a9ca4676e2798fe57f9ba1dbe13efd33cc4de2459443150",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "468",
+      "sql": "SELECT st.translation\nFROM set_translations st\nJOIN sets s ON st.setCode = s.code\nWHERE s.name = 'Eighth Edition'\n  AND st.language = 'Chinese Simplified';",
+      "candidate": "1164c375b5d2345afeffebc347ff681eb45ba43ff4d8af58bbdc12c2a4d40b3a",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "472",
+      "sql": "SELECT COUNT(*)\nFROM set_translations st\nJOIN sets s ON st.setCode = s.code\nWHERE s.block = 'Ice Age'\n  AND st.language = 'Italian'\n  AND st.translation IS NOT NULL;",
+      "candidate": "8ab01a700cfd2b18fd9f18ce8ca804c2be2afc22c3cb157e3170564f71b005ce",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "474",
+      "sql": "SELECT COUNT(*)\nFROM sets s\nJOIN set_translations st ON s.code = st.setCode\nWHERE st.language = 'Italian'\n  AND st.translation IS NOT NULL\n  AND s.baseSetSize < 100;",
+      "candidate": "79a88c4b85d9cdce2ea72fb41ef1722eec8b3639b5cd7b2703bdcf6644151d2a",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "477",
+      "sql": "SELECT DISTINCT artist\nFROM cards\nWHERE setCode = 'COLD' AND artist IN ('Jeremy Jarvis', 'Aaron Miller', 'Chippy');",
+      "candidate": "194d2f53b0dcf1fad49f8a545145db579ef1e4907f4621d8f280757d6d2530ff",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "479",
+      "sql": "SELECT COUNT(*)\nFROM cards T1\nJOIN sets T2 ON T1.setCode = T2.code\nWHERE T2.name = 'Coldsnap'\n  AND T1.convertedManaCost > 5\n  AND (T1.power = '*' OR T1.power IS NULL);",
+      "candidate": "b5cfd03bda5b6ea8110fef36a398e846e07f9a7fc7b9589d673ff256f86e96a7",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "480",
+      "sql": "SELECT flavorText FROM foreign_data WHERE language = 'Italian' AND uuid IN (SELECT uuid FROM cards WHERE name = 'Ancestor''s Chosen')",
+      "candidate": "0dd8e6c936531853d9e3ad4ac2ae58059cf4a9ad39ba29f073eee9817947bab6",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "483",
+      "sql": "SELECT r.text\nFROM cards c\nJOIN rulings r ON c.uuid = r.uuid\nJOIN sets s ON c.setCode = s.code\nWHERE s.name = 'Coldsnap'\n  AND r.text IS NOT NULL\n  AND EXISTS (\n    SELECT 1\n    FROM foreign_data fd\n    WHERE fd.uuid = c.uuid\n      AND fd.language = 'Italian'\n      AND fd.text IS NOT NULL\n  );",
+      "candidate": "687c2697e7cb90d4e0e6af2cc62f5c282270153e6b3e7bac6e2bf2a3cb3b9dab",
+      "transformed": false,
+      "old_reward": null,
+      "new_reward": null,
+      "transition": "unresolved",
+      "execution_status": "timeout"
+    },
+    {
+      "question_id": "484",
+      "sql": "SELECT MAX(c.convertedManaCost) as maxCMC\nFROM cards c\nJOIN foreign_data fd ON c.uuid = fd.uuid\nJOIN sets s ON c.setCode = s.code\nWHERE s.name = 'Coldsnap'\nAND fd.language = 'Italian'\nORDER BY c.convertedManaCost DESC\nLIMIT 1;",
+      "candidate": "1721998ba769b611cdd9122ae99b4077ea6a39025a9ceb99ed893511ce740fa1",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "486",
+      "sql": "SELECT\n  SUM(convertedManaCost = 7) * 100.0 / COUNT(*) AS percentage\nFROM cards\nWHERE setCode = (\n  SELECT code\n  FROM sets\n  WHERE name = 'Coldsnap'\n);",
+      "candidate": "67c7f3ae1112caa7ca310a2fdb32f5ad34d39ebabcad8e40116a230996a85a62",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "487",
+      "sql": "SELECT SUM(CASE WHEN cardKingdomFoilId IS NOT NULL AND cardKingdomId IS NOT NULL THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS percentage\nFROM cards\nWHERE name = 'Coldsnap';",
+      "candidate": "beaba9bd47a1d923f43ee6fb0685280b6df48b994c3251973ab0538c6aa14165",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "518",
+      "sql": "SELECT l.format, c.name\nFROM legalities l\nJOIN cards c ON l.uuid = c.uuid\nWHERE l.status = 'Banned'\nGROUP BY l.format\nORDER BY COUNT(*) DESC\nLIMIT 1;",
+      "candidate": "b5314788631c4d64adc6fe941ede99d1ed1a082a9275a0392398305114209b22",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "522",
+      "sql": "SELECT c.name, l.format\nFROM cards c\nJOIN legalities l ON c.uuid = l.uuid\nWHERE c.edhrecRank = 1 AND l.status = 'Banned';",
+      "candidate": "e62762af5e84888b7621a05c53d17f5ba34a37f0e76412867db025301f544c21",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "528",
+      "sql": "SELECT DISTINCT c.name, l.format\nFROM cards c\nJOIN legalities l ON c.uuid = l.uuid\nJOIN sets s ON c.setCode = s.code\nWHERE s.name = 'Hour of Devastation'\nAND l.status = 'Legal';",
+      "candidate": "26c609ecb7f381bb0a74ea0b63fc173d9b03f56670398c68294726c6246ae395",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "531",
+      "sql": "SELECT DisplayName, Reputation\nFROM users\nWHERE DisplayName IN ('Harlan', 'Jarrod Dixon')\nORDER BY Reputation DESC\nLIMIT 1;",
+      "candidate": "25c897902a4ff2e3c4d879d188a013ef479a103206511cd9aba16a85648d6660",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "532",
+      "sql": "SELECT DisplayName FROM users WHERE strftime('%Y', CreationDate) = '2011';",
+      "candidate": "8d3363164794d833250bf016f4a66e74d5d55e3366b9584aa356833f74c2fa4b",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "537",
+      "sql": "SELECT COUNT(*) FROM posts WHERE OwnerUserId = (SELECT Id FROM users WHERE DisplayName = 'csgillespie');",
+      "candidate": "a38d3d18fdfd7bd4273db4d3f3c198531c88f7d54614107f1225bb5adf71cedb",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "539",
+      "sql": "SELECT u.DisplayName\nFROM posts p\nJOIN users u ON p.OwnerUserId = u.Id\nWHERE p.Title = 'Eliciting priors from experts';",
+      "candidate": "bbbcab5c449e974ad71a08448eae1f54aa7b7bc514a789fd9039afca8a15f27c",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "544",
+      "sql": "SELECT u.DisplayName\nFROM posts p\nJOIN users u ON p.LastEditorUserId = u.Id\nWHERE p.Title = 'Examples for teaching: Correlation does not mean causation';",
+      "candidate": "300c7313cb9ebd0f8b63f697e46541d2f817d5f67a8b9b5a888d49956ba1a5a0",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "547",
+      "sql": "SELECT COUNT(*)\nFROM posts p\nJOIN users u ON p.OwnerUserId = u.Id\nWHERE u.Age > 65\n  AND p.Score >= 20;",
+      "candidate": "2a20acb7bf46e8bae478d2729a8ba6ee6d020ccf327b882fe846a3c45d200348",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "549",
+      "sql": "SELECT p.Body\nFROM tags t\nJOIN posts p ON t.ExcerptPostId = p.Id\nWHERE t.TagName = 'bayesian';",
+      "candidate": "aae61677b9bd7dd414ad132dc710ead0730b7769232845d752204e9cf293bb28",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "555",
+      "sql": "SELECT AVG(p.Score)\nFROM posts p\nJOIN users u ON p.OwnerUserId = u.Id\nWHERE u.DisplayName = 'csgillespie';",
+      "candidate": "96f5ba887406e5f7863e2c1453aef74eb23b0b2f1e1cc32e45b40b2378a3f7f0",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "557",
+      "sql": "SELECT CAST(SUM(CASE WHEN u.Age > 65 THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(*) AS percentage\nFROM posts p\nJOIN users u ON p.OwnerUserId = u.Id\nWHERE p.Score > 5;",
+      "candidate": "7b2a1f468b5abe2fc6d65e69bb473c4c922de3db52ad700d04fc0fb7157dc82f",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "563",
+      "sql": "SELECT p.FavoriteCount\nFROM comments c\nJOIN posts p ON c.PostId = p.Id\nWHERE c.UserId = 3025\n  AND c.CreationDate = '2014/4/23 20:29:39.0';",
+      "candidate": "eaa3ef31dc9d37f9e52211071a90fefd522f99b5001cd72d01cdc1a768d90b8e",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "567",
+      "sql": "SELECT COUNT(*) FROM posts WHERE OwnerUserId = (SELECT Id FROM users WHERE DisplayName = 'Tiago Pasqualini')",
+      "candidate": "fa711c0885baeae57a14bfd314956baf25dbca6c24b69ab4d23a6db54d8506f7",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "568",
+      "sql": "SELECT u.DisplayName\nFROM votes v\nJOIN users u ON v.UserId = u.Id\nWHERE v.Id = 6347;",
+      "candidate": "ddef3e98046e8a02a3b5fb8ee74106986f7cd26ce76ea48c5da8a91d09372908",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "571",
+      "sql": "SELECT CAST(COUNT(DISTINCT p.Id) AS REAL) / COUNT(DISTINCT v.Id)\nFROM posts p\nLEFT JOIN votes v ON p.Id = v.PostId\nWHERE p.OwnerUserId = 24;",
+      "candidate": "c8da1bf68b70946082291d1493ea8919dc8e25f5a7fb84e4f6c4ef7421b276f3",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "572",
+      "sql": "SELECT ViewCount FROM posts WHERE Title = 'Integration of Weka and/or RapidMiner into Informatica PowerCenter/Developer';",
+      "candidate": "a20c6af0b11f717127b673315d8f1f06f64ca7561837dea5952a69d4425c56a5",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "573",
+      "sql": "SELECT Text FROM comments WHERE Score = 17;",
+      "candidate": "6b92f9f6d8cb2aa0ec0a7ecfb0bccdc66a439ca813a246053de9a3f78493fca3",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "576",
+      "sql": "SELECT u.DisplayName\nFROM comments c\nJOIN users u ON c.UserId = u.Id\nWHERE c.Text = 'thank you user93!';",
+      "candidate": "dc01f1f86f8229509ea4e2a8b473ffd7166b3ba5aa4524b13a9aa4d23bbd4866",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "578",
+      "sql": "SELECT u.Reputation\nFROM posts p\nJOIN users u ON p.OwnerUserId = u.Id\nWHERE p.Title = 'Understanding what Dassault iSight is doing?';",
+      "candidate": "214a7b060c01dff14d3ca57be4c18abbd134ab19cc9687a4cf6cd4ffb8243e3c",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "581",
+      "sql": "SELECT u.DisplayName\nFROM posts p\nJOIN users u ON p.OwnerUserId = u.Id\nWHERE p.Title = 'Open source tools for visualizing multi-dimensional data?'",
+      "candidate": "7b56ade8d5d2994e0fb033f8f146d19d7015b487cf142d71785a5ff397e8cadb",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "586",
+      "sql": "SELECT u.DisplayName\nFROM votes v\nJOIN posts p ON v.PostId = p.Id\nJOIN users u ON v.UserId = u.Id\nWHERE v.BountyAmount = 50\n  AND p.Title LIKE '%variance%';",
+      "candidate": "712f3929ac6ee5441dc9ba2f42138f58663cf8665dc1b3dfa6a421d47e2357e2",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 1,
+      "transition": "0->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "587",
+      "sql": "SELECT AVG(p.ViewCount) AS AverageViewCount, p.Title, c.Text AS Comment\nFROM posts p\nJOIN postLinks pl ON p.Id = pl.PostId\nJOIN posts related ON pl.RelatedPostId = related.Id\nJOIN tags t ON related.Id = t.WikiPostId OR related.Id = t.ExcerptPostId\nLEFT JOIN comments c ON p.Id = c.PostId\nWHERE t.TagName = 'humor'\nGROUP BY p.Id, p.Title, c.Text;",
+      "candidate": "98755992d1b1034402ab2b89a67285dae08c7edfd0d74ece928c2a7da3b327e9",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "592",
+      "sql": "SELECT COUNT(UserId) FROM (SELECT UserId, COUNT(Name) as Count FROM badges GROUP BY UserId HAVING Count > 5)",
+      "candidate": "3e9649b1a5b93f67a5626236b05d1f91feaee38c5253bf217b018d2d985fcf41",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "598",
+      "sql": "SELECT\n  (CAST(SUM(CASE WHEN strftime('%Y', Date) = '2010' THEN 1 ELSE 0 END) AS REAL) * 100.0 / COUNT(Name)) -\n  (CAST(SUM(CASE WHEN strftime('%Y', Date) = '2011' THEN 1 ELSE 0 END) AS REAL) * 100.0 / COUNT(Name))\nAS percentage_difference\nFROM badges\nWHERE Name = 'Student';",
+      "candidate": "90682b486e4bf3dc18ab2b47eb4f8c556039329919877a78633704d5afb01ecf",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "604",
+      "sql": "SELECT\n  AVG(u.UpVotes) AS avg_up_votes,\n  AVG(u.Age) AS avg_user_age\nFROM users u\nWHERE u.Id IN (\n  SELECT p.OwnerUserId\n  FROM posts p\n  GROUP BY p.OwnerUserId\n  HAVING COUNT(p.Id) > 10\n);",
+      "candidate": "d1363f8ecf590446dfbe3956495bd022322581187b60ad180548d213d92c2902",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "629",
+      "sql": "SELECT CAST(SUM(CASE WHEN strftime('%Y', CreationDate) = '2010' THEN 1 ELSE 0 END) AS REAL) / COUNT(Id) AS ratio_2010, CAST(SUM(CASE WHEN strftime('%Y', CreationDate) = '2011' THEN 1 ELSE 0 END) AS REAL) / COUNT(Id) AS ratio_2011 FROM votes;",
+      "candidate": "2bcd3fec958d5ee41e40270f0e37531e29f3a96ea9c2eaa44e2f98d7d858afc5",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "633",
+      "sql": "SELECT Id\nFROM posts\nWHERE OwnerUserId = (SELECT Id FROM users WHERE DisplayName = 'slashnick')\nORDER BY AnswerCount DESC\nLIMIT 1;",
+      "candidate": "76db2289ee335fcefc41bd7c227a0d001b2be8490bf8e32286d09476146250cb",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "639",
+      "sql": "SELECT\n  1.0 * SUM(CASE WHEN p.Tags LIKE '%r%' THEN 1 ELSE 0 END) / COUNT(p.Id) AS percentage\nFROM posts p\nJOIN users u ON p.OwnerUserId = u.Id\nWHERE u.DisplayName = 'Community';",
+      "candidate": "1964e5ee56e7e637b0da8d92e8d2f3f886234c45d02462c07551566c7f1ef29f",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "640",
+      "sql": "SELECT\n  SUM(CASE WHEN u.DisplayName = 'Mornington' THEN p.ViewCount ELSE 0 END) -\n  SUM(CASE WHEN u.DisplayName = 'Amos' THEN p.ViewCount ELSE 0 END) AS difference\nFROM posts p\nJOIN users u ON p.OwnerUserId = u.Id;",
+      "candidate": "7ca25837483db88421c9b89514a3b2b8c7e733060fcf0edf7d0c7ce5c4a927f9",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 1,
+      "transition": "0->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "665",
+      "sql": "SELECT AVG(monthly_links) AS average_monthly_links\nFROM (\n    SELECT COUNT(*) / 12.0 AS monthly_links\n    FROM postLinks\n    WHERE strftime('%Y', CreationDate) = '2010'\n      AND RelatedPostId IN (\n          SELECT Id\n          FROM posts\n          WHERE AnswerCount <= 2\n      )\n) AS monthly_counts;",
+      "candidate": "24d17a498230705bf3173b4ee89f9e36713e865559f61c81ab8c603221c6cd5c",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "669",
+      "sql": "SELECT MIN(v.CreationDate)\nFROM votes v\nJOIN users u ON v.UserId = u.Id\nWHERE u.DisplayName = 'chl';",
+      "candidate": "d6666cd36c8fe2eb9ec258b4730435d2bcdfde914bb29fe6103309c7875da0ab",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "671",
+      "sql": "SELECT u.DisplayName\nFROM badges b\nJOIN users u ON b.UserId = u.Id\nWHERE b.Name = 'Autobiographer'\nORDER BY b.Date ASC\nLIMIT 1;",
+      "candidate": "bab2be71cef47e2403867d3b4f0a36d460a5010423b9b4803e92d1557ea6ac4e",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "678",
+      "sql": "SELECT p.Id, p.Title\nFROM posts p\nJOIN users u ON p.OwnerUserId = u.Id\nWHERE u.DisplayName = 'Harvey Motulsky'\nORDER BY p.ViewCount DESC\nLIMIT 1;",
+      "candidate": "d2d737b77c5ed68aa2d791900304214728783ee266ec9cacbdab0ac719ef174c",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "682",
+      "sql": "SELECT p.Id, u.DisplayName\nFROM posts p\nJOIN users u ON p.OwnerUserId = u.Id\nWHERE strftime('%Y', p.CreaionDate) = '2010'\nORDER BY p.FavoriteCount DESC\nLIMIT 1;",
+      "candidate": "c611b15bc5422e8744871bc9c2d68c272060d3ce638b9db84767323cf381320c",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 1,
+      "transition": "0->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "685",
+      "sql": "SELECT p.ViewCount, u.DisplayName\nFROM posts p\nJOIN users u ON p.LastEditorUserId = u.Id\nWHERE p.Title = 'Computer Game Datasets';",
+      "candidate": "66982e9390304036c8b802b091f6d49577517a53b8d0264e498efd74537ac9d5",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "687",
+      "sql": "SELECT COUNT(*)\nFROM comments\nWHERE PostId = (\n    SELECT Id\n    FROM posts\n    ORDER BY Score DESC\n    LIMIT 1\n);",
+      "candidate": "d719186a94f8e6030d3069c5640c1d862be769f7e45f93a1a28725c75d3f0fcc",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "694",
+      "sql": "SELECT c.Text, c.UserDisplayName\nFROM comments c\nJOIN posts p ON c.PostId = p.Id\nWHERE p.Title = 'Analysing wind data with R'\nORDER BY c.CreationDate DESC\nLIMIT 10;",
+      "candidate": "a8cfade5b36631193cb01c361100465dfb7ec1f2f7ccc02a5facaa01bb972a67",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "701",
+      "sql": "SELECT\n  100.0 * SUM(CASE WHEN p.Score > 50 THEN 1 ELSE 0 END) / COUNT(p.Id) AS percentage\nFROM posts p\nJOIN users u ON p.OwnerUserId = u.Id\nWHERE u.Reputation = (\n  SELECT MAX(Reputation)\n  FROM users\n);",
+      "candidate": "6b76aef15b96955ea96791d75139a090a9b0d130e7768717cd326f310a0bbe23",
+      "transformed": false,
+      "old_reward": null,
+      "new_reward": null,
+      "transition": "unresolved",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "704",
+      "sql": "SELECT ExcerptPostId, WikiPostId\nFROM tags\nWHERE TagName = 'sample';",
+      "candidate": "279759fefb593cad416e9ade04181f56eb0d63e0a17f8b35091ce5a25344bb31",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "705",
+      "sql": "SELECT u.Reputation, u.UpVotes\nFROM comments c\nJOIN users u ON c.UserId = u.Id\nWHERE c.Text = 'fine, you win :)';",
+      "candidate": "d9e16b56e4f3e56e6b199559a50f18d8e511d554ca25d5a8b250d81f46f20a7d",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "707",
+      "sql": "SELECT c.Text\nFROM comments c\nJOIN posts p ON c.PostId = p.Id\nWHERE p.ViewCount BETWEEN 100 AND 150\nORDER BY c.Score DESC\nLIMIT 1;",
+      "candidate": "b340f736b8e60e5dfabe79f48da855e29523d2e3558c6658c0ee6afe1d337172",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "710",
+      "sql": "SELECT COUNT(*)\nFROM comments c\nJOIN posts p ON c.PostId = p.Id\nWHERE p.CommentCount = 1\n  AND c.Score = 0;",
+      "candidate": "334fc0970bb40ab5927081285f4f2611d98cf9c0b72da71d3870f2c63dc45156",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 1,
+      "transition": "0->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "717",
+      "sql": "SELECT sp.power_name\nFROM superhero s\nJOIN hero_power hp ON s.id = hp.hero_id\nJOIN superpower sp ON hp.power_id = sp.id\nWHERE s.superhero_name = '3-D Man';",
+      "candidate": "0bc4e665732c64891386a6c8a2d62b26c1a3a621db9edfe746699cd80d8c24d3",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "719",
+      "sql": "SELECT COUNT(*) FROM superhero s JOIN hero_power hp ON s.id = hp.hero_id JOIN superpower sp ON hp.power_id = sp.id WHERE sp.power_name = 'Super Strength' AND s.height_cm > 200;",
+      "candidate": "763e643a1704a6cd69c660941f9e28b3af75d55183f4a679bfc8a520ad303b40",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "723",
+      "sql": "SELECT COUNT(*) FROM superhero s JOIN colour c ON s.eye_colour_id = c.id JOIN hero_power hp ON s.id = hp.hero_id JOIN superpower sp ON hp.power_id = sp.id WHERE c.colour = 'Blue' AND sp.power_name = 'Agility';",
+      "candidate": "761003eb648038afb8d4bde880456727d61ba759b7ce66b34bf5e9c784d171e8",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "724",
+      "sql": "SELECT s.superhero_name\nFROM superhero s\nJOIN colour c_eye ON s.eye_colour_id = c_eye.id\nJOIN colour c_hair ON s.hair_colour_id = c_hair.id\nWHERE c_eye.colour = 'Blue'\n  AND c_hair.colour = 'Blond';",
+      "candidate": "20cd7f07888317e71f7b5d9e8b63389acf74f8c968ecbe090e758c5b5c588b20",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "726",
+      "sql": "SELECT s.superhero_name, s.height_cm\nFROM superhero s\nJOIN publisher p ON s.publisher_id = p.id\nWHERE p.publisher_name = 'Marvel Comics'\nORDER BY s.height_cm DESC;",
+      "candidate": "a0cb115f761ea9192d948f381eb0b94849c14a8e215d4eb8d2ea01e54797b286",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "730",
+      "sql": "SELECT s.superhero_name\nFROM superhero s\nJOIN publisher p ON s.publisher_id = p.id\nJOIN hero_power hp ON s.id = hp.hero_id\nJOIN superpower sp ON hp.power_id = sp.id\nWHERE p.publisher_name = 'Marvel Comics'\n  AND sp.power_name = 'Super Strength';",
+      "candidate": "9c1cffc36a768ed10deec0c4e5999c91033dfe291d8fc55510f06a0c4d6919e3",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "732",
+      "sql": "SELECT p.publisher_name\nFROM superhero s\nJOIN publisher p ON s.publisher_id = p.id\nJOIN hero_attribute ha ON s.id = ha.hero_id\nJOIN attribute a ON ha.attribute_id = a.id\nWHERE a.attribute_name = 'Speed'\nORDER BY ha.attribute_value ASC\nLIMIT 1;",
+      "candidate": "e1925a248d8ea6d69502856b670a4e67aa4a9fe92603b3df50acbfa66ec4effe",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "733",
+      "sql": "SELECT COUNT(*) FROM superhero s JOIN publisher p ON s.publisher_id = p.id JOIN colour c ON s.eye_colour_id = c.id WHERE c.colour = 'Gold' AND p.publisher_name = 'Marvel Comics';",
+      "candidate": "22af2787716e757e4951f93d6af75ec9c2ebee961ed1434adeb3c83be888a74f",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "736",
+      "sql": "SELECT s.superhero_name\nFROM superhero s\nJOIN hero_attribute ha ON s.id = ha.hero_id\nJOIN attribute a ON ha.attribute_id = a.id\nWHERE a.attribute_name = 'Intelligence'\nORDER BY ha.attribute_value ASC\nLIMIT 1;",
+      "candidate": "6ee7e909e1afa771e10e62971c342e83a253fed474675b0196e7db5ee078c624",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "737",
+      "sql": "SELECT r.race FROM superhero s JOIN race r ON s.race_id = r.id WHERE s.superhero_name = 'Copycat'",
+      "candidate": "0ca77685850e4a950afd16543c6acd4b9e5cf8f7aecb4c959bb09cc64a36e3af",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "738",
+      "sql": "SELECT s.superhero_name\nFROM superhero s\nJOIN hero_attribute ha ON s.id = ha.hero_id\nJOIN attribute a ON ha.attribute_id = a.id\nWHERE a.attribute_name = 'Durability' AND ha.attribute_value < 50;",
+      "candidate": "5ad4919f85ad56d04be24b57b5cf7bd5340f23af2dc9765e94000b12198598f1",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "739",
+      "sql": "SELECT s.superhero_name\nFROM superhero s\nJOIN hero_power hp ON s.id = hp.hero_id\nJOIN superpower sp ON hp.power_id = sp.id\nWHERE sp.power_name = 'Death Touch';",
+      "candidate": "c204dfd4be9b29dd172a39029d3d85d7c584ea8e342371f23db528d74667f216",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "740",
+      "sql": "SELECT COUNT(*) FROM superhero s JOIN gender g ON s.gender_id = g.id JOIN hero_attribute ha ON s.id = ha.hero_id JOIN attribute a ON ha.attribute_id = a.id WHERE g.gender = 'Female' AND a.attribute_name = 'Strength' AND ha.attribute_value = 100;",
+      "candidate": "75a4f9201acc58a88aff9e051dca02b2e9b2aa9cb197478a906af8547d1702fe",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "743",
+      "sql": "SELECT\n  SUM(CASE WHEN alignment.alignment = 'Bad' THEN 1 ELSE 0 END) * 100.0 / COUNT(superhero.id) AS percentage,\n  SUM(CASE WHEN alignment.alignment = 'Bad' AND publisher.publisher_name = 'Marvel Comics' THEN 1 ELSE 0 END) AS marvel_bad_count\nFROM superhero\nJOIN alignment ON superhero.alignment_id = alignment.id\nJOIN publisher ON superhero.publisher_id = publisher.id;",
+      "candidate": "a384bf6b4db9b8f7601a40720c729f35601d6a35d9bb38d58fc8527a50b379e9",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "744",
+      "sql": "SELECT SUM(publisher_name = 'Marvel Comics') - SUM(publisher_name = 'DC Comics') FROM superhero JOIN publisher ON superhero.publisher_id = publisher.id",
+      "candidate": "182a929248a407772438e4e48b18c268b3a4c0e7a35ac7ed3685e9643dbf17d0",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "745",
+      "sql": "SELECT id FROM publisher WHERE publisher_name = 'Star Trek';",
+      "candidate": "a9cee48d00633b5d588c32b527202a3e80f6584ab2f66d9eecd60606ffbf9a9a",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "747",
+      "sql": "SELECT COUNT(*) FROM superhero WHERE full_name IS NULL;",
+      "candidate": "02f54eb175fffbc58ba6b3e7048967beebf9598767539987f10cdc7a1d8eab42",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "750",
+      "sql": "SELECT AVG(weight_kg) FROM superhero JOIN gender ON superhero.gender_id = gender.id WHERE gender.gender = 'Female';",
+      "candidate": "73d5b4e75d1ff8c6d365c9e39e05eedaf9d92575e356048b95a8ff8946348678",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "753",
+      "sql": "SELECT superhero_name\nFROM superhero\nWHERE height_cm BETWEEN 170 AND 190\n  AND eye_colour_id IN (SELECT id FROM colour WHERE colour = 'No Colour');",
+      "candidate": "a36bd330907ab2eee5a1d629f2af9205cd8ba68b5f7bd840857584adfe38b3de",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "758",
+      "sql": "SELECT c.colour\nFROM superhero s\nJOIN colour c ON s.hair_colour_id = c.id\nJOIN race r ON s.race_id = r.id\nWHERE s.height_cm = 185 AND r.race = 'human';",
+      "candidate": "0decfccec958b6e73c84ad85b7a4288b516ae45b6808929a38cbdcb9ee2ab8e2",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "760",
+      "sql": "SELECT SUM(publisher_id = 13) * 100.0 / COUNT(*) FROM superhero WHERE height_cm BETWEEN 150 AND 180;",
+      "candidate": "98fbfbd79801b382993350455cfc82d8a093e18e5409228b26758b6c24e69a89",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "761",
+      "sql": "SELECT s.superhero_name\nFROM superhero s\nJOIN gender g ON s.gender_id = g.id\nWHERE g.gender = 'Male'\n  AND s.weight_kg > (SELECT AVG(weight_kg) * 0.79 FROM superhero);",
+      "candidate": "e44416c2d0104f1307c32b9534e99225b4b1fc7247cb5efa475d27aa57f2e3e0",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "764",
+      "sql": "SELECT sp.power_name FROM superhero s JOIN hero_power hp ON s.id = hp.hero_id JOIN superpower sp ON hp.power_id = sp.id WHERE s.id = 1",
+      "candidate": "c00191e2c504ab65c160c378007a95b5b5c374e273c4a8c39acec9ae28058709",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "765",
+      "sql": "SELECT COUNT(*) FROM superhero JOIN hero_power ON superhero.id = hero_power.hero_id JOIN superpower ON hero_power.power_id = superpower.id WHERE superpower.power_name = 'Stealth';",
+      "candidate": "96717a721eb9980fafd4952c0b1583f20ac3e936998d102234d17a09c17dc315",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "769",
+      "sql": "SELECT s.superhero_name\nFROM superhero s\nJOIN hero_attribute ha ON s.id = ha.hero_id\nJOIN attribute a ON ha.attribute_id = a.id\nJOIN publisher p ON s.publisher_id = p.id\nWHERE a.attribute_name = 'durability'\n  AND p.publisher_name = 'Dark Horse Comics'\nORDER BY ha.attribute_value DESC\nLIMIT 1;",
+      "candidate": "5fd525b4b6fa332da423a6ae3be063303e537c73ea132c792e6be9a45379b5ab",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "772",
+      "sql": "SELECT c1.colour AS eye_colour, c2.colour AS hair_colour, c3.colour AS skin_colour\nFROM superhero s\nJOIN gender g ON s.gender_id = g.id\nJOIN publisher p ON s.publisher_id = p.id\nJOIN colour c1 ON s.eye_colour_id = c1.id\nJOIN colour c2 ON s.hair_colour_id = c2.id\nJOIN colour c3 ON s.skin_colour_id = c3.id\nWHERE g.gender = 'Female' AND p.publisher_name = 'Dark Horse Comics';",
+      "candidate": "9a9718c06b22d3bb56318f2fca57bafb0fc937d130aa2fc9409f5aa0b9864e5a",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "773",
+      "sql": "SELECT s.superhero_name, p.publisher_name\nFROM superhero s\nJOIN publisher p ON s.publisher_id = p.id\nWHERE s.hair_colour_id = s.skin_colour_id\n  AND s.hair_colour_id = s.eye_colour_id;",
+      "candidate": "3235c005c71c52b930c79861d9f70101e79127b62914ed6c6a08c0da2183ff73",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "775",
+      "sql": "SELECT SUM(CASE WHEN c.colour = 'Blue' THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS percentage\nFROM superhero s\nJOIN gender g ON s.gender_id = g.id\nJOIN colour c ON s.skin_colour_id = c.id\nWHERE g.gender = 'Female';",
+      "candidate": "9a8427da007211191ee71be4797f5372745b09272e7e85935deedd2c0c4f7e57",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "779",
+      "sql": "SELECT COUNT(*) FROM hero_power WHERE hero_id = (SELECT id FROM superhero WHERE superhero_name = 'Amazo');",
+      "candidate": "61f3742df46b7e96af57cbe17ae1e9f137554982bfaa413b8ca1f50e01833ad5",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "781",
+      "sql": "SELECT height_cm FROM superhero JOIN colour ON eye_colour_id = colour.id WHERE colour.colour = 'Amber'",
+      "candidate": "2ab27a2552cdf2885ad95c0d222b681bc8912577f9f7d1c8e090191ff94fe327",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "782",
+      "sql": "SELECT s.superhero_name\nFROM superhero s\nJOIN colour c_eye ON s.eye_colour_id = c_eye.id\nJOIN colour c_hair ON s.hair_colour_id = c_hair.id\nWHERE c_eye.colour = 'Black' AND c_hair.colour = 'Black';",
+      "candidate": "1f13d3bdbf115adc371b1166351a82770d8c4651c5a0e672b79652a573881996",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "785",
+      "sql": "SELECT superhero_name FROM superhero JOIN alignment ON superhero.alignment_id = alignment.id WHERE alignment.alignment = 'Neutral';",
+      "candidate": "f8ba8a1489d6785fa3b9908e772e5197ee707a93d5487941011277a6fd64a2cc",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "786",
+      "sql": "SELECT COUNT(*)\nFROM superhero s\nJOIN hero_attribute ha ON s.id = ha.hero_id\nJOIN attribute a ON ha.attribute_id = a.id\nWHERE a.attribute_name = 'Strength'\n  AND ha.attribute_value = (\n    SELECT MAX(attribute_value)\n    FROM hero_attribute ha2\n    JOIN attribute a2 ON ha2.attribute_id = a2.id\n    WHERE a2.attribute_name = 'Strength'\n  );",
+      "candidate": "f2bb44eb256c3f73716843f9747808d8e131ef7e1aeac614a880845ff9b5963e",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "790",
+      "sql": "SELECT (SELECT weight_kg FROM superhero WHERE full_name = 'Emil Blonsky') - (SELECT weight_kg FROM superhero WHERE full_name = 'Charles Chandler')",
+      "candidate": "987c309f665f7b2327ea56bd21965dc79989e40653b6a295135c41694ef528c4",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "791",
+      "sql": "SELECT AVG(height_cm) FROM superhero",
+      "candidate": "22f9787e76206a912541e060cb0eb12f004698a62a7c5b40e203569ab320b73b",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "792",
+      "sql": "SELECT sp.power_name\nFROM superhero s\nJOIN hero_power hp ON s.id = hp.hero_id\nJOIN superpower sp ON hp.power_id = sp.id\nWHERE s.superhero_name = 'Abomination';",
+      "candidate": "997dca643d11a03845a1da73a5a95c61f66e2ec3975e466fba09d14dbc1aa0c2",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "794",
+      "sql": "SELECT s.superhero_name\nFROM superhero s\nJOIN hero_attribute ha ON s.id = ha.hero_id\nJOIN attribute a ON ha.attribute_id = a.id\nWHERE a.attribute_name = 'Speed'\nORDER BY ha.attribute_value DESC\nLIMIT 1;",
+      "candidate": "94bd2ed2d3c7d94e193de90f09ffa41af84104284b5da497bc4b05907ab7d81c",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "796",
+      "sql": "SELECT a.attribute_name, ha.attribute_value\nFROM superhero s\nJOIN hero_attribute ha ON s.id = ha.hero_id\nJOIN attribute a ON ha.attribute_id = a.id\nWHERE s.superhero_name = '3-D Man';",
+      "candidate": "ee17d0a76688906f2d9a47b08b6aa82c2a75cbf4c859a630ec0777161ac330e2",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "797",
+      "sql": "SELECT s.superhero_name\nFROM superhero s\nJOIN colour c_eye ON s.eye_colour_id = c_eye.id\nJOIN colour c_hair ON s.hair_colour_id = c_hair.id\nWHERE c_eye.colour = 'Blue'\n  AND c_hair.colour = 'Brown';",
+      "candidate": "bbc1c50bf6c9c9d26872d3b35e5b29fd7f5aa55774bdd673dd58748b6946ad3f",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "798",
+      "sql": "SELECT p.publisher_name\nFROM superhero s\nJOIN publisher p ON s.publisher_id = p.id\nWHERE s.superhero_name IN ('Hawkman', 'Karate Kid', 'Speedy');",
+      "candidate": "e7d42a901d252ff73cd4eb08086e555664ebb7ae71d1534265e276c951f551b9",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "800",
+      "sql": "SELECT\n  SUM(CASE WHEN c.colour = 'Blue' THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS percentage\nFROM superhero s\nJOIN colour c ON s.eye_colour_id = c.id;",
+      "candidate": "88e6e8c9387101a7ccbe2a2f5b971fecd986e9021643d71c1becc2c45b74ab29",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "806",
+      "sql": "SELECT c.colour\nFROM superhero s\nJOIN colour c ON s.eye_colour_id = c.id\nWHERE s.full_name = 'Karen Beecher-Duncan';",
+      "candidate": "d16ed8add794502c688cbf145091401202927850421271eb84b08db87ad57d59",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "819",
+      "sql": "SELECT\n  SUM(CASE WHEN T1.eye_colour_id = 7 THEN 1 ELSE 0 END) - SUM(CASE WHEN T1.eye_colour_id = 1 THEN 1 ELSE 0 END)\nFROM superhero AS T1\nWHERE T1.weight_kg = 0 OR T1.weight_kg IS NULL",
+      "candidate": "4392360924317e8a870b5a94c38153e4b475270611b294ee0b89497a6bc87dd7",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "822",
+      "sql": "SELECT COUNT(*) FROM superhero s JOIN colour c ON s.skin_colour_id = c.id JOIN alignment a ON s.alignment_id = a.id WHERE c.colour = 'Green' AND a.alignment = 'Bad';",
+      "candidate": "63a1c8426b7fa74edc4e4b961db538b63c93f54ac581a8c8183ea124d243ae6d",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "824",
+      "sql": "SELECT DISTINCT s.superhero_name\nFROM superhero s\nJOIN hero_power hp ON s.id = hp.hero_id\nJOIN superpower sp ON hp.power_id = sp.id\nWHERE sp.power_name = 'Wind Control'\nORDER BY s.superhero_name;",
+      "candidate": "0ce149b94635c20bced6bafe28e28eb7784ca3796b4c3e56c4af535c27172e41",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "825",
+      "sql": "SELECT g.gender\nFROM superhero s\nJOIN gender g ON s.gender_id = g.id\nJOIN hero_power hp ON s.id = hp.hero_id\nJOIN superpower sp ON hp.power_id = sp.id\nWHERE sp.power_name = 'Phoenix Force';",
+      "candidate": "e8b4e9505240d3aa87e9b72e60237333bc5a7975c4e4034c36e5f6186699ee42",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "829",
+      "sql": "SELECT SUM(publisher_name = 'DC Comics') - SUM(publisher_name = 'Marvel Comics') AS difference\nFROM superhero\nJOIN publisher ON superhero.publisher_id = publisher.id;",
+      "candidate": "e7cf75744b6b296f80e369819b6ca219f203edf7ba384a512a38f184450143d1",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "846",
+      "sql": "SELECT d.driverRef\nFROM qualifying q\nJOIN drivers d ON q.driverId = d.driverId\nWHERE q.raceId = 20\n  AND q.q1 = (\n    SELECT MAX(q1)\n    FROM qualifying\n    WHERE raceId = 20\n  );",
+      "candidate": "19cbecf15e6d21e690c0fcbbc2cea350b4fffdedda6ba206467e18ede30102cd",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "847",
+      "sql": "SELECT d.surname\nFROM qualifying q\nJOIN drivers d ON q.driverId = d.driverId\nWHERE q.raceId = 19\nORDER BY q.q2 ASC\nLIMIT 1;",
+      "candidate": "5195dd363a13af7ec9a26774342a59dd3339a620778defac584a56a53c4f0214",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "850",
+      "sql": "SELECT r.name\nFROM races r\nJOIN circuits c ON r.circuitId = c.circuitId\nWHERE c.country = 'Germany';",
+      "candidate": "5b305a064577198614caf78f5cea60e7e69954404cb1a2eb4d9f42d3be82c652",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "854",
+      "sql": "SELECT c.lat, c.lng\nFROM circuits c\nJOIN races r ON c.circuitId = r.circuitId\nWHERE r.name = 'Australian Grand Prix';",
+      "candidate": "daa5ef4015fd2dd536e5c3b7859e25622081a65354d3740ccad69de6b5c1baf0",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "857",
+      "sql": "SELECT c.lat, c.lng\nFROM races r\nJOIN circuits c ON r.circuitId = c.circuitId\nWHERE r.name = 'Abu Dhabi Grand Prix';",
+      "candidate": "3d55f23ca5a48d202ac32c00ba012066f7e8010d694cf7c0c119e5405de1dca7",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "859",
+      "sql": "SELECT q.q1\nFROM qualifying q\nJOIN drivers d ON q.driverId = d.driverId\nWHERE d.forename = 'Bruno'\n  AND d.surname = 'Senna'\n  AND q.raceId = 354;",
+      "candidate": "aa38c79bdaea0d97993807b4f964904990a7dcfab57d5ee42c7cc0508fec0422",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "861",
+      "sql": "SELECT number\nFROM qualifying\nWHERE raceId = 903\n  AND q3 LIKE '1:54%';",
+      "candidate": "47032ce62506dd4c818d0f187776482dfab93347241cce1200664f530b9e6ba9",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "862",
+      "sql": "SELECT COUNT(*)\nFROM results r\nJOIN races ra ON r.raceId = ra.raceId\nWHERE ra.name = 'Bahrain Grand Prix'\n  AND ra.year = 2007\n  AND r.time IS NULL;",
+      "candidate": "6e063df46a11965b6d89874e94559ddd49c16fa77173205d9980fcbf6b98d7a4",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "868",
+      "sql": "SELECT c.lat, c.lng\nFROM races r\nJOIN circuits c ON r.circuitId = c.circuitId\nWHERE r.name = 'Malaysian Grand Prix';",
+      "candidate": "40aff4d9b66c790b71d0e6523a5094a76aff101efc4d0024fa3468067e465259",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "869",
+      "sql": "SELECT c.url\nFROM constructorResults cr\nJOIN constructors c ON cr.constructorId = c.constructorId\nWHERE cr.raceId = 9\nORDER BY cr.points DESC\nLIMIT 1;",
+      "candidate": "e2626abe09989e40025fa9a10fa54c92136f435901b5564f73387a7f5bf5d868",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "872",
+      "sql": "SELECT d.code\nFROM qualifying q\nJOIN drivers d ON q.driverId = d.driverId\nWHERE q.raceId = 45\n  AND q.q3 LIKE '1:33%';",
+      "candidate": "6e5f07b24329da3c959d50e0f6f91a42be6939561d3e58f9f35d5c0fe37c3585",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "875",
+      "sql": "SELECT s.url\nFROM races r\nJOIN seasons s ON r.year = s.year\nWHERE r.raceId = 901;",
+      "candidate": "906cdb70e61d625e47495af0d5f8db47661741bcd9130c547d50c6b76f913336",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "877",
+      "sql": "SELECT d.forename, d.surname, MAX(d.dob) AS dob\nFROM results r\nJOIN drivers d ON r.driverId = d.driverId\nWHERE r.raceId = 872\n  AND r.time IS NOT NULL\nGROUP BY d.driverId\nORDER BY dob DESC\nLIMIT 1;",
+      "candidate": "8f57e378c5c99ea3df4ef193d67a3b7afa0a5be8df31bec22c7227ade3a7ede9",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "879",
+      "sql": "SELECT d.nationality\nFROM results r\nJOIN drivers d ON r.driverId = d.driverId\nWHERE r.fastestLapSpeed = (SELECT MAX(fastestLapSpeed) FROM results)\nLIMIT 1;",
+      "candidate": "b098f4dc6bacb29b98726dd1cf816f58a212afcf6540e8e2ff57d0dbad8fcf6a",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "880",
+      "sql": "SELECT\n  (results.fastestLapSpeed - (SELECT results.fastestLapSpeed FROM results WHERE results.raceId = 854 AND results.driverId = (SELECT drivers.driverId FROM drivers WHERE drivers.forename = 'Paul' AND drivers.surname = 'di Resta')) * 100.0) / results.fastestLapSpeed\nFROM results\nWHERE results.raceId = 853\n  AND results.driverId = (SELECT drivers.driverId FROM drivers WHERE drivers.forename = 'Paul' AND drivers.surname = 'di Resta')",
+      "candidate": "bf63c38dd0a895c608fc203957a5bb7e506820ba07a09ad5753ac631f560b8c7",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "884",
+      "sql": "SELECT name\nFROM races\nWHERE strftime('%Y', date) = (SELECT strftime('%Y', MIN(date)) FROM races)\n  AND strftime('%m', date) = (SELECT strftime('%m', MIN(date)) FROM races);",
+      "candidate": "b2dfcfa44c373d2ef00fd5b03832405fa762c0f4db14d45a2f723da6509d3a18",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "895",
+      "sql": "SELECT AVG(lt.milliseconds) AS average_lap_time\nFROM lapTimes lt\nJOIN drivers d ON lt.driverId = d.driverId\nJOIN races r ON lt.raceId = r.raceId\nWHERE d.forename = 'Lewis'\n  AND d.surname = 'Hamilton'\n  AND r.name = 'Malaysian Grand Prix'\n  AND r.year = 2009;",
+      "candidate": "67ea59e4c66495ea579e23abdcd6de204fff37c9f7f51ad9d953800f966d9722",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "897",
+      "sql": "SELECT\n    d.forename,\n    d.surname,\n    d.nationality,\n    MAX(ds.points) AS max_points\nFROM\n    drivers d\nJOIN\n    driverStandings ds ON d.driverId = ds.driverId\nGROUP BY\n    d.driverId\nORDER BY\n    SUM(ds.wins) DESC\nLIMIT 1;",
+      "candidate": "57df8bc4f287d945386863173f75de12d5a13d43038d0d8ee9da01001a495a33",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "898",
+      "sql": "SELECT forename, surname, dob, (YEAR(CURRENT_TIMESTAMP) - YEAR(dob)) AS age\nFROM drivers\nWHERE nationality = 'Japanese'\nORDER BY dob DESC\nLIMIT 1;",
+      "candidate": "18f968b75d17258257125ed40ca9e83c559025e84e11ca383667edc0ecfd8abd",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "sql_error"
+    },
+    {
+      "question_id": "901",
+      "sql": "SELECT r.name AS race_name, c.name AS circuit_name, c.location\nFROM races r\nJOIN circuits c ON r.circuitId = c.circuitId\nWHERE strftime('%m', r.date) = '09' AND strftime('%Y', r.date) = '2005';",
+      "candidate": "42b8707c11f9f5f4731a677fbff87265ec301d1490d2f0ce1525de600633b322",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "909",
+      "sql": "SELECT\n  100.0 * SUM(CASE WHEN c.country = 'Germany' THEN 1 ELSE 0 END) / COUNT(*)\nFROM races r\nJOIN circuits c ON r.circuitId = c.circuitId\nWHERE r.name = 'European Grand Prix';",
+      "candidate": "0ab3c636744c6b35a6592044584fc138be1bf0ce1c2742345e9d726bc512ff72",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "910",
+      "sql": "SELECT lat, lng FROM circuits WHERE name = 'Silverstone Circuit';",
+      "candidate": "1e446472f0735547b1dacd217e15d9b348300d259749627b8327f781689df15b",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "912",
+      "sql": "SELECT circuitRef FROM circuits WHERE name = 'Marina Bay Street Circuit';",
+      "candidate": "62f53c4bbdcc24246e4d97f111ed4095b9ce3c45eefc8efdcc46f28ff72b79d3",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "915",
+      "sql": "SELECT nationality\nFROM drivers\nORDER BY dob ASC\nLIMIT 1;",
+      "candidate": "c33a41e759cbdd2eabd97d015a9c036348061b54cfc796aecd736592afeb2a3c",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "931",
+      "sql": "SELECT MAX(fastestLapSpeed) FROM results JOIN races ON results.raceId = races.raceId WHERE races.name = 'Spanish Grand Prix' AND races.year = 2009;",
+      "candidate": "4828d9d5389d03d177ae952482a150dee8ed85ac68165b1a12993b68395ccc79",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "933",
+      "sql": "SELECT r.positionOrder\nFROM results r\nJOIN races rc ON r.raceId = rc.raceId\nJOIN drivers d ON r.driverId = d.driverId\nWHERE d.forename = 'Lewis'\n  AND d.surname = 'Hamilton'\n  AND rc.name = 'Chinese Grand Prix'\n  AND rc.year = 2008\nORDER BY r.positionOrder\nLIMIT 1;",
+      "candidate": "da70892dc2f383d38f4dd8f722387344b7440169a1c8e9d8780ced8f30eea7e6",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "937",
+      "sql": "SELECT r.time\nFROM races r\nJOIN results res ON r.raceId = res.raceId\nJOIN drivers d ON res.driverId = d.driverId\nWHERE r.year = 2008\n  AND r.name = 'Chinese Grand Prix'\n  AND res.rank = 2;",
+      "candidate": "da2b9345f59d1e0c668ccb23ad56ef872db0ed9a3d94a9af66f123ca14ebd88b",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "940",
+      "sql": "SELECT COUNT(*)\nFROM results r\nJOIN drivers d ON r.driverId = d.driverId\nJOIN races rac ON r.raceId = rac.raceId\nWHERE rac.name = 'Chinese Grand Prix'\n  AND rac.year = 2008\n  AND r.time IS NOT NULL\n  AND EXISTS (\n      SELECT 1\n      FROM results r2\n      WHERE r2.driverId = d.driverId\n  );",
+      "candidate": "a8efaa788f7a064d24a1a61d32a2c83b0cea858469d508706259ae351fc3a666",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "945",
+      "sql": "SELECT COUNT(*) FROM circuits WHERE location = 'Adelaide' AND country = 'Australia';",
+      "candidate": "ec364660b0089032bbef5919a125893f61b96b752805dcf6a9242212ffe3fb55",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "948",
+      "sql": "SELECT MAX(points) FROM constructorStandings JOIN constructors ON constructorStandings.constructorId = constructors.constructorId WHERE constructors.nationality = 'British';",
+      "candidate": "bf7d4e56d0d0ca2c16adae8dfea40e1accd64bb94a4283aa208458a6d565b730",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "951",
+      "sql": "SELECT COUNT(*)\nFROM constructorStandings cs\nJOIN constructors c ON cs.constructorId = c.constructorId\nWHERE c.nationality = 'Japanese'\n  AND cs.points = 0\nGROUP BY c.constructorId\nHAVING COUNT(cs.raceId) = 2;",
+      "candidate": "9400f614f8e10956d59b04e12250c7bc7f2ab2e2ecef42b4b18d1eb9a0bf9396",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "960",
+      "sql": "SELECT AVG(fastestLapSpeed) FROM results JOIN races ON results.raceId = races.raceId WHERE races.name = 'Spanish Grand Prix' AND races.year = 2009;",
+      "candidate": "19b10b2768337c873480994a08ba3220982fd7870963e5738f92a98db3f5b171",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "963",
+      "sql": "SELECT COUNT(*)\nFROM drivers d\nJOIN lapTimes lt ON d.driverId = lt.driverId\nWHERE d.nationality = 'French'\n  AND lt.milliseconds < 120000;",
+      "candidate": "203a85496643422ebffdc8c1d645d136c4390e585772f7d75ec7e28439262b3d",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "964",
+      "sql": "SELECT code FROM drivers WHERE nationality = 'American';",
+      "candidate": "c48fa144079da8aa50286229fd1b6cfca24867fd3d82598491cfab5948525f54",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "971",
+      "sql": "SELECT driverRef\nFROM drivers\nWHERE nationality = 'German'\nORDER BY dob ASC\nLIMIT 1;",
+      "candidate": "b900b0d1171d75e469965fb9e23dd798455c375a12e358b71193ff54dee02ce4",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "972",
+      "sql": "SELECT d.driverId, d.code\nFROM drivers d\nJOIN results r ON d.driverId = r.driverId\nWHERE strftime('%Y', d.dob) = '1971'\n  AND r.fastestLapTime IS NOT NULL;",
+      "candidate": "9d97a72ed3af5989486e6e606a9720a5cf8f618ffeddb36213619288c400a062",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "977",
+      "sql": "SELECT COUNT(*) FROM results WHERE raceId > 50 AND raceId < 100 AND statusId = 2 AND time IS NOT NULL;",
+      "candidate": "114b03a94c4c9a0f7735f6203c490ed91869a0aeb4412f92845f2dc318198069",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "981",
+      "sql": "SELECT MIN(r.date) AS first_qualifying_race_date,\n       r.name AS race_name,\n       r.time AS race_time,\n       r.year AS race_year\nFROM races r\nJOIN qualifying q ON r.raceId = q.raceId\nJOIN drivers d ON q.driverId = d.driverId\nWHERE d.dob = (SELECT MAX(dob) FROM drivers)\nLIMIT 1;",
+      "candidate": "63fdc7862664642822168585e66b8400ec1660865ce22d0be323b65f7b845c72",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "988",
+      "sql": "SELECT\n    d.forename,\n    d.surname,\n    AVG(CAST(REPLACE(p.duration, '.', '') AS REAL)) AS avg_pit_stop_duration\nFROM\n    drivers d\nJOIN\n    pitStops p ON d.driverId = p.driverId\nWHERE\n    d.nationality = 'German'\n    AND CAST(strftime('%Y', d.dob) AS INTEGER) BETWEEN 1980 AND 1985\nGROUP BY\n    d.driverId, d.forename, d.surname\nORDER BY\n    avg_pit_stop_duration ASC\nLIMIT 3;",
+      "candidate": "fa0b7c931baaf9f764116172cf89039e1316727a545a91fbd5eb735edc0f40b9",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "990",
+      "sql": "SELECT c.constructorRef, c.url\nFROM results r\nJOIN constructors c ON r.constructorId = c.constructorId\nJOIN races ra ON r.raceId = ra.raceId\nWHERE ra.name = 'Singapore Grand Prix'\n  AND ra.year = 2009\n  AND r.position = 1\nORDER BY MAX(r.time) DESC\nLIMIT 1;",
+      "candidate": "1a0bac79c8e446b95424dcc0308e2de40558d2aa16e667c65ef94d72c7e669cc",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "sql_error"
+    },
+    {
+      "question_id": "1001",
+      "sql": "SELECT d.forename, d.surname\nFROM qualifying q\nJOIN races r ON q.raceId = r.raceId\nJOIN circuits c ON r.circuitId = c.circuitId\nJOIN drivers d ON q.driverId = d.driverId\nWHERE c.name = 'Marina Bay Street Circuit'\n  AND r.year = 2008\nORDER BY q.q3 ASC\nLIMIT 1;",
+      "candidate": "203237b6bf220be22aa1867583e84425276cb86b525fdc06232a6b3190212fb5",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1002",
+      "sql": "SELECT\n    d.forename || ' ' || d.surname AS fullName,\n    d.nationality,\n    r.name AS raceName\nFROM drivers d\nJOIN results res ON d.driverId = res.driverId\nJOIN races r ON res.raceId = r.raceId\nWHERE d.dob = (SELECT MAX(dob) FROM drivers)\nORDER BY r.date\nLIMIT 1;",
+      "candidate": "d7756150251b5cba0f252e803f3b0eeadd9a92405c99a47345c10773a4f6d798",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1025",
+      "sql": "SELECT l.name\nFROM Match m\nJOIN League l ON m.league_id = l.id\nWHERE m.season = '2015/2016'\nGROUP BY l.name\nORDER BY SUM(m.home_team_goal + m.away_team_goal) DESC\nLIMIT 1;",
+      "candidate": "e1e28e20ab839190be99ae52f95c42a10a7e1107415603013f6ff2e80614cdf3",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1028",
+      "sql": "SELECT T.team_long_name\nFROM Match M\nJOIN Team T ON M.away_team_api_id = T.team_api_id\nJOIN League L ON M.league_id = L.id\nWHERE L.name = 'Scotland Premier League'\n  AND M.season = '2009/2010'\n  AND M.away_team_goal > M.home_team_goal\nGROUP BY T.team_long_name\nORDER BY COUNT(*) DESC\nLIMIT 1;",
+      "candidate": "6025fef40838e6817cc2d27c14a5c9a509016a01279716cedff6a227f3f783d2",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1029",
+      "sql": "SELECT T.team_long_name, TA.buildUpPlaySpeed\nFROM Team T\nJOIN Team_Attributes TA ON T.team_fifa_api_id = TA.team_fifa_api_id\nORDER BY TA.buildUpPlaySpeed DESC\nLIMIT 4;",
+      "candidate": "e35cd4e99e2c81fd05a48556f94105d4fc2d145d233308858c3969aae16cddb7",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1030",
+      "sql": "SELECT l.name\nFROM Match m\nJOIN League l ON m.league_id = l.id\nWHERE m.season = '2015/2016'\nGROUP BY l.name\nORDER BY SUM(CASE WHEN m.home_team_goal = m.away_team_goal THEN 1 ELSE 0 END) DESC\nLIMIT 1;",
+      "candidate": "7dadf3a713b70671712fe03b07601e93c694e3d36697c88403419b366b217cb5",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1037",
+      "sql": "SELECT\n  (SUM(CASE WHEN preferred_foot = 'left' THEN 1 ELSE 0 END) * 100.0) / COUNT(player_fifa_api_id) AS percentage\nFROM Player_Attributes\nJOIN Player ON Player_Attributes.player_fifa_api_id = Player.player_fifa_api_id\nWHERE strftime('%Y', Player.birthday) BETWEEN '1987' AND '1992';",
+      "candidate": "144544ffc4ddd61cc68457ea4c77bcd4a7f5fe641b65f87452d556f3f7e40b76",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "sql_error"
+    },
+    {
+      "question_id": "1039",
+      "sql": "SELECT AVG(long_shots) FROM Player_Attributes JOIN Player ON Player_Attributes.player_fifa_api_id = Player.player_fifa_api_id WHERE Player.player_name = 'Ahmed Samir Farag';",
+      "candidate": "b072aac735a44419b80bff334e4f61e273184b558ecf666849dd9a21dec19843",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1040",
+      "sql": "SELECT p.player_name\nFROM Player p\nJOIN Player_Attributes pa ON p.player_fifa_api_id = pa.player_fifa_api_id\nWHERE p.height > 180\nGROUP BY p.player_fifa_api_id, p.player_name\nORDER BY AVG(pa.heading_accuracy) DESC\nLIMIT 10;",
+      "candidate": "dbf7d5a868409748682de8f95d071d70f912b192effe1ef13960df82da49a7a7",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1042",
+      "sql": "SELECT L.name\nFROM Match M\nJOIN League L ON M.league_id = L.id\nWHERE M.season = '2009/2010'\nGROUP BY L.name\nHAVING AVG(M.home_team_goal) > AVG(M.away_team_goal);",
+      "candidate": "5d1932b5a6e38289f0061a96088982281db595b4c3634025fab7d4eb7cc5cf3d",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1044",
+      "sql": "SELECT player_name\nFROM Player\nWHERE substr(birthday, 1, 4) = '1970' AND substr(birthday, 6, 2) = '10';",
+      "candidate": "585e0d00dc54474ca0801a6ed2049268c4c4b2fe1b04c628d073fd47a64d6742",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1048",
+      "sql": "SELECT pa.overall_rating\nFROM Player_Attributes pa\nJOIN Player p ON pa.player_api_id = p.player_api_id\nWHERE p.player_name = 'Gabriel Tamas'\n  AND strftime('%Y', pa.date) = '2011';",
+      "candidate": "b4427e0c00242d61df4cbd7714c1499f2632e5f8f1c7f74ea2ebed6052add4d7",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1057",
+      "sql": "SELECT AVG(home_team_goal)\nFROM Match\nJOIN League ON Match.league_id = League.id\nJOIN Country ON League.country_id = Country.id\nWHERE Country.name = 'Poland' AND Match.season = '2010/2011';",
+      "candidate": "b463d23cd1ba9473459fc2e71c89ae6a977c53488970a636fe15978664c582bf",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1068",
+      "sql": "SELECT AVG(t2.overall_rating)\nFROM Player_Attributes t2\nJOIN Player t1 ON t2.player_api_id = t1.player_api_id\nWHERE strftime('%Y', t2.date) >= '2010'\n  AND strftime('%Y', t2.date) <= '2015'\n  AND t1.height > 170;",
+      "candidate": "fcf8302e69978c0c077af3547406a14443b3ac9e4aab32bbcf3188dc4edd551b",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 1,
+      "transition": "0->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1076",
+      "sql": "SELECT\n  (SELECT AVG(pa.ball_control) FROM Player_Attributes pa JOIN Player p ON pa.player_api_id = p.player_api_id WHERE p.player_name = 'Abdou Diallo') -\n  (SELECT AVG(pa.ball_control) FROM Player_Attributes pa JOIN Player p ON pa.player_api_id = p.player_api_id WHERE p.player_name = 'Aaron Appindangoye')\n;",
+      "candidate": "e0d1b4d1c66e8f1527ba718abc32534904954eaceaf7b82dd64ed84864b6a694",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1078",
+      "sql": "SELECT player_name\nFROM Player\nWHERE player_name IN ('Aaron Lennon', 'Abdelaziz Barrada')\nORDER BY birthday ASC\nLIMIT 1;",
+      "candidate": "09cff47dddc6f854a66e44d323de8aa39820ac1fe2acccd45d6db85e01b7883d",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1079",
+      "sql": "SELECT player_name\nFROM Player\nORDER BY height DESC\nLIMIT 1;",
+      "candidate": "2c0321c526929efaf70be1135bd5307a42c7213954cd1dac13d0e4a889b0778e",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1080",
+      "sql": "SELECT COUNT(*)\nFROM Player_Attributes\nWHERE preferred_foot = 'left'\n  AND attacking_work_rate = 'low';",
+      "candidate": "645cab23519bebf3ccb5c0b673d7814bb3ab7d5ad088cbb77f36c3dcb5d4bd13",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1084",
+      "sql": "SELECT COUNT(DISTINCT p.player_api_id)\nFROM Player p\nJOIN Player_Attributes pa ON p.player_api_id = pa.player_api_id\nWHERE strftime('%Y', p.birthday) < '1986'\n  AND pa.defensive_work_rate = 'high';",
+      "candidate": "0a25006c013061b6c24bf605e3e5c2bd87b3fcef19ac50d51cd8050873f6c853",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1088",
+      "sql": "SELECT DISTINCT p.player_name\nFROM Player p\nJOIN Player_Attributes pa ON p.player_api_id = pa.player_api_id\nWHERE pa.volleys > 70 AND pa.dribbling > 70;",
+      "candidate": "99392cee9285f7cb921a3cde77b0961ed9847803dd88e2e46940e1ce62fa36e8",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1096",
+      "sql": "SELECT AVG(T1.overall_rating) FROM Player_Attributes AS T1 JOIN Player AS T2 ON T1.player_api_id  =  T2.player_api_id WHERE T2.player_name = 'Pietro Marino'",
+      "candidate": "259d71971343b5ffe2c207082c0e3c7c7a43403752ff9f6f29c6fc97401978a0",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1098",
+      "sql": "SELECT MAX(chanceCreationPassing) AS highest_chance_creation_passing, chanceCreationPassingClass\nFROM Team_Attributes\nJOIN Team ON Team_Attributes.team_fifa_api_id = Team.team_fifa_api_id\nWHERE Team.team_long_name = 'Ajax';",
+      "candidate": "8be5922a5cdaab6117a07e6834872e5a981d55841e99e7c9ea6661f9689dbc0b",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1102",
+      "sql": "SELECT p.player_name\nFROM Player p\nJOIN Player_Attributes pa ON p.player_api_id = pa.player_api_id\nWHERE pa.overall_rating = 77\n  AND pa.date LIKE '2016-06-23%'\nORDER BY p.birthday ASC\nLIMIT 1;",
+      "candidate": "b0837a1a4fd6c957da6e84c0bf4bb6d6858a7c36d7f890d5308b4bd70349666b",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1103",
+      "sql": "SELECT pa.overall_rating\nFROM Player_Attributes pa\nJOIN Player p ON pa.player_api_id = p.player_api_id\nWHERE p.player_name = 'Aaron Mooy'\n  AND pa.date LIKE '2016-02-04%';",
+      "candidate": "86589e3f54d61143636da88d2e858ac46ca8a030b80abfc191afbe061425cf02",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1105",
+      "sql": "SELECT pa.attacking_work_rate\nFROM Player_Attributes pa\nJOIN Player p ON pa.player_api_id = p.player_api_id\nWHERE p.player_name = 'Francesco Migliore'\n  AND pa.date LIKE '2015-05-01%';",
+      "candidate": "95f68c2f9e6dbbb09146c0b9a9cdc1eadabd13ce066775dd2a4a45cc564f23a2",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1107",
+      "sql": "SELECT date\nFROM Player_Attributes\nJOIN Player ON Player_Attributes.player_api_id = Player.player_api_id\nWHERE Player.player_name = 'Kevin Constant'\nORDER BY crossing DESC\nLIMIT 1;",
+      "candidate": "f3982db7fc3b3c8eedb60e713a68f8b64cebe22a92934b7668d2370801c0e3c1",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1110",
+      "sql": "SELECT buildUpPlayPassingClass\nFROM Team_Attributes\nJOIN Team ON Team_Attributes.team_fifa_api_id = Team.team_fifa_api_id\nWHERE Team.team_long_name = 'FC Lorient'\n  AND Team_Attributes.date LIKE '2010-02-22%';",
+      "candidate": "aa685f2ab3be4e802d9cc954cd1057ed3153d6f29686411b15a8c88cc239b8e6",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1113",
+      "sql": "SELECT T.defenceAggressionClass\nFROM Team T\nJOIN Team_Attributes TA ON T.team_fifa_api_id = TA.team_fifa_api_id\nWHERE T.team_long_name = 'Hannover 96'\n  AND TA.date LIKE '2015-09-10%';",
+      "candidate": "c0e6f629d7c605d7acce7146e75b0371b1b85d2c6226772bbacfae598530a78a",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "sql_error"
+    },
+    {
+      "question_id": "1114",
+      "sql": "SELECT AVG(pa.overall_rating)\nFROM Player_Attributes pa\nJOIN Player p ON pa.player_api_id = p.player_api_id\nWHERE p.player_name = 'Marko Arnautovic'\n  AND SUBSTR(pa.date, 1, 10) BETWEEN '2007-02-22' AND '2016-04-21';",
+      "candidate": "8371758726475c03cdc66aa5426cab058932b8b9f54813082933141a04a6dc2b",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1115",
+      "sql": "SELECT\n  (Landon_Donovan.overall_rating - Jordan_Bowery.overall_rating) * 100.0 / Landon_Donovan.overall_rating AS percentage\nFROM Player_Attributes Landon_Donovan\nJOIN Player_Attributes Jordan_Bowery\n  ON Landon_Donovan.date = Jordan_Bowery.date\nJOIN Player Landon_P\n  ON Landon_Donovan.player_api_id = Landon_P.player_api_id\nJOIN Player Jordan_P\n  ON Jordan_Bowery.player_api_id = Jordan_P.player_api_id\nWHERE Landon_P.player_name = 'Landon Donovan'\n  AND Jordan_P.player_name = 'Jordan Bowery'\n  AND Landon_Donovan.date = '2013/7/12';",
+      "candidate": "39dc83ccd067e5666e672b8c69e9477e87d2ef12140651775a5ae4f51f4a7d3d",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1122",
+      "sql": "SELECT p.player_name\nFROM Player p\nJOIN Player_Attributes pa ON p.player_api_id = pa.player_api_id\nORDER BY pa.overall_rating DESC\nLIMIT 1;",
+      "candidate": "9c53940b813516d43fae5f8bd147afe2d0729cbf7a156826d758181bfeff9a71",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1124",
+      "sql": "SELECT DISTINCT p.player_name\nFROM Player p\nJOIN Player_Attributes pa ON p.player_api_id = pa.player_api_id\nWHERE pa.attacking_work_rate = 'high';",
+      "candidate": "365a0af47fa76a8db509db6d44c7d1b1ff93ee7c6a06a0e7f7ed9c27e4c14661",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1130",
+      "sql": "SELECT DISTINCT t.team_short_name\nFROM Team t\nJOIN Team_Attributes ta ON t.team_fifa_api_id = ta.team_fifa_api_id\nWHERE ta.chanceCreationPassingClass = 'Safe';",
+      "candidate": "3a302c75bb627e20a911c8ba443a8355423c65cd0581c05e811bf1e2008b5655",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1136",
+      "sql": "SELECT COUNT(*)\nFROM Player_Attributes\nWHERE crossing = (SELECT MAX(crossing) FROM Player_Attributes)\n  AND preferred_foot = 'left';",
+      "candidate": "eba55ed92005df437b373dcee496f8cb291f1f8d414aaaefa4b9be0975f15333",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1139",
+      "sql": "SELECT m.home_team_goal, m.away_team_goal\nFROM \"Match\" m\nJOIN League l ON m.league_id = l.id\nWHERE m.date LIKE '2008-09-24%'\nAND l.name = 'Belgium Jupiler League';",
+      "candidate": "f1f2d807ba55a7852261f4559859db964a9818a2ea95fd68f3c941f66515df43",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1145",
+      "sql": "SELECT l.name\nFROM Match m\nJOIN League l ON m.league_id = l.id\nWHERE m.season = '2015/2016'\nGROUP BY l.name\nORDER BY COUNT(m.id) DESC\nLIMIT 4;",
+      "candidate": "00a48fc432bc1c92d4d46372c2f2a8b131468eea73dcde43f2aa561207340a36",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1146",
+      "sql": "SELECT T.team_long_name\nFROM \"Match\" M\nJOIN Team T ON M.away_team_api_id = T.team_api_id\nORDER BY M.away_team_goal DESC\nLIMIT 1;",
+      "candidate": "6e600b250ab15887cf0c1b0a657c81460857c460b6d793ae681139267e37792f",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1147",
+      "sql": "SELECT p.player_name\nFROM Player p\nJOIN Player_Attributes pa ON p.player_api_id = pa.player_api_id\nORDER BY pa.overall_rating DESC\nLIMIT 1;",
+      "candidate": "9c53940b813516d43fae5f8bd147afe2d0729cbf7a156826d758181bfeff9a71",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1149",
+      "sql": "SELECT\n  CASE\n    WHEN SUM(CASE WHEN SEX = 'M' AND Admission = '+' THEN 1 ELSE 0 END) > SUM(CASE WHEN SEX = 'M' AND Admission = '-' THEN 1 ELSE 0 END) THEN 'in-patient'\n    WHEN SUM(CASE WHEN SEX = 'M' AND Admission = '+' THEN 1 ELSE 0 END) < SUM(CASE WHEN SEX = 'M' AND Admission = '-' THEN 1 ELSE 0 END) THEN 'outpatient'\n    ELSE 'equal'\n  END AS type,\n  CASE\n    WHEN SUM(CASE WHEN SEX = 'M' AND Admission = '-' THEN 1 ELSE 0 END) = 0 THEN 0\n    ELSE 100.0 * ABS(SUM(CASE WHEN SEX = 'M' AND Admission = '+' THEN 1 ELSE 0 END) - SUM(CASE WHEN SEX = 'M' AND Admission = '-' THEN 1 ELSE 0 END)) / SUM(CASE WHEN SEX = 'M' AND Admission = '-' THEN 1 ELSE 0 END)\n  END AS deviation_percentage\nFROM Patient\nWHERE SEX = 'M';",
+      "candidate": "91f5a4638ae3255642e3c12c50ba5bcf92a0c38272012499fbaed373a45d49e9",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1150",
+      "sql": "SELECT CAST(SUM(CASE WHEN strftime('%Y', Birthday) > '1930' THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(ID) FROM Patient WHERE SEX = 'F';",
+      "candidate": "694e917649ea23f1496ef8b2afb92920feba5b4c85d4d8dee517b448cc3d3bf0",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1153",
+      "sql": "SELECT p.Diagnosis, l.Date\nFROM Patient p\nJOIN Laboratory l ON p.ID = l.ID\nWHERE p.ID = 30609;",
+      "candidate": "2352bff3ab4eca7fb3a223fa39445afdc513f1f65b42c77ff24d0dd12182c9a2",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1155",
+      "sql": "SELECT P.ID, P.SEX, P.Birthday\nFROM Patient P\nJOIN Laboratory L ON P.ID = L.ID\nWHERE L.LDH > 500;",
+      "candidate": "cbd2d72b42d0c39f7932e9110213970c0f4c78da45b74ae8b132aaa05d945338",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1156",
+      "sql": "SELECT ID, (strftime('%Y', 'now') - strftime('%Y', Birthday)) AS age FROM Patient WHERE ID IN (SELECT ID FROM Examination WHERE RVVT = '+');",
+      "candidate": "cc1a0f833022ceb50821aa281c33407b2dba25e3a78866cc62b694990877acd2",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1157",
+      "sql": "SELECT p.ID, p.SEX, p.Diagnosis\nFROM Patient p\nJOIN Examination e ON p.ID = e.ID\nWHERE e.Thrombosis = 2;",
+      "candidate": "369169cb01818f0d932da8f244171de07ca75c2775bdf6b31b698e5bad38fd46",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1162",
+      "sql": "SELECT COUNT(*) FROM Patient WHERE SEX = 'F' AND strftime('%Y', Description) = '1997' AND Admission = '-';",
+      "candidate": "ca50bfd3033ba752708bbc83dcd11e6cd7ad4f493cfcebdc533bf1ac93ce8c88",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1164",
+      "sql": "SELECT COUNT(*)\nFROM Patient P\nJOIN Examination E ON P.ID = E.ID\nWHERE E.Thrombosis = 1\n  AND P.SEX = 'F'\n  AND strftime('%Y', E.`Examination Date`) = '1997';",
+      "candidate": "d56b7012b5547fd7a4e4ecc68d6ad71d8d769e6d0e8320e8486fce03197db96a",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1169",
+      "sql": "SELECT\n  CAST(SUM(CASE WHEN P.SEX = 'M' AND L.UA <= 8.0 THEN 1 ELSE 0 END) AS REAL) /\n  NULLIF(SUM(CASE WHEN P.SEX = 'F' AND L.UA <= 6.5 THEN 1 ELSE 0 END), 0) AS ratio\nFROM Patient P\nJOIN Laboratory L ON P.ID = L.ID;",
+      "candidate": "21db1973ff40d66c55107a1f6f891edec1df1a3554bbab2fd820946b56af0dfe",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1179",
+      "sql": "SELECT `aCL IgM` FROM Examination WHERE `Examination Date` = '1993-11-12' AND ID IN (SELECT ID FROM Patient WHERE Diagnosis = 'SLE' AND `First Date` = '1994-02-19')",
+      "candidate": "904977c28e142c396f8bc4b739b1c6b1a7dd478141b48950e48cec2fc75433ab",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1187",
+      "sql": "SELECT COUNT(*) FROM Laboratory WHERE Date BETWEEN '1987-07-06' AND '1996-01-31' AND GPT > 30 AND ALB < 4",
+      "candidate": "63a1fefc07113e6176dcf6822d0b90fb27a12863c948385b93db8d25316fad13",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1192",
+      "sql": "SELECT DISTINCT P.ID\nFROM Patient P\nJOIN Laboratory L ON P.ID = L.ID\nWHERE P.Admission = '-'\n  AND L.Date LIKE '1991-10%'\n  AND L.`T-BIL` < 2.0;",
+      "candidate": "fd8492ed78f505e0010d5a2bc25339cf0cbc2e33fde027d0db5cbe75fe64ec48",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1195",
+      "sql": "SELECT AVG(L.ALB)\nFROM Laboratory L\nJOIN Patient P ON L.ID = P.ID\nWHERE P.SEX = 'F'\n  AND L.PLT > 400\n  AND P.Diagnosis = 'SLE';",
+      "candidate": "bdbcaa4c82c6d475533dae58c6153d1d5b5df34b052ae7d4981243d52825efdf",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1208",
+      "sql": "SELECT DISTINCT P.ID\nFROM Patient P\nJOIN Laboratory L ON P.ID = L.ID\nWHERE P.SEX = 'M' AND L.GPT >= 60;",
+      "candidate": "0d6a36ad462df5b48cc243bb0e89d67e3687fece6e3d975b2253f623cd9df52d",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1209",
+      "sql": "SELECT P.Diagnosis\nFROM Patient P\nJOIN Laboratory L ON P.ID = L.ID\nWHERE L.GPT > 60\nORDER BY P.Birthday ASC;",
+      "candidate": "9feafcf82fb44d94eecdd2a7a4a9b7262035c1232b7912d0dc9c7bb0cb67fbdc",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1220",
+      "sql": "SELECT P.ID, P.SEX, P.Birthday\nFROM Patient P\nJOIN Laboratory L ON P.ID = L.ID\nWHERE L.UN = 29;",
+      "candidate": "b673a1761afe1d519e46ae2a6ba7236bdfa128744266dbd7be87eec38e59c3f9",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1225",
+      "sql": "SELECT\n  Patient.SEX,\n  GROUP_CONCAT(DISTINCT Patient.ID) AS ID\nFROM Patient\n  JOIN Laboratory ON Patient.ID = Laboratory.ID\nWHERE Laboratory.`T-BIL` >= 2.0\nGROUP BY Patient.SEX",
+      "candidate": "6346f5c392329e9bac3d22e9f8c067445a6692784cf51c70c79cb204c4b2f371",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1229",
+      "sql": "SELECT COUNT(DISTINCT P.ID)\nFROM Patient P\nJOIN Laboratory L ON P.ID = L.ID\nWHERE L.TG >= 200\n  AND (strftime('%Y', 'now') - strftime('%Y', P.Birthday)) > 50;",
+      "candidate": "bd7f0a9b6d01006a3a4cb512230ea64e98be0e22c436127a75da52c29a9eebb5",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1231",
+      "sql": "SELECT COUNT(DISTINCT P.ID)\nFROM Patient P\nJOIN Laboratory L ON P.ID = L.ID\nWHERE strftime('%Y', P.Birthday) BETWEEN '1936' AND '1956'\n  AND P.SEX = 'M'\n  AND L.CPK >= 250;",
+      "candidate": "474d4cde0399bf8332802df3ba98c09ec54e37d0d69a89db64c4a4e0e7e4fb21",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1238",
+      "sql": "SELECT P.ID, P.SEX\nFROM Patient P\nJOIN Examination E ON P.ID = E.ID\nJOIN Laboratory L ON P.ID = L.ID\nWHERE E.Diagnosis = 'SLE'\n  AND L.HGB > 10\n  AND L.HGB < 17\nORDER BY P.Birthday ASC\nLIMIT 1;",
+      "candidate": "6e07c29b614cccf42d372b6ae4d597b658b10ff6bf23b938399249009478ab76",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1251",
+      "sql": "SELECT COUNT(DISTINCT ID)\nFROM Laboratory\nWHERE IGG >= 2000;",
+      "candidate": "158d3b84a788e21dc5c4f6beb9081a9b4bd7baed52fd5c0ec65ca287a2dce9a3",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 1,
+      "transition": "0->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1252",
+      "sql": "SELECT COUNT(*)\nFROM Patient p\nJOIN Laboratory l ON p.ID = l.ID\nWHERE l.IGG > 900\n  AND l.IGG < 2000\n  AND (SELECT Symptoms FROM Examination WHERE ID = p.ID) IS NOT NULL;",
+      "candidate": "66c4e318e5a866d0a074939196341938115a28963528f00c4106e81d89c6d351",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1255",
+      "sql": "SELECT Diagnosis\nFROM Laboratory\nJOIN Patient ON Laboratory.ID = Patient.ID\nWHERE IGM <= 40 OR IGM >= 400\nGROUP BY Diagnosis\nORDER BY COUNT(Diagnosis) DESC\nLIMIT 1",
+      "candidate": "4863767ac8ae3931467b25a9598af27dee0df8d433c0c8191e76927eb86cf08e",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1256",
+      "sql": "SELECT COUNT(*) FROM Patient WHERE Description IS NULL AND ID IN (SELECT ID FROM Laboratory WHERE CRP = '+')",
+      "candidate": "231fbd5d0a38ef3064372a89f87cf53219f05cf56baa595858385a756721a412",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 1,
+      "transition": "0->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1265",
+      "sql": "SELECT COUNT(DISTINCT P.ID)\nFROM Patient P\nJOIN Laboratory L ON P.ID = L.ID\nWHERE L.RNP IN ('-', '+-')\n  AND P.Admission = '+';",
+      "candidate": "c03283c9012fc6fcfca3a2fdb87d8ad87afa83cbe26439e1107dcf88d0449a6e",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1267",
+      "sql": "SELECT COUNT(*)\nFROM Examination e\nJOIN Laboratory l ON e.ID = l.ID\nWHERE (l.SM = '-' OR l.SM = '+-')\n  AND e.Thrombosis = 0;",
+      "candidate": "d2a5ce16abfffd255471a730d7dce7c61ffc7ad69cd7d8d4dcfc8445b72165ce",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1270",
+      "sql": "SELECT COUNT(DISTINCT p.ID)\nFROM Patient p\nJOIN Examination e ON p.ID = e.ID\nWHERE p.SEX = 'F'\n  AND e.Symptoms IS NULL\n  AND e.SC170 IN ('negative', '0');",
+      "candidate": "83f87da983d0823404430689261912689e22049c16a4e87f00f89d403481b0dc",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "sql_error"
+    },
+    {
+      "question_id": "1281",
+      "sql": "SELECT MAX(P.Birthday)\nFROM Patient P\nJOIN Laboratory L ON P.ID = L.ID\nWHERE L.GOT >= 60;",
+      "candidate": "f3b144f4a7958f1c98d6ad12a87986a2c65845b44d174230a2903e1d20a085a8",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1302",
+      "sql": "SELECT COUNT(*)\nFROM Patient p\nJOIN Laboratory l ON p.ID = l.ID\nJOIN Examination e ON p.ID = e.ID\nWHERE l.CPK < 250\n  AND (e.KCT = '+' OR e.RVVT = '+' OR e.LAC = '+');",
+      "candidate": "4c832919055b324167460baf290af804acfa02814ad175a16d1af3fdac1e343d",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1312",
+      "sql": "SELECT m.first_name, m.last_name, maj.major_name\nFROM member m\nJOIN major maj ON m.link_to_major = maj.major_id\nWHERE m.first_name = 'Angela' AND m.last_name = 'Sanders';",
+      "candidate": "689f3ed89f55aae762736410bb2b11e12fd0b20722fd22c6add755b6bd82797f",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1317",
+      "sql": "SELECT COUNT(*)\nFROM attendance a\nJOIN member m ON a.link_to_member = m.member_id\nJOIN event e ON a.link_to_event = e.event_id\nWHERE e.event_name = 'Women''s Soccer'\n  AND m.t_shirt_size = 'Medium';",
+      "candidate": "981e90fe551c6e9cf500de2268f8aa7ec4c764917354471ef9db0184f76ccd20",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1322",
+      "sql": "SELECT COUNT(*)\nFROM (\n    SELECT e.event_id\n    FROM event e\n    JOIN attendance a ON e.event_id = a.link_to_event\n    WHERE e.type = 'Meeting'\n    GROUP BY e.event_id\n    HAVING COUNT(a.link_to_member) > 10\n) AS meetings_with_many_attendees;",
+      "candidate": "6a529fd446a648d8967d8611a98f8a65b3f261236e34189a3d5593af494e082a",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 1,
+      "transition": "0->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1323",
+      "sql": "SELECT e.event_name\nFROM event e\nJOIN attendance a ON e.event_id = a.link_to_event\nWHERE e.type != 'fundraiser'\nGROUP BY e.event_id\nHAVING COUNT(a.link_to_member) > 20;",
+      "candidate": "155b4fdfcedbfb6b69c253cd749ae03f259f1a709e4532b67bc3a3f267cbd092",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1331",
+      "sql": "SELECT SUM(i.amount)\nFROM income i\nJOIN member m ON i.link_to_member = m.member_id\nWHERE m.position = 'Vice President';",
+      "candidate": "adb54dd7f8b7d01e7601b0304620107bc9dfbe1235a74b0b0872a117881ea903",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1334",
+      "sql": "SELECT m.first_name, m.last_name\nFROM member m\nJOIN zip_code z ON m.zip = z.zip_code\nWHERE z.state = 'IL';",
+      "candidate": "c89ae689e586382b5cba9bf0ffcf04ad8720a22d5dcf6d4fe4ff6e8cefc66f1c",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1339",
+      "sql": "SELECT AVG(cost)\nFROM expense\nJOIN member ON expense.link_to_member = member.member_id\nWHERE member.first_name = 'Elijah'\n  AND member.last_name = 'Allen'\n  AND (CAST(SUBSTR(expense.expense_date, 5, 2) AS INTEGER) = 9\n       OR CAST(SUBSTR(expense.expense_date, 5, 2) AS INTEGER) = 10);",
+      "candidate": "2d21d114f5982bb15bdb8c62f9bee5983f55917104f2ef1043a8ea818fca45ae",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1340",
+      "sql": "SELECT\n  SUM(CASE WHEN SUBSTR(e.event_date, 1, 4) = '2019' THEN b.spent ELSE 0 END) -\n  SUM(CASE WHEN SUBSTR(e.event_date, 1, 4) = '2020' THEN b.spent ELSE 0 END) AS difference\nFROM budget b\nJOIN event e ON b.link_to_event = e.event_id\nWHERE SUBSTR(e.event_date, 1, 4) IN ('2019', '2020');",
+      "candidate": "d46b6fdc18ce82a2221a11557a0e457b432c440aa230e1538e033930f3edd5ea",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1344",
+      "sql": "SELECT notes FROM income WHERE source = 'Fundraising' AND date_received = '2019-09-14';",
+      "candidate": "095935bc6713fbfbf524b86c8df7c72343e5805c92603b91e307295eb4213a6c",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1346",
+      "sql": "SELECT phone FROM member WHERE first_name = 'Carlo' AND last_name = 'Jacobs';",
+      "candidate": "c95d30d1e960155422d7c0161cc6dce8ca4c527324375317ac49887e55f27c76",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1350",
+      "sql": "SELECT e.status\nFROM expense ex\nJOIN budget b ON ex.link_to_budget = b.budget_id\nJOIN event e ON b.link_to_event = e.event_id\nWHERE ex.expense_description = 'Post Cards, Posters'\n  AND ex.expense_date = '2019-8-20';",
+      "candidate": "cdfd888ba9b3b16be0aac08b642eb2d8ab3461e8e06c24ccbe36fe3b5a2ddadc",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1351",
+      "sql": "SELECT m.first_name, m.last_name, maj.major_name\nFROM member m\nJOIN major maj ON m.link_to_major = maj.major_id\nWHERE m.first_name = 'Brent' AND m.last_name = 'Thomason';",
+      "candidate": "8864ceae2ce85459e7b56920813bd1cd929e2228ff2130bd89d9137ad2c575b9",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1352",
+      "sql": "SELECT COUNT(*)\nFROM member m\nJOIN major ma ON m.link_to_major = ma.major_id\nWHERE ma.major_name = 'Business'\n  AND m.t_shirt_size = 'Medium';",
+      "candidate": "1988d93b80a8bceac6b2a7d0bf6ab459acfc861feb98cf96ba241703e11bed6f",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1356",
+      "sql": "SELECT m.department\nFROM member m\nJOIN major ma ON m.link_to_major = ma.major_id\nWHERE m.position = 'President';",
+      "candidate": "85f0a55a10e9fbd378bf7ebf937d810763ec831c72d4d7ad57391492d3b0957a",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "sql_error"
+    },
+    {
+      "question_id": "1357",
+      "sql": "SELECT i.date_received\nFROM income i\nJOIN member m ON i.link_to_member = m.member_id\nWHERE m.first_name = 'Connor' AND m.last_name = 'Hilton' AND i.source = 'Dues';",
+      "candidate": "c34b5b1df78da56418eec5dcbeedbdfc8e42b0a9ff2a2ec5376919e3be9aa3c7",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1359",
+      "sql": "SELECT\n  SUM(CASE WHEN e.event_name = 'Yearly Kickoff' THEN b.amount ELSE 0 END) * 1.0 /\n  SUM(CASE WHEN e.event_name = 'October Meeting' THEN b.amount ELSE 0 END) AS result\nFROM budget b\nJOIN event e ON b.link_to_event = e.event_id\nWHERE b.category = 'Advertisement'\n  AND e.event_name IN ('Yearly Kickoff', 'October Meeting');",
+      "candidate": "b5bacf51423856776f5b19dd955ec093a41922207a8f483b5676b8779554f5aa",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1361",
+      "sql": "SELECT SUM(cost) FROM expense WHERE expense_description = 'Pizza';",
+      "candidate": "12ba3aaad3cd24f11485867ed893f8f23b7d443c165b434a6cb3659d0d4c63cf",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1362",
+      "sql": "SELECT COUNT(DISTINCT city) FROM zip_code WHERE county = 'Orange County' AND state = 'Virginia';",
+      "candidate": "3313afd8162a00693a9b1baca84b8f9028e61b798250823e473a99c3f26a6f54",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1368",
+      "sql": "SELECT m.major_name\nFROM member m\nJOIN major ma ON m.link_to_major = ma.major_id\nWHERE m.phone = '809-555-3360';",
+      "candidate": "2f93ad93ce7bea3dec899b403fa9cbe948619ae9db845b2d149d9c8f1a2126c5",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "sql_error"
+    },
+    {
+      "question_id": "1371",
+      "sql": "SELECT COUNT(*) FROM attendance JOIN event ON attendance.link_to_event = event.event_id WHERE event.event_name = 'Women''s Soccer';",
+      "candidate": "d7ebb73384a3d7b7581ded9d2c9e63ef5391785f9bd942a62672a82723bd2bd7",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1375",
+      "sql": "SELECT m.first_name, m.last_name\nFROM member m\nJOIN major ma ON m.link_to_major = ma.major_id\nWHERE ma.department = 'School of Applied Sciences, Technology and Education';",
+      "candidate": "6ace912ced9adff86aab4cfb7673a1f531902de8aae33c027710024d7143430b",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1376",
+      "sql": "SELECT e.event_name\nFROM event e\nJOIN budget b ON e.event_id = b.link_to_event\nWHERE e.status = 'Closed'\nORDER BY CAST(b.spent AS REAL) / b.amount DESC\nLIMIT 1;",
+      "candidate": "002b49f7f765f19affd6a46cc3ab0ae694e0e8f3fbb4bff83a70662e66666e86",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1378",
+      "sql": "SELECT MAX(spent) FROM budget;",
+      "candidate": "ecb62a138baa70c1770cbbd15ebd7041d0fd69719ff87e5c0e9e12f671a57984",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1380",
+      "sql": "SELECT SUM(spent) FROM budget WHERE category = 'Food';",
+      "candidate": "d9e47161f4cd5c19d327b7b68b8ba5db4bf4c41aa2ab39bf839207b3e988b6b4",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1381",
+      "sql": "SELECT m.first_name, m.last_name\nFROM member m\nJOIN attendance a ON m.member_id = a.link_to_member\nGROUP BY m.member_id\nHAVING COUNT(a.link_to_event) > 7;",
+      "candidate": "d8dc87189d510a7c76435cb5e0a4ea0f8b188424e66fb9c4c2762d3cc1d55005",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1387",
+      "sql": "SELECT m.first_name, m.last_name\nFROM member m\nJOIN expense e ON m.member_id = e.link_to_member\nJOIN budget b ON e.link_to_budget = b.budget_id\nJOIN event ev ON b.link_to_event = ev.event_id\nWHERE ev.event_name = 'Yearly Kickoff';",
+      "candidate": "a68b141c0996ad9933d4caacd1cf9064f5c3b3614f1643b23cdf8d20455a6b77",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1390",
+      "sql": "SELECT\n  SUM(CASE WHEN e.event_name = 'Yearly Kickoff' THEN ex.cost ELSE 0 END) * 100.0 / SUM(ex.cost) AS percentage\nFROM expense ex\nJOIN event e ON ex.link_to_budget IN (SELECT budget_id FROM budget WHERE link_to_event = e.event_id);",
+      "candidate": "f22093a1b7ff8e7d0764cf6ff5a3f46eb625e49957e59a6c4859049de576fcee",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1392",
+      "sql": "SELECT source\nFROM income\nWHERE date_received BETWEEN '2019-09-01' AND '2019-09-30'\nORDER BY amount DESC\nLIMIT 1;",
+      "candidate": "5cb360731392182a3ac01d651353675c682cb561525bd7a93a623f7404f52ed4",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1394",
+      "sql": "SELECT COUNT(*)\nFROM member m\nJOIN major ma ON m.link_to_major = ma.major_id\nWHERE ma.major_name = 'Physics Teaching';",
+      "candidate": "7394f97a025ff3391c149324ef51c57bfaf294f4180afbf0cf823bfcd1d4cd29",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1398",
+      "sql": "SELECT e.event_name\nFROM event e\nJOIN budget b ON e.event_id = b.link_to_event\nWHERE b.category = 'Advertisement'\nORDER BY b.spent DESC\nLIMIT 1;",
+      "candidate": "8fa939d4cfcf499dd56818f7339fa629cb0c96d5c9d750d406f94f7ef45ebd87",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1401",
+      "sql": "SELECT e.cost\nFROM expense e\nJOIN budget b ON e.link_to_budget = b.budget_id\nJOIN event ev ON b.link_to_event = ev.event_id\nWHERE e.expense_description = 'Posters'\n  AND ev.event_name = 'September Speaker';",
+      "candidate": "8596e89b715a6ebf98e91794a9b05f04151b89fc097a0bad9d5901789b6668e6",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1403",
+      "sql": "SELECT e.event_name\nFROM event e\nJOIN budget b ON e.event_id = b.link_to_event\nWHERE e.status = 'Closed'\nORDER BY b.remaining ASC\nLIMIT 1;",
+      "candidate": "0dda8b4e3200277d563d6b73ded4d6adb747e31aaae394173af4709e99584935",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1409",
+      "sql": "SELECT SUM(cost) FROM expense WHERE expense_date = '2019-08-20'",
+      "candidate": "579b146a74aebb2160cbfcfb41f65b896bba236531f2df3ab849de7cf96d9219",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1410",
+      "sql": "SELECT m.first_name, m.last_name, SUM(e.cost) AS total_cost\nFROM member m\nJOIN expense e ON m.member_id = e.link_to_member\nWHERE m.member_id = 'rec4BLdZHS2Blfp4v'\nGROUP BY m.member_id;",
+      "candidate": "bb3ce0724a4ec94fd185751a7994863d84375a83278bf6eeac43d8a592ce8104",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1411",
+      "sql": "SELECT e.expense_description\nFROM expense e\nJOIN member m ON e.link_to_member = m.member_id\nWHERE m.first_name = 'Sacha' AND m.last_name = 'Harrison';",
+      "candidate": "9b937ef3086b38deb5bf7a69924516ddeab8232923b42baa1b757a2710575d93",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1422",
+      "sql": "SELECT DISTINCT e.type\nFROM event e\nWHERE e.location = 'MU 215';",
+      "candidate": "c57ef657c3e6724905b4a585bc22ed4718b94f71e3ad77eb8208d95ec8203364",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 1,
+      "transition": "0->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1426",
+      "sql": "SELECT m.last_name, m.link_to_major, ma.department, ma.college\nFROM member m\nJOIN major ma ON m.link_to_major = ma.major_id\nWHERE ma.major_name = 'Environmental Engineering';",
+      "candidate": "b91e4be65bdff73f736575c9b22e25388149a7aabb078fad709184527a2207b3",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1427",
+      "sql": "SELECT DISTINCT b.category\nFROM budget b\nJOIN event e ON b.link_to_event = e.event_id\nWHERE e.location = 'MU 215'\n  AND e.type = 'Guest Speaker'\n  AND b.spent = 0;",
+      "candidate": "93282f1ff1abc0731d3d55c4b97bb8f92a743fa01cd055aaa2cf2281cb2444c8",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 1,
+      "transition": "0->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1432",
+      "sql": "SELECT\n  SUM(CASE WHEN i.amount = 50 THEN 1 ELSE 0 END) * 100.0 / COUNT(m.member_id) AS percentage\nFROM member m\nJOIN income i ON m.member_id = i.link_to_member\nWHERE m.t_shirt_size = 'Medium'\n  AND i.source = 'Student_Club';",
+      "candidate": "37f27d6e9333c08cd298ee6b491491333bff23c401572b6441c03042c1875c9f",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1435",
+      "sql": "SELECT event_name\nFROM event\nWHERE type = 'Game'\n  AND status = 'Closed'\n  AND event_date BETWEEN '2019-03-15' AND '2020-03-20';",
+      "candidate": "19fc7e5524af4cb524b020f22d43a260d34bb442922f900ee5c26d489e464b07",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1457",
+      "sql": "SELECT m.first_name, m.last_name, m.phone\nFROM member m\nJOIN expense e ON m.member_id = e.link_to_member\nWHERE e.cost > (SELECT AVG(cost) FROM expense);",
+      "candidate": "45b742767eb48544e0f728aba68969cd419128f7cac1deec6e66a5f062c9cd2f",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1460",
+      "sql": "SELECT m.first_name, m.last_name, e.cost\nFROM expense e\nJOIN member m ON e.link_to_member = m.member_id\nWHERE e.expense_description = 'Water, Veggie tray, supplies';",
+      "candidate": "2ceb4f63d58d75091f093afdc50edd277005e618344e2b2584e824ddf401285d",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1464",
+      "sql": "SELECT m.first_name, m.last_name, i.amount\nFROM income i\nJOIN member m ON i.link_to_member = m.member_id\nWHERE i.date_received = '9/9/2019';",
+      "candidate": "758d0e5960f79bb573716835a969885a510ac538f39b8980e63742235cef5d24",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1471",
+      "sql": "SELECT CAST(SUM(CASE WHEN Currency = 'EUR' THEN 1 ELSE 0 END) AS REAL) / SUM(CASE WHEN Currency = 'CZK' THEN 1 ELSE 0 END) AS ratio\nFROM customers;",
+      "candidate": "158c56a92ec2d2fb9dea6d55e0735b654d8ce404f7528896ebd0bccbb0b6b9af",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1472",
+      "sql": "SELECT c.CustomerID\nFROM yearmonth y\nJOIN customers c ON y.CustomerID = c.CustomerID\nWHERE y.Date BETWEEN '201201' AND '201212'\n  AND c.Segment = 'LAM'\nGROUP BY c.CustomerID\nORDER BY SUM(y.Consumption) ASC\nLIMIT 1;",
+      "candidate": "f5b7640047c5b0488be2a5ee843107992d561c4026b373c0ccc7512e236c24fd",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1476",
+      "sql": "SELECT\n  (SELECT SUM(Consumption)\n   FROM yearmonth ym\n   JOIN customers c ON ym.CustomerID = c.CustomerID\n   WHERE c.Currency = 'CZK'\n     AND ym.Date BETWEEN '201201' AND '201212')\n  -\n  (SELECT SUM(Consumption)\n   FROM yearmonth ym\n   JOIN customers c ON ym.CustomerID = c.CustomerID\n   WHERE c.Currency = 'EUR'\n     AND ym.Date BETWEEN '201201' AND '201212') AS DifferenceInConsumption;",
+      "candidate": "2f8e998c3fec87e22bb5fc13c22f89b700ea2569478588bb1dea20466a9ec808",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1479",
+      "sql": "SELECT substr(Date, 1, 4) AS Year, SUM(Consumption) AS TotalConsumption\nFROM yearmonth\nJOIN customers ON yearmonth.CustomerID = customers.CustomerID\nWHERE customers.Currency = 'CZK'\nGROUP BY Year\nORDER BY TotalConsumption DESC\nLIMIT 1;",
+      "candidate": "16be8c26da438da1cdd408ee5e11fefae6d4195baf76be3583e141af02134773",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1480",
+      "sql": "SELECT ym.Date\nFROM yearmonth ym\nJOIN customers c ON ym.CustomerID = c.CustomerID\nWHERE c.Segment = 'SME'\n  AND ym.Date BETWEEN '201301' AND '201312'\nORDER BY ym.Consumption DESC\nLIMIT 1;",
+      "candidate": "918ac2c875398d75ffaa4579209af12b2213cafbaab6b17dba546fb46bd5f6f8",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1481",
+      "sql": "WITH lowest_consumption AS (\n    SELECT\n        y.CustomerID,\n        y.Date,\n        y.Consumption,\n        c.Segment,\n        c.Currency,\n        ROW_NUMBER() OVER (PARTITION BY c.Segment ORDER BY y.Consumption ASC) as rn\n    FROM yearmonth y\n    JOIN customers c ON y.CustomerID = c.CustomerID\n    WHERE y.Date BETWEEN '201301' AND '201312'\n      AND c.Currency = 'CZK'\n),\nannual_avg AS (\n    SELECT\n        Segment,\n        AVG(Consumption) as avg_consumption\n    FROM lowest_consumption\n    WHERE rn = 1\n    GROUP BY Segment\n)\nSELECT\n    (SELECT avg_consumption FROM annual_avg WHERE Segment = 'SME') - (SELECT avg_consumption FROM annual_avg WHERE Segment = 'LAM') as SME_LAM_diff,\n    (SELECT avg_consumption FROM annual_avg WHERE Segment = 'LAM') - (SELECT avg_consumption FROM annual_avg WHERE Segment = 'KAM') as LAM_KAM_diff,\n    (SELECT avg_consumption FROM annual_avg WHERE Segment = 'KAM') - (SELECT avg_consumption FROM annual_avg WHERE Segment = 'SME') as KAM_SME_diff\nFROM annual_avg\nLIMIT 1;",
+      "candidate": "8b926dd39756e221a51c8d2a33af380c448f9f5a0a987e0a1004c56940799769",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1483",
+      "sql": "SELECT SUM(Consumption)\nFROM yearmonth\nWHERE CustomerID = 6\n  AND Date >= '201308'\n  AND Date <= '201311';",
+      "candidate": "471d544939b7995801796440f53f55219058255ed8fc251b0cdd30602bb3322f",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1484",
+      "sql": "SELECT SUM(CASE WHEN Country = 'CZE' THEN 1 ELSE 0 END) - SUM(CASE WHEN Country = 'SVK' THEN 1 ELSE 0 END) AS difference\nFROM gasstations\nWHERE Segment = 'discount';",
+      "candidate": "9a5f69b625a45ef6abcc7684eed43a7ed57113df0941829dbadaf9b783c0c7c2",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1486",
+      "sql": "SELECT (SELECT COUNT(*) FROM transactions_1k t JOIN customers c ON t.CustomerID = c.CustomerID WHERE c.Segment = 'SME' AND c.Currency = 'CZK') - (SELECT COUNT(*) FROM transactions_1k t JOIN customers c ON t.CustomerID = c.CustomerID WHERE c.Segment = 'SME' AND c.Currency = 'EUR') AS difference",
+      "candidate": "ed0be6b48840120edf584c5db354eaa52a26bb460f8c430d9edbb6340a4f2491",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1490",
+      "sql": "SELECT\n    (CAST(SUM(CASE WHEN y.Consumption > 46.73 THEN 1 ELSE 0 END) AS REAL) / COUNT(*)) * 100 AS percentage\nFROM yearmonth y\nJOIN customers c ON y.CustomerID = c.CustomerID\nWHERE c.Segment = 'LAM';",
+      "candidate": "42ece04de78943feb4b90f73c0016081fc161cbd673a2c02391c25af9f7bf9e3",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1493",
+      "sql": "SELECT\n    SUM(CASE WHEN Consumption > 528.3 THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS percentage\nFROM yearmonth\nWHERE Date = '201202';",
+      "candidate": "d83bf5a21930e5a8d5804359c36aa0f6a540f2bb7a3c73a0407f69c7d776187b",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1498",
+      "sql": "SELECT MAX(Consumption) FROM yearmonth WHERE substr(Date, 1, 4) = '2012';",
+      "candidate": "a0652ea3a222949ac3104503f4ef82b6e16c557e0932fbf5a32917579460a5b1",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1505",
+      "sql": "SELECT COUNT(*)\nFROM customers c\nJOIN yearmonth y ON c.CustomerID = y.CustomerID\nWHERE c.Currency = 'EUR'\n  AND y.Consumption > 1000;",
+      "candidate": "dd9779f10ac886487cc4d5bfeb28ab3c93e15085b386a3f8bb7fd960842501a9",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 0,
+      "transition": "1->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1506",
+      "sql": "SELECT p.Description\nFROM transactions_1k t\nJOIN gasstations g ON t.GasStationID = g.GasStationID\nJOIN products p ON t.ProductID = p.ProductID\nWHERE g.Country = 'CZE';",
+      "candidate": "3009cc2b96434a58c117e548a4fad23728e0df83fbceec219ca5252f33cb87c1",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1509",
+      "sql": "SELECT COUNT(*)\nFROM transactions_1k t\nJOIN gasstations g ON t.GasStationID = g.GasStationID\nWHERE g.Country = 'CZE'\n  AND t.Date > '2012-01-01';",
+      "candidate": "5ba75a711ab4f3ea501823e22860cf8d85bcdbe8c71df83583c826136f6a9a4a",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1514",
+      "sql": "SELECT c.Currency\nFROM transactions_1k t\nJOIN customers c ON t.CustomerID = c.CustomerID\nWHERE t.Date = '2012-08-24'\n  AND t.Time = '16:25:00';",
+      "candidate": "23b2b1aadd0d0e10d1536fbe28e284b005fcb80c0636e5691863a595aaa66b61",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1515",
+      "sql": "SELECT c.Segment\nFROM transactions_1k t\nJOIN customers c ON t.CustomerID = c.CustomerID\nWHERE t.Date = '2012-08-23'\n  AND t.Time = '21:20:00'\nLIMIT 1;",
+      "candidate": "7e908819e301c47b81e1f6726af6654be49b2bf2eb6da33c23b9318d157713d3",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1521",
+      "sql": "SELECT COUNT(*) FROM transactions_1k t JOIN gasstations g ON t.GasStationID = g.GasStationID WHERE t.Date = '2012-08-26' AND t.Time BETWEEN '08:00:00' AND '09:00:00' AND g.Country = 'CZE';",
+      "candidate": "c12be60949c0a1e47c16b67b786ed16991cfaec766c31f037020dad2dee07c56",
+      "transformed": false,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1524",
+      "sql": "SELECT c.Currency\nFROM transactions_1k t\nJOIN customers c ON t.CustomerID = c.CustomerID\nWHERE t.Date = '2012-08-24'\n  AND t.Price = 548.4;",
+      "candidate": "d72dda4d35ba8ea59323ce409e4adf51f311c8052bae3bb2c66bff4502681d4f",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1525",
+      "sql": "SELECT\n  CAST(SUM(CASE WHEN c.Currency = 'EUR' THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(DISTINCT t.CustomerID) AS percentage\nFROM transactions_1k t\nJOIN customers c ON t.CustomerID = c.CustomerID\nWHERE t.Date = '2012-08-25';",
+      "candidate": "c97b34175f4a848720d29ffa05bcf16a1d30c37db17e1a9d6d396940d5b47964",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 1,
+      "transition": "0->1",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1526",
+      "sql": "WITH customer_2012 AS (\n    SELECT\n        t.CustomerID,\n        SUM(t.Amount * t.Price) AS total_spent\n    FROM transactions_1k t\n    WHERE t.Date = '2012-08-24'\n    GROUP BY t.CustomerID\n    HAVING total_spent = 634.8\n),\nconsumption_2012 AS (\n    SELECT\n        c.CustomerID,\n        SUM(y.Consumption) AS total_consumption\n    FROM customer_2012 c\n    JOIN yearmonth y ON c.CustomerID = y.CustomerID\n    WHERE y.Date LIKE '2012%'\n    GROUP BY c.CustomerID\n),\nconsumption_2013 AS (\n    SELECT\n        c.CustomerID,\n        SUM(y.Consumption) AS total_consumption\n    FROM customer_2012 c\n    JOIN yearmonth y ON c.CustomerID = y.CustomerID\n    WHERE y.Date LIKE '2013%'\n    GROUP BY c.CustomerID\n)\nSELECT\n    (c2012.total_consumption - c2013.total_consumption) * 1.0 / c2012.total_consumption AS consumption_decrease_rate\nFROM consumption_2012 c2012\nJOIN consumption_2013 c2013 ON c2012.CustomerID = c2013.CustomerID;",
+      "candidate": "0530aa5336e883b9c02106d649f87c63fff19462d7d8bc517522b6d69dc25b6d",
+      "transformed": true,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1531",
+      "sql": "SELECT\n    c.CustomerID,\n    SUM(t.Price) / SUM(t.Amount) AS average_price_per_item,\n    c.Currency\nFROM customers c\nJOIN transactions_1k t ON c.CustomerID = t.CustomerID\nGROUP BY c.CustomerID\nORDER BY SUM(t.Price) DESC\nLIMIT 1;",
+      "candidate": "2fd14208dc817c5c329c059d8a5d06169afb1a52da71cc74c0386f6e81b1f1f5",
+      "transformed": false,
+      "old_reward": 0,
+      "new_reward": 0,
+      "transition": "0->0",
+      "execution_status": "ok"
+    },
+    {
+      "question_id": "1533",
+      "sql": "SELECT y.Consumption\nFROM yearmonth y\nJOIN transactions_1k t ON y.CustomerID = t.CustomerID\nWHERE t.ProductID = 5\n  AND (t.Price / t.Amount) > 29.00\n  AND y.Date = '201208';",
+      "candidate": "8511f2107aa4a70b192a3c38898e93612259bd3082f1fb4d5fb29bfaa6005a5d",
+      "transformed": true,
+      "old_reward": 1,
+      "new_reward": 1,
+      "transition": "1->1",
+      "execution_status": "ok"
+    }
+  ]
+}

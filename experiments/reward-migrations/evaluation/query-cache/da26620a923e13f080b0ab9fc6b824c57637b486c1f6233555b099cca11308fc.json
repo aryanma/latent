@@ -1,0 +1,48 @@
+{
+  "provenance": {
+    "database_sha256": "c98bdb57fe7474da798b407785544b9af0daaad5d61fd21e2a73309493bc1227",
+    "query_sha256": "ef021f2c6baec624cd07f17c0cfd735f4ee196a81fe1f2ac7d5cee629f8516a0",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "ef021f2c6baec624cd07f17c0cfd735f4ee196a81fe1f2ac7d5cee629f8516a0",
+    "status": "ok",
+    "seconds": 0.069651,
+    "result_sha256": "f90e94d68fa63314c352a4326e7ad293c1f05e7480976b0987e9127968d14403",
+    "rows": 149,
+    "distinct_rows": 149,
+    "preview": [
+      [
+        "Volare, cautela\n{T}: Quando una creatura bersaglio diversa dalla Valchiria dell'Adarkar viene messa in un cimitero in questo turno, rimetti in gioco quella carta sotto il tuo controllo."
+      ],
+      [
+        "Volare\n{S}: Il Grifone di Borealia guadagna attacco improvviso fino alla fine del turno. ({S} può essere pagato con un mana da un permanente neve.)"
+      ],
+      [
+        "Mantenimento cumulativo {S} ({S} può essere pagato con un mana da un permanente neve.)\nSe una creatura sta per infliggere danno da combattimento a te e/o a una o più creature che controlli, previeni X di quei danni, dove X è pari al numero di segnalini ep"
+      ],
+      [
+        "Ogniqualvolta ti viene inflitto danno, puoi mettere in gioco altrettante pedine creatura Soldato 1/1 bianche."
+      ],
+      [
+        "Gli altri Soldati prendono +1/+1 e hanno attacco improvviso."
+      ]
+    ],
+    "columns": [
+      "text"
+    ]
+  }
+}

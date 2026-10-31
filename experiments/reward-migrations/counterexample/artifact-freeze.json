@@ -1,0 +1,58 @@
+{
+  "experiment": "One constructed counterexample for BIRD legacy task1525",
+  "files": [
+    {
+      "path": "executor_snapshot.py",
+      "bytes": 8511,
+      "sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2"
+    },
+    {
+      "path": "prompt_protocol.py",
+      "bytes": 944,
+      "sha256": "6f13095662d614f5802ce7d472246edf113aa180326b66f42678bdb8039f89cc"
+    },
+    {
+      "path": "reproduce_witness.py",
+      "bytes": 12566,
+      "sha256": "1ff97772d8206021335228e05b93f67fa990beef29d037406c2fbe2ee9c3cbe7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6068,
+      "sha256": "fed4309441828b765769b05c68c53f9fa22262b6480f099114e2c596f2a142b0"
+    },
+    {
+      "path": "inputs.json",
+      "bytes": 12203,
+      "sha256": "83b900009eb6991125c98d00cc1753c75c5df65923863df104271c7034ad4c89"
+    },
+    {
+      "path": "verification-summary.json",
+      "bytes": 869,
+      "sha256": "d268e3a251a62fd939710496e4c2efd7db08afaae364daccbfc08daed0cba678"
+    },
+    {
+      "path": "run1/results.json",
+      "bytes": 25239,
+      "sha256": "5c1f713f8102f81516f918afd84c1b8c9111c55693cdcd8d390e4df51a2897d3"
+    },
+    {
+      "path": "run2/results.json",
+      "bytes": 25238,
+      "sha256": "bc3d6333616725eb84c201ac6201f85d8ce9a6a95a858325ce15caa5990ed8db"
+    }
+  ],
+  "excluded_files": [
+    {
+      "paths": [
+        "run1/counterfactual.sqlite",
+        "run2/counterfactual.sqlite"
+      ],
+      "reason": "Identical35MB derivedDB copies; reproduce from source with script",
+      "sha256": "352b2187645ae1ac8c9e022ce030d7d7174bccf753e0ffead69633d5dcc015ca"
+    }
+  ],
+  "no_model_inference": true,
+  "no_original_database_modification": true,
+  "no_production_edits": true
+}

@@ -1,0 +1,5170 @@
+[
+  {
+    "public": {
+      "id": "labels-20000",
+      "family": "labels",
+      "seed": 20000,
+      "contract": {
+        "goal": "Prepare a training dataset for a customer-request routing model.",
+        "authority": "case_resolution",
+        "cutoff_revision": 65,
+        "labels": [
+          "billing",
+          "access",
+          "usage",
+          "cancellation"
+        ],
+        "aliases": {
+          "payment": "billing",
+          "invoice": "billing",
+          "login": "access",
+          "sign-in": "access",
+          "quota": "usage",
+          "limits": "usage",
+          "closure": "cancellation",
+          "cancel": "cancellation"
+        },
+        "rules": [
+          "Only keep rows whose registry entry permits training.",
+          "Exclude every row whose lineage appears in the evaluation index, even when its text differs.",
+          "Keep exactly one row for EVERY eligible lineage. Equivalent copies are interchangeable.",
+          "Use the latest approved case_resolution event at or before revision 65. Ignore other authorities, drafts, and later revisions.",
+          "Normalize categories using the label aliases. Do not infer labels from the text.",
+          "Every changed label must cite the selected source event, which you must have inspected.",
+          "Do not change original text, IDs, or the source tables."
+        ]
+      },
+      "candidates": [
+        {
+          "id": "row-b7f6e4585e",
+          "ticket_id": "ticket-43471dc91b",
+          "text": "Can you help resolve this account issue?",
+          "label": "cancellation"
+        },
+        {
+          "id": "row-32a87e5542",
+          "ticket_id": "ticket-5aa7a27e3d",
+          "text": "Following up on the issue in my previous message.",
+          "label": "payment"
+        },
+        {
+          "id": "row-8c5c3fc328",
+          "ticket_id": "ticket-006b580e9d",
+          "text": "Please review my account request.",
+          "label": "access"
+        },
+        {
+          "id": "row-a8e0c2316d",
+          "ticket_id": "ticket-df7f09f374",
+          "text": "I need assistance with the request I opened.",
+          "label": "login"
+        },
+        {
+          "id": "row-429b4939ed",
+          "ticket_id": "ticket-523355ad30",
+          "text": "Following up on the issue in my previous message.",
+          "label": "payment"
+        },
+        {
+          "id": "row-c14d34d916",
+          "ticket_id": "ticket-4f4b42e0bc",
+          "text": "Please review my account request.",
+          "label": "billing"
+        }
+      ],
+      "tables": {
+        "registry": [
+          {
+            "id": "registry-b9e552c7fb",
+            "ticket_id": "ticket-006b580e9d",
+            "case_id": "case-39be4e6a80",
+            "lineage_id": "lineage-f4823b1aca",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-ce112d2854",
+            "ticket_id": "ticket-5aa7a27e3d",
+            "case_id": "case-96388ef5ea",
+            "lineage_id": "lineage-e596e32134",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-8924934efe",
+            "ticket_id": "ticket-43471dc91b",
+            "case_id": "case-14f34f6080",
+            "lineage_id": "lineage-449df888c6",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-110f1bad1a",
+            "ticket_id": "ticket-df7f09f374",
+            "case_id": "case-100735a7b8",
+            "lineage_id": "lineage-f003e593fb",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-c80bfe125b",
+            "ticket_id": "ticket-4f4b42e0bc",
+            "case_id": "case-fdf6a0b82e",
+            "lineage_id": "lineage-8244c2be4d",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-11559f3983",
+            "ticket_id": "ticket-523355ad30",
+            "case_id": "case-2bea4da465",
+            "lineage_id": "lineage-49b1613ffa",
+            "training_allowed": true
+          }
+        ],
+        "events": [
+          {
+            "id": "event-ceb5ff5c9e",
+            "case_id": "case-fdf6a0b82e",
+            "authority": "human_review",
+            "revision": 60,
+            "status": "approved",
+            "category": "invoice"
+          },
+          {
+            "id": "event-42cfa8f0a6",
+            "case_id": "case-96388ef5ea",
+            "authority": "case_resolution",
+            "revision": 59,
+            "status": "approved",
+            "category": "invoice"
+          },
+          {
+            "id": "event-e62bd728f7",
+            "case_id": "case-100735a7b8",
+            "authority": "case_resolution",
+            "revision": 60,
+            "status": "approved",
+            "category": "access"
+          },
+          {
+            "id": "event-7d6af197e2",
+            "case_id": "case-100735a7b8",
+            "authority": "human_review",
+            "revision": 58,
+            "status": "approved",
+            "category": "quota"
+          },
+          {
+            "id": "event-eb5ac6fd28",
+            "case_id": "case-39be4e6a80",
+            "authority": "case_resolution",
+            "revision": 59,
+            "status": "approved",
+            "category": "cancel"
+          },
+          {
+            "id": "event-d95b95eeb3",
+            "case_id": "case-2bea4da465",
+            "authority": "human_review",
+            "revision": 61,
+            "status": "approved",
+            "category": "access"
+          },
+          {
+            "id": "event-e72aaf1306",
+            "case_id": "case-2bea4da465",
+            "authority": "case_resolution",
+            "revision": 62,
+            "status": "approved",
+            "category": "billing"
+          },
+          {
+            "id": "event-8623c3bc69",
+            "case_id": "case-96388ef5ea",
+            "authority": "human_review",
+            "revision": 61,
+            "status": "approved",
+            "category": "closure"
+          },
+          {
+            "id": "event-4f5993468a",
+            "case_id": "case-14f34f6080",
+            "authority": "human_review",
+            "revision": 64,
+            "status": "approved",
+            "category": "cancellation"
+          },
+          {
+            "id": "event-586f674ba4",
+            "case_id": "case-fdf6a0b82e",
+            "authority": "case_resolution",
+            "revision": 61,
+            "status": "approved",
+            "category": "closure"
+          },
+          {
+            "id": "event-c2bba35bf4",
+            "case_id": "case-39be4e6a80",
+            "authority": "human_review",
+            "revision": 58,
+            "status": "approved",
+            "category": "access"
+          },
+          {
+            "id": "event-836f0df4f7",
+            "case_id": "case-14f34f6080",
+            "authority": "case_resolution",
+            "revision": 62,
+            "status": "approved",
+            "category": "usage"
+          }
+        ],
+        "evaluation": []
+      }
+    },
+    "private": {
+      "eligible_groups": {
+        "lineage-f4823b1aca": {
+          "label": "cancellation",
+          "event_id": "event-eb5ac6fd28",
+          "row_ids": [
+            "row-8c5c3fc328"
+          ]
+        },
+        "lineage-49b1613ffa": {
+          "label": "billing",
+          "event_id": "event-e72aaf1306",
+          "row_ids": [
+            "row-429b4939ed"
+          ]
+        },
+        "lineage-449df888c6": {
+          "label": "usage",
+          "event_id": "event-836f0df4f7",
+          "row_ids": [
+            "row-b7f6e4585e"
+          ]
+        },
+        "lineage-f003e593fb": {
+          "label": "access",
+          "event_id": "event-e62bd728f7",
+          "row_ids": [
+            "row-a8e0c2316d"
+          ]
+        },
+        "lineage-8244c2be4d": {
+          "label": "cancellation",
+          "event_id": "event-586f674ba4",
+          "row_ids": [
+            "row-c14d34d916"
+          ]
+        },
+        "lineage-e596e32134": {
+          "label": "billing",
+          "event_id": "event-42cfa8f0a6",
+          "row_ids": [
+            "row-32a87e5542"
+          ]
+        }
+      },
+      "rows": {
+        "row-8c5c3fc328": {
+          "lineage_id": "lineage-f4823b1aca",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-eb5ac6fd28",
+          "registry_id": "registry-b9e552c7fb"
+        },
+        "row-429b4939ed": {
+          "lineage_id": "lineage-49b1613ffa",
+          "label": "billing",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-e72aaf1306",
+          "registry_id": "registry-11559f3983"
+        },
+        "row-b7f6e4585e": {
+          "lineage_id": "lineage-449df888c6",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-836f0df4f7",
+          "registry_id": "registry-8924934efe"
+        },
+        "row-a8e0c2316d": {
+          "lineage_id": "lineage-f003e593fb",
+          "label": "access",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-e62bd728f7",
+          "registry_id": "registry-110f1bad1a"
+        },
+        "row-c14d34d916": {
+          "lineage_id": "lineage-8244c2be4d",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-586f674ba4",
+          "registry_id": "registry-c80bfe125b"
+        },
+        "row-32a87e5542": {
+          "lineage_id": "lineage-e596e32134",
+          "label": "billing",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-42cfa8f0a6",
+          "registry_id": "registry-ce112d2854"
+        }
+      },
+      "policy_truth": {
+        "lineage-f4823b1aca": {
+          "case_resolution": {
+            "label": "cancellation",
+            "event_id": "event-eb5ac6fd28"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-c2bba35bf4"
+          }
+        },
+        "lineage-49b1613ffa": {
+          "case_resolution": {
+            "label": "billing",
+            "event_id": "event-e72aaf1306"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-d95b95eeb3"
+          }
+        },
+        "lineage-449df888c6": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-836f0df4f7"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-4f5993468a"
+          }
+        },
+        "lineage-f003e593fb": {
+          "case_resolution": {
+            "label": "access",
+            "event_id": "event-e62bd728f7"
+          },
+          "human_review": {
+            "label": "usage",
+            "event_id": "event-7d6af197e2"
+          }
+        },
+        "lineage-8244c2be4d": {
+          "case_resolution": {
+            "label": "cancellation",
+            "event_id": "event-586f674ba4"
+          },
+          "human_review": {
+            "label": "billing",
+            "event_id": "event-ceb5ff5c9e"
+          }
+        },
+        "lineage-e596e32134": {
+          "case_resolution": {
+            "label": "billing",
+            "event_id": "event-42cfa8f0a6"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-8623c3bc69"
+          }
+        }
+      }
+    },
+    "fingerprint": "eb082b48300ade80eb83ed311c91f8fbff1551aa049a4934e95359a83214d386"
+  },
+  {
+    "public": {
+      "id": "duplicates-20001",
+      "family": "duplicates",
+      "seed": 20001,
+      "contract": {
+        "goal": "Prepare a training dataset for a customer-request routing model.",
+        "authority": "case_resolution",
+        "cutoff_revision": 73,
+        "labels": [
+          "billing",
+          "access",
+          "usage",
+          "cancellation"
+        ],
+        "aliases": {
+          "payment": "billing",
+          "invoice": "billing",
+          "login": "access",
+          "sign-in": "access",
+          "quota": "usage",
+          "limits": "usage",
+          "closure": "cancellation",
+          "cancel": "cancellation"
+        },
+        "rules": [
+          "Only keep rows whose registry entry permits training.",
+          "Exclude every row whose lineage appears in the evaluation index, even when its text differs.",
+          "Keep exactly one row for EVERY eligible lineage. Equivalent copies are interchangeable.",
+          "Use the latest approved case_resolution event at or before revision 73. Ignore other authorities, drafts, and later revisions.",
+          "Normalize categories using the label aliases. Do not infer labels from the text.",
+          "Every changed label must cite the selected source event, which you must have inspected.",
+          "Do not change original text, IDs, or the source tables."
+        ]
+      },
+      "candidates": [
+        {
+          "id": "row-a79f56a937",
+          "ticket_id": "ticket-695a073a5c",
+          "text": "Please review my account request.",
+          "label": "access"
+        },
+        {
+          "id": "row-e0e51498cd",
+          "ticket_id": "ticket-2ea8fe161f",
+          "text": "I need assistance with the request I opened.",
+          "label": "cancellation"
+        },
+        {
+          "id": "row-06cf5897f9",
+          "ticket_id": "ticket-f773c97fd3",
+          "text": "Following up on the issue in my previous message.",
+          "label": "usage"
+        },
+        {
+          "id": "row-d175289da4",
+          "ticket_id": "ticket-bcb328da7b",
+          "text": "Following up on the issue in my previous message.",
+          "label": "usage"
+        },
+        {
+          "id": "row-9265c53a60",
+          "ticket_id": "ticket-4c2475f7fc",
+          "text": "Can you help resolve this account issue?",
+          "label": "billing"
+        },
+        {
+          "id": "row-988144446d",
+          "ticket_id": "ticket-b27171fc38",
+          "text": "please  review  my  account  request.  ",
+          "label": "access"
+        },
+        {
+          "id": "row-e6562af69b",
+          "ticket_id": "ticket-0fdefc628b",
+          "text": "can  you  help  resolve  this  account  issue?  ",
+          "label": "billing"
+        },
+        {
+          "id": "row-f041718fa9",
+          "ticket_id": "ticket-334f2876e6",
+          "text": "following  up  on  the  issue  in  my  previous  message.  ",
+          "label": "usage"
+        },
+        {
+          "id": "row-2b286120fd",
+          "ticket_id": "ticket-995a1bbfc2",
+          "text": "Please review my account request.",
+          "label": "access"
+        }
+      ],
+      "tables": {
+        "registry": [
+          {
+            "id": "registry-b7fde48fb3",
+            "ticket_id": "ticket-695a073a5c",
+            "case_id": "case-62a7982393",
+            "lineage_id": "lineage-ff5d7a94fb",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-750e1eba46",
+            "ticket_id": "ticket-f773c97fd3",
+            "case_id": "case-e23fe4e3d9",
+            "lineage_id": "lineage-b3d18ee856",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-33b5e6d4e8",
+            "ticket_id": "ticket-995a1bbfc2",
+            "case_id": "case-5ba599c6d2",
+            "lineage_id": "lineage-786ff3fde0",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-a6790a9471",
+            "ticket_id": "ticket-2ea8fe161f",
+            "case_id": "case-82f1706ef8",
+            "lineage_id": "lineage-989df6878a",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-223708804a",
+            "ticket_id": "ticket-b27171fc38",
+            "case_id": "case-62a7982393",
+            "lineage_id": "lineage-ff5d7a94fb",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-65e8a5b503",
+            "ticket_id": "ticket-334f2876e6",
+            "case_id": "case-e23fe4e3d9",
+            "lineage_id": "lineage-b3d18ee856",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-8e4cc0ecd1",
+            "ticket_id": "ticket-bcb328da7b",
+            "case_id": "case-aac680794b",
+            "lineage_id": "lineage-2c7ebb67d2",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-c08fe09da7",
+            "ticket_id": "ticket-4c2475f7fc",
+            "case_id": "case-99874566cb",
+            "lineage_id": "lineage-60668bf00b",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-d9e8878bd6",
+            "ticket_id": "ticket-0fdefc628b",
+            "case_id": "case-99874566cb",
+            "lineage_id": "lineage-60668bf00b",
+            "training_allowed": true
+          }
+        ],
+        "events": [
+          {
+            "id": "event-45a98d09a0",
+            "case_id": "case-82f1706ef8",
+            "authority": "case_resolution",
+            "revision": 68,
+            "status": "approved",
+            "category": "closure"
+          },
+          {
+            "id": "event-a53d286023",
+            "case_id": "case-5ba599c6d2",
+            "authority": "human_review",
+            "revision": 72,
+            "status": "approved",
+            "category": "cancel"
+          },
+          {
+            "id": "event-111e895aa4",
+            "case_id": "case-e23fe4e3d9",
+            "authority": "human_review",
+            "revision": 67,
+            "status": "approved",
+            "category": "invoice"
+          },
+          {
+            "id": "event-7b20aa3eeb",
+            "case_id": "case-82f1706ef8",
+            "authority": "human_review",
+            "revision": 67,
+            "status": "approved",
+            "category": "sign-in"
+          },
+          {
+            "id": "event-40ef801631",
+            "case_id": "case-aac680794b",
+            "authority": "case_resolution",
+            "revision": 66,
+            "status": "approved",
+            "category": "usage"
+          },
+          {
+            "id": "event-ae6d7d546f",
+            "case_id": "case-aac680794b",
+            "authority": "human_review",
+            "revision": 66,
+            "status": "approved",
+            "category": "closure"
+          },
+          {
+            "id": "event-1b4f519be0",
+            "case_id": "case-e23fe4e3d9",
+            "authority": "case_resolution",
+            "revision": 67,
+            "status": "approved",
+            "category": "quota"
+          },
+          {
+            "id": "event-8ced7bedba",
+            "case_id": "case-62a7982393",
+            "authority": "human_review",
+            "revision": 65,
+            "status": "approved",
+            "category": "cancel"
+          },
+          {
+            "id": "event-176920c14f",
+            "case_id": "case-62a7982393",
+            "authority": "case_resolution",
+            "revision": 68,
+            "status": "approved",
+            "category": "access"
+          },
+          {
+            "id": "event-a6922e944a",
+            "case_id": "case-99874566cb",
+            "authority": "human_review",
+            "revision": 71,
+            "status": "approved",
+            "category": "closure"
+          },
+          {
+            "id": "event-4d583c5af5",
+            "case_id": "case-99874566cb",
+            "authority": "case_resolution",
+            "revision": 67,
+            "status": "approved",
+            "category": "invoice"
+          },
+          {
+            "id": "event-6688926c9c",
+            "case_id": "case-5ba599c6d2",
+            "authority": "case_resolution",
+            "revision": 71,
+            "status": "approved",
+            "category": "login"
+          }
+        ],
+        "evaluation": []
+      }
+    },
+    "private": {
+      "eligible_groups": {
+        "lineage-786ff3fde0": {
+          "label": "access",
+          "event_id": "event-6688926c9c",
+          "row_ids": [
+            "row-2b286120fd"
+          ]
+        },
+        "lineage-2c7ebb67d2": {
+          "label": "usage",
+          "event_id": "event-40ef801631",
+          "row_ids": [
+            "row-d175289da4"
+          ]
+        },
+        "lineage-60668bf00b": {
+          "label": "billing",
+          "event_id": "event-4d583c5af5",
+          "row_ids": [
+            "row-9265c53a60",
+            "row-e6562af69b"
+          ]
+        },
+        "lineage-989df6878a": {
+          "label": "cancellation",
+          "event_id": "event-45a98d09a0",
+          "row_ids": [
+            "row-e0e51498cd"
+          ]
+        },
+        "lineage-ff5d7a94fb": {
+          "label": "access",
+          "event_id": "event-176920c14f",
+          "row_ids": [
+            "row-a79f56a937",
+            "row-988144446d"
+          ]
+        },
+        "lineage-b3d18ee856": {
+          "label": "usage",
+          "event_id": "event-1b4f519be0",
+          "row_ids": [
+            "row-06cf5897f9",
+            "row-f041718fa9"
+          ]
+        }
+      },
+      "rows": {
+        "row-2b286120fd": {
+          "lineage_id": "lineage-786ff3fde0",
+          "label": "access",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-6688926c9c",
+          "registry_id": "registry-33b5e6d4e8"
+        },
+        "row-d175289da4": {
+          "lineage_id": "lineage-2c7ebb67d2",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-40ef801631",
+          "registry_id": "registry-8e4cc0ecd1"
+        },
+        "row-9265c53a60": {
+          "lineage_id": "lineage-60668bf00b",
+          "label": "billing",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-4d583c5af5",
+          "registry_id": "registry-c08fe09da7"
+        },
+        "row-e6562af69b": {
+          "lineage_id": "lineage-60668bf00b",
+          "label": "billing",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-4d583c5af5",
+          "registry_id": "registry-d9e8878bd6"
+        },
+        "row-e0e51498cd": {
+          "lineage_id": "lineage-989df6878a",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-45a98d09a0",
+          "registry_id": "registry-a6790a9471"
+        },
+        "row-a79f56a937": {
+          "lineage_id": "lineage-ff5d7a94fb",
+          "label": "access",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-176920c14f",
+          "registry_id": "registry-b7fde48fb3"
+        },
+        "row-988144446d": {
+          "lineage_id": "lineage-ff5d7a94fb",
+          "label": "access",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-176920c14f",
+          "registry_id": "registry-223708804a"
+        },
+        "row-06cf5897f9": {
+          "lineage_id": "lineage-b3d18ee856",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-1b4f519be0",
+          "registry_id": "registry-750e1eba46"
+        },
+        "row-f041718fa9": {
+          "lineage_id": "lineage-b3d18ee856",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-1b4f519be0",
+          "registry_id": "registry-65e8a5b503"
+        }
+      },
+      "policy_truth": {
+        "lineage-786ff3fde0": {
+          "case_resolution": {
+            "label": "access",
+            "event_id": "event-6688926c9c"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-a53d286023"
+          }
+        },
+        "lineage-2c7ebb67d2": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-40ef801631"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-ae6d7d546f"
+          }
+        },
+        "lineage-60668bf00b": {
+          "case_resolution": {
+            "label": "billing",
+            "event_id": "event-4d583c5af5"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-a6922e944a"
+          }
+        },
+        "lineage-989df6878a": {
+          "case_resolution": {
+            "label": "cancellation",
+            "event_id": "event-45a98d09a0"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-7b20aa3eeb"
+          }
+        },
+        "lineage-ff5d7a94fb": {
+          "case_resolution": {
+            "label": "access",
+            "event_id": "event-176920c14f"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-8ced7bedba"
+          }
+        },
+        "lineage-b3d18ee856": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-1b4f519be0"
+          },
+          "human_review": {
+            "label": "billing",
+            "event_id": "event-111e895aa4"
+          }
+        }
+      }
+    },
+    "fingerprint": "c7627289fd491b8c31fe25cba6cb193dd0f2a9686b75d7efdec86bb6bc04647b"
+  },
+  {
+    "public": {
+      "id": "permissions-20002",
+      "family": "permissions",
+      "seed": 20002,
+      "contract": {
+        "goal": "Prepare a training dataset for a customer-request routing model.",
+        "authority": "case_resolution",
+        "cutoff_revision": 57,
+        "labels": [
+          "billing",
+          "access",
+          "usage",
+          "cancellation"
+        ],
+        "aliases": {
+          "payment": "billing",
+          "invoice": "billing",
+          "login": "access",
+          "sign-in": "access",
+          "quota": "usage",
+          "limits": "usage",
+          "closure": "cancellation",
+          "cancel": "cancellation"
+        },
+        "rules": [
+          "Only keep rows whose registry entry permits training.",
+          "Exclude every row whose lineage appears in the evaluation index, even when its text differs.",
+          "Keep exactly one row for EVERY eligible lineage. Equivalent copies are interchangeable.",
+          "Use the latest approved case_resolution event at or before revision 57. Ignore other authorities, drafts, and later revisions.",
+          "Normalize categories using the label aliases. Do not infer labels from the text.",
+          "Every changed label must cite the selected source event, which you must have inspected.",
+          "Do not change original text, IDs, or the source tables."
+        ]
+      },
+      "candidates": [
+        {
+          "id": "row-62552cd0eb",
+          "ticket_id": "ticket-7338a255c0",
+          "text": "Following up on the issue in my previous message.",
+          "label": "usage"
+        },
+        {
+          "id": "row-034abae7d4",
+          "ticket_id": "ticket-624c730e8f",
+          "text": "Please review my account request.",
+          "label": "cancellation"
+        },
+        {
+          "id": "row-dca4b286de",
+          "ticket_id": "ticket-fc3be15e0c",
+          "text": "I need assistance with the request I opened.",
+          "label": "billing"
+        },
+        {
+          "id": "row-050e6945fc",
+          "ticket_id": "ticket-484a7bb35d",
+          "text": "Following up on the issue in my previous message.",
+          "label": "access"
+        },
+        {
+          "id": "row-9b312f2901",
+          "ticket_id": "ticket-92be831df1",
+          "text": "Can you help resolve this account issue?",
+          "label": "usage"
+        },
+        {
+          "id": "row-c7204161d4",
+          "ticket_id": "ticket-27bfd750e8",
+          "text": "Please review my account request.",
+          "label": "cancellation"
+        }
+      ],
+      "tables": {
+        "registry": [
+          {
+            "id": "registry-6d33416448",
+            "ticket_id": "ticket-fc3be15e0c",
+            "case_id": "case-9829b806c2",
+            "lineage_id": "lineage-0a6969a41d",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-edf28c882a",
+            "ticket_id": "ticket-92be831df1",
+            "case_id": "case-dd87d6bc45",
+            "lineage_id": "lineage-8fe0d11b1a",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-5f77571287",
+            "ticket_id": "ticket-27bfd750e8",
+            "case_id": "case-cd1380315c",
+            "lineage_id": "lineage-c5e1c3334d",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-001c67ad9d",
+            "ticket_id": "ticket-7338a255c0",
+            "case_id": "case-2701e64605",
+            "lineage_id": "lineage-449f473b3a",
+            "training_allowed": false
+          },
+          {
+            "id": "registry-ebae249c4f",
+            "ticket_id": "ticket-624c730e8f",
+            "case_id": "case-24e654e230",
+            "lineage_id": "lineage-e3829f21e6",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-bcf72b39cb",
+            "ticket_id": "ticket-484a7bb35d",
+            "case_id": "case-eb28db6283",
+            "lineage_id": "lineage-5a869ffb67",
+            "training_allowed": true
+          }
+        ],
+        "events": [
+          {
+            "id": "event-ba4ae46cf1",
+            "case_id": "case-2701e64605",
+            "authority": "human_review",
+            "revision": 53,
+            "status": "approved",
+            "category": "payment"
+          },
+          {
+            "id": "event-bf04c75d85",
+            "case_id": "case-9829b806c2",
+            "authority": "human_review",
+            "revision": 55,
+            "status": "approved",
+            "category": "cancel"
+          },
+          {
+            "id": "event-698d375d90",
+            "case_id": "case-dd87d6bc45",
+            "authority": "human_review",
+            "revision": 50,
+            "status": "approved",
+            "category": "closure"
+          },
+          {
+            "id": "event-3d0d2d4967",
+            "case_id": "case-eb28db6283",
+            "authority": "case_resolution",
+            "revision": 49,
+            "status": "approved",
+            "category": "login"
+          },
+          {
+            "id": "event-298771b30e",
+            "case_id": "case-2701e64605",
+            "authority": "case_resolution",
+            "revision": 50,
+            "status": "approved",
+            "category": "usage"
+          },
+          {
+            "id": "event-9f49a814bd",
+            "case_id": "case-dd87d6bc45",
+            "authority": "case_resolution",
+            "revision": 49,
+            "status": "approved",
+            "category": "limits"
+          },
+          {
+            "id": "event-ca7e8a3729",
+            "case_id": "case-24e654e230",
+            "authority": "case_resolution",
+            "revision": 49,
+            "status": "approved",
+            "category": "closure"
+          },
+          {
+            "id": "event-bad9feca29",
+            "case_id": "case-9829b806c2",
+            "authority": "case_resolution",
+            "revision": 51,
+            "status": "approved",
+            "category": "invoice"
+          },
+          {
+            "id": "event-d9528ce869",
+            "case_id": "case-cd1380315c",
+            "authority": "human_review",
+            "revision": 52,
+            "status": "approved",
+            "category": "access"
+          },
+          {
+            "id": "event-acb6967497",
+            "case_id": "case-eb28db6283",
+            "authority": "human_review",
+            "revision": 54,
+            "status": "approved",
+            "category": "billing"
+          },
+          {
+            "id": "event-cecc224001",
+            "case_id": "case-24e654e230",
+            "authority": "human_review",
+            "revision": 55,
+            "status": "approved",
+            "category": "sign-in"
+          },
+          {
+            "id": "event-d4580c8b78",
+            "case_id": "case-cd1380315c",
+            "authority": "case_resolution",
+            "revision": 50,
+            "status": "approved",
+            "category": "cancellation"
+          }
+        ],
+        "evaluation": []
+      }
+    },
+    "private": {
+      "eligible_groups": {
+        "lineage-e3829f21e6": {
+          "label": "cancellation",
+          "event_id": "event-ca7e8a3729",
+          "row_ids": [
+            "row-034abae7d4"
+          ]
+        },
+        "lineage-5a869ffb67": {
+          "label": "access",
+          "event_id": "event-3d0d2d4967",
+          "row_ids": [
+            "row-050e6945fc"
+          ]
+        },
+        "lineage-8fe0d11b1a": {
+          "label": "usage",
+          "event_id": "event-9f49a814bd",
+          "row_ids": [
+            "row-9b312f2901"
+          ]
+        },
+        "lineage-0a6969a41d": {
+          "label": "billing",
+          "event_id": "event-bad9feca29",
+          "row_ids": [
+            "row-dca4b286de"
+          ]
+        },
+        "lineage-c5e1c3334d": {
+          "label": "cancellation",
+          "event_id": "event-d4580c8b78",
+          "row_ids": [
+            "row-c7204161d4"
+          ]
+        }
+      },
+      "rows": {
+        "row-034abae7d4": {
+          "lineage_id": "lineage-e3829f21e6",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-ca7e8a3729",
+          "registry_id": "registry-ebae249c4f"
+        },
+        "row-050e6945fc": {
+          "lineage_id": "lineage-5a869ffb67",
+          "label": "access",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-3d0d2d4967",
+          "registry_id": "registry-bcf72b39cb"
+        },
+        "row-9b312f2901": {
+          "lineage_id": "lineage-8fe0d11b1a",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-9f49a814bd",
+          "registry_id": "registry-edf28c882a"
+        },
+        "row-dca4b286de": {
+          "lineage_id": "lineage-0a6969a41d",
+          "label": "billing",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-bad9feca29",
+          "registry_id": "registry-6d33416448"
+        },
+        "row-c7204161d4": {
+          "lineage_id": "lineage-c5e1c3334d",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-d4580c8b78",
+          "registry_id": "registry-5f77571287"
+        },
+        "row-62552cd0eb": {
+          "lineage_id": "lineage-449f473b3a",
+          "label": "usage",
+          "permitted": false,
+          "leaked": false,
+          "eligible": false,
+          "event_id": "event-298771b30e",
+          "registry_id": "registry-001c67ad9d"
+        }
+      },
+      "policy_truth": {
+        "lineage-e3829f21e6": {
+          "case_resolution": {
+            "label": "cancellation",
+            "event_id": "event-ca7e8a3729"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-cecc224001"
+          }
+        },
+        "lineage-5a869ffb67": {
+          "case_resolution": {
+            "label": "access",
+            "event_id": "event-3d0d2d4967"
+          },
+          "human_review": {
+            "label": "billing",
+            "event_id": "event-acb6967497"
+          }
+        },
+        "lineage-8fe0d11b1a": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-9f49a814bd"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-698d375d90"
+          }
+        },
+        "lineage-0a6969a41d": {
+          "case_resolution": {
+            "label": "billing",
+            "event_id": "event-bad9feca29"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-bf04c75d85"
+          }
+        },
+        "lineage-c5e1c3334d": {
+          "case_resolution": {
+            "label": "cancellation",
+            "event_id": "event-d4580c8b78"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-d9528ce869"
+          }
+        },
+        "lineage-449f473b3a": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-298771b30e"
+          },
+          "human_review": {
+            "label": "billing",
+            "event_id": "event-ba4ae46cf1"
+          }
+        }
+      }
+    },
+    "fingerprint": "658f76ae5bb18cd4e264099ce1fcf6e141e12c039966aa9541a71d56dda4b589"
+  },
+  {
+    "public": {
+      "id": "leakage-20003",
+      "family": "leakage",
+      "seed": 20003,
+      "contract": {
+        "goal": "Prepare a training dataset for a customer-request routing model.",
+        "authority": "case_resolution",
+        "cutoff_revision": 75,
+        "labels": [
+          "billing",
+          "access",
+          "usage",
+          "cancellation"
+        ],
+        "aliases": {
+          "payment": "billing",
+          "invoice": "billing",
+          "login": "access",
+          "sign-in": "access",
+          "quota": "usage",
+          "limits": "usage",
+          "closure": "cancellation",
+          "cancel": "cancellation"
+        },
+        "rules": [
+          "Only keep rows whose registry entry permits training.",
+          "Exclude every row whose lineage appears in the evaluation index, even when its text differs.",
+          "Keep exactly one row for EVERY eligible lineage. Equivalent copies are interchangeable.",
+          "Use the latest approved case_resolution event at or before revision 75. Ignore other authorities, drafts, and later revisions.",
+          "Normalize categories using the label aliases. Do not infer labels from the text.",
+          "Every changed label must cite the selected source event, which you must have inspected.",
+          "Do not change original text, IDs, or the source tables."
+        ]
+      },
+      "candidates": [
+        {
+          "id": "row-948140546c",
+          "ticket_id": "ticket-2f8041f72e",
+          "text": "Following up on the issue in my previous message.",
+          "label": "billing"
+        },
+        {
+          "id": "row-197af88041",
+          "ticket_id": "ticket-67fb255b97",
+          "text": "I need assistance with the request I opened.",
+          "label": "usage"
+        },
+        {
+          "id": "row-1122ae3586",
+          "ticket_id": "ticket-1a02fb2468",
+          "text": "Please review my account request.",
+          "label": "cancellation"
+        },
+        {
+          "id": "row-c7206158f6",
+          "ticket_id": "ticket-8d15e30da5",
+          "text": "Can you help resolve this account issue?",
+          "label": "access"
+        },
+        {
+          "id": "row-ee07ff409f",
+          "ticket_id": "ticket-56faed8070",
+          "text": "Following up on the issue in my previous message.",
+          "label": "usage"
+        },
+        {
+          "id": "row-932805ac6e",
+          "ticket_id": "ticket-b90249dcae",
+          "text": "Please review my account request.",
+          "label": "usage"
+        }
+      ],
+      "tables": {
+        "registry": [
+          {
+            "id": "registry-275241449f",
+            "ticket_id": "ticket-8d15e30da5",
+            "case_id": "case-e85c66779a",
+            "lineage_id": "lineage-b629bf95e8",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-34b2f5e7d9",
+            "ticket_id": "ticket-b90249dcae",
+            "case_id": "case-e7e3ee1eff",
+            "lineage_id": "lineage-e8a37ac96f",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-bca998074e",
+            "ticket_id": "ticket-67fb255b97",
+            "case_id": "case-887c5b5ce1",
+            "lineage_id": "lineage-9ca1744005",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-4334830122",
+            "ticket_id": "ticket-56faed8070",
+            "case_id": "case-130de77322",
+            "lineage_id": "lineage-ce49614035",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-29c17c9716",
+            "ticket_id": "ticket-1a02fb2468",
+            "case_id": "case-6b4ed60496",
+            "lineage_id": "lineage-dc676431da",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-0ff6c7982e",
+            "ticket_id": "ticket-2f8041f72e",
+            "case_id": "case-75ef3bca0e",
+            "lineage_id": "lineage-295338b44c",
+            "training_allowed": true
+          }
+        ],
+        "events": [
+          {
+            "id": "event-5dd4c42c41",
+            "case_id": "case-130de77322",
+            "authority": "case_resolution",
+            "revision": 67,
+            "status": "approved",
+            "category": "usage"
+          },
+          {
+            "id": "event-cda7e2002f",
+            "case_id": "case-75ef3bca0e",
+            "authority": "case_resolution",
+            "revision": 69,
+            "status": "approved",
+            "category": "payment"
+          },
+          {
+            "id": "event-bc67cd309b",
+            "case_id": "case-e7e3ee1eff",
+            "authority": "case_resolution",
+            "revision": 72,
+            "status": "approved",
+            "category": "usage"
+          },
+          {
+            "id": "event-43012abfff",
+            "case_id": "case-75ef3bca0e",
+            "authority": "human_review",
+            "revision": 70,
+            "status": "approved",
+            "category": "access"
+          },
+          {
+            "id": "event-6a0d95f6d3",
+            "case_id": "case-6b4ed60496",
+            "authority": "case_resolution",
+            "revision": 73,
+            "status": "approved",
+            "category": "cancellation"
+          },
+          {
+            "id": "event-ef4e0cf96f",
+            "case_id": "case-6b4ed60496",
+            "authority": "human_review",
+            "revision": 68,
+            "status": "approved",
+            "category": "sign-in"
+          },
+          {
+            "id": "event-e482fb2f12",
+            "case_id": "case-887c5b5ce1",
+            "authority": "case_resolution",
+            "revision": 71,
+            "status": "approved",
+            "category": "usage"
+          },
+          {
+            "id": "event-9043456b0a",
+            "case_id": "case-130de77322",
+            "authority": "human_review",
+            "revision": 70,
+            "status": "approved",
+            "category": "closure"
+          },
+          {
+            "id": "event-e78a7e02cd",
+            "case_id": "case-e7e3ee1eff",
+            "authority": "human_review",
+            "revision": 68,
+            "status": "approved",
+            "category": "closure"
+          },
+          {
+            "id": "event-1ebdb00db6",
+            "case_id": "case-e85c66779a",
+            "authority": "case_resolution",
+            "revision": 68,
+            "status": "approved",
+            "category": "sign-in"
+          },
+          {
+            "id": "event-03cdaf29d3",
+            "case_id": "case-e85c66779a",
+            "authority": "human_review",
+            "revision": 66,
+            "status": "approved",
+            "category": "payment"
+          },
+          {
+            "id": "event-8ce388287d",
+            "case_id": "case-887c5b5ce1",
+            "authority": "human_review",
+            "revision": 69,
+            "status": "approved",
+            "category": "access"
+          }
+        ],
+        "evaluation": [
+          {
+            "id": "eval-a52855f47e",
+            "lineage_id": "lineage-9ca1744005",
+            "note": "An evaluation example from this document family is reserved."
+          }
+        ]
+      }
+    },
+    "private": {
+      "eligible_groups": {
+        "lineage-e8a37ac96f": {
+          "label": "usage",
+          "event_id": "event-bc67cd309b",
+          "row_ids": [
+            "row-932805ac6e"
+          ]
+        },
+        "lineage-295338b44c": {
+          "label": "billing",
+          "event_id": "event-cda7e2002f",
+          "row_ids": [
+            "row-948140546c"
+          ]
+        },
+        "lineage-b629bf95e8": {
+          "label": "access",
+          "event_id": "event-1ebdb00db6",
+          "row_ids": [
+            "row-c7206158f6"
+          ]
+        },
+        "lineage-dc676431da": {
+          "label": "cancellation",
+          "event_id": "event-6a0d95f6d3",
+          "row_ids": [
+            "row-1122ae3586"
+          ]
+        },
+        "lineage-ce49614035": {
+          "label": "usage",
+          "event_id": "event-5dd4c42c41",
+          "row_ids": [
+            "row-ee07ff409f"
+          ]
+        }
+      },
+      "rows": {
+        "row-932805ac6e": {
+          "lineage_id": "lineage-e8a37ac96f",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-bc67cd309b",
+          "registry_id": "registry-34b2f5e7d9"
+        },
+        "row-948140546c": {
+          "lineage_id": "lineage-295338b44c",
+          "label": "billing",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-cda7e2002f",
+          "registry_id": "registry-0ff6c7982e"
+        },
+        "row-c7206158f6": {
+          "lineage_id": "lineage-b629bf95e8",
+          "label": "access",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-1ebdb00db6",
+          "registry_id": "registry-275241449f"
+        },
+        "row-197af88041": {
+          "lineage_id": "lineage-9ca1744005",
+          "label": "usage",
+          "permitted": true,
+          "leaked": true,
+          "eligible": false,
+          "event_id": "event-e482fb2f12",
+          "registry_id": "registry-bca998074e"
+        },
+        "row-1122ae3586": {
+          "lineage_id": "lineage-dc676431da",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-6a0d95f6d3",
+          "registry_id": "registry-29c17c9716"
+        },
+        "row-ee07ff409f": {
+          "lineage_id": "lineage-ce49614035",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-5dd4c42c41",
+          "registry_id": "registry-4334830122"
+        }
+      },
+      "policy_truth": {
+        "lineage-e8a37ac96f": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-bc67cd309b"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-e78a7e02cd"
+          }
+        },
+        "lineage-295338b44c": {
+          "case_resolution": {
+            "label": "billing",
+            "event_id": "event-cda7e2002f"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-43012abfff"
+          }
+        },
+        "lineage-b629bf95e8": {
+          "case_resolution": {
+            "label": "access",
+            "event_id": "event-1ebdb00db6"
+          },
+          "human_review": {
+            "label": "billing",
+            "event_id": "event-03cdaf29d3"
+          }
+        },
+        "lineage-9ca1744005": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-e482fb2f12"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-8ce388287d"
+          }
+        },
+        "lineage-dc676431da": {
+          "case_resolution": {
+            "label": "cancellation",
+            "event_id": "event-6a0d95f6d3"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-ef4e0cf96f"
+          }
+        },
+        "lineage-ce49614035": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-5dd4c42c41"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-9043456b0a"
+          }
+        }
+      }
+    },
+    "fingerprint": "e8507dd303c3585d8ce710b62fd3a864a633e6afcb32f651f38c6e14eabfee5b"
+  },
+  {
+    "public": {
+      "id": "versions-20004",
+      "family": "versions",
+      "seed": 20004,
+      "contract": {
+        "goal": "Prepare a training dataset for a customer-request routing model.",
+        "authority": "case_resolution",
+        "cutoff_revision": 72,
+        "labels": [
+          "billing",
+          "access",
+          "usage",
+          "cancellation"
+        ],
+        "aliases": {
+          "payment": "billing",
+          "invoice": "billing",
+          "login": "access",
+          "sign-in": "access",
+          "quota": "usage",
+          "limits": "usage",
+          "closure": "cancellation",
+          "cancel": "cancellation"
+        },
+        "rules": [
+          "Only keep rows whose registry entry permits training.",
+          "Exclude every row whose lineage appears in the evaluation index, even when its text differs.",
+          "Keep exactly one row for EVERY eligible lineage. Equivalent copies are interchangeable.",
+          "Use the latest approved case_resolution event at or before revision 72. Ignore other authorities, drafts, and later revisions.",
+          "Normalize categories using the label aliases. Do not infer labels from the text.",
+          "Every changed label must cite the selected source event, which you must have inspected.",
+          "Do not change original text, IDs, or the source tables."
+        ]
+      },
+      "candidates": [
+        {
+          "id": "row-563bd27f48",
+          "ticket_id": "ticket-62d3e66764",
+          "text": "Please review my account request.",
+          "label": "usage"
+        },
+        {
+          "id": "row-edade4fa9a",
+          "ticket_id": "ticket-a6e70c25df",
+          "text": "Following up on the issue in my previous message.",
+          "label": "billing"
+        },
+        {
+          "id": "row-f16336308e",
+          "ticket_id": "ticket-9e9f8790eb",
+          "text": "Please review my account request.",
+          "label": "billing"
+        },
+        {
+          "id": "row-c5a85ac423",
+          "ticket_id": "ticket-99b04c5365",
+          "text": "Following up on the issue in my previous message.",
+          "label": "billing"
+        },
+        {
+          "id": "row-5394c827e6",
+          "ticket_id": "ticket-2420b9fd75",
+          "text": "I need assistance with the request I opened.",
+          "label": "access"
+        },
+        {
+          "id": "row-1c2e90590b",
+          "ticket_id": "ticket-929311f218",
+          "text": "Can you help resolve this account issue?",
+          "label": "cancellation"
+        }
+      ],
+      "tables": {
+        "registry": [
+          {
+            "id": "registry-dbca987c21",
+            "ticket_id": "ticket-2420b9fd75",
+            "case_id": "case-6a43364835",
+            "lineage_id": "lineage-5b7eafbd15",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-e7f3f213ae",
+            "ticket_id": "ticket-62d3e66764",
+            "case_id": "case-afe099b91f",
+            "lineage_id": "lineage-d2802a942b",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-7bda82668d",
+            "ticket_id": "ticket-929311f218",
+            "case_id": "case-d2b0c7378b",
+            "lineage_id": "lineage-8f5e7dc58a",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-4a738b7e24",
+            "ticket_id": "ticket-99b04c5365",
+            "case_id": "case-d34945f188",
+            "lineage_id": "lineage-d9d44be838",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-06c9af9020",
+            "ticket_id": "ticket-a6e70c25df",
+            "case_id": "case-589ae60927",
+            "lineage_id": "lineage-9faf1326da",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-f68c19a7e2",
+            "ticket_id": "ticket-9e9f8790eb",
+            "case_id": "case-f27467a3af",
+            "lineage_id": "lineage-962a8a947c",
+            "training_allowed": true
+          }
+        ],
+        "events": [
+          {
+            "id": "event-89cea44be3",
+            "case_id": "case-d34945f188",
+            "authority": "case_resolution",
+            "revision": 66,
+            "status": "draft",
+            "category": "quota"
+          },
+          {
+            "id": "event-9bb0b85f1c",
+            "case_id": "case-589ae60927",
+            "authority": "case_resolution",
+            "revision": 67,
+            "status": "approved",
+            "category": "payment"
+          },
+          {
+            "id": "event-bc6253b33f",
+            "case_id": "case-6a43364835",
+            "authority": "case_resolution",
+            "revision": 77,
+            "status": "approved",
+            "category": "billing"
+          },
+          {
+            "id": "event-908ee720c3",
+            "case_id": "case-f27467a3af",
+            "authority": "human_review",
+            "revision": 68,
+            "status": "approved",
+            "category": "billing"
+          },
+          {
+            "id": "event-15663790d5",
+            "case_id": "case-589ae60927",
+            "authority": "case_resolution",
+            "revision": 69,
+            "status": "draft",
+            "category": "usage"
+          },
+          {
+            "id": "event-3a1ccef415",
+            "case_id": "case-afe099b91f",
+            "authority": "human_review",
+            "revision": 67,
+            "status": "approved",
+            "category": "usage"
+          },
+          {
+            "id": "event-774d6dda28",
+            "case_id": "case-d34945f188",
+            "authority": "case_resolution",
+            "revision": 74,
+            "status": "approved",
+            "category": "closure"
+          },
+          {
+            "id": "event-c6212691bf",
+            "case_id": "case-d34945f188",
+            "authority": "case_resolution",
+            "revision": 67,
+            "status": "approved",
+            "category": "payment"
+          },
+          {
+            "id": "event-418f6d1d1a",
+            "case_id": "case-6a43364835",
+            "authority": "case_resolution",
+            "revision": 61,
+            "status": "approved",
+            "category": "cancel"
+          },
+          {
+            "id": "event-462010fd0a",
+            "case_id": "case-f27467a3af",
+            "authority": "case_resolution",
+            "revision": 51,
+            "status": "approved",
+            "category": "invoice"
+          },
+          {
+            "id": "event-26e95b008b",
+            "case_id": "case-f27467a3af",
+            "authority": "case_resolution",
+            "revision": 67,
+            "status": "approved",
+            "category": "closure"
+          },
+          {
+            "id": "event-1b6ea7985a",
+            "case_id": "case-f27467a3af",
+            "authority": "case_resolution",
+            "revision": 78,
+            "status": "approved",
+            "category": "payment"
+          },
+          {
+            "id": "event-0f796e3ad0",
+            "case_id": "case-d34945f188",
+            "authority": "case_resolution",
+            "revision": 47,
+            "status": "approved",
+            "category": "access"
+          },
+          {
+            "id": "event-3d983ed872",
+            "case_id": "case-afe099b91f",
+            "authority": "case_resolution",
+            "revision": 56,
+            "status": "approved",
+            "category": "limits"
+          },
+          {
+            "id": "event-6970a4f396",
+            "case_id": "case-afe099b91f",
+            "authority": "case_resolution",
+            "revision": 70,
+            "status": "approved",
+            "category": "closure"
+          },
+          {
+            "id": "event-97373f21df",
+            "case_id": "case-afe099b91f",
+            "authority": "case_resolution",
+            "revision": 75,
+            "status": "approved",
+            "category": "invoice"
+          },
+          {
+            "id": "event-0d2b64f847",
+            "case_id": "case-6a43364835",
+            "authority": "case_resolution",
+            "revision": 68,
+            "status": "approved",
+            "category": "login"
+          },
+          {
+            "id": "event-ecde88d8cf",
+            "case_id": "case-589ae60927",
+            "authority": "case_resolution",
+            "revision": 54,
+            "status": "approved",
+            "category": "login"
+          },
+          {
+            "id": "event-e204094e34",
+            "case_id": "case-d34945f188",
+            "authority": "human_review",
+            "revision": 65,
+            "status": "approved",
+            "category": "access"
+          },
+          {
+            "id": "event-5d54490d47",
+            "case_id": "case-d2b0c7378b",
+            "authority": "case_resolution",
+            "revision": 46,
+            "status": "approved",
+            "category": "closure"
+          },
+          {
+            "id": "event-e90cef5923",
+            "case_id": "case-589ae60927",
+            "authority": "human_review",
+            "revision": 71,
+            "status": "approved",
+            "category": "sign-in"
+          },
+          {
+            "id": "event-67a71badcd",
+            "case_id": "case-589ae60927",
+            "authority": "case_resolution",
+            "revision": 77,
+            "status": "approved",
+            "category": "sign-in"
+          },
+          {
+            "id": "event-d2acfd45d1",
+            "case_id": "case-d2b0c7378b",
+            "authority": "case_resolution",
+            "revision": 64,
+            "status": "draft",
+            "category": "access"
+          },
+          {
+            "id": "event-2183b64a3a",
+            "case_id": "case-d2b0c7378b",
+            "authority": "case_resolution",
+            "revision": 78,
+            "status": "approved",
+            "category": "quota"
+          },
+          {
+            "id": "event-b8136cf262",
+            "case_id": "case-f27467a3af",
+            "authority": "case_resolution",
+            "revision": 63,
+            "status": "draft",
+            "category": "closure"
+          },
+          {
+            "id": "event-6873062daa",
+            "case_id": "case-d2b0c7378b",
+            "authority": "human_review",
+            "revision": 63,
+            "status": "approved",
+            "category": "cancel"
+          },
+          {
+            "id": "event-e8c3b0e5bd",
+            "case_id": "case-d2b0c7378b",
+            "authority": "case_resolution",
+            "revision": 64,
+            "status": "approved",
+            "category": "usage"
+          },
+          {
+            "id": "event-b55ad103aa",
+            "case_id": "case-6a43364835",
+            "authority": "case_resolution",
+            "revision": 66,
+            "status": "draft",
+            "category": "limits"
+          },
+          {
+            "id": "event-19c6f2722a",
+            "case_id": "case-6a43364835",
+            "authority": "human_review",
+            "revision": 66,
+            "status": "approved",
+            "category": "closure"
+          },
+          {
+            "id": "event-a8a33dd011",
+            "case_id": "case-afe099b91f",
+            "authority": "case_resolution",
+            "revision": 71,
+            "status": "draft",
+            "category": "billing"
+          }
+        ],
+        "evaluation": []
+      }
+    },
+    "private": {
+      "eligible_groups": {
+        "lineage-d2802a942b": {
+          "label": "cancellation",
+          "event_id": "event-6970a4f396",
+          "row_ids": [
+            "row-563bd27f48"
+          ]
+        },
+        "lineage-9faf1326da": {
+          "label": "billing",
+          "event_id": "event-9bb0b85f1c",
+          "row_ids": [
+            "row-edade4fa9a"
+          ]
+        },
+        "lineage-8f5e7dc58a": {
+          "label": "usage",
+          "event_id": "event-e8c3b0e5bd",
+          "row_ids": [
+            "row-1c2e90590b"
+          ]
+        },
+        "lineage-5b7eafbd15": {
+          "label": "access",
+          "event_id": "event-0d2b64f847",
+          "row_ids": [
+            "row-5394c827e6"
+          ]
+        },
+        "lineage-962a8a947c": {
+          "label": "cancellation",
+          "event_id": "event-26e95b008b",
+          "row_ids": [
+            "row-f16336308e"
+          ]
+        },
+        "lineage-d9d44be838": {
+          "label": "billing",
+          "event_id": "event-c6212691bf",
+          "row_ids": [
+            "row-c5a85ac423"
+          ]
+        }
+      },
+      "rows": {
+        "row-563bd27f48": {
+          "lineage_id": "lineage-d2802a942b",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-6970a4f396",
+          "registry_id": "registry-e7f3f213ae"
+        },
+        "row-edade4fa9a": {
+          "lineage_id": "lineage-9faf1326da",
+          "label": "billing",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-9bb0b85f1c",
+          "registry_id": "registry-06c9af9020"
+        },
+        "row-1c2e90590b": {
+          "lineage_id": "lineage-8f5e7dc58a",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-e8c3b0e5bd",
+          "registry_id": "registry-7bda82668d"
+        },
+        "row-5394c827e6": {
+          "lineage_id": "lineage-5b7eafbd15",
+          "label": "access",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-0d2b64f847",
+          "registry_id": "registry-dbca987c21"
+        },
+        "row-f16336308e": {
+          "lineage_id": "lineage-962a8a947c",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-26e95b008b",
+          "registry_id": "registry-f68c19a7e2"
+        },
+        "row-c5a85ac423": {
+          "lineage_id": "lineage-d9d44be838",
+          "label": "billing",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-c6212691bf",
+          "registry_id": "registry-4a738b7e24"
+        }
+      },
+      "policy_truth": {
+        "lineage-d2802a942b": {
+          "case_resolution": {
+            "label": "cancellation",
+            "event_id": "event-6970a4f396"
+          },
+          "human_review": {
+            "label": "usage",
+            "event_id": "event-3a1ccef415"
+          }
+        },
+        "lineage-9faf1326da": {
+          "case_resolution": {
+            "label": "billing",
+            "event_id": "event-9bb0b85f1c"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-e90cef5923"
+          }
+        },
+        "lineage-8f5e7dc58a": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-e8c3b0e5bd"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-6873062daa"
+          }
+        },
+        "lineage-5b7eafbd15": {
+          "case_resolution": {
+            "label": "access",
+            "event_id": "event-0d2b64f847"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-19c6f2722a"
+          }
+        },
+        "lineage-962a8a947c": {
+          "case_resolution": {
+            "label": "cancellation",
+            "event_id": "event-26e95b008b"
+          },
+          "human_review": {
+            "label": "billing",
+            "event_id": "event-908ee720c3"
+          }
+        },
+        "lineage-d9d44be838": {
+          "case_resolution": {
+            "label": "billing",
+            "event_id": "event-c6212691bf"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-e204094e34"
+          }
+        }
+      }
+    },
+    "fingerprint": "a37aad70de9bc7279fbefc6800ffe514e35dc932903021fef0e5bf90c018c88d"
+  },
+  {
+    "public": {
+      "id": "pair-20005",
+      "family": "pair",
+      "seed": 20005,
+      "contract": {
+        "goal": "Prepare a training dataset for a customer-request routing model.",
+        "authority": "case_resolution",
+        "cutoff_revision": 73,
+        "labels": [
+          "billing",
+          "access",
+          "usage",
+          "cancellation"
+        ],
+        "aliases": {
+          "payment": "billing",
+          "invoice": "billing",
+          "login": "access",
+          "sign-in": "access",
+          "quota": "usage",
+          "limits": "usage",
+          "closure": "cancellation",
+          "cancel": "cancellation"
+        },
+        "rules": [
+          "Only keep rows whose registry entry permits training.",
+          "Exclude every row whose lineage appears in the evaluation index, even when its text differs.",
+          "Keep exactly one row for EVERY eligible lineage. Equivalent copies are interchangeable.",
+          "Use the latest approved case_resolution event at or before revision 73. Ignore other authorities, drafts, and later revisions.",
+          "Normalize categories using the label aliases. Do not infer labels from the text.",
+          "Every changed label must cite the selected source event, which you must have inspected.",
+          "Do not change original text, IDs, or the source tables."
+        ]
+      },
+      "candidates": [
+        {
+          "id": "row-56e40f5d46",
+          "ticket_id": "ticket-459f924e84",
+          "text": "Can you help resolve this account issue?",
+          "label": "cancellation"
+        },
+        {
+          "id": "row-b249796ab0",
+          "ticket_id": "ticket-6c7c7d913c",
+          "text": "i  need  assistance  with  the  request  i  opened.  ",
+          "label": "payment"
+        },
+        {
+          "id": "row-c7da5104df",
+          "ticket_id": "ticket-ca11a74bdc",
+          "text": "I need assistance with the request I opened.",
+          "label": "payment"
+        },
+        {
+          "id": "row-be6ecdfe73",
+          "ticket_id": "ticket-5159fa253b",
+          "text": "Following up on the issue in my previous message.",
+          "label": "quota"
+        },
+        {
+          "id": "row-0e17b0512a",
+          "ticket_id": "ticket-4b47a22d0c",
+          "text": "Please review my account request.",
+          "label": "billing"
+        },
+        {
+          "id": "row-18e5402d54",
+          "ticket_id": "ticket-335e2c026b",
+          "text": "Following up on the issue in my previous message.",
+          "label": "limits"
+        },
+        {
+          "id": "row-ba41eb6847",
+          "ticket_id": "ticket-5806333070",
+          "text": "Please review my account request.",
+          "label": "usage"
+        },
+        {
+          "id": "row-4b59546d87",
+          "ticket_id": "ticket-975d77bce4",
+          "text": "please  review  my  account  request.  ",
+          "label": "usage"
+        },
+        {
+          "id": "row-a655363785",
+          "ticket_id": "ticket-3445bb49aa",
+          "text": "following  up  on  the  issue  in  my  previous  message.  ",
+          "label": "quota"
+        }
+      ],
+      "tables": {
+        "registry": [
+          {
+            "id": "registry-f9fab12460",
+            "ticket_id": "ticket-975d77bce4",
+            "case_id": "case-560591f19c",
+            "lineage_id": "lineage-51047953d4",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-ecdf1f5f96",
+            "ticket_id": "ticket-4b47a22d0c",
+            "case_id": "case-f58480cfe3",
+            "lineage_id": "lineage-a524ddecae",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-4af703ef78",
+            "ticket_id": "ticket-335e2c026b",
+            "case_id": "case-47d4150b97",
+            "lineage_id": "lineage-fb0b633ef5",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-90d4c2c442",
+            "ticket_id": "ticket-5159fa253b",
+            "case_id": "case-09ae2fde1b",
+            "lineage_id": "lineage-e3a7acfe11",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-623d95bf2e",
+            "ticket_id": "ticket-459f924e84",
+            "case_id": "case-3cffad62ce",
+            "lineage_id": "lineage-9bc9332c5d",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-5fcb8cf0c4",
+            "ticket_id": "ticket-5806333070",
+            "case_id": "case-560591f19c",
+            "lineage_id": "lineage-51047953d4",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-609a950516",
+            "ticket_id": "ticket-6c7c7d913c",
+            "case_id": "case-21176074a2",
+            "lineage_id": "lineage-5eb886c6fa",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-cbb8ae9520",
+            "ticket_id": "ticket-3445bb49aa",
+            "case_id": "case-09ae2fde1b",
+            "lineage_id": "lineage-e3a7acfe11",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-94b8cc61cd",
+            "ticket_id": "ticket-ca11a74bdc",
+            "case_id": "case-21176074a2",
+            "lineage_id": "lineage-5eb886c6fa",
+            "training_allowed": true
+          }
+        ],
+        "events": [
+          {
+            "id": "event-078226530f",
+            "case_id": "case-f58480cfe3",
+            "authority": "human_review",
+            "revision": 71,
+            "status": "approved",
+            "category": "payment"
+          },
+          {
+            "id": "event-ac61fd7806",
+            "case_id": "case-47d4150b97",
+            "authority": "case_resolution",
+            "revision": 71,
+            "status": "approved",
+            "category": "limits"
+          },
+          {
+            "id": "event-7092f93e17",
+            "case_id": "case-3cffad62ce",
+            "authority": "human_review",
+            "revision": 65,
+            "status": "approved",
+            "category": "closure"
+          },
+          {
+            "id": "event-36c9537cbd",
+            "case_id": "case-21176074a2",
+            "authority": "case_resolution",
+            "revision": 65,
+            "status": "approved",
+            "category": "payment"
+          },
+          {
+            "id": "event-58cd31f81f",
+            "case_id": "case-09ae2fde1b",
+            "authority": "case_resolution",
+            "revision": 69,
+            "status": "approved",
+            "category": "quota"
+          },
+          {
+            "id": "event-457f70732b",
+            "case_id": "case-3cffad62ce",
+            "authority": "case_resolution",
+            "revision": 70,
+            "status": "approved",
+            "category": "sign-in"
+          },
+          {
+            "id": "event-b6bec18863",
+            "case_id": "case-47d4150b97",
+            "authority": "human_review",
+            "revision": 67,
+            "status": "approved",
+            "category": "payment"
+          },
+          {
+            "id": "event-c0f214cd8d",
+            "case_id": "case-21176074a2",
+            "authority": "human_review",
+            "revision": 64,
+            "status": "approved",
+            "category": "cancel"
+          },
+          {
+            "id": "event-e518ed5e58",
+            "case_id": "case-09ae2fde1b",
+            "authority": "human_review",
+            "revision": 72,
+            "status": "approved",
+            "category": "billing"
+          },
+          {
+            "id": "event-d76d46c27b",
+            "case_id": "case-560591f19c",
+            "authority": "case_resolution",
+            "revision": 66,
+            "status": "approved",
+            "category": "closure"
+          },
+          {
+            "id": "event-3f3c90cf71",
+            "case_id": "case-f58480cfe3",
+            "authority": "case_resolution",
+            "revision": 70,
+            "status": "approved",
+            "category": "cancel"
+          },
+          {
+            "id": "event-6d23ebba4b",
+            "case_id": "case-560591f19c",
+            "authority": "human_review",
+            "revision": 66,
+            "status": "approved",
+            "category": "limits"
+          }
+        ],
+        "evaluation": []
+      }
+    },
+    "private": {
+      "eligible_groups": {
+        "lineage-51047953d4": {
+          "label": "cancellation",
+          "event_id": "event-d76d46c27b",
+          "row_ids": [
+            "row-ba41eb6847",
+            "row-4b59546d87"
+          ]
+        },
+        "lineage-e3a7acfe11": {
+          "label": "usage",
+          "event_id": "event-58cd31f81f",
+          "row_ids": [
+            "row-be6ecdfe73",
+            "row-a655363785"
+          ]
+        },
+        "lineage-9bc9332c5d": {
+          "label": "access",
+          "event_id": "event-457f70732b",
+          "row_ids": [
+            "row-56e40f5d46"
+          ]
+        },
+        "lineage-5eb886c6fa": {
+          "label": "billing",
+          "event_id": "event-36c9537cbd",
+          "row_ids": [
+            "row-c7da5104df",
+            "row-b249796ab0"
+          ]
+        },
+        "lineage-a524ddecae": {
+          "label": "cancellation",
+          "event_id": "event-3f3c90cf71",
+          "row_ids": [
+            "row-0e17b0512a"
+          ]
+        },
+        "lineage-fb0b633ef5": {
+          "label": "usage",
+          "event_id": "event-ac61fd7806",
+          "row_ids": [
+            "row-18e5402d54"
+          ]
+        }
+      },
+      "rows": {
+        "row-ba41eb6847": {
+          "lineage_id": "lineage-51047953d4",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-d76d46c27b",
+          "registry_id": "registry-5fcb8cf0c4"
+        },
+        "row-4b59546d87": {
+          "lineage_id": "lineage-51047953d4",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-d76d46c27b",
+          "registry_id": "registry-f9fab12460"
+        },
+        "row-be6ecdfe73": {
+          "lineage_id": "lineage-e3a7acfe11",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-58cd31f81f",
+          "registry_id": "registry-90d4c2c442"
+        },
+        "row-a655363785": {
+          "lineage_id": "lineage-e3a7acfe11",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-58cd31f81f",
+          "registry_id": "registry-cbb8ae9520"
+        },
+        "row-56e40f5d46": {
+          "lineage_id": "lineage-9bc9332c5d",
+          "label": "access",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-457f70732b",
+          "registry_id": "registry-623d95bf2e"
+        },
+        "row-c7da5104df": {
+          "lineage_id": "lineage-5eb886c6fa",
+          "label": "billing",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-36c9537cbd",
+          "registry_id": "registry-94b8cc61cd"
+        },
+        "row-b249796ab0": {
+          "lineage_id": "lineage-5eb886c6fa",
+          "label": "billing",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-36c9537cbd",
+          "registry_id": "registry-609a950516"
+        },
+        "row-0e17b0512a": {
+          "lineage_id": "lineage-a524ddecae",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-3f3c90cf71",
+          "registry_id": "registry-ecdf1f5f96"
+        },
+        "row-18e5402d54": {
+          "lineage_id": "lineage-fb0b633ef5",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-ac61fd7806",
+          "registry_id": "registry-4af703ef78"
+        }
+      },
+      "policy_truth": {
+        "lineage-51047953d4": {
+          "case_resolution": {
+            "label": "cancellation",
+            "event_id": "event-d76d46c27b"
+          },
+          "human_review": {
+            "label": "usage",
+            "event_id": "event-6d23ebba4b"
+          }
+        },
+        "lineage-e3a7acfe11": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-58cd31f81f"
+          },
+          "human_review": {
+            "label": "billing",
+            "event_id": "event-e518ed5e58"
+          }
+        },
+        "lineage-9bc9332c5d": {
+          "case_resolution": {
+            "label": "access",
+            "event_id": "event-457f70732b"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-7092f93e17"
+          }
+        },
+        "lineage-5eb886c6fa": {
+          "case_resolution": {
+            "label": "billing",
+            "event_id": "event-36c9537cbd"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-c0f214cd8d"
+          }
+        },
+        "lineage-a524ddecae": {
+          "case_resolution": {
+            "label": "cancellation",
+            "event_id": "event-3f3c90cf71"
+          },
+          "human_review": {
+            "label": "billing",
+            "event_id": "event-078226530f"
+          }
+        },
+        "lineage-fb0b633ef5": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-ac61fd7806"
+          },
+          "human_review": {
+            "label": "billing",
+            "event_id": "event-b6bec18863"
+          }
+        }
+      }
+    },
+    "fingerprint": "038e205cf7b0ce3f40e61bd1d2f3adbfd5f075cfce22bbad1c02af831bb029bf"
+  },
+  {
+    "public": {
+      "id": "labels-20006",
+      "family": "labels",
+      "seed": 20006,
+      "contract": {
+        "goal": "Prepare a training dataset for a customer-request routing model.",
+        "authority": "case_resolution",
+        "cutoff_revision": 54,
+        "labels": [
+          "billing",
+          "access",
+          "usage",
+          "cancellation"
+        ],
+        "aliases": {
+          "payment": "billing",
+          "invoice": "billing",
+          "login": "access",
+          "sign-in": "access",
+          "quota": "usage",
+          "limits": "usage",
+          "closure": "cancellation",
+          "cancel": "cancellation"
+        },
+        "rules": [
+          "Only keep rows whose registry entry permits training.",
+          "Exclude every row whose lineage appears in the evaluation index, even when its text differs.",
+          "Keep exactly one row for EVERY eligible lineage. Equivalent copies are interchangeable.",
+          "Use the latest approved case_resolution event at or before revision 54. Ignore other authorities, drafts, and later revisions.",
+          "Normalize categories using the label aliases. Do not infer labels from the text.",
+          "Every changed label must cite the selected source event, which you must have inspected.",
+          "Do not change original text, IDs, or the source tables."
+        ]
+      },
+      "candidates": [
+        {
+          "id": "row-0cdd123c45",
+          "ticket_id": "ticket-273e60bca8",
+          "text": "Please review my account request.",
+          "label": "billing"
+        },
+        {
+          "id": "row-d270a0a660",
+          "ticket_id": "ticket-5aa4758e5d",
+          "text": "Can you help resolve this account issue?",
+          "label": "cancellation"
+        },
+        {
+          "id": "row-800f651016",
+          "ticket_id": "ticket-509a27de0c",
+          "text": "Following up on the issue in my previous message.",
+          "label": "cancel"
+        },
+        {
+          "id": "row-53fa0a8711",
+          "ticket_id": "ticket-a2973c3607",
+          "text": "Following up on the issue in my previous message.",
+          "label": "closure"
+        },
+        {
+          "id": "row-f7bd4f34d7",
+          "ticket_id": "ticket-02d3d4de44",
+          "text": "Please review my account request.",
+          "label": "access"
+        },
+        {
+          "id": "row-e6fe3885ad",
+          "ticket_id": "ticket-37b4fce52e",
+          "text": "I need assistance with the request I opened.",
+          "label": "payment"
+        }
+      ],
+      "tables": {
+        "registry": [
+          {
+            "id": "registry-4639b96cc9",
+            "ticket_id": "ticket-a2973c3607",
+            "case_id": "case-a03f8f78db",
+            "lineage_id": "lineage-39103775b8",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-05b58241db",
+            "ticket_id": "ticket-509a27de0c",
+            "case_id": "case-f7df5511b4",
+            "lineage_id": "lineage-14f62ac17b",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-9dc1fe89e1",
+            "ticket_id": "ticket-5aa4758e5d",
+            "case_id": "case-ed1afaab49",
+            "lineage_id": "lineage-87d519c161",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-ba04881af7",
+            "ticket_id": "ticket-37b4fce52e",
+            "case_id": "case-ad8098bc08",
+            "lineage_id": "lineage-fe949e1b89",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-52a9414a63",
+            "ticket_id": "ticket-02d3d4de44",
+            "case_id": "case-fec24b11a2",
+            "lineage_id": "lineage-e4fc981d87",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-e12ab825e6",
+            "ticket_id": "ticket-273e60bca8",
+            "case_id": "case-52636aa357",
+            "lineage_id": "lineage-a4ecb888ec",
+            "training_allowed": true
+          }
+        ],
+        "events": [
+          {
+            "id": "event-97a183d6e6",
+            "case_id": "case-f7df5511b4",
+            "authority": "case_resolution",
+            "revision": 46,
+            "status": "approved",
+            "category": "cancellation"
+          },
+          {
+            "id": "event-7b355b7e82",
+            "case_id": "case-fec24b11a2",
+            "authority": "human_review",
+            "revision": 48,
+            "status": "approved",
+            "category": "access"
+          },
+          {
+            "id": "event-ad6e7d08fa",
+            "case_id": "case-fec24b11a2",
+            "authority": "case_resolution",
+            "revision": 46,
+            "status": "approved",
+            "category": "quota"
+          },
+          {
+            "id": "event-ae454ce948",
+            "case_id": "case-ed1afaab49",
+            "authority": "human_review",
+            "revision": 51,
+            "status": "approved",
+            "category": "cancellation"
+          },
+          {
+            "id": "event-f8a1709804",
+            "case_id": "case-a03f8f78db",
+            "authority": "case_resolution",
+            "revision": 47,
+            "status": "approved",
+            "category": "cancellation"
+          },
+          {
+            "id": "event-ea2faa9722",
+            "case_id": "case-ad8098bc08",
+            "authority": "human_review",
+            "revision": 46,
+            "status": "approved",
+            "category": "login"
+          },
+          {
+            "id": "event-a7fa95870c",
+            "case_id": "case-f7df5511b4",
+            "authority": "human_review",
+            "revision": 51,
+            "status": "approved",
+            "category": "sign-in"
+          },
+          {
+            "id": "event-24c98e7359",
+            "case_id": "case-ed1afaab49",
+            "authority": "case_resolution",
+            "revision": 47,
+            "status": "approved",
+            "category": "login"
+          },
+          {
+            "id": "event-c43feddc27",
+            "case_id": "case-ad8098bc08",
+            "authority": "case_resolution",
+            "revision": 52,
+            "status": "approved",
+            "category": "invoice"
+          },
+          {
+            "id": "event-340f688881",
+            "case_id": "case-52636aa357",
+            "authority": "case_resolution",
+            "revision": 48,
+            "status": "approved",
+            "category": "quota"
+          },
+          {
+            "id": "event-890c77c509",
+            "case_id": "case-52636aa357",
+            "authority": "human_review",
+            "revision": 45,
+            "status": "approved",
+            "category": "invoice"
+          },
+          {
+            "id": "event-118d97448e",
+            "case_id": "case-a03f8f78db",
+            "authority": "human_review",
+            "revision": 50,
+            "status": "approved",
+            "category": "billing"
+          }
+        ],
+        "evaluation": []
+      }
+    },
+    "private": {
+      "eligible_groups": {
+        "lineage-e4fc981d87": {
+          "label": "usage",
+          "event_id": "event-ad6e7d08fa",
+          "row_ids": [
+            "row-f7bd4f34d7"
+          ]
+        },
+        "lineage-39103775b8": {
+          "label": "cancellation",
+          "event_id": "event-f8a1709804",
+          "row_ids": [
+            "row-53fa0a8711"
+          ]
+        },
+        "lineage-87d519c161": {
+          "label": "access",
+          "event_id": "event-24c98e7359",
+          "row_ids": [
+            "row-d270a0a660"
+          ]
+        },
+        "lineage-fe949e1b89": {
+          "label": "billing",
+          "event_id": "event-c43feddc27",
+          "row_ids": [
+            "row-e6fe3885ad"
+          ]
+        },
+        "lineage-a4ecb888ec": {
+          "label": "usage",
+          "event_id": "event-340f688881",
+          "row_ids": [
+            "row-0cdd123c45"
+          ]
+        },
+        "lineage-14f62ac17b": {
+          "label": "cancellation",
+          "event_id": "event-97a183d6e6",
+          "row_ids": [
+            "row-800f651016"
+          ]
+        }
+      },
+      "rows": {
+        "row-f7bd4f34d7": {
+          "lineage_id": "lineage-e4fc981d87",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-ad6e7d08fa",
+          "registry_id": "registry-52a9414a63"
+        },
+        "row-53fa0a8711": {
+          "lineage_id": "lineage-39103775b8",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-f8a1709804",
+          "registry_id": "registry-4639b96cc9"
+        },
+        "row-d270a0a660": {
+          "lineage_id": "lineage-87d519c161",
+          "label": "access",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-24c98e7359",
+          "registry_id": "registry-9dc1fe89e1"
+        },
+        "row-e6fe3885ad": {
+          "lineage_id": "lineage-fe949e1b89",
+          "label": "billing",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-c43feddc27",
+          "registry_id": "registry-ba04881af7"
+        },
+        "row-0cdd123c45": {
+          "lineage_id": "lineage-a4ecb888ec",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-340f688881",
+          "registry_id": "registry-e12ab825e6"
+        },
+        "row-800f651016": {
+          "lineage_id": "lineage-14f62ac17b",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-97a183d6e6",
+          "registry_id": "registry-05b58241db"
+        }
+      },
+      "policy_truth": {
+        "lineage-e4fc981d87": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-ad6e7d08fa"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-7b355b7e82"
+          }
+        },
+        "lineage-39103775b8": {
+          "case_resolution": {
+            "label": "cancellation",
+            "event_id": "event-f8a1709804"
+          },
+          "human_review": {
+            "label": "billing",
+            "event_id": "event-118d97448e"
+          }
+        },
+        "lineage-87d519c161": {
+          "case_resolution": {
+            "label": "access",
+            "event_id": "event-24c98e7359"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-ae454ce948"
+          }
+        },
+        "lineage-fe949e1b89": {
+          "case_resolution": {
+            "label": "billing",
+            "event_id": "event-c43feddc27"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-ea2faa9722"
+          }
+        },
+        "lineage-a4ecb888ec": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-340f688881"
+          },
+          "human_review": {
+            "label": "billing",
+            "event_id": "event-890c77c509"
+          }
+        },
+        "lineage-14f62ac17b": {
+          "case_resolution": {
+            "label": "cancellation",
+            "event_id": "event-97a183d6e6"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-a7fa95870c"
+          }
+        }
+      }
+    },
+    "fingerprint": "22ae807c3c37bb7f0b1998b05ac49867acb4dd90fe8cabb9266bc9d7c59b85cc"
+  },
+  {
+    "public": {
+      "id": "duplicates-20007",
+      "family": "duplicates",
+      "seed": 20007,
+      "contract": {
+        "goal": "Prepare a training dataset for a customer-request routing model.",
+        "authority": "case_resolution",
+        "cutoff_revision": 58,
+        "labels": [
+          "billing",
+          "access",
+          "usage",
+          "cancellation"
+        ],
+        "aliases": {
+          "payment": "billing",
+          "invoice": "billing",
+          "login": "access",
+          "sign-in": "access",
+          "quota": "usage",
+          "limits": "usage",
+          "closure": "cancellation",
+          "cancel": "cancellation"
+        },
+        "rules": [
+          "Only keep rows whose registry entry permits training.",
+          "Exclude every row whose lineage appears in the evaluation index, even when its text differs.",
+          "Keep exactly one row for EVERY eligible lineage. Equivalent copies are interchangeable.",
+          "Use the latest approved case_resolution event at or before revision 58. Ignore other authorities, drafts, and later revisions.",
+          "Normalize categories using the label aliases. Do not infer labels from the text.",
+          "Every changed label must cite the selected source event, which you must have inspected.",
+          "Do not change original text, IDs, or the source tables."
+        ]
+      },
+      "candidates": [
+        {
+          "id": "row-f787d85396",
+          "ticket_id": "ticket-fd03f74c3f",
+          "text": "Please review my account request.",
+          "label": "access"
+        },
+        {
+          "id": "row-65c96ca95c",
+          "ticket_id": "ticket-d6aebfe89d",
+          "text": "Following up on the issue in my previous message.",
+          "label": "usage"
+        },
+        {
+          "id": "row-140e392e53",
+          "ticket_id": "ticket-0d954e0b28",
+          "text": "Can you help resolve this account issue?",
+          "label": "billing"
+        },
+        {
+          "id": "row-057d931ab9",
+          "ticket_id": "ticket-38dee7a010",
+          "text": "please  review  my  account  request.  ",
+          "label": "access"
+        },
+        {
+          "id": "row-645d2510cb",
+          "ticket_id": "ticket-fe5addd819",
+          "text": "Following up on the issue in my previous message.",
+          "label": "usage"
+        },
+        {
+          "id": "row-a39659ebe1",
+          "ticket_id": "ticket-4ee344c5af",
+          "text": "I need assistance with the request I opened.",
+          "label": "cancellation"
+        },
+        {
+          "id": "row-d2bd0c3ba8",
+          "ticket_id": "ticket-be5257dbf2",
+          "text": "can  you  help  resolve  this  account  issue?  ",
+          "label": "billing"
+        },
+        {
+          "id": "row-626a1f4935",
+          "ticket_id": "ticket-e38314bbf6",
+          "text": "please  review  my  account  request.  ",
+          "label": "access"
+        },
+        {
+          "id": "row-e94774c19e",
+          "ticket_id": "ticket-adb4dafad6",
+          "text": "Please review my account request.",
+          "label": "access"
+        }
+      ],
+      "tables": {
+        "registry": [
+          {
+            "id": "registry-8575203124",
+            "ticket_id": "ticket-adb4dafad6",
+            "case_id": "case-3dad909519",
+            "lineage_id": "lineage-a5be91feb5",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-a3fd28981e",
+            "ticket_id": "ticket-e38314bbf6",
+            "case_id": "case-3dad909519",
+            "lineage_id": "lineage-a5be91feb5",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-e4a2c9ec9c",
+            "ticket_id": "ticket-be5257dbf2",
+            "case_id": "case-42068e6e8e",
+            "lineage_id": "lineage-274f198277",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-134714b00c",
+            "ticket_id": "ticket-fe5addd819",
+            "case_id": "case-81e19d3db5",
+            "lineage_id": "lineage-b34ccfe19f",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-9d20e027ed",
+            "ticket_id": "ticket-0d954e0b28",
+            "case_id": "case-42068e6e8e",
+            "lineage_id": "lineage-274f198277",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-ec0794a37b",
+            "ticket_id": "ticket-d6aebfe89d",
+            "case_id": "case-f8b86eba85",
+            "lineage_id": "lineage-c8ccab6562",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-5a2e9c6d53",
+            "ticket_id": "ticket-38dee7a010",
+            "case_id": "case-f5d1033a3c",
+            "lineage_id": "lineage-443bfe8c04",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-1527512ffb",
+            "ticket_id": "ticket-fd03f74c3f",
+            "case_id": "case-f5d1033a3c",
+            "lineage_id": "lineage-443bfe8c04",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-5bdb381a18",
+            "ticket_id": "ticket-4ee344c5af",
+            "case_id": "case-3bdbc6ded2",
+            "lineage_id": "lineage-3a0018a9a4",
+            "training_allowed": true
+          }
+        ],
+        "events": [
+          {
+            "id": "event-864d5693d8",
+            "case_id": "case-f8b86eba85",
+            "authority": "case_resolution",
+            "revision": 53,
+            "status": "approved",
+            "category": "quota"
+          },
+          {
+            "id": "event-08df82d76b",
+            "case_id": "case-81e19d3db5",
+            "authority": "human_review",
+            "revision": 57,
+            "status": "approved",
+            "category": "invoice"
+          },
+          {
+            "id": "event-2e69c76f13",
+            "case_id": "case-3dad909519",
+            "authority": "human_review",
+            "revision": 52,
+            "status": "approved",
+            "category": "quota"
+          },
+          {
+            "id": "event-5ab17edea1",
+            "case_id": "case-81e19d3db5",
+            "authority": "case_resolution",
+            "revision": 53,
+            "status": "approved",
+            "category": "usage"
+          },
+          {
+            "id": "event-f81e3760ce",
+            "case_id": "case-42068e6e8e",
+            "authority": "human_review",
+            "revision": 54,
+            "status": "approved",
+            "category": "quota"
+          },
+          {
+            "id": "event-51fca1215a",
+            "case_id": "case-f5d1033a3c",
+            "authority": "case_resolution",
+            "revision": 54,
+            "status": "approved",
+            "category": "login"
+          },
+          {
+            "id": "event-ebe298344d",
+            "case_id": "case-3bdbc6ded2",
+            "authority": "human_review",
+            "revision": 52,
+            "status": "approved",
+            "category": "invoice"
+          },
+          {
+            "id": "event-27b103d46b",
+            "case_id": "case-42068e6e8e",
+            "authority": "case_resolution",
+            "revision": 50,
+            "status": "approved",
+            "category": "payment"
+          },
+          {
+            "id": "event-c490d45544",
+            "case_id": "case-3dad909519",
+            "authority": "case_resolution",
+            "revision": 53,
+            "status": "approved",
+            "category": "access"
+          },
+          {
+            "id": "event-b745ab2ba0",
+            "case_id": "case-f5d1033a3c",
+            "authority": "human_review",
+            "revision": 54,
+            "status": "approved",
+            "category": "cancellation"
+          },
+          {
+            "id": "event-5860f4709f",
+            "case_id": "case-f8b86eba85",
+            "authority": "human_review",
+            "revision": 49,
+            "status": "approved",
+            "category": "cancellation"
+          },
+          {
+            "id": "event-0bde74800e",
+            "case_id": "case-3bdbc6ded2",
+            "authority": "case_resolution",
+            "revision": 53,
+            "status": "approved",
+            "category": "closure"
+          }
+        ],
+        "evaluation": []
+      }
+    },
+    "private": {
+      "eligible_groups": {
+        "lineage-a5be91feb5": {
+          "label": "access",
+          "event_id": "event-c490d45544",
+          "row_ids": [
+            "row-e94774c19e",
+            "row-626a1f4935"
+          ]
+        },
+        "lineage-c8ccab6562": {
+          "label": "usage",
+          "event_id": "event-864d5693d8",
+          "row_ids": [
+            "row-65c96ca95c"
+          ]
+        },
+        "lineage-274f198277": {
+          "label": "billing",
+          "event_id": "event-27b103d46b",
+          "row_ids": [
+            "row-140e392e53",
+            "row-d2bd0c3ba8"
+          ]
+        },
+        "lineage-3a0018a9a4": {
+          "label": "cancellation",
+          "event_id": "event-0bde74800e",
+          "row_ids": [
+            "row-a39659ebe1"
+          ]
+        },
+        "lineage-443bfe8c04": {
+          "label": "access",
+          "event_id": "event-51fca1215a",
+          "row_ids": [
+            "row-f787d85396",
+            "row-057d931ab9"
+          ]
+        },
+        "lineage-b34ccfe19f": {
+          "label": "usage",
+          "event_id": "event-5ab17edea1",
+          "row_ids": [
+            "row-645d2510cb"
+          ]
+        }
+      },
+      "rows": {
+        "row-e94774c19e": {
+          "lineage_id": "lineage-a5be91feb5",
+          "label": "access",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-c490d45544",
+          "registry_id": "registry-8575203124"
+        },
+        "row-626a1f4935": {
+          "lineage_id": "lineage-a5be91feb5",
+          "label": "access",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-c490d45544",
+          "registry_id": "registry-a3fd28981e"
+        },
+        "row-65c96ca95c": {
+          "lineage_id": "lineage-c8ccab6562",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-864d5693d8",
+          "registry_id": "registry-ec0794a37b"
+        },
+        "row-140e392e53": {
+          "lineage_id": "lineage-274f198277",
+          "label": "billing",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-27b103d46b",
+          "registry_id": "registry-9d20e027ed"
+        },
+        "row-d2bd0c3ba8": {
+          "lineage_id": "lineage-274f198277",
+          "label": "billing",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-27b103d46b",
+          "registry_id": "registry-e4a2c9ec9c"
+        },
+        "row-a39659ebe1": {
+          "lineage_id": "lineage-3a0018a9a4",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-0bde74800e",
+          "registry_id": "registry-5bdb381a18"
+        },
+        "row-f787d85396": {
+          "lineage_id": "lineage-443bfe8c04",
+          "label": "access",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-51fca1215a",
+          "registry_id": "registry-1527512ffb"
+        },
+        "row-057d931ab9": {
+          "lineage_id": "lineage-443bfe8c04",
+          "label": "access",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-51fca1215a",
+          "registry_id": "registry-5a2e9c6d53"
+        },
+        "row-645d2510cb": {
+          "lineage_id": "lineage-b34ccfe19f",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-5ab17edea1",
+          "registry_id": "registry-134714b00c"
+        }
+      },
+      "policy_truth": {
+        "lineage-a5be91feb5": {
+          "case_resolution": {
+            "label": "access",
+            "event_id": "event-c490d45544"
+          },
+          "human_review": {
+            "label": "usage",
+            "event_id": "event-2e69c76f13"
+          }
+        },
+        "lineage-c8ccab6562": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-864d5693d8"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-5860f4709f"
+          }
+        },
+        "lineage-274f198277": {
+          "case_resolution": {
+            "label": "billing",
+            "event_id": "event-27b103d46b"
+          },
+          "human_review": {
+            "label": "usage",
+            "event_id": "event-f81e3760ce"
+          }
+        },
+        "lineage-3a0018a9a4": {
+          "case_resolution": {
+            "label": "cancellation",
+            "event_id": "event-0bde74800e"
+          },
+          "human_review": {
+            "label": "billing",
+            "event_id": "event-ebe298344d"
+          }
+        },
+        "lineage-443bfe8c04": {
+          "case_resolution": {
+            "label": "access",
+            "event_id": "event-51fca1215a"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-b745ab2ba0"
+          }
+        },
+        "lineage-b34ccfe19f": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-5ab17edea1"
+          },
+          "human_review": {
+            "label": "billing",
+            "event_id": "event-08df82d76b"
+          }
+        }
+      }
+    },
+    "fingerprint": "ef035a3c351920114238d7e78322df6d43758db6531e5ef3aa136b3fb0dc42b2"
+  },
+  {
+    "public": {
+      "id": "permissions-20008",
+      "family": "permissions",
+      "seed": 20008,
+      "contract": {
+        "goal": "Prepare a training dataset for a customer-request routing model.",
+        "authority": "case_resolution",
+        "cutoff_revision": 72,
+        "labels": [
+          "billing",
+          "access",
+          "usage",
+          "cancellation"
+        ],
+        "aliases": {
+          "payment": "billing",
+          "invoice": "billing",
+          "login": "access",
+          "sign-in": "access",
+          "quota": "usage",
+          "limits": "usage",
+          "closure": "cancellation",
+          "cancel": "cancellation"
+        },
+        "rules": [
+          "Only keep rows whose registry entry permits training.",
+          "Exclude every row whose lineage appears in the evaluation index, even when its text differs.",
+          "Keep exactly one row for EVERY eligible lineage. Equivalent copies are interchangeable.",
+          "Use the latest approved case_resolution event at or before revision 72. Ignore other authorities, drafts, and later revisions.",
+          "Normalize categories using the label aliases. Do not infer labels from the text.",
+          "Every changed label must cite the selected source event, which you must have inspected.",
+          "Do not change original text, IDs, or the source tables."
+        ]
+      },
+      "candidates": [
+        {
+          "id": "row-e3e85ef3f3",
+          "ticket_id": "ticket-c31e76d858",
+          "text": "Following up on the issue in my previous message.",
+          "label": "cancellation"
+        },
+        {
+          "id": "row-63c3022acf",
+          "ticket_id": "ticket-e1d4d4dce3",
+          "text": "I need assistance with the request I opened.",
+          "label": "access"
+        },
+        {
+          "id": "row-0c6a7c9734",
+          "ticket_id": "ticket-5f69aab9b7",
+          "text": "Please review my account request.",
+          "label": "usage"
+        },
+        {
+          "id": "row-43d3ceb6ad",
+          "ticket_id": "ticket-2d835dea33",
+          "text": "Please review my account request.",
+          "label": "billing"
+        },
+        {
+          "id": "row-b0eda97ba1",
+          "ticket_id": "ticket-65f5682b81",
+          "text": "Can you help resolve this account issue?",
+          "label": "access"
+        },
+        {
+          "id": "row-9205950729",
+          "ticket_id": "ticket-43526aaa4e",
+          "text": "Following up on the issue in my previous message.",
+          "label": "usage"
+        }
+      ],
+      "tables": {
+        "registry": [
+          {
+            "id": "registry-0c143aa6c0",
+            "ticket_id": "ticket-5f69aab9b7",
+            "case_id": "case-73c85b5ace",
+            "lineage_id": "lineage-c0653c5e6a",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-3d954dcd3e",
+            "ticket_id": "ticket-2d835dea33",
+            "case_id": "case-18343aa1e1",
+            "lineage_id": "lineage-f6ae4cbb23",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-0c545e9fb8",
+            "ticket_id": "ticket-65f5682b81",
+            "case_id": "case-4784edfd0a",
+            "lineage_id": "lineage-b3b779aa57",
+            "training_allowed": false
+          },
+          {
+            "id": "registry-858f709519",
+            "ticket_id": "ticket-43526aaa4e",
+            "case_id": "case-5db3a86e8a",
+            "lineage_id": "lineage-a29227f3bd",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-5ec9a5a06b",
+            "ticket_id": "ticket-e1d4d4dce3",
+            "case_id": "case-d4f87f7f11",
+            "lineage_id": "lineage-08de53f6f1",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-d1ca31319b",
+            "ticket_id": "ticket-c31e76d858",
+            "case_id": "case-9615b969ef",
+            "lineage_id": "lineage-fd8df6af37",
+            "training_allowed": true
+          }
+        ],
+        "events": [
+          {
+            "id": "event-74da32fb8f",
+            "case_id": "case-73c85b5ace",
+            "authority": "case_resolution",
+            "revision": 70,
+            "status": "approved",
+            "category": "limits"
+          },
+          {
+            "id": "event-6529dc661b",
+            "case_id": "case-18343aa1e1",
+            "authority": "case_resolution",
+            "revision": 70,
+            "status": "approved",
+            "category": "payment"
+          },
+          {
+            "id": "event-e863b215ba",
+            "case_id": "case-9615b969ef",
+            "authority": "human_review",
+            "revision": 68,
+            "status": "approved",
+            "category": "invoice"
+          },
+          {
+            "id": "event-7a2f0a2a51",
+            "case_id": "case-18343aa1e1",
+            "authority": "human_review",
+            "revision": 64,
+            "status": "approved",
+            "category": "limits"
+          },
+          {
+            "id": "event-7c92851691",
+            "case_id": "case-73c85b5ace",
+            "authority": "human_review",
+            "revision": 63,
+            "status": "approved",
+            "category": "cancel"
+          },
+          {
+            "id": "event-b6f2e73f45",
+            "case_id": "case-9615b969ef",
+            "authority": "case_resolution",
+            "revision": 68,
+            "status": "approved",
+            "category": "cancellation"
+          },
+          {
+            "id": "event-35628b22ec",
+            "case_id": "case-d4f87f7f11",
+            "authority": "human_review",
+            "revision": 68,
+            "status": "approved",
+            "category": "cancellation"
+          },
+          {
+            "id": "event-5d6a4f9f4b",
+            "case_id": "case-5db3a86e8a",
+            "authority": "case_resolution",
+            "revision": 69,
+            "status": "approved",
+            "category": "usage"
+          },
+          {
+            "id": "event-fd4c15ad6a",
+            "case_id": "case-4784edfd0a",
+            "authority": "case_resolution",
+            "revision": 70,
+            "status": "approved",
+            "category": "sign-in"
+          },
+          {
+            "id": "event-c444d3a849",
+            "case_id": "case-5db3a86e8a",
+            "authority": "human_review",
+            "revision": 68,
+            "status": "approved",
+            "category": "login"
+          },
+          {
+            "id": "event-bb0c3513e5",
+            "case_id": "case-4784edfd0a",
+            "authority": "human_review",
+            "revision": 69,
+            "status": "approved",
+            "category": "quota"
+          },
+          {
+            "id": "event-901585bb88",
+            "case_id": "case-d4f87f7f11",
+            "authority": "case_resolution",
+            "revision": 65,
+            "status": "approved",
+            "category": "sign-in"
+          }
+        ],
+        "evaluation": []
+      }
+    },
+    "private": {
+      "eligible_groups": {
+        "lineage-c0653c5e6a": {
+          "label": "usage",
+          "event_id": "event-74da32fb8f",
+          "row_ids": [
+            "row-0c6a7c9734"
+          ]
+        },
+        "lineage-fd8df6af37": {
+          "label": "cancellation",
+          "event_id": "event-b6f2e73f45",
+          "row_ids": [
+            "row-e3e85ef3f3"
+          ]
+        },
+        "lineage-08de53f6f1": {
+          "label": "access",
+          "event_id": "event-901585bb88",
+          "row_ids": [
+            "row-63c3022acf"
+          ]
+        },
+        "lineage-f6ae4cbb23": {
+          "label": "billing",
+          "event_id": "event-6529dc661b",
+          "row_ids": [
+            "row-43d3ceb6ad"
+          ]
+        },
+        "lineage-a29227f3bd": {
+          "label": "usage",
+          "event_id": "event-5d6a4f9f4b",
+          "row_ids": [
+            "row-9205950729"
+          ]
+        }
+      },
+      "rows": {
+        "row-0c6a7c9734": {
+          "lineage_id": "lineage-c0653c5e6a",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-74da32fb8f",
+          "registry_id": "registry-0c143aa6c0"
+        },
+        "row-e3e85ef3f3": {
+          "lineage_id": "lineage-fd8df6af37",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-b6f2e73f45",
+          "registry_id": "registry-d1ca31319b"
+        },
+        "row-b0eda97ba1": {
+          "lineage_id": "lineage-b3b779aa57",
+          "label": "access",
+          "permitted": false,
+          "leaked": false,
+          "eligible": false,
+          "event_id": "event-fd4c15ad6a",
+          "registry_id": "registry-0c545e9fb8"
+        },
+        "row-63c3022acf": {
+          "lineage_id": "lineage-08de53f6f1",
+          "label": "access",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-901585bb88",
+          "registry_id": "registry-5ec9a5a06b"
+        },
+        "row-43d3ceb6ad": {
+          "lineage_id": "lineage-f6ae4cbb23",
+          "label": "billing",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-6529dc661b",
+          "registry_id": "registry-3d954dcd3e"
+        },
+        "row-9205950729": {
+          "lineage_id": "lineage-a29227f3bd",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-5d6a4f9f4b",
+          "registry_id": "registry-858f709519"
+        }
+      },
+      "policy_truth": {
+        "lineage-c0653c5e6a": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-74da32fb8f"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-7c92851691"
+          }
+        },
+        "lineage-fd8df6af37": {
+          "case_resolution": {
+            "label": "cancellation",
+            "event_id": "event-b6f2e73f45"
+          },
+          "human_review": {
+            "label": "billing",
+            "event_id": "event-e863b215ba"
+          }
+        },
+        "lineage-b3b779aa57": {
+          "case_resolution": {
+            "label": "access",
+            "event_id": "event-fd4c15ad6a"
+          },
+          "human_review": {
+            "label": "usage",
+            "event_id": "event-bb0c3513e5"
+          }
+        },
+        "lineage-08de53f6f1": {
+          "case_resolution": {
+            "label": "access",
+            "event_id": "event-901585bb88"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-35628b22ec"
+          }
+        },
+        "lineage-f6ae4cbb23": {
+          "case_resolution": {
+            "label": "billing",
+            "event_id": "event-6529dc661b"
+          },
+          "human_review": {
+            "label": "usage",
+            "event_id": "event-7a2f0a2a51"
+          }
+        },
+        "lineage-a29227f3bd": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-5d6a4f9f4b"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-c444d3a849"
+          }
+        }
+      }
+    },
+    "fingerprint": "51df69d7f4248a864a0f87c133ebcbc58ee35244e4a6c7969ed511a702fd127a"
+  },
+  {
+    "public": {
+      "id": "leakage-20009",
+      "family": "leakage",
+      "seed": 20009,
+      "contract": {
+        "goal": "Prepare a training dataset for a customer-request routing model.",
+        "authority": "case_resolution",
+        "cutoff_revision": 52,
+        "labels": [
+          "billing",
+          "access",
+          "usage",
+          "cancellation"
+        ],
+        "aliases": {
+          "payment": "billing",
+          "invoice": "billing",
+          "login": "access",
+          "sign-in": "access",
+          "quota": "usage",
+          "limits": "usage",
+          "closure": "cancellation",
+          "cancel": "cancellation"
+        },
+        "rules": [
+          "Only keep rows whose registry entry permits training.",
+          "Exclude every row whose lineage appears in the evaluation index, even when its text differs.",
+          "Keep exactly one row for EVERY eligible lineage. Equivalent copies are interchangeable.",
+          "Use the latest approved case_resolution event at or before revision 52. Ignore other authorities, drafts, and later revisions.",
+          "Normalize categories using the label aliases. Do not infer labels from the text.",
+          "Every changed label must cite the selected source event, which you must have inspected.",
+          "Do not change original text, IDs, or the source tables."
+        ]
+      },
+      "candidates": [
+        {
+          "id": "row-563841448d",
+          "ticket_id": "ticket-574a6936ba",
+          "text": "Please review my account request.",
+          "label": "usage"
+        },
+        {
+          "id": "row-28286e4c51",
+          "ticket_id": "ticket-c936a28846",
+          "text": "Please review my account request.",
+          "label": "access"
+        },
+        {
+          "id": "row-b13ba6d81b",
+          "ticket_id": "ticket-115590ddf7",
+          "text": "Following up on the issue in my previous message.",
+          "label": "cancellation"
+        },
+        {
+          "id": "row-ced55fb455",
+          "ticket_id": "ticket-d8f16d63bb",
+          "text": "Following up on the issue in my previous message.",
+          "label": "cancellation"
+        },
+        {
+          "id": "row-3f54fb8e74",
+          "ticket_id": "ticket-5c03f6f6b7",
+          "text": "I need assistance with the request I opened.",
+          "label": "billing"
+        },
+        {
+          "id": "row-ec6a0f9fd1",
+          "ticket_id": "ticket-cfa94b60d1",
+          "text": "Can you help resolve this account issue?",
+          "label": "access"
+        }
+      ],
+      "tables": {
+        "registry": [
+          {
+            "id": "registry-6b3907e427",
+            "ticket_id": "ticket-5c03f6f6b7",
+            "case_id": "case-d93b432cb8",
+            "lineage_id": "lineage-688e3c6282",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-d9ca6f7248",
+            "ticket_id": "ticket-d8f16d63bb",
+            "case_id": "case-b71afd0017",
+            "lineage_id": "lineage-fcd44e53cc",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-e4db2c3854",
+            "ticket_id": "ticket-cfa94b60d1",
+            "case_id": "case-c6df3d59c5",
+            "lineage_id": "lineage-ea00430f63",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-340c024bf9",
+            "ticket_id": "ticket-c936a28846",
+            "case_id": "case-4b1d1c4053",
+            "lineage_id": "lineage-f19382b6df",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-98feb3ad0b",
+            "ticket_id": "ticket-574a6936ba",
+            "case_id": "case-da553b41e5",
+            "lineage_id": "lineage-c9bdef33da",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-05ef413109",
+            "ticket_id": "ticket-115590ddf7",
+            "case_id": "case-2258ad3835",
+            "lineage_id": "lineage-cb5a4e146f",
+            "training_allowed": true
+          }
+        ],
+        "events": [
+          {
+            "id": "event-60a9dc31ff",
+            "case_id": "case-d93b432cb8",
+            "authority": "human_review",
+            "revision": 49,
+            "status": "approved",
+            "category": "sign-in"
+          },
+          {
+            "id": "event-6b2d699c65",
+            "case_id": "case-b71afd0017",
+            "authority": "case_resolution",
+            "revision": 46,
+            "status": "approved",
+            "category": "cancel"
+          },
+          {
+            "id": "event-111b4a847b",
+            "case_id": "case-4b1d1c4053",
+            "authority": "case_resolution",
+            "revision": 49,
+            "status": "approved",
+            "category": "sign-in"
+          },
+          {
+            "id": "event-e8d1e64acb",
+            "case_id": "case-d93b432cb8",
+            "authority": "case_resolution",
+            "revision": 50,
+            "status": "approved",
+            "category": "billing"
+          },
+          {
+            "id": "event-354cbd73d7",
+            "case_id": "case-c6df3d59c5",
+            "authority": "human_review",
+            "revision": 51,
+            "status": "approved",
+            "category": "limits"
+          },
+          {
+            "id": "event-88dd6b6541",
+            "case_id": "case-2258ad3835",
+            "authority": "human_review",
+            "revision": 45,
+            "status": "approved",
+            "category": "limits"
+          },
+          {
+            "id": "event-034f8cbac4",
+            "case_id": "case-da553b41e5",
+            "authority": "case_resolution",
+            "revision": 49,
+            "status": "approved",
+            "category": "limits"
+          },
+          {
+            "id": "event-b6e1228f7b",
+            "case_id": "case-2258ad3835",
+            "authority": "case_resolution",
+            "revision": 44,
+            "status": "approved",
+            "category": "cancellation"
+          },
+          {
+            "id": "event-71ac550bdc",
+            "case_id": "case-b71afd0017",
+            "authority": "human_review",
+            "revision": 50,
+            "status": "approved",
+            "category": "invoice"
+          },
+          {
+            "id": "event-350a5e67e3",
+            "case_id": "case-c6df3d59c5",
+            "authority": "case_resolution",
+            "revision": 44,
+            "status": "approved",
+            "category": "access"
+          },
+          {
+            "id": "event-84f7178c74",
+            "case_id": "case-4b1d1c4053",
+            "authority": "human_review",
+            "revision": 47,
+            "status": "approved",
+            "category": "invoice"
+          },
+          {
+            "id": "event-d1eac1accf",
+            "case_id": "case-da553b41e5",
+            "authority": "human_review",
+            "revision": 48,
+            "status": "approved",
+            "category": "cancel"
+          }
+        ],
+        "evaluation": [
+          {
+            "id": "eval-1e0ea01b17",
+            "lineage_id": "lineage-f19382b6df",
+            "note": "An evaluation example from this document family is reserved."
+          }
+        ]
+      }
+    },
+    "private": {
+      "eligible_groups": {
+        "lineage-cb5a4e146f": {
+          "label": "cancellation",
+          "event_id": "event-b6e1228f7b",
+          "row_ids": [
+            "row-b13ba6d81b"
+          ]
+        },
+        "lineage-ea00430f63": {
+          "label": "access",
+          "event_id": "event-350a5e67e3",
+          "row_ids": [
+            "row-ec6a0f9fd1"
+          ]
+        },
+        "lineage-688e3c6282": {
+          "label": "billing",
+          "event_id": "event-e8d1e64acb",
+          "row_ids": [
+            "row-3f54fb8e74"
+          ]
+        },
+        "lineage-c9bdef33da": {
+          "label": "usage",
+          "event_id": "event-034f8cbac4",
+          "row_ids": [
+            "row-563841448d"
+          ]
+        },
+        "lineage-fcd44e53cc": {
+          "label": "cancellation",
+          "event_id": "event-6b2d699c65",
+          "row_ids": [
+            "row-ced55fb455"
+          ]
+        }
+      },
+      "rows": {
+        "row-28286e4c51": {
+          "lineage_id": "lineage-f19382b6df",
+          "label": "access",
+          "permitted": true,
+          "leaked": true,
+          "eligible": false,
+          "event_id": "event-111b4a847b",
+          "registry_id": "registry-340c024bf9"
+        },
+        "row-b13ba6d81b": {
+          "lineage_id": "lineage-cb5a4e146f",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-b6e1228f7b",
+          "registry_id": "registry-05ef413109"
+        },
+        "row-ec6a0f9fd1": {
+          "lineage_id": "lineage-ea00430f63",
+          "label": "access",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-350a5e67e3",
+          "registry_id": "registry-e4db2c3854"
+        },
+        "row-3f54fb8e74": {
+          "lineage_id": "lineage-688e3c6282",
+          "label": "billing",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-e8d1e64acb",
+          "registry_id": "registry-6b3907e427"
+        },
+        "row-563841448d": {
+          "lineage_id": "lineage-c9bdef33da",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-034f8cbac4",
+          "registry_id": "registry-98feb3ad0b"
+        },
+        "row-ced55fb455": {
+          "lineage_id": "lineage-fcd44e53cc",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-6b2d699c65",
+          "registry_id": "registry-d9ca6f7248"
+        }
+      },
+      "policy_truth": {
+        "lineage-f19382b6df": {
+          "case_resolution": {
+            "label": "access",
+            "event_id": "event-111b4a847b"
+          },
+          "human_review": {
+            "label": "billing",
+            "event_id": "event-84f7178c74"
+          }
+        },
+        "lineage-cb5a4e146f": {
+          "case_resolution": {
+            "label": "cancellation",
+            "event_id": "event-b6e1228f7b"
+          },
+          "human_review": {
+            "label": "usage",
+            "event_id": "event-88dd6b6541"
+          }
+        },
+        "lineage-ea00430f63": {
+          "case_resolution": {
+            "label": "access",
+            "event_id": "event-350a5e67e3"
+          },
+          "human_review": {
+            "label": "usage",
+            "event_id": "event-354cbd73d7"
+          }
+        },
+        "lineage-688e3c6282": {
+          "case_resolution": {
+            "label": "billing",
+            "event_id": "event-e8d1e64acb"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-60a9dc31ff"
+          }
+        },
+        "lineage-c9bdef33da": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-034f8cbac4"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-d1eac1accf"
+          }
+        },
+        "lineage-fcd44e53cc": {
+          "case_resolution": {
+            "label": "cancellation",
+            "event_id": "event-6b2d699c65"
+          },
+          "human_review": {
+            "label": "billing",
+            "event_id": "event-71ac550bdc"
+          }
+        }
+      }
+    },
+    "fingerprint": "3676a702cc4d3829a6f0cd5aea28910e079a114e6419ee8fe4040dce71fd2006"
+  },
+  {
+    "public": {
+      "id": "versions-20010",
+      "family": "versions",
+      "seed": 20010,
+      "contract": {
+        "goal": "Prepare a training dataset for a customer-request routing model.",
+        "authority": "case_resolution",
+        "cutoff_revision": 52,
+        "labels": [
+          "billing",
+          "access",
+          "usage",
+          "cancellation"
+        ],
+        "aliases": {
+          "payment": "billing",
+          "invoice": "billing",
+          "login": "access",
+          "sign-in": "access",
+          "quota": "usage",
+          "limits": "usage",
+          "closure": "cancellation",
+          "cancel": "cancellation"
+        },
+        "rules": [
+          "Only keep rows whose registry entry permits training.",
+          "Exclude every row whose lineage appears in the evaluation index, even when its text differs.",
+          "Keep exactly one row for EVERY eligible lineage. Equivalent copies are interchangeable.",
+          "Use the latest approved case_resolution event at or before revision 52. Ignore other authorities, drafts, and later revisions.",
+          "Normalize categories using the label aliases. Do not infer labels from the text.",
+          "Every changed label must cite the selected source event, which you must have inspected.",
+          "Do not change original text, IDs, or the source tables."
+        ]
+      },
+      "candidates": [
+        {
+          "id": "row-c2fc60c904",
+          "ticket_id": "ticket-efa118c3b0",
+          "text": "I need assistance with the request I opened.",
+          "label": "billing"
+        },
+        {
+          "id": "row-fd9130f1ec",
+          "ticket_id": "ticket-bb7e0b4d22",
+          "text": "Can you help resolve this account issue?",
+          "label": "cancellation"
+        },
+        {
+          "id": "row-722df62297",
+          "ticket_id": "ticket-f7e13bb73b",
+          "text": "Please review my account request.",
+          "label": "access"
+        },
+        {
+          "id": "row-0b47824f22",
+          "ticket_id": "ticket-659f9e0a6b",
+          "text": "Please review my account request.",
+          "label": "access"
+        },
+        {
+          "id": "row-c58f341df4",
+          "ticket_id": "ticket-fa357fe70e",
+          "text": "Following up on the issue in my previous message.",
+          "label": "usage"
+        },
+        {
+          "id": "row-6f3047a147",
+          "ticket_id": "ticket-38144f6954",
+          "text": "Following up on the issue in my previous message.",
+          "label": "usage"
+        }
+      ],
+      "tables": {
+        "registry": [
+          {
+            "id": "registry-af32b8a013",
+            "ticket_id": "ticket-38144f6954",
+            "case_id": "case-de2e72a822",
+            "lineage_id": "lineage-819fba397a",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-af3c2e1642",
+            "ticket_id": "ticket-f7e13bb73b",
+            "case_id": "case-57a9c951af",
+            "lineage_id": "lineage-f8d78272fd",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-713d6b6341",
+            "ticket_id": "ticket-fa357fe70e",
+            "case_id": "case-bb07d3045a",
+            "lineage_id": "lineage-445a1d137a",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-73c7e29a36",
+            "ticket_id": "ticket-efa118c3b0",
+            "case_id": "case-700755666b",
+            "lineage_id": "lineage-42a7e00092",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-80ab91290c",
+            "ticket_id": "ticket-bb7e0b4d22",
+            "case_id": "case-43b883d7d4",
+            "lineage_id": "lineage-9c5f0eda4c",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-9122a7f0f1",
+            "ticket_id": "ticket-659f9e0a6b",
+            "case_id": "case-a689ad6470",
+            "lineage_id": "lineage-494f9618ba",
+            "training_allowed": true
+          }
+        ],
+        "events": [
+          {
+            "id": "event-dc1459cdef",
+            "case_id": "case-de2e72a822",
+            "authority": "case_resolution",
+            "revision": 43,
+            "status": "draft",
+            "category": "usage"
+          },
+          {
+            "id": "event-07443bae47",
+            "case_id": "case-a689ad6470",
+            "authority": "case_resolution",
+            "revision": 50,
+            "status": "draft",
+            "category": "login"
+          },
+          {
+            "id": "event-9ce8d4ac63",
+            "case_id": "case-bb07d3045a",
+            "authority": "case_resolution",
+            "revision": 49,
+            "status": "draft",
+            "category": "cancel"
+          },
+          {
+            "id": "event-94e8eed1a1",
+            "case_id": "case-57a9c951af",
+            "authority": "human_review",
+            "revision": 45,
+            "status": "approved",
+            "category": "login"
+          },
+          {
+            "id": "event-97e60ca5e6",
+            "case_id": "case-a689ad6470",
+            "authority": "case_resolution",
+            "revision": 50,
+            "status": "approved",
+            "category": "closure"
+          },
+          {
+            "id": "event-bdc17fb23d",
+            "case_id": "case-bb07d3045a",
+            "authority": "case_resolution",
+            "revision": 50,
+            "status": "approved",
+            "category": "usage"
+          },
+          {
+            "id": "event-4df3d4bf83",
+            "case_id": "case-700755666b",
+            "authority": "human_review",
+            "revision": 43,
+            "status": "approved",
+            "category": "access"
+          },
+          {
+            "id": "event-753b481825",
+            "case_id": "case-bb07d3045a",
+            "authority": "case_resolution",
+            "revision": 61,
+            "status": "approved",
+            "category": "cancellation"
+          },
+          {
+            "id": "event-861790611b",
+            "case_id": "case-43b883d7d4",
+            "authority": "human_review",
+            "revision": 49,
+            "status": "approved",
+            "category": "cancellation"
+          },
+          {
+            "id": "event-36f3b68ba9",
+            "case_id": "case-de2e72a822",
+            "authority": "case_resolution",
+            "revision": 61,
+            "status": "approved",
+            "category": "cancellation"
+          },
+          {
+            "id": "event-6578b76d4a",
+            "case_id": "case-57a9c951af",
+            "authority": "case_resolution",
+            "revision": 37,
+            "status": "approved",
+            "category": "access"
+          },
+          {
+            "id": "event-f03ba99727",
+            "case_id": "case-57a9c951af",
+            "authority": "case_resolution",
+            "revision": 57,
+            "status": "approved",
+            "category": "closure"
+          },
+          {
+            "id": "event-a49a8107ae",
+            "case_id": "case-de2e72a822",
+            "authority": "case_resolution",
+            "revision": 29,
+            "status": "approved",
+            "category": "billing"
+          },
+          {
+            "id": "event-1015bc98ac",
+            "case_id": "case-43b883d7d4",
+            "authority": "case_resolution",
+            "revision": 54,
+            "status": "approved",
+            "category": "cancel"
+          },
+          {
+            "id": "event-7c449eb42e",
+            "case_id": "case-57a9c951af",
+            "authority": "case_resolution",
+            "revision": 49,
+            "status": "approved",
+            "category": "cancel"
+          },
+          {
+            "id": "event-63c34e3409",
+            "case_id": "case-57a9c951af",
+            "authority": "case_resolution",
+            "revision": 51,
+            "status": "draft",
+            "category": "usage"
+          },
+          {
+            "id": "event-0b7908060e",
+            "case_id": "case-de2e72a822",
+            "authority": "human_review",
+            "revision": 44,
+            "status": "approved",
+            "category": "invoice"
+          },
+          {
+            "id": "event-05c6e6d85e",
+            "case_id": "case-bb07d3045a",
+            "authority": "case_resolution",
+            "revision": 43,
+            "status": "approved",
+            "category": "access"
+          },
+          {
+            "id": "event-0372d0412c",
+            "case_id": "case-43b883d7d4",
+            "authority": "case_resolution",
+            "revision": 47,
+            "status": "approved",
+            "category": "sign-in"
+          },
+          {
+            "id": "event-e1041e847a",
+            "case_id": "case-700755666b",
+            "authority": "case_resolution",
+            "revision": 34,
+            "status": "approved",
+            "category": "access"
+          },
+          {
+            "id": "event-09a533e387",
+            "case_id": "case-700755666b",
+            "authority": "case_resolution",
+            "revision": 56,
+            "status": "approved",
+            "category": "limits"
+          },
+          {
+            "id": "event-1a81546e88",
+            "case_id": "case-a689ad6470",
+            "authority": "human_review",
+            "revision": 43,
+            "status": "approved",
+            "category": "login"
+          },
+          {
+            "id": "event-1148eb4fc4",
+            "case_id": "case-a689ad6470",
+            "authority": "case_resolution",
+            "revision": 43,
+            "status": "approved",
+            "category": "access"
+          },
+          {
+            "id": "event-a98fd4695f",
+            "case_id": "case-700755666b",
+            "authority": "case_resolution",
+            "revision": 47,
+            "status": "approved",
+            "category": "invoice"
+          },
+          {
+            "id": "event-cce62f8c4a",
+            "case_id": "case-bb07d3045a",
+            "authority": "human_review",
+            "revision": 49,
+            "status": "approved",
+            "category": "login"
+          },
+          {
+            "id": "event-b420d77413",
+            "case_id": "case-700755666b",
+            "authority": "case_resolution",
+            "revision": 47,
+            "status": "draft",
+            "category": "payment"
+          },
+          {
+            "id": "event-9d05b7fa7c",
+            "case_id": "case-43b883d7d4",
+            "authority": "case_resolution",
+            "revision": 42,
+            "status": "approved",
+            "category": "cancel"
+          },
+          {
+            "id": "event-ede6d68cd3",
+            "case_id": "case-a689ad6470",
+            "authority": "case_resolution",
+            "revision": 57,
+            "status": "approved",
+            "category": "cancel"
+          },
+          {
+            "id": "event-a124f86ba5",
+            "case_id": "case-43b883d7d4",
+            "authority": "case_resolution",
+            "revision": 46,
+            "status": "draft",
+            "category": "sign-in"
+          },
+          {
+            "id": "event-4acf209fb9",
+            "case_id": "case-de2e72a822",
+            "authority": "case_resolution",
+            "revision": 47,
+            "status": "approved",
+            "category": "limits"
+          }
+        ],
+        "evaluation": []
+      }
+    },
+    "private": {
+      "eligible_groups": {
+        "lineage-494f9618ba": {
+          "label": "cancellation",
+          "event_id": "event-97e60ca5e6",
+          "row_ids": [
+            "row-0b47824f22"
+          ]
+        },
+        "lineage-819fba397a": {
+          "label": "usage",
+          "event_id": "event-4acf209fb9",
+          "row_ids": [
+            "row-6f3047a147"
+          ]
+        },
+        "lineage-9c5f0eda4c": {
+          "label": "access",
+          "event_id": "event-0372d0412c",
+          "row_ids": [
+            "row-fd9130f1ec"
+          ]
+        },
+        "lineage-42a7e00092": {
+          "label": "billing",
+          "event_id": "event-a98fd4695f",
+          "row_ids": [
+            "row-c2fc60c904"
+          ]
+        },
+        "lineage-f8d78272fd": {
+          "label": "cancellation",
+          "event_id": "event-7c449eb42e",
+          "row_ids": [
+            "row-722df62297"
+          ]
+        },
+        "lineage-445a1d137a": {
+          "label": "usage",
+          "event_id": "event-bdc17fb23d",
+          "row_ids": [
+            "row-c58f341df4"
+          ]
+        }
+      },
+      "rows": {
+        "row-0b47824f22": {
+          "lineage_id": "lineage-494f9618ba",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-97e60ca5e6",
+          "registry_id": "registry-9122a7f0f1"
+        },
+        "row-6f3047a147": {
+          "lineage_id": "lineage-819fba397a",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-4acf209fb9",
+          "registry_id": "registry-af32b8a013"
+        },
+        "row-fd9130f1ec": {
+          "lineage_id": "lineage-9c5f0eda4c",
+          "label": "access",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-0372d0412c",
+          "registry_id": "registry-80ab91290c"
+        },
+        "row-c2fc60c904": {
+          "lineage_id": "lineage-42a7e00092",
+          "label": "billing",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-a98fd4695f",
+          "registry_id": "registry-73c7e29a36"
+        },
+        "row-722df62297": {
+          "lineage_id": "lineage-f8d78272fd",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-7c449eb42e",
+          "registry_id": "registry-af3c2e1642"
+        },
+        "row-c58f341df4": {
+          "lineage_id": "lineage-445a1d137a",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-bdc17fb23d",
+          "registry_id": "registry-713d6b6341"
+        }
+      },
+      "policy_truth": {
+        "lineage-494f9618ba": {
+          "case_resolution": {
+            "label": "cancellation",
+            "event_id": "event-97e60ca5e6"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-1a81546e88"
+          }
+        },
+        "lineage-819fba397a": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-4acf209fb9"
+          },
+          "human_review": {
+            "label": "billing",
+            "event_id": "event-0b7908060e"
+          }
+        },
+        "lineage-9c5f0eda4c": {
+          "case_resolution": {
+            "label": "access",
+            "event_id": "event-0372d0412c"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-861790611b"
+          }
+        },
+        "lineage-42a7e00092": {
+          "case_resolution": {
+            "label": "billing",
+            "event_id": "event-a98fd4695f"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-4df3d4bf83"
+          }
+        },
+        "lineage-f8d78272fd": {
+          "case_resolution": {
+            "label": "cancellation",
+            "event_id": "event-7c449eb42e"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-94e8eed1a1"
+          }
+        },
+        "lineage-445a1d137a": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-bdc17fb23d"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-cce62f8c4a"
+          }
+        }
+      }
+    },
+    "fingerprint": "8d8c816cbeb4769b47d14b85111ceb5eeca06bb0d7b8ad53e32546fca4a91dea"
+  },
+  {
+    "public": {
+      "id": "pair-20011",
+      "family": "pair",
+      "seed": 20011,
+      "contract": {
+        "goal": "Prepare a training dataset for a customer-request routing model.",
+        "authority": "case_resolution",
+        "cutoff_revision": 56,
+        "labels": [
+          "billing",
+          "access",
+          "usage",
+          "cancellation"
+        ],
+        "aliases": {
+          "payment": "billing",
+          "invoice": "billing",
+          "login": "access",
+          "sign-in": "access",
+          "quota": "usage",
+          "limits": "usage",
+          "closure": "cancellation",
+          "cancel": "cancellation"
+        },
+        "rules": [
+          "Only keep rows whose registry entry permits training.",
+          "Exclude every row whose lineage appears in the evaluation index, even when its text differs.",
+          "Keep exactly one row for EVERY eligible lineage. Equivalent copies are interchangeable.",
+          "Use the latest approved case_resolution event at or before revision 56. Ignore other authorities, drafts, and later revisions.",
+          "Normalize categories using the label aliases. Do not infer labels from the text.",
+          "Every changed label must cite the selected source event, which you must have inspected.",
+          "Do not change original text, IDs, or the source tables."
+        ]
+      },
+      "candidates": [
+        {
+          "id": "row-14f0847af1",
+          "ticket_id": "ticket-da545039fb",
+          "text": "Following up on the issue in my previous message.",
+          "label": "limits"
+        },
+        {
+          "id": "row-21bb4d2fe7",
+          "ticket_id": "ticket-b98e91193b",
+          "text": "Can you help resolve this account issue?",
+          "label": "access"
+        },
+        {
+          "id": "row-0bb04760e0",
+          "ticket_id": "ticket-cb495b296f",
+          "text": "i  need  assistance  with  the  request  i  opened.  ",
+          "label": "login"
+        },
+        {
+          "id": "row-7256263b9a",
+          "ticket_id": "ticket-06490fad90",
+          "text": "Following up on the issue in my previous message.",
+          "label": "quota"
+        },
+        {
+          "id": "row-1c33e2ab16",
+          "ticket_id": "ticket-c662ef02a4",
+          "text": "Please review my account request.",
+          "label": "access"
+        },
+        {
+          "id": "row-f4339d1be6",
+          "ticket_id": "ticket-5cb199a64c",
+          "text": "Please review my account request.",
+          "label": "usage"
+        },
+        {
+          "id": "row-8317d12dbb",
+          "ticket_id": "ticket-c0b9bb8222",
+          "text": "I need assistance with the request I opened.",
+          "label": "sign-in"
+        },
+        {
+          "id": "row-8f1f759f68",
+          "ticket_id": "ticket-9bde12748a",
+          "text": "please  review  my  account  request.  ",
+          "label": "access"
+        },
+        {
+          "id": "row-466beadbdd",
+          "ticket_id": "ticket-95b75c4f7e",
+          "text": "following  up  on  the  issue  in  my  previous  message.  ",
+          "label": "quota"
+        }
+      ],
+      "tables": {
+        "registry": [
+          {
+            "id": "registry-c9598bdc99",
+            "ticket_id": "ticket-95b75c4f7e",
+            "case_id": "case-f5e43166f2",
+            "lineage_id": "lineage-d38fe6bf0e",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-0e3c6266f2",
+            "ticket_id": "ticket-c0b9bb8222",
+            "case_id": "case-e03f357373",
+            "lineage_id": "lineage-24964a66af",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-ff9257a189",
+            "ticket_id": "ticket-da545039fb",
+            "case_id": "case-1ddeabdea2",
+            "lineage_id": "lineage-c82d92cb9f",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-6d43f6c62c",
+            "ticket_id": "ticket-b98e91193b",
+            "case_id": "case-52892245b5",
+            "lineage_id": "lineage-fda3de4465",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-a23e138523",
+            "ticket_id": "ticket-cb495b296f",
+            "case_id": "case-e03f357373",
+            "lineage_id": "lineage-24964a66af",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-e76039c6c3",
+            "ticket_id": "ticket-c662ef02a4",
+            "case_id": "case-227c6a79f0",
+            "lineage_id": "lineage-bb0fe8f401",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-e255e7d716",
+            "ticket_id": "ticket-9bde12748a",
+            "case_id": "case-227c6a79f0",
+            "lineage_id": "lineage-bb0fe8f401",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-76fb549660",
+            "ticket_id": "ticket-06490fad90",
+            "case_id": "case-f5e43166f2",
+            "lineage_id": "lineage-d38fe6bf0e",
+            "training_allowed": true
+          },
+          {
+            "id": "registry-54133de5fe",
+            "ticket_id": "ticket-5cb199a64c",
+            "case_id": "case-0d93ec4225",
+            "lineage_id": "lineage-1e1ba6627f",
+            "training_allowed": true
+          }
+        ],
+        "events": [
+          {
+            "id": "event-bb394acc87",
+            "case_id": "case-f5e43166f2",
+            "authority": "human_review",
+            "revision": 50,
+            "status": "approved",
+            "category": "payment"
+          },
+          {
+            "id": "event-2a3d726b43",
+            "case_id": "case-1ddeabdea2",
+            "authority": "human_review",
+            "revision": 52,
+            "status": "approved",
+            "category": "sign-in"
+          },
+          {
+            "id": "event-b46e4844ab",
+            "case_id": "case-227c6a79f0",
+            "authority": "case_resolution",
+            "revision": 48,
+            "status": "approved",
+            "category": "payment"
+          },
+          {
+            "id": "event-226501f03a",
+            "case_id": "case-0d93ec4225",
+            "authority": "case_resolution",
+            "revision": 49,
+            "status": "approved",
+            "category": "billing"
+          },
+          {
+            "id": "event-2e282349f5",
+            "case_id": "case-0d93ec4225",
+            "authority": "human_review",
+            "revision": 52,
+            "status": "approved",
+            "category": "quota"
+          },
+          {
+            "id": "event-c6d8340103",
+            "case_id": "case-e03f357373",
+            "authority": "case_resolution",
+            "revision": 50,
+            "status": "approved",
+            "category": "access"
+          },
+          {
+            "id": "event-d28362928e",
+            "case_id": "case-52892245b5",
+            "authority": "human_review",
+            "revision": 47,
+            "status": "approved",
+            "category": "login"
+          },
+          {
+            "id": "event-b61d30e2f7",
+            "case_id": "case-52892245b5",
+            "authority": "case_resolution",
+            "revision": 49,
+            "status": "approved",
+            "category": "cancellation"
+          },
+          {
+            "id": "event-fcb4b6eabe",
+            "case_id": "case-1ddeabdea2",
+            "authority": "case_resolution",
+            "revision": 51,
+            "status": "approved",
+            "category": "usage"
+          },
+          {
+            "id": "event-72ff0992b2",
+            "case_id": "case-227c6a79f0",
+            "authority": "human_review",
+            "revision": 51,
+            "status": "approved",
+            "category": "sign-in"
+          },
+          {
+            "id": "event-07ac019275",
+            "case_id": "case-f5e43166f2",
+            "authority": "case_resolution",
+            "revision": 53,
+            "status": "approved",
+            "category": "quota"
+          },
+          {
+            "id": "event-3b25ec450d",
+            "case_id": "case-e03f357373",
+            "authority": "human_review",
+            "revision": 48,
+            "status": "approved",
+            "category": "closure"
+          }
+        ],
+        "evaluation": []
+      }
+    },
+    "private": {
+      "eligible_groups": {
+        "lineage-bb0fe8f401": {
+          "label": "billing",
+          "event_id": "event-b46e4844ab",
+          "row_ids": [
+            "row-1c33e2ab16",
+            "row-8f1f759f68"
+          ]
+        },
+        "lineage-c82d92cb9f": {
+          "label": "usage",
+          "event_id": "event-fcb4b6eabe",
+          "row_ids": [
+            "row-14f0847af1"
+          ]
+        },
+        "lineage-fda3de4465": {
+          "label": "cancellation",
+          "event_id": "event-b61d30e2f7",
+          "row_ids": [
+            "row-21bb4d2fe7"
+          ]
+        },
+        "lineage-24964a66af": {
+          "label": "access",
+          "event_id": "event-c6d8340103",
+          "row_ids": [
+            "row-8317d12dbb",
+            "row-0bb04760e0"
+          ]
+        },
+        "lineage-1e1ba6627f": {
+          "label": "billing",
+          "event_id": "event-226501f03a",
+          "row_ids": [
+            "row-f4339d1be6"
+          ]
+        },
+        "lineage-d38fe6bf0e": {
+          "label": "usage",
+          "event_id": "event-07ac019275",
+          "row_ids": [
+            "row-7256263b9a",
+            "row-466beadbdd"
+          ]
+        }
+      },
+      "rows": {
+        "row-1c33e2ab16": {
+          "lineage_id": "lineage-bb0fe8f401",
+          "label": "billing",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-b46e4844ab",
+          "registry_id": "registry-e76039c6c3"
+        },
+        "row-8f1f759f68": {
+          "lineage_id": "lineage-bb0fe8f401",
+          "label": "billing",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-b46e4844ab",
+          "registry_id": "registry-e255e7d716"
+        },
+        "row-14f0847af1": {
+          "lineage_id": "lineage-c82d92cb9f",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-fcb4b6eabe",
+          "registry_id": "registry-ff9257a189"
+        },
+        "row-21bb4d2fe7": {
+          "lineage_id": "lineage-fda3de4465",
+          "label": "cancellation",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-b61d30e2f7",
+          "registry_id": "registry-6d43f6c62c"
+        },
+        "row-8317d12dbb": {
+          "lineage_id": "lineage-24964a66af",
+          "label": "access",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-c6d8340103",
+          "registry_id": "registry-0e3c6266f2"
+        },
+        "row-0bb04760e0": {
+          "lineage_id": "lineage-24964a66af",
+          "label": "access",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-c6d8340103",
+          "registry_id": "registry-a23e138523"
+        },
+        "row-f4339d1be6": {
+          "lineage_id": "lineage-1e1ba6627f",
+          "label": "billing",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-226501f03a",
+          "registry_id": "registry-54133de5fe"
+        },
+        "row-7256263b9a": {
+          "lineage_id": "lineage-d38fe6bf0e",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-07ac019275",
+          "registry_id": "registry-76fb549660"
+        },
+        "row-466beadbdd": {
+          "lineage_id": "lineage-d38fe6bf0e",
+          "label": "usage",
+          "permitted": true,
+          "leaked": false,
+          "eligible": true,
+          "event_id": "event-07ac019275",
+          "registry_id": "registry-c9598bdc99"
+        }
+      },
+      "policy_truth": {
+        "lineage-bb0fe8f401": {
+          "case_resolution": {
+            "label": "billing",
+            "event_id": "event-b46e4844ab"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-72ff0992b2"
+          }
+        },
+        "lineage-c82d92cb9f": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-fcb4b6eabe"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-2a3d726b43"
+          }
+        },
+        "lineage-fda3de4465": {
+          "case_resolution": {
+            "label": "cancellation",
+            "event_id": "event-b61d30e2f7"
+          },
+          "human_review": {
+            "label": "access",
+            "event_id": "event-d28362928e"
+          }
+        },
+        "lineage-24964a66af": {
+          "case_resolution": {
+            "label": "access",
+            "event_id": "event-c6d8340103"
+          },
+          "human_review": {
+            "label": "cancellation",
+            "event_id": "event-3b25ec450d"
+          }
+        },
+        "lineage-1e1ba6627f": {
+          "case_resolution": {
+            "label": "billing",
+            "event_id": "event-226501f03a"
+          },
+          "human_review": {
+            "label": "usage",
+            "event_id": "event-2e282349f5"
+          }
+        },
+        "lineage-d38fe6bf0e": {
+          "case_resolution": {
+            "label": "usage",
+            "event_id": "event-07ac019275"
+          },
+          "human_review": {
+            "label": "billing",
+            "event_id": "event-bb394acc87"
+          }
+        }
+      }
+    },
+    "fingerprint": "928c7dd34c4f5b9100089032e2fbd85c06b9b0bfe25665770c20fd126922baad"
+  }
+]

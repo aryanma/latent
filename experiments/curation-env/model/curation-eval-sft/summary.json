@@ -1,0 +1,1045 @@
+{
+  "episodes": [
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 17.02947283408139,
+      "generation_tokens": 1440,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 8981,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 89549,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "labels-1000",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.215559707954526,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6323,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 37988,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "duplicates-1001",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 16.21796712500509,
+      "generation_tokens": 1499,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 9145,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 90950,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "permissions-1002",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.995644000009634,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6680,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 44853,
+      "reward": 0.0,
+      "steps": 12,
+      "success": false,
+      "task_id": "leakage-1003",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 22.42801608296577,
+      "generation_tokens": 1438,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 14519,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 0.5,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.5,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 135558,
+      "reward": 0.5,
+      "steps": 18,
+      "success": false,
+      "task_id": "versions-1004",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 21.906757916905917,
+      "generation_tokens": 3445,
+      "invalid_action_count": 6,
+      "invalid_json_count": 6,
+      "max_prompt_tokens": 6274,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [
+          "lineage-a3bdfdedb0",
+          "lineage-5e1d0c67d6",
+          "lineage-afb6766dda"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.0,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 41900,
+      "reward": 0.0,
+      "steps": 11,
+      "success": false,
+      "task_id": "pair-1005",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 15.274788458016701,
+      "generation_tokens": 1634,
+      "invalid_action_count": 1,
+      "invalid_json_count": 1,
+      "max_prompt_tokens": 7867,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 0.0,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.0,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 65848,
+      "reward": 0.0,
+      "steps": 15,
+      "success": false,
+      "task_id": "labels-1006",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.61147024994716,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6373,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 38382,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "duplicates-1007",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 17.840629875077866,
+      "generation_tokens": 1541,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 9289,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 92111,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "permissions-1008",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 17.420397332985885,
+      "generation_tokens": 1445,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 9164,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 91097,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "leakage-1009",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 26.652500667027198,
+      "generation_tokens": 1350,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 16534,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 0.5,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.5,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 155276,
+      "reward": 0.5,
+      "steps": 18,
+      "success": false,
+      "task_id": "versions-1010",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.507258625002578,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6370,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 38363,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "pair-1011",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 16.944583583041094,
+      "generation_tokens": 1504,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 8730,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 87555,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "labels-1012",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 19.197590166004375,
+      "generation_tokens": 1848,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 8622,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 89199,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "duplicates-1013",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 15.92084649996832,
+      "generation_tokens": 1348,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 8501,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 85588,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "permissions-1014",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 17.019812250044197,
+      "generation_tokens": 1419,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 9090,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 90484,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "leakage-1015",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 28.02739233302418,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 7687,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 53025,
+      "reward": 0.0,
+      "steps": 12,
+      "success": false,
+      "task_id": "versions-1016",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.454986999975517,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6391,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 38527,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "pair-1017",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 17.41924370790366,
+      "generation_tokens": 1502,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 9189,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 91265,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "labels-1018",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 29.116669958923012,
+      "generation_tokens": 4096,
+      "invalid_action_count": 7,
+      "invalid_json_count": 7,
+      "max_prompt_tokens": 7283,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 70873,
+      "reward": 0.0,
+      "steps": 16,
+      "success": false,
+      "task_id": "duplicates-1019",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 17.781138250022195,
+      "generation_tokens": 1518,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 9209,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 91478,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "permissions-1020",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 15.258030208060518,
+      "generation_tokens": 1316,
+      "invalid_action_count": 0,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 7854,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "budget_exhausted"
+      },
+      "prompt_tokens_total": 81592,
+      "reward": 0.0,
+      "steps": 18,
+      "success": false,
+      "task_id": "leakage-1021",
+      "termination": "budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 3.0037484579952434,
+      "generation_tokens": 345,
+      "invalid_action_count": 1,
+      "invalid_json_count": 0,
+      "max_prompt_tokens": 3853,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 6,
+        "duplicate_lineages": [],
+        "kept_rows": 6,
+        "label_accuracy": 0.5,
+        "provenance": true,
+        "required_lineages": 6,
+        "reward": 0.5,
+        "safe": true,
+        "success": false,
+        "termination": "submitted",
+        "unique": true,
+        "unsupported_edits": [],
+        "violations": []
+      },
+      "prompt_tokens_total": 14607,
+      "reward": 0.5,
+      "steps": 6,
+      "success": false,
+      "task_id": "versions-1022",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.620006166980602,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6365,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 38308,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "pair-1023",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.422060083015822,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6364,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 38308,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "composition-2000",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 7.610378333949484,
+      "generation_tokens": 1250,
+      "invalid_action_count": 2,
+      "invalid_json_count": 2,
+      "max_prompt_tokens": 3853,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [
+          "lineage-75fa6cc6fc",
+          "lineage-a7f75230e8",
+          "lineage-b0bf365c8e"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.0,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-34e77833a6",
+            "type": "permission"
+          },
+          {
+            "id": "row-65f0d92a38",
+            "type": "evaluation_overlap"
+          },
+          {
+            "id": "row-2ecf30e5e2",
+            "type": "evaluation_overlap"
+          },
+          {
+            "id": "row-5fcac1599a",
+            "type": "permission"
+          }
+        ]
+      },
+      "prompt_tokens_total": 15332,
+      "reward": 0.0,
+      "steps": 6,
+      "success": false,
+      "task_id": "composition-2001",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.325218667043373,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6311,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 37878,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "composition-2002",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.24036741699092,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6256,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 37449,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "composition-2003",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 24.16195695893839,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 5631,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 30687,
+      "reward": 0.0,
+      "steps": 9,
+      "success": false,
+      "task_id": "composition-2004",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.309934749966487,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6329,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 38024,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "composition-2005",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 28.405071582994424,
+      "generation_tokens": 4096,
+      "invalid_action_count": 7,
+      "invalid_json_count": 7,
+      "max_prompt_tokens": 6846,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 66609,
+      "reward": 0.0,
+      "steps": 16,
+      "success": false,
+      "task_id": "composition-2006",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.735365082975477,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6302,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 37818,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "composition-2007",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.521183291915804,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6354,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 38222,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "composition-2008",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.584404750028625,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6372,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 38369,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "composition-2009",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.507064332952723,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6201,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 37004,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "composition-2010",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.570718958973885,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6361,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 38285,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "composition-2011",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.526207874994725,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6365,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 38318,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "policy_shift-2000",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": null,
+      "elapsed_seconds": 7.645555292023346,
+      "generation_tokens": 1250,
+      "invalid_action_count": 2,
+      "invalid_json_count": 2,
+      "max_prompt_tokens": 3854,
+      "outcome": {
+        "coverage": 1.0,
+        "covered_lineages": 4,
+        "duplicate_lineages": [
+          "lineage-75fa6cc6fc",
+          "lineage-a7f75230e8",
+          "lineage-b0bf365c8e"
+        ],
+        "kept_rows": 9,
+        "label_accuracy": 0.3333333333333333,
+        "provenance": true,
+        "required_lineages": 4,
+        "reward": 0.0,
+        "safe": false,
+        "success": false,
+        "termination": "submitted",
+        "unique": false,
+        "unsupported_edits": [],
+        "violations": [
+          {
+            "id": "row-34e77833a6",
+            "type": "permission"
+          },
+          {
+            "id": "row-65f0d92a38",
+            "type": "evaluation_overlap"
+          },
+          {
+            "id": "row-2ecf30e5e2",
+            "type": "evaluation_overlap"
+          },
+          {
+            "id": "row-5fcac1599a",
+            "type": "permission"
+          }
+        ]
+      },
+      "prompt_tokens_total": 15338,
+      "reward": 0.0,
+      "steps": 6,
+      "success": false,
+      "task_id": "policy_shift-2001",
+      "termination": "submitted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.416359042050317,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6312,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 37888,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "policy_shift-2002",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.273739166907035,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6257,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 37459,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "policy_shift-2003",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 24.155859665945172,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 5632,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 30696,
+      "reward": 0.0,
+      "steps": 9,
+      "success": false,
+      "task_id": "policy_shift-2004",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.30243033298757,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6330,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 38034,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "policy_shift-2005",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 28.37309250002727,
+      "generation_tokens": 4096,
+      "invalid_action_count": 7,
+      "invalid_json_count": 7,
+      "max_prompt_tokens": 6847,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 66625,
+      "reward": 0.0,
+      "steps": 16,
+      "success": false,
+      "task_id": "policy_shift-2006",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.382374708075076,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6303,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 37828,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "policy_shift-2007",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.46173474995885,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6355,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 38232,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "policy_shift-2008",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.46365283394698,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6373,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 38379,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "policy_shift-2009",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.075426875031553,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6125,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 36398,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "policy_shift-2010",
+      "termination": "generation_budget_exhausted"
+    },
+    {
+      "driver_termination": "generation_budget_exhausted",
+      "elapsed_seconds": 25.567866124911234,
+      "generation_tokens": 4096,
+      "invalid_action_count": 8,
+      "invalid_json_count": 8,
+      "max_prompt_tokens": 6362,
+      "outcome": {
+        "reward": 0.0,
+        "success": false,
+        "termination": "generation_budget_exhausted"
+      },
+      "prompt_tokens_total": 38295,
+      "reward": 0.0,
+      "steps": 10,
+      "success": false,
+      "task_id": "policy_shift-2011",
+      "termination": "generation_budget_exhausted"
+    }
+  ],
+  "episodes_completed": 48,
+  "network_attempts": [],
+  "remote_inference_calls": 0,
+  "split": "evaluation",
+  "successes": 0,
+  "variant": "v2"
+}

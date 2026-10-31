@@ -1,0 +1,607 @@
+{
+  "method": "Post-hoc reconstruction of pinned upstream first training permutation: stable sort by token length, NumPy RandomState42 permutation, first120. Sum of supervised target tokens independently matches recorded7775; not an instrumented per-batch log.",
+  "target_tokens": 7775,
+  "distinct_worlds": 76,
+  "examples": [
+    {
+      "task_id": "duplicates-10037",
+      "step": 5,
+      "target_tokens": 47
+    },
+    {
+      "task_id": "versions-10028",
+      "step": 6,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "versions-10004",
+      "step": 3,
+      "target_tokens": 92
+    },
+    {
+      "task_id": "duplicates-10025",
+      "step": 2,
+      "target_tokens": 114
+    },
+    {
+      "task_id": "pair-10089",
+      "step": 6,
+      "target_tokens": 217
+    },
+    {
+      "task_id": "versions-10046",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "pair-10023",
+      "step": 6,
+      "target_tokens": 217
+    },
+    {
+      "task_id": "pair-10059",
+      "step": 4,
+      "target_tokens": 85
+    },
+    {
+      "task_id": "versions-10040",
+      "step": 4,
+      "target_tokens": 88
+    },
+    {
+      "task_id": "pair-10017",
+      "step": 4,
+      "target_tokens": 81
+    },
+    {
+      "task_id": "pair-10053",
+      "step": 7,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "pair-10083",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "pair-10095",
+      "step": 5,
+      "target_tokens": 50
+    },
+    {
+      "task_id": "labels-10054",
+      "step": 5,
+      "target_tokens": 214
+    },
+    {
+      "task_id": "versions-10052",
+      "step": 4,
+      "target_tokens": 85
+    },
+    {
+      "task_id": "versions-10070",
+      "step": 2,
+      "target_tokens": 83
+    },
+    {
+      "task_id": "labels-10090",
+      "step": 4,
+      "target_tokens": 86
+    },
+    {
+      "task_id": "labels-10042",
+      "step": 4,
+      "target_tokens": 84
+    },
+    {
+      "task_id": "versions-10058",
+      "step": 3,
+      "target_tokens": 86
+    },
+    {
+      "task_id": "permissions-10092",
+      "step": 3,
+      "target_tokens": 92
+    },
+    {
+      "task_id": "versions-10034",
+      "step": 2,
+      "target_tokens": 85
+    },
+    {
+      "task_id": "labels-10018",
+      "step": 4,
+      "target_tokens": 86
+    },
+    {
+      "task_id": "pair-10041",
+      "step": 2,
+      "target_tokens": 121
+    },
+    {
+      "task_id": "versions-10004",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "pair-10011",
+      "step": 5,
+      "target_tokens": 51
+    },
+    {
+      "task_id": "leakage-10009",
+      "step": 6,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "versions-10052",
+      "step": 6,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "duplicates-10055",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "duplicates-10025",
+      "step": 6,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "duplicates-10061",
+      "step": 3,
+      "target_tokens": 89
+    },
+    {
+      "task_id": "duplicates-10013",
+      "step": 2,
+      "target_tokens": 115
+    },
+    {
+      "task_id": "permissions-10044",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "pair-10095",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "duplicates-10049",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "versions-10088",
+      "step": 6,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "versions-10088",
+      "step": 4,
+      "target_tokens": 87
+    },
+    {
+      "task_id": "duplicates-10037",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "permissions-10074",
+      "step": 6,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "leakage-10033",
+      "step": 4,
+      "target_tokens": 86
+    },
+    {
+      "task_id": "pair-10077",
+      "step": 5,
+      "target_tokens": 48
+    },
+    {
+      "task_id": "duplicates-10079",
+      "step": 3,
+      "target_tokens": 91
+    },
+    {
+      "task_id": "permissions-10020",
+      "step": 4,
+      "target_tokens": 86
+    },
+    {
+      "task_id": "permissions-10038",
+      "step": 2,
+      "target_tokens": 86
+    },
+    {
+      "task_id": "pair-10029",
+      "step": 4,
+      "target_tokens": 89
+    },
+    {
+      "task_id": "pair-10005",
+      "step": 7,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "duplicates-10043",
+      "step": 3,
+      "target_tokens": 88
+    },
+    {
+      "task_id": "pair-10017",
+      "step": 5,
+      "target_tokens": 46
+    },
+    {
+      "task_id": "versions-10034",
+      "step": 6,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "versions-10016",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "leakage-10081",
+      "step": 6,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "leakage-10039",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "leakage-10057",
+      "step": 4,
+      "target_tokens": 82
+    },
+    {
+      "task_id": "versions-10010",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "duplicates-10067",
+      "step": 5,
+      "target_tokens": 48
+    },
+    {
+      "task_id": "duplicates-10085",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "pair-10077",
+      "step": 6,
+      "target_tokens": 215
+    },
+    {
+      "task_id": "versions-10004",
+      "step": 5,
+      "target_tokens": 107
+    },
+    {
+      "task_id": "pair-10017",
+      "step": 7,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "permissions-10092",
+      "step": 2,
+      "target_tokens": 84
+    },
+    {
+      "task_id": "pair-10011",
+      "step": 2,
+      "target_tokens": 121
+    },
+    {
+      "task_id": "labels-10072",
+      "step": 6,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "versions-10064",
+      "step": 3,
+      "target_tokens": 93
+    },
+    {
+      "task_id": "permissions-10086",
+      "step": 3,
+      "target_tokens": 92
+    },
+    {
+      "task_id": "leakage-10045",
+      "step": 2,
+      "target_tokens": 80
+    },
+    {
+      "task_id": "leakage-10015",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "pair-10083",
+      "step": 3,
+      "target_tokens": 90
+    },
+    {
+      "task_id": "labels-10048",
+      "step": 4,
+      "target_tokens": 86
+    },
+    {
+      "task_id": "duplicates-10073",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "permissions-10068",
+      "step": 6,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "versions-10016",
+      "step": 2,
+      "target_tokens": 88
+    },
+    {
+      "task_id": "pair-10011",
+      "step": 6,
+      "target_tokens": 215
+    },
+    {
+      "task_id": "duplicates-10013",
+      "step": 4,
+      "target_tokens": 90
+    },
+    {
+      "task_id": "pair-10059",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "permissions-10092",
+      "step": 5,
+      "target_tokens": 26
+    },
+    {
+      "task_id": "versions-10070",
+      "step": 3,
+      "target_tokens": 91
+    },
+    {
+      "task_id": "duplicates-10001",
+      "step": 4,
+      "target_tokens": 87
+    },
+    {
+      "task_id": "labels-10024",
+      "step": 2,
+      "target_tokens": 83
+    },
+    {
+      "task_id": "versions-10076",
+      "step": 3,
+      "target_tokens": 90
+    },
+    {
+      "task_id": "leakage-10057",
+      "step": 5,
+      "target_tokens": 26
+    },
+    {
+      "task_id": "labels-10090",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "leakage-10009",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "duplicates-10043",
+      "step": 2,
+      "target_tokens": 122
+    },
+    {
+      "task_id": "labels-10006",
+      "step": 4,
+      "target_tokens": 86
+    },
+    {
+      "task_id": "duplicates-10043",
+      "step": 5,
+      "target_tokens": 48
+    },
+    {
+      "task_id": "pair-10017",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "leakage-10063",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "leakage-10021",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "pair-10077",
+      "step": 4,
+      "target_tokens": 84
+    },
+    {
+      "task_id": "pair-10071",
+      "step": 3,
+      "target_tokens": 84
+    },
+    {
+      "task_id": "duplicates-10091",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "pair-10083",
+      "step": 7,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "pair-10065",
+      "step": 6,
+      "target_tokens": 218
+    },
+    {
+      "task_id": "duplicates-10073",
+      "step": 4,
+      "target_tokens": 80
+    },
+    {
+      "task_id": "leakage-10003",
+      "step": 5,
+      "target_tokens": 25
+    },
+    {
+      "task_id": "permissions-10050",
+      "step": 3,
+      "target_tokens": 89
+    },
+    {
+      "task_id": "labels-10066",
+      "step": 2,
+      "target_tokens": 88
+    },
+    {
+      "task_id": "permissions-10026",
+      "step": 2,
+      "target_tokens": 86
+    },
+    {
+      "task_id": "permissions-10080",
+      "step": 6,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "pair-10059",
+      "step": 3,
+      "target_tokens": 89
+    },
+    {
+      "task_id": "pair-10095",
+      "step": 7,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "permissions-10038",
+      "step": 4,
+      "target_tokens": 83
+    },
+    {
+      "task_id": "leakage-10057",
+      "step": 3,
+      "target_tokens": 90
+    },
+    {
+      "task_id": "versions-10046",
+      "step": 5,
+      "target_tokens": 112
+    },
+    {
+      "task_id": "permissions-10014",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "versions-10070",
+      "step": 4,
+      "target_tokens": 86
+    },
+    {
+      "task_id": "pair-10089",
+      "step": 2,
+      "target_tokens": 121
+    },
+    {
+      "task_id": "permissions-10062",
+      "step": 6,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "permissions-10014",
+      "step": 4,
+      "target_tokens": 88
+    },
+    {
+      "task_id": "versions-10004",
+      "step": 6,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "permissions-10080",
+      "step": 4,
+      "target_tokens": 84
+    },
+    {
+      "task_id": "leakage-10027",
+      "step": 1,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "leakage-10021",
+      "step": 2,
+      "target_tokens": 84
+    },
+    {
+      "task_id": "duplicates-10079",
+      "step": 2,
+      "target_tokens": 111
+    },
+    {
+      "task_id": "labels-10030",
+      "step": 3,
+      "target_tokens": 83
+    },
+    {
+      "task_id": "permissions-10038",
+      "step": 6,
+      "target_tokens": 10
+    },
+    {
+      "task_id": "leakage-10075",
+      "step": 3,
+      "target_tokens": 88
+    },
+    {
+      "task_id": "labels-10054",
+      "step": 4,
+      "target_tokens": 89
+    },
+    {
+      "task_id": "versions-10094",
+      "step": 3,
+      "target_tokens": 91
+    },
+    {
+      "task_id": "leakage-10021",
+      "step": 3,
+      "target_tokens": 94
+    },
+    {
+      "task_id": "permissions-10002",
+      "step": 2,
+      "target_tokens": 83
+    }
+  ]
+}

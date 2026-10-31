@@ -1,0 +1,27 @@
+{
+  "provenance": {
+    "database_sha256": "eb89bcfe97eefa386a27904ec5aa15159811a7eac894ec659a36e48fa9f76b77",
+    "query_sha256": "c88530ad1ba80c87104b908ab4f4d7b5acd32fd89f20fa5742b6fb5247a3e48a",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "c88530ad1ba80c87104b908ab4f4d7b5acd32fd89f20fa5742b6fb5247a3e48a",
+    "status": "sql_error",
+    "seconds": 0.000126,
+    "error": "near \"```sql\nSELECT\n  SUM(CASE WHEN e.event_name = 'Yearly Kickoff' THEN b.amount ELSE 0 END) * 1.0 /\n  SUM(CASE WHEN e.event_name = 'October Meeting' THEN b.amount ELSE 0 END) AS result\nFROM budget b\nJOIN event e ON b.link_to_event = e.event_id\nWHERE b.category = 'Advertisement'\n  AND e.event_name IN ('Yearly Kickoff', 'October Meeting');\n```\": syntax error",
+    "denied": []
+  }
+}

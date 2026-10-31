@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-10-31T03:05:20.972459+00:00",
+  "status": "frozen before any Qwen3.6 inference",
+  "design": "Final exploratory newer-architecture baseline added after Qwen3-1.7B difficulty and during8Bevaluation; not a pure scaling comparison or preregistered originalcomparison.",
+  "model": "mlx-community/Qwen3.6-35B-A3B-4bit",
+  "revision": "38740b847e4cb78f352aba30aa41c76e08e6eb46",
+  "model_created_at": "2026-04-16 16:26:18+00:00",
+  "weights_sha256": {
+    "model-00001-of-00004.safetensors": "09f3e6ecb0b7af6e6a38bc8169a134c821b0924c2679b2bb8f4426ad38d032b8",
+    "model-00002-of-00004.safetensors": "31dcdb1c49eebdb1505bd14e3cb33f9cf900bd2546b638f2464694ae763a033f",
+    "model-00003-of-00004.safetensors": "3e66de06a1f03dade16a612a368cfce4a4c9caa4efd7d28185454384082cec03",
+    "model-00004-of-00004.safetensors": "a5d0cf03519c26f8b506df6b0ba60526e5c08c8cea22d0c21ce92950e58a5422"
+  },
+  "variant": "v2",
+  "driver_sha256": "c2a1b0a623402e9030fb7300919d83fd3dcd341a1cedd0cc279248005e072192",
+  "runtime_sha256": "c46ecfc4f4236e7e3de5d68250badba9e0d317aee45f959e3450ff1593b434f6",
+  "native_template_verification": "native-template-verification.json",
+  "manifest_sha256": "6893521e0391e831b45a414390246e0fb0a06d1c203892b66082a91f8ae22730",
+  "development_smoke": [
+    "clean-0",
+    "labels-1",
+    "versions-5",
+    "composition-7"
+  ],
+  "evaluation": "all48 frozen episodes if native backend smoke is operational",
+  "max_steps": 18,
+  "max_tokens_per_turn": 512,
+  "max_generated_tokens_per_episode": 4096,
+  "max_context": 32768,
+  "temperature": 0.0,
+  "seed": 42,
+  "nonthinking": true,
+  "output_repair": false,
+  "history_truncation": false,
+  "prompt_selection": false,
+  "training": false,
+  "backend": "mlx-lm0.32.2 native qwen3_5_moe text-only loader; vision weights stripped by upstream sanitize; no backend patches",
+  "setup_limit": "about15min active investigation; stop on unsupported inference rather than backend development"
+}

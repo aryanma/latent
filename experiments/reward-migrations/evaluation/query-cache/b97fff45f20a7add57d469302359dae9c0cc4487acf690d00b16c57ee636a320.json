@@ -1,0 +1,36 @@
+{
+  "provenance": {
+    "database_sha256": "b3d149ad05746dbbe5116e229e17e18f09c39db43cf117d9ef3441753608b691",
+    "query_sha256": "038911a6a1ee46b3237fbbe2948ef77d814760ccf34de34921f2aa520956d28d",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "038911a6a1ee46b3237fbbe2948ef77d814760ccf34de34921f2aa520956d28d",
+    "status": "ok",
+    "seconds": 0.007276,
+    "result_sha256": "4141c150bdf82127efd0211e459da00524f4e8849d1b191a019e087b6a1eedbc",
+    "rows": 1,
+    "distinct_rows": 1,
+    "preview": [
+      [
+        -5.815242674672346
+      ]
+    ],
+    "columns": [
+      "CAST(SUM(IIF(SUBSTRING(Date, 1, 4) = '2012', Consumption, 0)) - SUM(IIF(SUBSTRING(Date, 1, 4) = '2013', Consumption, 0)) AS FLOAT) / SUM(IIF(SUBSTRING(Date, 1, 4) = '2012', Consumption, 0))"
+    ]
+  }
+}

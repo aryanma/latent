@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+/model/model/
+/model/reproduced-*/
+/model/scale8b/model/
+/model/scale8b/reproduced-*/
+/model/currentmoe/model/
+/model/currentmoe/reproduced-*/

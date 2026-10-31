@@ -1,0 +1,36 @@
+{
+  "provenance": {
+    "database_sha256": "986817d793479801ed55133e55aa27e335422c0cd3866b54a3d6317b7c5f09c1",
+    "query_sha256": "0964a87b832236ae3e687b4a0b737655e244d2a700361951adb0c2a20b4456a0",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "0964a87b832236ae3e687b4a0b737655e244d2a700361951adb0c2a20b4456a0",
+    "status": "ok",
+    "seconds": 0.002679,
+    "result_sha256": "d612deca151be94dc3a7a57a0b7a345a079041b9c23a78657e4943072c2dc5d2",
+    "rows": 1,
+    "distinct_rows": 1,
+    "preview": [
+      [
+        1.4166666666666667
+      ]
+    ],
+    "columns": [
+      "CAST(SUM(CASE WHEN strftime('%Y', OpenDate) = '1980' THEN 1 ELSE 0 END) AS REAL) / 12.0"
+    ]
+  }
+}

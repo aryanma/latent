@@ -1,0 +1,102 @@
+{
+  "provenance": {
+    "database_sha256": "d15d89cdb068a202b6f2b99342af44dffc1d52545b39ceaf62efdc0ba570101e",
+    "query_sha256": "4969905ba88059da35412804617406601b5f7d298445f13e0acbd70ad332fd41",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "4969905ba88059da35412804617406601b5f7d298445f13e0acbd70ad332fd41",
+    "status": "ok",
+    "seconds": 0.038019,
+    "result_sha256": "5f329ba1d3fd0620daf3ce09cdcce34e57d7fd46241fb8052a89f148d8b78a5d",
+    "rows": 140,
+    "distinct_rows": 140,
+    "preview": [
+      [
+        816173,
+        2779,
+        "1993-12-02",
+        "VYDAJ",
+        "VYBER",
+        800,
+        42072,
+        null,
+        null,
+        null
+      ],
+      [
+        816174,
+        2779,
+        "1994-12-29",
+        "VYDAJ",
+        "VYBER",
+        2400,
+        59207,
+        null,
+        null,
+        null
+      ],
+      [
+        816175,
+        2779,
+        "1995-12-05",
+        "VYDAJ",
+        "VYBER",
+        4320,
+        45682,
+        null,
+        null,
+        null
+      ],
+      [
+        816181,
+        2779,
+        "1993-11-20",
+        "VYDAJ",
+        "VYBER",
+        600,
+        42711,
+        null,
+        null,
+        null
+      ],
+      [
+        816185,
+        2779,
+        "1994-02-24",
+        "VYDAJ",
+        "VYBER",
+        3480,
+        40506,
+        null,
+        null,
+        null
+      ]
+    ],
+    "columns": [
+      "trans_id",
+      "account_id",
+      "date",
+      "type",
+      "operation",
+      "amount",
+      "balance",
+      "k_symbol",
+      "bank",
+      "account"
+    ]
+  }
+}

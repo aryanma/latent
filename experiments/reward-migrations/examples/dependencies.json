@@ -1,0 +1,35 @@
+{
+  "reward:0": [],
+  "reward:1": [],
+  "reward:2": [],
+  "reward:3": [],
+  "group-statistics": [
+    "reward:0",
+    "reward:1",
+    "reward:2",
+    "reward:3"
+  ],
+  "advantage:0": [
+    "reward:0",
+    "group-statistics"
+  ],
+  "advantage:1": [
+    "reward:1",
+    "group-statistics"
+  ],
+  "advantage:2": [
+    "reward:2",
+    "group-statistics"
+  ],
+  "advantage:3": [
+    "reward:3",
+    "group-statistics"
+  ],
+  "best-of-four": [
+    "reward:0",
+    "reward:1",
+    "reward:2",
+    "reward:3"
+  ],
+  "unrelated-task": []
+}

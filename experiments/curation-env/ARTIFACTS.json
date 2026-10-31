@@ -1,0 +1,1360 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 5887,
+      "sha256": "1ce0b0630dac3fadd681d37e272ac4be9a6f305131ac6172323cc336ae58efc8"
+    },
+    "analyze_results.py": {
+      "bytes": 5654,
+      "sha256": "3e8e1fc54d58557b011cff1b1d887928bce0e1db73c4d92bd60791816330a21a"
+    },
+    "build_release.py": {
+      "bytes": 6648,
+      "sha256": "f626f3cf44238af2bc2b02f9a7879495b6ebab1e3a52f9da63237f52dd77e4d1"
+    },
+    "cli.py": {
+      "bytes": 1135,
+      "sha256": "f5dfa7af338985d3c574621c69df4ae78b371cba408da72762d185811876192b"
+    },
+    "control-results.json": {
+      "bytes": 4919897,
+      "sha256": "b8c189bb585e05b0a909842b7e8fc315be793909e1d312fa7000be6f0525c091"
+    },
+    "export_playground.py": {
+      "bytes": 1049,
+      "sha256": "01c80ff90a3e2ecf624fb307368ab01de35cdb86eeb06df7c348bac18d39f925"
+    },
+    "latent_curation/__init__.py": {
+      "bytes": 236,
+      "sha256": "ca454212891c0ec39f572e21a778547bec1be75fe116678373b17a81218ada33"
+    },
+    "latent_curation/environment.py": {
+      "bytes": 23442,
+      "sha256": "047c741e5df2fd85ca71fdc7972366091f914a6d7df020a1497c7c73efbfd13f"
+    },
+    "make_suite.py": {
+      "bytes": 2171,
+      "sha256": "cbc0dc7a1b7b7aa8620942b96ebf36d95188bec7b91ff3396bbe395f81feb2be"
+    },
+    "model/QWEN-LICENSE.txt": {
+      "bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+    },
+    "model/README.md": {
+      "bytes": 9167,
+      "sha256": "286a04d24d954b39938236798ec2f04ebbb8162aa7cd095174c35c723a270a93"
+    },
+    "model/curation-dev-final-v1/driver-used.py": {
+      "bytes": 10086,
+      "sha256": "e010046201b2c2a23bfb2584c47c2aa6e600eccb8d78c8a5cab80294d0dcbc1c"
+    },
+    "model/curation-dev-final-v1/environment-snapshot/latent_curation/__init__.py": {
+      "bytes": 236,
+      "sha256": "ca454212891c0ec39f572e21a778547bec1be75fe116678373b17a81218ada33"
+    },
+    "model/curation-dev-final-v1/environment-snapshot/latent_curation/environment.py": {
+      "bytes": 23442,
+      "sha256": "047c741e5df2fd85ca71fdc7972366091f914a6d7df020a1497c7c73efbfd13f"
+    },
+    "model/curation-dev-final-v1/environment-snapshot/tasks/development.json": {
+      "bytes": 108845,
+      "sha256": "ba6d17336f22f257247856474a9e63a16c2006b9eda02e624b76ab7f30567f3d"
+    },
+    "model/curation-dev-final-v1/environment-snapshot/tasks/manifest.json": {
+      "bytes": 9224,
+      "sha256": "f1efacdb3c30b16caa3a585c58bad2997104893d9f8b298e1b459e038d2ba01a"
+    },
+    "model/curation-dev-final-v1/episode-clean-0.json": {
+      "bytes": 57944,
+      "sha256": "4fdb07acf2a868e3b3437bd2010ad8b636792d9a18905fbf9079a62ce9d0abdb"
+    },
+    "model/curation-dev-final-v1/episode-composition-7.json": {
+      "bytes": 91382,
+      "sha256": "e05023cef77ed9accbd65defe1a4f996f832e3b5a91c134e69a9405f241a00c8"
+    },
+    "model/curation-dev-final-v1/episode-labels-1.json": {
+      "bytes": 69728,
+      "sha256": "d99071754ac62b931edcfc33aa191d04e7f9e74168c1f91aba193e17125d46db"
+    },
+    "model/curation-dev-final-v1/episode-versions-5.json": {
+      "bytes": 68000,
+      "sha256": "9b69aa2973c892e6488273de1d2d1633614d2784f85b063f6b83f9cc3c842072"
+    },
+    "model/curation-dev-final-v1/run-manifest.json": {
+      "bytes": 2150,
+      "sha256": "9604f95308cb418f7b632a4d01cd5706461645e1265e963849cfbead15d32758"
+    },
+    "model/curation-dev-final-v1/runtime-used.py": {
+      "bytes": 3819,
+      "sha256": "54ed9a667239c75bcd95a57b0c22aef00883f1144a6dd89f5c4ed2c537eee3d9"
+    },
+    "model/curation-dev-final-v1/summary.json": {
+      "bytes": 3491,
+      "sha256": "1af54caeb1f68dc77f7275bb1e7bee17ab4dbdb1af1be80c268cefdf87d54535"
+    },
+    "model/curation-dev-final-v2/driver-used.py": {
+      "bytes": 10086,
+      "sha256": "e010046201b2c2a23bfb2584c47c2aa6e600eccb8d78c8a5cab80294d0dcbc1c"
+    },
+    "model/curation-dev-final-v2/environment-snapshot/latent_curation/__init__.py": {
+      "bytes": 236,
+      "sha256": "ca454212891c0ec39f572e21a778547bec1be75fe116678373b17a81218ada33"
+    },
+    "model/curation-dev-final-v2/environment-snapshot/latent_curation/environment.py": {
+      "bytes": 23442,
+      "sha256": "047c741e5df2fd85ca71fdc7972366091f914a6d7df020a1497c7c73efbfd13f"
+    },
+    "model/curation-dev-final-v2/environment-snapshot/tasks/development.json": {
+      "bytes": 108845,
+      "sha256": "ba6d17336f22f257247856474a9e63a16c2006b9eda02e624b76ab7f30567f3d"
+    },
+    "model/curation-dev-final-v2/environment-snapshot/tasks/manifest.json": {
+      "bytes": 9224,
+      "sha256": "f1efacdb3c30b16caa3a585c58bad2997104893d9f8b298e1b459e038d2ba01a"
+    },
+    "model/curation-dev-final-v2/episode-clean-0.json": {
+      "bytes": 89000,
+      "sha256": "0117bd7f9a6c2cfad4d4f681b83a54ab18022b5a6f3b570fa8d5c0f592d6f3cc"
+    },
+    "model/curation-dev-final-v2/episode-composition-7.json": {
+      "bytes": 150739,
+      "sha256": "3d8e61293f4098415a6921ce60270cd8247e7f10ca721f7fa1e99aae817f7c3f"
+    },
+    "model/curation-dev-final-v2/episode-labels-1.json": {
+      "bytes": 118728,
+      "sha256": "de01f9bb68630e8e99490fcd4beccfc73e5e43be049aab8a56e850488b8a0915"
+    },
+    "model/curation-dev-final-v2/episode-versions-5.json": {
+      "bytes": 115656,
+      "sha256": "1788c47464831df4902954c1a43838778400f2b1ace297017eb3b05c6e8e8cc7"
+    },
+    "model/curation-dev-final-v2/run-manifest.json": {
+      "bytes": 3027,
+      "sha256": "d028791e81c319fbcddde53da4c69d97341f60c59a6edb8feaab7d99328e0873"
+    },
+    "model/curation-dev-final-v2/runtime-used.py": {
+      "bytes": 3819,
+      "sha256": "54ed9a667239c75bcd95a57b0c22aef00883f1144a6dd89f5c4ed2c537eee3d9"
+    },
+    "model/curation-dev-final-v2/summary.json": {
+      "bytes": 3898,
+      "sha256": "5d9c1733c1311227836ecb2599962e75a34744cf2ab577f1af591120b9ea319b"
+    },
+    "model/curation-eval-base/driver-used.py": {
+      "bytes": 10678,
+      "sha256": "c2a1b0a623402e9030fb7300919d83fd3dcd341a1cedd0cc279248005e072192"
+    },
+    "model/curation-eval-base/environment-snapshot/latent_curation/__init__.py": {
+      "bytes": 236,
+      "sha256": "ca454212891c0ec39f572e21a778547bec1be75fe116678373b17a81218ada33"
+    },
+    "model/curation-eval-base/environment-snapshot/latent_curation/environment.py": {
+      "bytes": 23442,
+      "sha256": "047c741e5df2fd85ca71fdc7972366091f914a6d7df020a1497c7c73efbfd13f"
+    },
+    "model/curation-eval-base/environment-snapshot/tasks/development.json": {
+      "bytes": 108845,
+      "sha256": "ba6d17336f22f257247856474a9e63a16c2006b9eda02e624b76ab7f30567f3d"
+    },
+    "model/curation-eval-base/environment-snapshot/tasks/evaluation.json": {
+      "bytes": 803852,
+      "sha256": "5eef8563b1fe02f396835386cdb071f7135ce06dc33f4d6fa6cf434a717e244d"
+    },
+    "model/curation-eval-base/environment-snapshot/tasks/manifest.json": {
+      "bytes": 9224,
+      "sha256": "f1efacdb3c30b16caa3a585c58bad2997104893d9f8b298e1b459e038d2ba01a"
+    },
+    "model/curation-eval-base/episode-composition-2000.json": {
+      "bytes": 292267,
+      "sha256": "5342b667587e0284bf77520d48335b64b9b0f663bf7a28f8d7d2bd0f401a84f7"
+    },
+    "model/curation-eval-base/episode-composition-2001.json": {
+      "bytes": 169569,
+      "sha256": "5103db577a6c3527dcb6597978a152f333709043e1e01673a099f72c0776fbf9"
+    },
+    "model/curation-eval-base/episode-composition-2002.json": {
+      "bytes": 251822,
+      "sha256": "996cf04bed2088c0dfebc0dc8acc61cdd69f4a4184d243efb1fc9e0187b66cab"
+    },
+    "model/curation-eval-base/episode-composition-2003.json": {
+      "bytes": 313183,
+      "sha256": "bcc347c5b56a980b244179822a0e79300e12928235e064cda5e180f8568cbab0"
+    },
+    "model/curation-eval-base/episode-composition-2004.json": {
+      "bytes": 323228,
+      "sha256": "c3db11f46d1402db4e7360b58997dba075e419bf0b01cbbd723cbabc57ab6125"
+    },
+    "model/curation-eval-base/episode-composition-2005.json": {
+      "bytes": 312500,
+      "sha256": "4ff61ebf5decc42d346aef059d3ba0d76d811ff1af0a7291eacfeef84a458e72"
+    },
+    "model/curation-eval-base/episode-composition-2006.json": {
+      "bytes": 293467,
+      "sha256": "b757e261f1aa041ef2028a1bf458e0e492c466ee5fc12af739d5e7a7ec13c867"
+    },
+    "model/curation-eval-base/episode-composition-2007.json": {
+      "bytes": 339538,
+      "sha256": "4910e51884f707701538f360bc8a2e9e986e9102893ff72730ef840cd6ccdb5f"
+    },
+    "model/curation-eval-base/episode-composition-2008.json": {
+      "bytes": 146967,
+      "sha256": "623bdbe9417c03fbe45b13cd3691880f2c2074853d887f4f25b0e6f16c47c01c"
+    },
+    "model/curation-eval-base/episode-composition-2009.json": {
+      "bytes": 299862,
+      "sha256": "b4506111b70ca372af94b50f1b0ff63a07d3963b6deefbf37ea8198d1fd9eaa8"
+    },
+    "model/curation-eval-base/episode-composition-2010.json": {
+      "bytes": 313356,
+      "sha256": "c3c4f3fed26b432d991367503fd61688fb5066c1955f9d201e9f7cd848e3842d"
+    },
+    "model/curation-eval-base/episode-composition-2011.json": {
+      "bytes": 244679,
+      "sha256": "583ddcc8a989786238b33e0ad499dd3325bd1b04d2cf48a69f79a6a87858a7c1"
+    },
+    "model/curation-eval-base/episode-duplicates-1001.json": {
+      "bytes": 212183,
+      "sha256": "addcb8a7c14110594a8d08bd8f230fae0a443c7e3c590739cd28e87e9b708e6d"
+    },
+    "model/curation-eval-base/episode-duplicates-1007.json": {
+      "bytes": 206898,
+      "sha256": "624185302d8ad90fad4930e64985006dc69a6f17f3f0440e0b9045ad180e752a"
+    },
+    "model/curation-eval-base/episode-duplicates-1013.json": {
+      "bytes": 173925,
+      "sha256": "3b7b2f69ab7ef7ef65dbbee7aa33fc60a0ad2162ca5250e82478d437fb328a41"
+    },
+    "model/curation-eval-base/episode-duplicates-1019.json": {
+      "bytes": 220221,
+      "sha256": "1e5e7250ae2f4648faecb56f384f88b97c8d3f3bd09a07fee5d35d02b57db4d4"
+    },
+    "model/curation-eval-base/episode-labels-1000.json": {
+      "bytes": 128770,
+      "sha256": "d3b428f10ea42900dcebe2b844da879ad23cd189d67e216327e2bf8b7bc42326"
+    },
+    "model/curation-eval-base/episode-labels-1006.json": {
+      "bytes": 196768,
+      "sha256": "4f214fbcfd4a9514a080cf673be0cdeedd35f83182beeebfc8890cead1922b16"
+    },
+    "model/curation-eval-base/episode-labels-1012.json": {
+      "bytes": 130316,
+      "sha256": "834321f99711e7946d7298d45170fc281182ab5b76338a0283f1077b37973203"
+    },
+    "model/curation-eval-base/episode-labels-1018.json": {
+      "bytes": 90860,
+      "sha256": "134a644d67031d4d1ead9e4f33dd6cc699e6d471399324b7db509c23c304dd5f"
+    },
+    "model/curation-eval-base/episode-leakage-1003.json": {
+      "bytes": 89323,
+      "sha256": "1c557183c089fe04849f78e959b60127adb5ff9e85c1c45cc39457c49ea44056"
+    },
+    "model/curation-eval-base/episode-leakage-1009.json": {
+      "bytes": 161387,
+      "sha256": "05841b28477a1b16837daf9d57bf74f321b5e7db6644d65fbe8845dfe62fcdf8"
+    },
+    "model/curation-eval-base/episode-leakage-1015.json": {
+      "bytes": 280278,
+      "sha256": "54888b6a4e686a7c9335afa53f6f3871cf65f9a42e360d23b11e46af5b5b60d1"
+    },
+    "model/curation-eval-base/episode-leakage-1021.json": {
+      "bytes": 116122,
+      "sha256": "a5152f6fa24f1c1bc929604cb3a83c73496240a6c659410ca56d46c80899f896"
+    },
+    "model/curation-eval-base/episode-pair-1005.json": {
+      "bytes": 132345,
+      "sha256": "dae901e7e24cf1ca6cc8de4d6ac8d0adacd75ff902fd1f178f9d2277f4aa35d4"
+    },
+    "model/curation-eval-base/episode-pair-1011.json": {
+      "bytes": 180463,
+      "sha256": "85bb4347513fa97729ee71e6392a279159560bdd829011e7126b728aab49f222"
+    },
+    "model/curation-eval-base/episode-pair-1017.json": {
+      "bytes": 137798,
+      "sha256": "b0559c6daa9a06009dd7e171f891ee7883d9824d512b709853aa682422f8c9c8"
+    },
+    "model/curation-eval-base/episode-pair-1023.json": {
+      "bytes": 130050,
+      "sha256": "6faea7d3f2360e619d1cd97fd4be15d83e74d13c34debdd3432e5137f1fcd0cb"
+    },
+    "model/curation-eval-base/episode-permissions-1002.json": {
+      "bytes": 148999,
+      "sha256": "6c52f052e4d23e53ae2143fcfa0475a2b6dc0e61656194fca74b6c29233b5fa6"
+    },
+    "model/curation-eval-base/episode-permissions-1008.json": {
+      "bytes": 120085,
+      "sha256": "7d986d3e6323e5468828c0e3db08c2ea74f3104c521e5010d6d929bbc4c80b95"
+    },
+    "model/curation-eval-base/episode-permissions-1014.json": {
+      "bytes": 130459,
+      "sha256": "04f84dc5db211496ec6a1ba6ce289f399484aba73acb0f2b8f548c4508ba893c"
+    },
+    "model/curation-eval-base/episode-permissions-1020.json": {
+      "bytes": 180215,
+      "sha256": "72814d3c1b0a809c173ebb77f48d9293dacc619e6abcabaf94620ca9d89d8d19"
+    },
+    "model/curation-eval-base/episode-policy_shift-2000.json": {
+      "bytes": 315055,
+      "sha256": "e5513e6579c7589708bf319677ec6116c891e789d29b7d812647a366593f876a"
+    },
+    "model/curation-eval-base/episode-policy_shift-2001.json": {
+      "bytes": 169637,
+      "sha256": "a31617a8ebe7814890cd87e547c47410422eef8026a00ce9a2448ae9c14dcb47"
+    },
+    "model/curation-eval-base/episode-policy_shift-2002.json": {
+      "bytes": 120046,
+      "sha256": "6ecc4390e0b800db4234e0d3bb9bdd2e4a4e6d434c57783090f51d6d05e82ed2"
+    },
+    "model/curation-eval-base/episode-policy_shift-2003.json": {
+      "bytes": 313147,
+      "sha256": "5c0aee418ececdd18fcb7d0071c3e500847dd8bce4d941a7f1bf9c77e28d4b20"
+    },
+    "model/curation-eval-base/episode-policy_shift-2004.json": {
+      "bytes": 149879,
+      "sha256": "af2f0d174880fdf855469edc309c727f0a23260eaf7bbad1356e0e6d272a38b7"
+    },
+    "model/curation-eval-base/episode-policy_shift-2005.json": {
+      "bytes": 288121,
+      "sha256": "8668e07e6e0392c64ad597e555c270ae5012a44fa9f92fdfa9d8a9ecc318db11"
+    },
+    "model/curation-eval-base/episode-policy_shift-2006.json": {
+      "bytes": 148220,
+      "sha256": "5f32177f6475880bfcab58b22fb7e6b46d356e5fa4790a5af51248f21f9a496a"
+    },
+    "model/curation-eval-base/episode-policy_shift-2007.json": {
+      "bytes": 164085,
+      "sha256": "6e1a9d7cfb27adf21e2dc2a5dc3d7bf7cfa6aaf7bdc4d4baa0f1c1514bd98562"
+    },
+    "model/curation-eval-base/episode-policy_shift-2008.json": {
+      "bytes": 147054,
+      "sha256": "e388aa7f978efbf90748d0267ea1dd638014fe402e38bae5a3d8a26b67724e6a"
+    },
+    "model/curation-eval-base/episode-policy_shift-2009.json": {
+      "bytes": 279424,
+      "sha256": "d43cf26ae4358436d0a31412dc066648c60fd3bcb8250410f3ce34e2e0c72dc3"
+    },
+    "model/curation-eval-base/episode-policy_shift-2010.json": {
+      "bytes": 163764,
+      "sha256": "a9abf6e555650ae1554fa8ab80b9abaa3e89e6f12a97a6e637a50ca62e2925d2"
+    },
+    "model/curation-eval-base/episode-policy_shift-2011.json": {
+      "bytes": 137017,
+      "sha256": "7545d924ebb7bbd7418083cc84d162ded9de22bad8ce06f8c8c1dbb26e59b2da"
+    },
+    "model/curation-eval-base/episode-versions-1004.json": {
+      "bytes": 122304,
+      "sha256": "5f3ea1b710e061922115ade9e864e22e38a6873b380678ee5314b691ad42ebf3"
+    },
+    "model/curation-eval-base/episode-versions-1010.json": {
+      "bytes": 219667,
+      "sha256": "494efa57efa6b2eccdeff9b3ccb6c1a5f9c405a90ea14cdf6dc54ef342633fc6"
+    },
+    "model/curation-eval-base/episode-versions-1016.json": {
+      "bytes": 262108,
+      "sha256": "63992c81b31e2a67c281e68e996a86923c29fd69938fbf52fada202560b5fc4c"
+    },
+    "model/curation-eval-base/episode-versions-1022.json": {
+      "bytes": 206540,
+      "sha256": "3798c16568b7c59b12daffab66dadafe42026f2c74541011c6b6858be6d15e7a"
+    },
+    "model/curation-eval-base/run-manifest.json": {
+      "bytes": 4160,
+      "sha256": "8cadd4f7c514e6d2012360814430fab86311d118441bffd3321597d66a2d6e6f"
+    },
+    "model/curation-eval-base/runtime-used.py": {
+      "bytes": 3896,
+      "sha256": "d4a20e598ce290cb5a63cb75ce5a7c352598bb4d9e09cb7f2ce13899af531b8e"
+    },
+    "model/curation-eval-base/summary.json": {
+      "bytes": 42422,
+      "sha256": "7128d042189c2c4ce95e718f322415ce5a6f4dcaae6d48d46d905eafe21943bb"
+    },
+    "model/curation-eval-sft/driver-used.py": {
+      "bytes": 10678,
+      "sha256": "c2a1b0a623402e9030fb7300919d83fd3dcd341a1cedd0cc279248005e072192"
+    },
+    "model/curation-eval-sft/environment-snapshot/latent_curation/__init__.py": {
+      "bytes": 236,
+      "sha256": "ca454212891c0ec39f572e21a778547bec1be75fe116678373b17a81218ada33"
+    },
+    "model/curation-eval-sft/environment-snapshot/latent_curation/environment.py": {
+      "bytes": 23442,
+      "sha256": "047c741e5df2fd85ca71fdc7972366091f914a6d7df020a1497c7c73efbfd13f"
+    },
+    "model/curation-eval-sft/environment-snapshot/tasks/development.json": {
+      "bytes": 108845,
+      "sha256": "ba6d17336f22f257247856474a9e63a16c2006b9eda02e624b76ab7f30567f3d"
+    },
+    "model/curation-eval-sft/environment-snapshot/tasks/evaluation.json": {
+      "bytes": 803852,
+      "sha256": "5eef8563b1fe02f396835386cdb071f7135ce06dc33f4d6fa6cf434a717e244d"
+    },
+    "model/curation-eval-sft/environment-snapshot/tasks/manifest.json": {
+      "bytes": 9224,
+      "sha256": "f1efacdb3c30b16caa3a585c58bad2997104893d9f8b298e1b459e038d2ba01a"
+    },
+    "model/curation-eval-sft/episode-composition-2000.json": {
+      "bytes": 257186,
+      "sha256": "82762f9a5fd955675535c0f0b27036947cc0f95e7d66c4be7f4ee88cfef0a513"
+    },
+    "model/curation-eval-sft/episode-composition-2001.json": {
+      "bytes": 134927,
+      "sha256": "71c138d9d2f4532a44d16ccac71440545ed5958ddb4cb1488bbdf5b81a82df03"
+    },
+    "model/curation-eval-sft/episode-composition-2002.json": {
+      "bytes": 245891,
+      "sha256": "954579e2f1514632774c06e5bb68b49da86627a17ed9015018fea713a47f025e"
+    },
+    "model/curation-eval-sft/episode-composition-2003.json": {
+      "bytes": 245281,
+      "sha256": "ef5e381406846a1f87464f976a597bd71936448932c72810c12b2169b8157ce2"
+    },
+    "model/curation-eval-sft/episode-composition-2004.json": {
+      "bytes": 216055,
+      "sha256": "15ec2314ed5bad84fa76c7bb35447ba8b503b06e093b4522150faaf42f63c6d0"
+    },
+    "model/curation-eval-sft/episode-composition-2005.json": {
+      "bytes": 246520,
+      "sha256": "cd2973c162ce7cc97b11b85e033226d048543abe8fcfda9f02217ec9eb2abb15"
+    },
+    "model/curation-eval-sft/episode-composition-2006.json": {
+      "bytes": 360589,
+      "sha256": "cfe77f5c607a238bce7ec8dfefe2642ba54618edc4d5d70b51adbd3ce854ed82"
+    },
+    "model/curation-eval-sft/episode-composition-2007.json": {
+      "bytes": 245521,
+      "sha256": "ba77f0cd76e776fc43c99307d0fd4faaf04bb15cd6131408b7083dd07aef3e03"
+    },
+    "model/curation-eval-sft/episode-composition-2008.json": {
+      "bytes": 251672,
+      "sha256": "7eb18b47f4d257e0e86d722635e4365245aa3f67daa0566a4f50d4424c58386d"
+    },
+    "model/curation-eval-sft/episode-composition-2009.json": {
+      "bytes": 248763,
+      "sha256": "d42ddaf48b32c02729bb68389d47d805a9f1369ed6002ce38f3d764115ca5774"
+    },
+    "model/curation-eval-sft/episode-composition-2010.json": {
+      "bytes": 246956,
+      "sha256": "375cca2a247917e6f8e315436a9f94a03c900bb0fc235b044c8ac1f48bd04e5b"
+    },
+    "model/curation-eval-sft/episode-composition-2011.json": {
+      "bytes": 250385,
+      "sha256": "0e5cda73da94c71bb52694f8d8434e75c2daeaf3756c94bfe5b515ac2a6e3f43"
+    },
+    "model/curation-eval-sft/episode-duplicates-1001.json": {
+      "bytes": 249714,
+      "sha256": "74046b66e8bac17b8626a9a4cd3c506e144d48b2498d49dc6a646a28b1d01277"
+    },
+    "model/curation-eval-sft/episode-duplicates-1007.json": {
+      "bytes": 248075,
+      "sha256": "3a9de74162f4627046688290dea6d4b895da55706399d377026673e6f7ce4dc1"
+    },
+    "model/curation-eval-sft/episode-duplicates-1013.json": {
+      "bytes": 449685,
+      "sha256": "be85825a0ad306f135459192a2c0b85c73b275e12f6f9870b503ad92ef049019"
+    },
+    "model/curation-eval-sft/episode-duplicates-1019.json": {
+      "bytes": 371256,
+      "sha256": "069e53ffc7ae4ce6370f7d929b47b46db2e80f384a75a820bcbb9c66c65b42e0"
+    },
+    "model/curation-eval-sft/episode-labels-1000.json": {
+      "bytes": 486215,
+      "sha256": "a30d9edd4375d1c961def6ef79ab6368775c54767c3e3243376c896189dcf1b5"
+    },
+    "model/curation-eval-sft/episode-labels-1006.json": {
+      "bytes": 384482,
+      "sha256": "ed5683d564c27a0a5ec956883a5fe7f9c1c51c106309270c32469533fc519b09"
+    },
+    "model/curation-eval-sft/episode-labels-1012.json": {
+      "bytes": 468828,
+      "sha256": "1243967f69e33abe817e1ac076d78c6d903468375fcc26f4e015223132210340"
+    },
+    "model/curation-eval-sft/episode-labels-1018.json": {
+      "bytes": 487639,
+      "sha256": "c3d251b563464530c1761cb71d6623632d16e5200ac246581917408b9a9a0766"
+    },
+    "model/curation-eval-sft/episode-leakage-1003.json": {
+      "bytes": 284179,
+      "sha256": "7fad913953a49b1df49110ea10c6c8b1de74d05c5f0bfc0cbdcc3c71b2e7b0d5"
+    },
+    "model/curation-eval-sft/episode-leakage-1009.json": {
+      "bytes": 495175,
+      "sha256": "5b4d7226175425e08d4c7d6c4890dffc741b5c91c2b3f1ce06c4488ef6dbad46"
+    },
+    "model/curation-eval-sft/episode-leakage-1015.json": {
+      "bytes": 494245,
+      "sha256": "fa558ace60f03d54bd8c6f2cf3514ec6fbc97d90c12bc21fb85d596ae91152b3"
+    },
+    "model/curation-eval-sft/episode-leakage-1021.json": {
+      "bytes": 459856,
+      "sha256": "fe58926e6956e0b908498dce6b88e3d96002260a94c457d63d23e020570701a2"
+    },
+    "model/curation-eval-sft/episode-pair-1005.json": {
+      "bytes": 264248,
+      "sha256": "f176aa71cbb0fa65750e5458414e000c3708b081d593e834bbcd3f3f95dbf107"
+    },
+    "model/curation-eval-sft/episode-pair-1011.json": {
+      "bytes": 249055,
+      "sha256": "1dda494b514d22f9f8e4327601325a33905e93222698bf4efb3586cdd0016ebf"
+    },
+    "model/curation-eval-sft/episode-pair-1017.json": {
+      "bytes": 246860,
+      "sha256": "a6c18d1e89bf0d9fb3bbda1949bca3cf9de7f8549d00d313ae66e627bc81b726"
+    },
+    "model/curation-eval-sft/episode-pair-1023.json": {
+      "bytes": 252072,
+      "sha256": "47675f6b4aecb235cb1279a1965dfed42eb4e357b47eb3a9ae2c686ccee9d885"
+    },
+    "model/curation-eval-sft/episode-permissions-1002.json": {
+      "bytes": 487275,
+      "sha256": "540d9fe63217049cd580d856b34c8419a34df965934cdb6fd3b8d271e0261d1f"
+    },
+    "model/curation-eval-sft/episode-permissions-1008.json": {
+      "bytes": 488153,
+      "sha256": "660a88dc9fa479eb4292a6a78efd9d6b5d1638990572f518775d32120e82f01d"
+    },
+    "model/curation-eval-sft/episode-permissions-1014.json": {
+      "bytes": 461170,
+      "sha256": "2e4731311fb1329b0d1b9040674c575e162f7ee027fc7341c0bd248148e1051f"
+    },
+    "model/curation-eval-sft/episode-permissions-1020.json": {
+      "bytes": 487208,
+      "sha256": "e4ea1b36d9540ffa5b3224266c7ef9307204ee74d634a1c448aa9bb68d5748eb"
+    },
+    "model/curation-eval-sft/episode-policy_shift-2000.json": {
+      "bytes": 253624,
+      "sha256": "e3b0c96ef657761c3c40a7132bc907fbc9d87c45418e953a85746615123dd337"
+    },
+    "model/curation-eval-sft/episode-policy_shift-2001.json": {
+      "bytes": 134965,
+      "sha256": "66c43ae22f66afee85d5092ae766ca7c195275bd54e31ae0e8074716a4421ba7"
+    },
+    "model/curation-eval-sft/episode-policy_shift-2002.json": {
+      "bytes": 245837,
+      "sha256": "510f582aa94e7297f4029016af4d4ac59695a6f6f329ef7e799f0aec13f12726"
+    },
+    "model/curation-eval-sft/episode-policy_shift-2003.json": {
+      "bytes": 245224,
+      "sha256": "b294fcdfc3a879468680a24e503095f82b6f8820ba3f76247d45ece2fcc6dabb"
+    },
+    "model/curation-eval-sft/episode-policy_shift-2004.json": {
+      "bytes": 216002,
+      "sha256": "ac0e339756a5683736f828af7ebaeaf5e2da7c2dc8193ff9ab36f97235dde5ad"
+    },
+    "model/curation-eval-sft/episode-policy_shift-2005.json": {
+      "bytes": 245019,
+      "sha256": "2fb144b99acb409a4bc319a4ec8c300f879fdd8438d685a6c5c67770950280d8"
+    },
+    "model/curation-eval-sft/episode-policy_shift-2006.json": {
+      "bytes": 360500,
+      "sha256": "a0f594b611047f00fb9b38b5e02ba61736492ac11956d16511cb34de3b68cd7f"
+    },
+    "model/curation-eval-sft/episode-policy_shift-2007.json": {
+      "bytes": 245479,
+      "sha256": "c21115741d61a39d113b69be4c54b694644424345ff788c1a2a25e0830a872ce"
+    },
+    "model/curation-eval-sft/episode-policy_shift-2008.json": {
+      "bytes": 252376,
+      "sha256": "6fb1dea943a64ba66424bf2429dd342934e8d7562f6895677d8ed52759553c8e"
+    },
+    "model/curation-eval-sft/episode-policy_shift-2009.json": {
+      "bytes": 254675,
+      "sha256": "d4d76527d4c0cdac18267a81d33e04abe963a3af2ba0642801620c959a0e835c"
+    },
+    "model/curation-eval-sft/episode-policy_shift-2010.json": {
+      "bytes": 242404,
+      "sha256": "7ae739fe49eec261a880a04e7d03c7182f476b9dc8feeec636f301537a952535"
+    },
+    "model/curation-eval-sft/episode-policy_shift-2011.json": {
+      "bytes": 250332,
+      "sha256": "b735435e849a15ead8bfc4c3507a6fcccec16cfecfce361f19c83f9f2955c691"
+    },
+    "model/curation-eval-sft/episode-versions-1004.json": {
+      "bytes": 735418,
+      "sha256": "755ce6673bdf2e5caaebcff92769d8d5fd014a8b4d40076eeae6bad51e5578dd"
+    },
+    "model/curation-eval-sft/episode-versions-1010.json": {
+      "bytes": 860584,
+      "sha256": "63c01d5cfb86010bda2c85d8bd917ffba88cdc58549033e691cad8c4380c4c30"
+    },
+    "model/curation-eval-sft/episode-versions-1016.json": {
+      "bytes": 323834,
+      "sha256": "3d5c535812cf22134b1bfc894f5055939d1c075a8b3d6a4ef84e5376a4eea10b"
+    },
+    "model/curation-eval-sft/episode-versions-1022.json": {
+      "bytes": 132785,
+      "sha256": "073e0dda4ae83f251d61b17b7b9907dcd8a6086e0eac8c49db82c5ece719f3b5"
+    },
+    "model/curation-eval-sft/run-manifest.json": {
+      "bytes": 4212,
+      "sha256": "5ab65188dca8847bfbf06def16568f46ee1df7f3275b4cc43c2a3b00ebc7dfa4"
+    },
+    "model/curation-eval-sft/runtime-used.py": {
+      "bytes": 3896,
+      "sha256": "d4a20e598ce290cb5a63cb75ce5a7c352598bb4d9e09cb7f2ce13899af531b8e"
+    },
+    "model/curation-eval-sft/summary.json": {
+      "bytes": 29563,
+      "sha256": "bbaea07a60a308033d03aa11248dc3e51a15c961fb30faa5b214e943db4779b6"
+    },
+    "model/curation-sft/adapter/adapter_config.json": {
+      "bytes": 1142,
+      "sha256": "4628d49bd74cde6479a3a191de3b8d88a79a3abd7597ab9b28908eda57d7862c"
+    },
+    "model/curation-sft/adapter/adapters.safetensors": {
+      "bytes": 9973395,
+      "sha256": "e51c66146f1d3af7e4712f45ce01853b5f6e96d2b6742a5bb4e4f18bef599054"
+    },
+    "model/curation-sft/data-manifest.json": {
+      "bytes": 16243,
+      "sha256": "379f0d9dec63b47251193112d3d5fe5a7b6c84a117666ac00f492a54466e4777"
+    },
+    "model/curation-sft/environment.py": {
+      "bytes": 23442,
+      "sha256": "047c741e5df2fd85ca71fdc7972366091f914a6d7df020a1497c7c73efbfd13f"
+    },
+    "model/curation-sft/prepare-used.py": {
+      "bytes": 4323,
+      "sha256": "be21d908ee198bb5126d861634dbfc3bbe511e156228a8e8b795dbe1fa951a2d"
+    },
+    "model/curation-sft/reconstructed-training-sample.json": {
+      "bytes": 11213,
+      "sha256": "0d2dae424a147cbc0e0201ae04fc162ee74b3fa97923d14d7bda917d14d41b32"
+    },
+    "model/curation-sft/train-trajectories.json": {
+      "bytes": 1703356,
+      "sha256": "3331efcda213bd5e1c03e14401adaf57853f6b962d0fa696c35d418bdd5d7666"
+    },
+    "model/curation-sft/train-used.py": {
+      "bytes": 7035,
+      "sha256": "d5b80ed54e77f7880e7b7b54f37b294669feced7fd244d8c9a0d22ccab93386a"
+    },
+    "model/curation-sft/train-worlds.json": {
+      "bytes": 1265591,
+      "sha256": "f9e7b3e06fa4dcb811bbd291b1f4a0448721f37ea231a93b1dbd397b79f4c7d7"
+    },
+    "model/curation-sft/train.jsonl": {
+      "bytes": 18168836,
+      "sha256": "9e4bd4e0f08970617ae1d7c918f809c8b3a0b078a09f7358e742bcb6b4eaa4b6"
+    },
+    "model/curation-sft/trainable-parameters.json": {
+      "bytes": 8377,
+      "sha256": "2ce9b9793724cd76294b649d34b8cb1f379d41c257eb026955c24e7ae70b3228"
+    },
+    "model/curation-sft/training-metrics.jsonl": {
+      "bytes": 4527,
+      "sha256": "83fe685e2e7fb0d31acaa2dde02a092e20fb3a86ca0e92ae29c8a56d5dc5934e"
+    },
+    "model/curation-sft/training-summary.json": {
+      "bytes": 6426,
+      "sha256": "f3044a350eb30f16cac11787652da373378a2d90fe8b87557dd538e2858704d0"
+    },
+    "model/curation-sft/valid-trajectories.json": {
+      "bytes": 212868,
+      "sha256": "33aa02d152bee77295942c52858070a15eb460d81f8bf2eb9d6c64e3e103a28c"
+    },
+    "model/curation-sft/valid-worlds.json": {
+      "bytes": 158196,
+      "sha256": "261c55c5b79ce4c57c25823936b303892973462ca56a23ab60248d60b744d851"
+    },
+    "model/curation-sft/valid.jsonl": {
+      "bytes": 2270757,
+      "sha256": "f0e3df262c0d7a47eb85c64a226869bfc27262fec7264f9575c8e045223c7bbb"
+    },
+    "model/curation-sft/validation-monitor.json": {
+      "bytes": 971,
+      "sha256": "3ee803dfea9ca9dfb2a185304a2eef2b42633aca4e079975a99a5f46ab4736f1"
+    },
+    "model/curation_driver.py": {
+      "bytes": 10678,
+      "sha256": "c2a1b0a623402e9030fb7300919d83fd3dcd341a1cedd0cc279248005e072192"
+    },
+    "model/currentmoe/LICENSE.txt": {
+      "bytes": 11343,
+      "sha256": "50cbab8a892c5f2993b8c7351a99182507472def3b1374558308605d99b86b32"
+    },
+    "model/currentmoe/README.md": {
+      "bytes": 6946,
+      "sha256": "8bbf7eff6871957009186d2fb59eba48f1fdf34f781185f531937443352537b4"
+    },
+    "model/currentmoe/artifact-freeze.json": {
+      "bytes": 7900,
+      "sha256": "e4d4c21d27da635be82e80200f3806751b5b411c16dea59fe9177da4a036e002"
+    },
+    "model/currentmoe/community-chat-template.jinja": {
+      "bytes": 7764,
+      "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259"
+    },
+    "model/currentmoe/comparison-integrity.json": {
+      "bytes": 857,
+      "sha256": "3c23e12e3743aa694d0ef261d709fa6142cf5b5c38eb3150fb9b88bbb6379d06"
+    },
+    "model/currentmoe/curation-eval-base/driver-used.py": {
+      "bytes": 10678,
+      "sha256": "c2a1b0a623402e9030fb7300919d83fd3dcd341a1cedd0cc279248005e072192"
+    },
+    "model/currentmoe/curation-eval-base/environment-snapshot/latent_curation/__init__.py": {
+      "bytes": 236,
+      "sha256": "ca454212891c0ec39f572e21a778547bec1be75fe116678373b17a81218ada33"
+    },
+    "model/currentmoe/curation-eval-base/environment-snapshot/latent_curation/environment.py": {
+      "bytes": 23442,
+      "sha256": "047c741e5df2fd85ca71fdc7972366091f914a6d7df020a1497c7c73efbfd13f"
+    },
+    "model/currentmoe/curation-eval-base/environment-snapshot/tasks/development.json": {
+      "bytes": 108845,
+      "sha256": "ba6d17336f22f257247856474a9e63a16c2006b9eda02e624b76ab7f30567f3d"
+    },
+    "model/currentmoe/curation-eval-base/environment-snapshot/tasks/evaluation.json": {
+      "bytes": 803852,
+      "sha256": "5eef8563b1fe02f396835386cdb071f7135ce06dc33f4d6fa6cf434a717e244d"
+    },
+    "model/currentmoe/curation-eval-base/environment-snapshot/tasks/manifest.json": {
+      "bytes": 9224,
+      "sha256": "f1efacdb3c30b16caa3a585c58bad2997104893d9f8b298e1b459e038d2ba01a"
+    },
+    "model/currentmoe/curation-eval-base/episode-composition-2000.json": {
+      "bytes": 249778,
+      "sha256": "de174c60f6fdbf54eeaa31a440325d7014a18207e87c6fdf3a601202a62c0703"
+    },
+    "model/currentmoe/curation-eval-base/episode-composition-2001.json": {
+      "bytes": 265424,
+      "sha256": "5b94c1ca9c5c6f95cfc16df1a3a902615745310a8e1d9bac5ec240410893b95d"
+    },
+    "model/currentmoe/curation-eval-base/episode-composition-2002.json": {
+      "bytes": 402295,
+      "sha256": "372c972b5c911c1cab06ad43efd5f67487c6ccf39dd03ab710904414691194ee"
+    },
+    "model/currentmoe/curation-eval-base/episode-composition-2003.json": {
+      "bytes": 329931,
+      "sha256": "8c580b79ce02d7561a74a003392def0d77c12063938f98de6e520afa97d0c9db"
+    },
+    "model/currentmoe/curation-eval-base/episode-composition-2004.json": {
+      "bytes": 227848,
+      "sha256": "b8b7888472b63f375cd292b261b6f45f0c5cb791833fcc06fad5efa93f626970"
+    },
+    "model/currentmoe/curation-eval-base/episode-composition-2005.json": {
+      "bytes": 315949,
+      "sha256": "466923122d3b1d354ae5a615f83db6c1831b7684576dbae35b59a52df56dd6fd"
+    },
+    "model/currentmoe/curation-eval-base/episode-composition-2006.json": {
+      "bytes": 220667,
+      "sha256": "066fcaaaaf0ff784873b80590909887f5338f430f8ea7d5e48bc8c98e665a3f8"
+    },
+    "model/currentmoe/curation-eval-base/episode-composition-2007.json": {
+      "bytes": 284835,
+      "sha256": "73659a1c8502400704d04405439d6e0c9927333f7f714b4bfb1e6ebf31170a76"
+    },
+    "model/currentmoe/curation-eval-base/episode-composition-2008.json": {
+      "bytes": 359006,
+      "sha256": "8a8073e43f0efa88d796f3a8605dde0daea2e6e0a1dfd7ee2327d6058fee7f87"
+    },
+    "model/currentmoe/curation-eval-base/episode-composition-2009.json": {
+      "bytes": 227559,
+      "sha256": "e8c78c8f28177d911966ccd6f6875af279829aa1420167823c48dbf8a0d054fa"
+    },
+    "model/currentmoe/curation-eval-base/episode-composition-2010.json": {
+      "bytes": 211945,
+      "sha256": "1f03ecaa05145ca04c50b738faa27b1827c0c240d879c6f1e5e38cad323bb0b2"
+    },
+    "model/currentmoe/curation-eval-base/episode-composition-2011.json": {
+      "bytes": 278922,
+      "sha256": "3ac5f209345ab825fc4de7ca50764e3725d7b2b41de47150aa2fbc5315c60ff7"
+    },
+    "model/currentmoe/curation-eval-base/episode-duplicates-1001.json": {
+      "bytes": 159026,
+      "sha256": "f1417fae35d16684bbeca9799effba64568564515a180ca47c7d33d4f4c34eb7"
+    },
+    "model/currentmoe/curation-eval-base/episode-duplicates-1007.json": {
+      "bytes": 143790,
+      "sha256": "f85a26b84746c88ca9b3f903f17ee2a90d19c5cfd802ce472b8862e526de6aee"
+    },
+    "model/currentmoe/curation-eval-base/episode-duplicates-1013.json": {
+      "bytes": 156838,
+      "sha256": "3f2b4ce3f2235546e1e25e8e769b4b39268fed96c7b3826506f0db0ac94339d4"
+    },
+    "model/currentmoe/curation-eval-base/episode-duplicates-1019.json": {
+      "bytes": 156981,
+      "sha256": "03b3ea98d71d0469c95ff2cdee2d9c28f052acc7072aaccb1e91bde5f1aeb4cc"
+    },
+    "model/currentmoe/curation-eval-base/episode-labels-1000.json": {
+      "bytes": 124620,
+      "sha256": "27be0d2e415a58bce6d110fa1bedb1291ae66807c16625912ac4403a488d1915"
+    },
+    "model/currentmoe/curation-eval-base/episode-labels-1006.json": {
+      "bytes": 124580,
+      "sha256": "574874284ba89e385321970aa2e11d4831f3038a4c6c4f9a728ed52f0f12a176"
+    },
+    "model/currentmoe/curation-eval-base/episode-labels-1012.json": {
+      "bytes": 137752,
+      "sha256": "6a868acd54c9689dcd2eb378bf2d21514dc257379b42e750bfb3c8417aed014c"
+    },
+    "model/currentmoe/curation-eval-base/episode-labels-1018.json": {
+      "bytes": 124836,
+      "sha256": "f9e1002f0c797a6f839a5863849e5a6120b6c7eb30107526376bffec51ea4c7b"
+    },
+    "model/currentmoe/curation-eval-base/episode-leakage-1003.json": {
+      "bytes": 151492,
+      "sha256": "865f7c0b543ae577d3d70f64f16df6d67fb3e0909e2751bed087908277d0fdd6"
+    },
+    "model/currentmoe/curation-eval-base/episode-leakage-1009.json": {
+      "bytes": 152348,
+      "sha256": "1bdda55b20193432514bef034f104f6a65d54ae6e7ee59b34fd9064a44f93276"
+    },
+    "model/currentmoe/curation-eval-base/episode-leakage-1015.json": {
+      "bytes": 151785,
+      "sha256": "b8e94647ca3e09059f928bee31f287091d99e96488049a8f561489bc394c31f0"
+    },
+    "model/currentmoe/curation-eval-base/episode-leakage-1021.json": {
+      "bytes": 135882,
+      "sha256": "e5d8c8826b727646dcbd2e601c1c6ccecf9b048479e099237b17d3478a96d428"
+    },
+    "model/currentmoe/curation-eval-base/episode-pair-1005.json": {
+      "bytes": 158587,
+      "sha256": "a20552bf18c6b53ca245b589965037134b8568e59dca18983c2244d6d232ed7c"
+    },
+    "model/currentmoe/curation-eval-base/episode-pair-1011.json": {
+      "bytes": 158686,
+      "sha256": "97a1fb173a32f0cfdd439bb48e7e1243383118e809dd85c42ff856503fddd0ff"
+    },
+    "model/currentmoe/curation-eval-base/episode-pair-1017.json": {
+      "bytes": 157100,
+      "sha256": "dd04e7ddb20423338a6b04a1024274d3483461cc2481a8fecd218d0c16fc5d17"
+    },
+    "model/currentmoe/curation-eval-base/episode-pair-1023.json": {
+      "bytes": 171755,
+      "sha256": "a0ae46f5c058e349a11104e536d76fedf34ab58531379e9a7b87b6eaf6de2383"
+    },
+    "model/currentmoe/curation-eval-base/episode-permissions-1002.json": {
+      "bytes": 123383,
+      "sha256": "b87ba6eb06eb091e87b3d1131d211e225f61668dbec3dd66d11a1edeadd1e952"
+    },
+    "model/currentmoe/curation-eval-base/episode-permissions-1008.json": {
+      "bytes": 192192,
+      "sha256": "1f00f769e8fa52ce67d4039e2e9667e49dfdf456be749aab164cc51d54981451"
+    },
+    "model/currentmoe/curation-eval-base/episode-permissions-1014.json": {
+      "bytes": 135075,
+      "sha256": "d714ea1c610d9d8b2fe6981531a7a499e137d1cab8f9897dc0562a306fbbe855"
+    },
+    "model/currentmoe/curation-eval-base/episode-permissions-1020.json": {
+      "bytes": 150509,
+      "sha256": "dc6a505bcb042df710ed37c8b3c99983b4c8f6d79941bdb736481584a8145004"
+    },
+    "model/currentmoe/curation-eval-base/episode-policy_shift-2000.json": {
+      "bytes": 249695,
+      "sha256": "7ed75dc519ee1ab8bdc79a3444313f51857a4240b4469e4e0514bcf42c876496"
+    },
+    "model/currentmoe/curation-eval-base/episode-policy_shift-2001.json": {
+      "bytes": 244251,
+      "sha256": "7563e5ecb067e25e20344d9e4d6aa4dc671cb12835b99ac40631a780aed8c860"
+    },
+    "model/currentmoe/curation-eval-base/episode-policy_shift-2002.json": {
+      "bytes": 192529,
+      "sha256": "e13f37d3f71e85d3d8d76984d23b20b99a3dadca8414a31f7c7464641262a0f4"
+    },
+    "model/currentmoe/curation-eval-base/episode-policy_shift-2003.json": {
+      "bytes": 284441,
+      "sha256": "85a136dc721948609e438f9aa813e95d6ca756d1bd30427e06aad7fcb8f0da2b"
+    },
+    "model/currentmoe/curation-eval-base/episode-policy_shift-2004.json": {
+      "bytes": 357074,
+      "sha256": "883d67150d5778fee296c8aea0d061af62734c5088d1ba7a18b1587c4bd5ec81"
+    },
+    "model/currentmoe/curation-eval-base/episode-policy_shift-2005.json": {
+      "bytes": 306570,
+      "sha256": "84d0b32b6fb62266e7b189edf90e1e6c0e8080fdedee54014b9f5d0be7869d1b"
+    },
+    "model/currentmoe/curation-eval-base/episode-policy_shift-2006.json": {
+      "bytes": 376622,
+      "sha256": "fcc3251105c9771cde72201d3159a9bf0ce15c69afdbe207dd08cddb67af7c70"
+    },
+    "model/currentmoe/curation-eval-base/episode-policy_shift-2007.json": {
+      "bytes": 228650,
+      "sha256": "0c81716ff68f00dd9ecdf42d572435df074e549b06c8064c03f3c280359ce182"
+    },
+    "model/currentmoe/curation-eval-base/episode-policy_shift-2008.json": {
+      "bytes": 438492,
+      "sha256": "a0af159efd103bd97f7e51db4ea2f9580fe4d022e52c0a403002354e1993cd15"
+    },
+    "model/currentmoe/curation-eval-base/episode-policy_shift-2009.json": {
+      "bytes": 191446,
+      "sha256": "8200510c4f1701407df3a291bf9f5c1305242f9eccfbac9244a3e6705b5de600"
+    },
+    "model/currentmoe/curation-eval-base/episode-policy_shift-2010.json": {
+      "bytes": 283577,
+      "sha256": "f6989f93513a9a724d0ba18304bf87b4aabb5224d68ba8d3d6c77d0ba5c39632"
+    },
+    "model/currentmoe/curation-eval-base/episode-policy_shift-2011.json": {
+      "bytes": 250911,
+      "sha256": "a13a72c04fbe1111aecacd5e496a95f60f284150c597c019b95270f609f7ddf5"
+    },
+    "model/currentmoe/curation-eval-base/episode-versions-1004.json": {
+      "bytes": 143236,
+      "sha256": "153d9484134fd3e6441f28dd6e9d656067563215f4daf5d8074b4be3dbd1ffcd"
+    },
+    "model/currentmoe/curation-eval-base/episode-versions-1010.json": {
+      "bytes": 140459,
+      "sha256": "88d40e67dc7c72416f58e529348d0f53f39d895c52b0dd80aee03fc725d9fc3e"
+    },
+    "model/currentmoe/curation-eval-base/episode-versions-1016.json": {
+      "bytes": 140766,
+      "sha256": "5087f3811a30c7dc7df7c365d463f5b6e367d03002cbc6e3d142e0f02581e88e"
+    },
+    "model/currentmoe/curation-eval-base/episode-versions-1022.json": {
+      "bytes": 160087,
+      "sha256": "f349f459c73d9aed4255d726dde53ca89b18f654650b7843b382edf79143e7ac"
+    },
+    "model/currentmoe/curation-eval-base/run-manifest.json": {
+      "bytes": 4170,
+      "sha256": "46df1e0735377e78a65379a5d035a469f3847d7e6c4e79075b3e2452b384d94d"
+    },
+    "model/currentmoe/curation-eval-base/runtime-used.py": {
+      "bytes": 4558,
+      "sha256": "c46ecfc4f4236e7e3de5d68250badba9e0d317aee45f959e3450ff1593b434f6"
+    },
+    "model/currentmoe/curation-eval-base/summary.json": {
+      "bytes": 43950,
+      "sha256": "a6a5391c9dceee156850a9540ca8e0c2a599b90fc66c9e24574dffe9fd188c3b"
+    },
+    "model/currentmoe/curation_driver.py": {
+      "bytes": 10678,
+      "sha256": "c2a1b0a623402e9030fb7300919d83fd3dcd341a1cedd0cc279248005e072192"
+    },
+    "model/currentmoe/current-summary.json": {
+      "bytes": 2661,
+      "sha256": "af042f47a6eaf250a48d37d41155e7269fe6296be301c50a23cd89cfe497a857"
+    },
+    "model/currentmoe/development-summary.json": {
+      "bytes": 3757,
+      "sha256": "76a33734d98410094567f838bc01b134295ba606d1cb227a57c30bc1a9325af5"
+    },
+    "model/currentmoe/download_pinned_model.py": {
+      "bytes": 1821,
+      "sha256": "dcb68496ab2dcdc1cdc825cbcdb22fc3de4d8cbbac9e67f58330c5229051b6fe"
+    },
+    "model/currentmoe/environment-snapshot/latent_curation/__init__.py": {
+      "bytes": 236,
+      "sha256": "ca454212891c0ec39f572e21a778547bec1be75fe116678373b17a81218ada33"
+    },
+    "model/currentmoe/environment-snapshot/latent_curation/environment.py": {
+      "bytes": 23442,
+      "sha256": "047c741e5df2fd85ca71fdc7972366091f914a6d7df020a1497c7c73efbfd13f"
+    },
+    "model/currentmoe/environment-snapshot/tasks/development.json": {
+      "bytes": 108845,
+      "sha256": "ba6d17336f22f257247856474a9e63a16c2006b9eda02e624b76ab7f30567f3d"
+    },
+    "model/currentmoe/environment-snapshot/tasks/evaluation.json": {
+      "bytes": 803852,
+      "sha256": "5eef8563b1fe02f396835386cdb071f7135ce06dc33f4d6fa6cf434a717e244d"
+    },
+    "model/currentmoe/environment-snapshot/tasks/manifest.json": {
+      "bytes": 9224,
+      "sha256": "f1efacdb3c30b16caa3a585c58bad2997104893d9f8b298e1b459e038d2ba01a"
+    },
+    "model/currentmoe/frozen-current-plan.json": {
+      "bytes": 1971,
+      "sha256": "5350d23981edc136e6e5c90437057d669390d8f898df4ca03b50c61256d83b47"
+    },
+    "model/currentmoe/local_runtime.py": {
+      "bytes": 4558,
+      "sha256": "c46ecfc4f4236e7e3de5d68250badba9e0d317aee45f959e3450ff1593b434f6"
+    },
+    "model/currentmoe/measure_reference_tokens.py": {
+      "bytes": 1608,
+      "sha256": "91406cc4dc6eddd2e429511e3e876d6540220a4476fa444ce71ae1069b5b1089"
+    },
+    "model/currentmoe/model-manifest.json": {
+      "bytes": 2589,
+      "sha256": "69eb165dd787bae7f15f2a4f4bfc1269b6f5fcb2af71df0d41923dd6a4bc662a"
+    },
+    "model/currentmoe/model-upstream-metadata.json": {
+      "bytes": 2170,
+      "sha256": "e6061b6a54c2b4301b805ad3fa1669bac7b86f464130e30dcd979ac9fbc42687"
+    },
+    "model/currentmoe/native-template-verification.json": {
+      "bytes": 2516,
+      "sha256": "5d5976f7580d3f69484e97a445413d36f94179be4281f401b2223966dd86517f"
+    },
+    "model/currentmoe/official-chat-template.jinja": {
+      "bytes": 7764,
+      "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259"
+    },
+    "model/currentmoe/official-upstream-metadata.json": {
+      "bytes": 6013,
+      "sha256": "66bfdd72276b5b9381d7ef991b7631f3dfbaca3b5ab2bc98d5daa7cbbdd32385"
+    },
+    "model/currentmoe/reference-token-budgets.json": {
+      "bytes": 11305,
+      "sha256": "fb13a5f972d308094bb839ef354cce25116f70b7b505340ba1d3087dbf9f055a"
+    },
+    "model/currentmoe/requirements.lock.txt": {
+      "bytes": 564,
+      "sha256": "4f51e8a5bafd11bc0ba078f2c8ca835a924b95269c35d898b927b1da43631187"
+    },
+    "model/currentmoe/summarize_current.py": {
+      "bytes": 3175,
+      "sha256": "6ea45fa4f59eabf3213666c5353ef9ccb115e2dbf95efe27d82500134857a08e"
+    },
+    "model/currentmoe/upstream-lfs-hashes.json": {
+      "bytes": 515,
+      "sha256": "be2753113db52595f55fd223bd6a517184d69be93f2176140f94ceb5ada333ea"
+    },
+    "model/currentmoe/verify_comparison_integrity.py": {
+      "bytes": 895,
+      "sha256": "37ba147826f9507ae336044619a9da8808c7ee0767862bd6df71b51b97d1dbe4"
+    },
+    "model/currentmoe/verify_native_template.py": {
+      "bytes": 2656,
+      "sha256": "debc9accba498c9a4b6a3c48b581d2ca35821276a5ad01d5d841637be7184051"
+    },
+    "model/download_pinned_model.py": {
+      "bytes": 706,
+      "sha256": "1885e892204b253a41975403f639590bec63cc4ec4df692c8504ae762f101aeb"
+    },
+    "model/frozen-comparison-plan.json": {
+      "bytes": 1075,
+      "sha256": "b230ffb6ffecc5470f7d69bcf2c5196c634af2e29cecf42eb72402eef21c7776"
+    },
+    "model/local_runtime.py": {
+      "bytes": 3896,
+      "sha256": "d4a20e598ce290cb5a63cb75ce5a7c352598bb4d9e09cb7f2ce13899af531b8e"
+    },
+    "model/measure_reference_tokens.py": {
+      "bytes": 1269,
+      "sha256": "e55650972dfd634fa3e9e414c0f5d62fe0363437afb88f2666d7910184153aff"
+    },
+    "model/model-manifest.json": {
+      "bytes": 1349,
+      "sha256": "ded846956ea01907fe498e2e825c476e9ab98deb02523e6db353cd324fcf03f5"
+    },
+    "model/prepare_sft.py": {
+      "bytes": 4323,
+      "sha256": "be21d908ee198bb5126d861634dbfc3bbe511e156228a8e8b795dbe1fa951a2d"
+    },
+    "model/reference-token-budgets.json": {
+      "bytes": 11265,
+      "sha256": "980723751236a75636938fc7eddd72b009a343bfd594de46dcab1bb420315359"
+    },
+    "model/requirements.lock.txt": {
+      "bytes": 564,
+      "sha256": "4f51e8a5bafd11bc0ba078f2c8ca835a924b95269c35d898b927b1da43631187"
+    },
+    "model/scale8b/QWEN-LICENSE.txt": {
+      "bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+    },
+    "model/scale8b/README.md": {
+      "bytes": 4558,
+      "sha256": "35bc46f4c24c5b52243a0c7e81f393d2dcbdaf7a76e0dffb605a5322693ff881"
+    },
+    "model/scale8b/curation-eval-base/driver-used.py": {
+      "bytes": 10678,
+      "sha256": "c2a1b0a623402e9030fb7300919d83fd3dcd341a1cedd0cc279248005e072192"
+    },
+    "model/scale8b/curation-eval-base/environment-snapshot/latent_curation/__init__.py": {
+      "bytes": 236,
+      "sha256": "ca454212891c0ec39f572e21a778547bec1be75fe116678373b17a81218ada33"
+    },
+    "model/scale8b/curation-eval-base/environment-snapshot/latent_curation/environment.py": {
+      "bytes": 23442,
+      "sha256": "047c741e5df2fd85ca71fdc7972366091f914a6d7df020a1497c7c73efbfd13f"
+    },
+    "model/scale8b/curation-eval-base/environment-snapshot/tasks/development.json": {
+      "bytes": 108845,
+      "sha256": "ba6d17336f22f257247856474a9e63a16c2006b9eda02e624b76ab7f30567f3d"
+    },
+    "model/scale8b/curation-eval-base/environment-snapshot/tasks/evaluation.json": {
+      "bytes": 803852,
+      "sha256": "5eef8563b1fe02f396835386cdb071f7135ce06dc33f4d6fa6cf434a717e244d"
+    },
+    "model/scale8b/curation-eval-base/environment-snapshot/tasks/manifest.json": {
+      "bytes": 9224,
+      "sha256": "f1efacdb3c30b16caa3a585c58bad2997104893d9f8b298e1b459e038d2ba01a"
+    },
+    "model/scale8b/curation-eval-base/episode-composition-2000.json": {
+      "bytes": 444742,
+      "sha256": "6275d76d013a2db64a22ee45d74138505d39005ba91e73109d573effd56abae3"
+    },
+    "model/scale8b/curation-eval-base/episode-composition-2001.json": {
+      "bytes": 227196,
+      "sha256": "6f0d42dac88684af099d6ba6296a286c96c34b827ccf5670b633a985fb7a1ab2"
+    },
+    "model/scale8b/curation-eval-base/episode-composition-2002.json": {
+      "bytes": 191749,
+      "sha256": "115fc4c9f8a679f0f60827fa0206691bd87e6c8522a5b64d66dfcd15074afa8d"
+    },
+    "model/scale8b/curation-eval-base/episode-composition-2003.json": {
+      "bytes": 215443,
+      "sha256": "745bfcbbd95317c8d560909d4b7d24b920ae4a54a83151e82279a4ac0c6165f0"
+    },
+    "model/scale8b/curation-eval-base/episode-composition-2004.json": {
+      "bytes": 425058,
+      "sha256": "945ca1712e61a76c235a95ba7e7c66616e772b2f5eaab00f951c6d09b58740ec"
+    },
+    "model/scale8b/curation-eval-base/episode-composition-2005.json": {
+      "bytes": 463356,
+      "sha256": "625615d1e62f9b7a8ec4dd3ffcece93e5b98ca5f313db065acd4b1dbda03d9ed"
+    },
+    "model/scale8b/curation-eval-base/episode-composition-2006.json": {
+      "bytes": 308286,
+      "sha256": "4077f3bb64299940f3c616bad96b46753fd054fb498ac6e78157bfe431df4c68"
+    },
+    "model/scale8b/curation-eval-base/episode-composition-2007.json": {
+      "bytes": 190912,
+      "sha256": "4e4c7f1ab3f3fecf47f22f81a739c028b4882d848f795d0ef574e218d92ac383"
+    },
+    "model/scale8b/curation-eval-base/episode-composition-2008.json": {
+      "bytes": 380759,
+      "sha256": "9910ae3433b0c6b3775dbb9666257d6c62de09c5b9608f144c0b20dc11c48ee9"
+    },
+    "model/scale8b/curation-eval-base/episode-composition-2009.json": {
+      "bytes": 464531,
+      "sha256": "1fa27c3aa9251c701a9b55d607a8d79847a70a5fb8531c26ae8078f78d39264c"
+    },
+    "model/scale8b/curation-eval-base/episode-composition-2010.json": {
+      "bytes": 421187,
+      "sha256": "e38baf4596bfc730bd4eee466680bfe3be11e366b5924da8acdd1f8e5d98a679"
+    },
+    "model/scale8b/curation-eval-base/episode-composition-2011.json": {
+      "bytes": 232057,
+      "sha256": "5fab4781239a1c3a64b8da6fbac6723fb459a806128e651e98519b74c31788bc"
+    },
+    "model/scale8b/curation-eval-base/episode-duplicates-1001.json": {
+      "bytes": 200014,
+      "sha256": "c0758884e642e017bb084efee78e481c4a4ba45f996189d0714e4be943a96294"
+    },
+    "model/scale8b/curation-eval-base/episode-duplicates-1007.json": {
+      "bytes": 194669,
+      "sha256": "bd1821eea62c605f9ea5f34e143d4bb263db83ae287628abf0a4f0a6124ada63"
+    },
+    "model/scale8b/curation-eval-base/episode-duplicates-1013.json": {
+      "bytes": 324070,
+      "sha256": "a4480dbedd2b4b4c1a83d33de07e004c93b8e3bdaff1f7ddf6bd96bf63241a5b"
+    },
+    "model/scale8b/curation-eval-base/episode-duplicates-1019.json": {
+      "bytes": 191091,
+      "sha256": "8c11ae96bf97b8cdc5cef6a7af2403074436821eae5e5b2d8d9bf05255756523"
+    },
+    "model/scale8b/curation-eval-base/episode-labels-1000.json": {
+      "bytes": 193116,
+      "sha256": "4f41260654c53f2622f1e463a0149643f42267d0d992728346f20111ca3e8502"
+    },
+    "model/scale8b/curation-eval-base/episode-labels-1006.json": {
+      "bytes": 150079,
+      "sha256": "7911fef95b640d94dfb7ca571250de246fe447a0da3262b402f33b0eae87b651"
+    },
+    "model/scale8b/curation-eval-base/episode-labels-1012.json": {
+      "bytes": 162195,
+      "sha256": "7afc14c60e0705cfded62994523c25880a0470fa74fa07ec4095cbb3e0fceecc"
+    },
+    "model/scale8b/curation-eval-base/episode-labels-1018.json": {
+      "bytes": 149752,
+      "sha256": "285e4a0874c8e2b7d10254d4ee132da4a3268a9a6032ab753f3097d38a836639"
+    },
+    "model/scale8b/curation-eval-base/episode-leakage-1003.json": {
+      "bytes": 170796,
+      "sha256": "00046d182c6c53c7dc2d748613c1833877973ddce69d4ba2804bc45cdf3d15ef"
+    },
+    "model/scale8b/curation-eval-base/episode-leakage-1009.json": {
+      "bytes": 170548,
+      "sha256": "1a5c02dc6d0b236bea274f6cbb8966a8ac54350a32911f9800e27bd39b567dad"
+    },
+    "model/scale8b/curation-eval-base/episode-leakage-1015.json": {
+      "bytes": 150403,
+      "sha256": "759bc606313af694d3fc898bd3c15d281ae8f621ea08c988681cfc5503f001bb"
+    },
+    "model/scale8b/curation-eval-base/episode-leakage-1021.json": {
+      "bytes": 176616,
+      "sha256": "8a6eb5d0b89f4e39418e4c0788702a78f6d05076c23574d0496f68769218580d"
+    },
+    "model/scale8b/curation-eval-base/episode-pair-1005.json": {
+      "bytes": 189179,
+      "sha256": "2b708fe9ca22dc0ca5391b48b5840c6bacd8c6e6384a64a21e4d073a34e91859"
+    },
+    "model/scale8b/curation-eval-base/episode-pair-1011.json": {
+      "bytes": 406498,
+      "sha256": "c0a56f4081cd8be1decd7386e0b28a67f2d253b80dfbb246d95ab468052b277e"
+    },
+    "model/scale8b/curation-eval-base/episode-pair-1017.json": {
+      "bytes": 480719,
+      "sha256": "e2a962a3c4544a20251efd18b868d0a26a72728dcc3d4bdd311163a176391a2e"
+    },
+    "model/scale8b/curation-eval-base/episode-pair-1023.json": {
+      "bytes": 166334,
+      "sha256": "f03e883e48ccfdf0033c06eb6b7d890d5358f0ba6e7a8ea5a7765e88f9d4b298"
+    },
+    "model/scale8b/curation-eval-base/episode-permissions-1002.json": {
+      "bytes": 296034,
+      "sha256": "31bb9de452de0d5f27b6c16cbe3e049616a7cbd40cdfbb4618f80aaaae2fd008"
+    },
+    "model/scale8b/curation-eval-base/episode-permissions-1008.json": {
+      "bytes": 148259,
+      "sha256": "88dfe572362e6970a861f957990e42ece814471c7d32410d2d77a44d957930f2"
+    },
+    "model/scale8b/curation-eval-base/episode-permissions-1014.json": {
+      "bytes": 274641,
+      "sha256": "91320c1277d73d98964c2603050f3a82d7c08745c9fec0d3337c0acc9e54e058"
+    },
+    "model/scale8b/curation-eval-base/episode-permissions-1020.json": {
+      "bytes": 245680,
+      "sha256": "b9c14f6380f0446e8ed60f69feb668dd6a05f24c2d2fcee78f08b541726c5a8e"
+    },
+    "model/scale8b/curation-eval-base/episode-policy_shift-2000.json": {
+      "bytes": 449272,
+      "sha256": "75598bb91e244720cf14ad729489ba2a5f0f206fae8b5bfb93fd83c997d89dd0"
+    },
+    "model/scale8b/curation-eval-base/episode-policy_shift-2001.json": {
+      "bytes": 262297,
+      "sha256": "d9a15cebefb3a0c4ac7823b0e972c3a138fcc255a32a3fa9c95c9f86b8b9cf8e"
+    },
+    "model/scale8b/curation-eval-base/episode-policy_shift-2002.json": {
+      "bytes": 244623,
+      "sha256": "a2e938e0545568a867f9960f3b07de8b01abfd557f6d38d698f59666ee53d892"
+    },
+    "model/scale8b/curation-eval-base/episode-policy_shift-2003.json": {
+      "bytes": 222593,
+      "sha256": "d5198e65e0ec7c25876da227bf20c52293ced8b7f4f9f1ba7f9da12c36517dc8"
+    },
+    "model/scale8b/curation-eval-base/episode-policy_shift-2004.json": {
+      "bytes": 142126,
+      "sha256": "6a7498d3d58e78822abaa708db1933c0b301e9b207650603dcab503897c77a49"
+    },
+    "model/scale8b/curation-eval-base/episode-policy_shift-2005.json": {
+      "bytes": 274821,
+      "sha256": "5ceba8b96cb0dd07156cdce6146aa391f99767bc4d18e942444316bb8e6dd2ef"
+    },
+    "model/scale8b/curation-eval-base/episode-policy_shift-2006.json": {
+      "bytes": 439749,
+      "sha256": "75d92b9cbffb31a16790b16afeb686fa8a1d1f9f3b65e4132533e6e6ef4572b0"
+    },
+    "model/scale8b/curation-eval-base/episode-policy_shift-2007.json": {
+      "bytes": 190865,
+      "sha256": "9642ae6c6f9cc6f8fb5db769825a41809376230664a5fe3628e668e0ffd8afd9"
+    },
+    "model/scale8b/curation-eval-base/episode-policy_shift-2008.json": {
+      "bytes": 302067,
+      "sha256": "8eff2dfb245d0a4186bdfde53a8f7b786b34bffc26da88e49d3d4c124459df7e"
+    },
+    "model/scale8b/curation-eval-base/episode-policy_shift-2009.json": {
+      "bytes": 464438,
+      "sha256": "901a81fc31fffe7d43b18cdb2532178c1be0b3d63c1100095acb07e67281751d"
+    },
+    "model/scale8b/curation-eval-base/episode-policy_shift-2010.json": {
+      "bytes": 216156,
+      "sha256": "c7b4528fea7e4e894b223a92a9f41abee8abd4ccf01dc99a7f7a69350955782c"
+    },
+    "model/scale8b/curation-eval-base/episode-policy_shift-2011.json": {
+      "bytes": 271922,
+      "sha256": "d4f178e15c07cb9cc8d7872448066cb1dfab30fd5dcaf194c09ace67440ec287"
+    },
+    "model/scale8b/curation-eval-base/episode-versions-1004.json": {
+      "bytes": 191201,
+      "sha256": "3a75bb5b3a812e1c0172666277185f16dfc23b17b473fcf1ca9ce3f5896db3bc"
+    },
+    "model/scale8b/curation-eval-base/episode-versions-1010.json": {
+      "bytes": 138828,
+      "sha256": "3318e650f5c8285cf714fd0806453e3aa1f893b2d4572072d3b7b5c061d2ccbe"
+    },
+    "model/scale8b/curation-eval-base/episode-versions-1016.json": {
+      "bytes": 190407,
+      "sha256": "7d339ea5cd3745f7c9033a394a2407aade0400c93f9a0709e478da1ca74bf3c2"
+    },
+    "model/scale8b/curation-eval-base/episode-versions-1022.json": {
+      "bytes": 183234,
+      "sha256": "beffa779506f77d1ab48918926096b2b98faa1aed3b40577f9a2266fdf01c770"
+    },
+    "model/scale8b/curation-eval-base/run-manifest.json": {
+      "bytes": 4158,
+      "sha256": "5c9da2f47e77f0a16b9bcb14d1599b0c93335434b8a2c26fe556e8b038b7dc5e"
+    },
+    "model/scale8b/curation-eval-base/runtime-used.py": {
+      "bytes": 3894,
+      "sha256": "cde13b8940386612b091a7e840009b1ad671b0fac0b3eb0e11bc21b7cca9edea"
+    },
+    "model/scale8b/curation-eval-base/summary.json": {
+      "bytes": 40993,
+      "sha256": "0a2b34a92bee14772555403689b97d5f386b7c7c58bee9f1ebcccfa5708d162a"
+    },
+    "model/scale8b/curation_driver.py": {
+      "bytes": 10678,
+      "sha256": "c2a1b0a623402e9030fb7300919d83fd3dcd341a1cedd0cc279248005e072192"
+    },
+    "model/scale8b/download_pinned_model.py": {
+      "bytes": 1318,
+      "sha256": "c3a477f7221920e57fb917a9bfd2ba724267aece65d880310be66bcecc06ddfb"
+    },
+    "model/scale8b/environment-snapshot/latent_curation/__init__.py": {
+      "bytes": 236,
+      "sha256": "ca454212891c0ec39f572e21a778547bec1be75fe116678373b17a81218ada33"
+    },
+    "model/scale8b/environment-snapshot/latent_curation/environment.py": {
+      "bytes": 23442,
+      "sha256": "047c741e5df2fd85ca71fdc7972366091f914a6d7df020a1497c7c73efbfd13f"
+    },
+    "model/scale8b/environment-snapshot/tasks/development.json": {
+      "bytes": 108845,
+      "sha256": "ba6d17336f22f257247856474a9e63a16c2006b9eda02e624b76ab7f30567f3d"
+    },
+    "model/scale8b/environment-snapshot/tasks/evaluation.json": {
+      "bytes": 803852,
+      "sha256": "5eef8563b1fe02f396835386cdb071f7135ce06dc33f4d6fa6cf434a717e244d"
+    },
+    "model/scale8b/environment-snapshot/tasks/manifest.json": {
+      "bytes": 9224,
+      "sha256": "f1efacdb3c30b16caa3a585c58bad2997104893d9f8b298e1b459e038d2ba01a"
+    },
+    "model/scale8b/frozen-scale-plan.json": {
+      "bytes": 1190,
+      "sha256": "6860f300d708c7170979599a9ad5a99c47a97443227dc7d29822d0a5bd21d3ad"
+    },
+    "model/scale8b/local_runtime.py": {
+      "bytes": 3894,
+      "sha256": "cde13b8940386612b091a7e840009b1ad671b0fac0b3eb0e11bc21b7cca9edea"
+    },
+    "model/scale8b/model-manifest.json": {
+      "bytes": 1492,
+      "sha256": "7a74496c4f2f75e2cd5902d918923d033dca1cd729ee634acaddfeae50626d6f"
+    },
+    "model/scale8b/requirements.lock.txt": {
+      "bytes": 564,
+      "sha256": "4f51e8a5bafd11bc0ba078f2c8ca835a924b95269c35d898b927b1da43631187"
+    },
+    "model/train_sft.py": {
+      "bytes": 7035,
+      "sha256": "d5b80ed54e77f7880e7b7b54f37b294669feced7fd244d8c9a0d22ccab93386a"
+    },
+    "render_results.py": {
+      "bytes": 4611,
+      "sha256": "6757124bea658766f30546a032a85971e85ea7c2a664266ebee55f80a83279ae"
+    },
+    "results.json": {
+      "bytes": 36726,
+      "sha256": "67c1f3f8411135b9af9746193bfe017aad6a1bf86ab039a11e571ede45a2f3ff"
+    },
+    "run_controls.py": {
+      "bytes": 4236,
+      "sha256": "18b4563bb016b82bd9a0abfcaa25cd0f96c28bc6a513b1816b73c7fe073556ba"
+    },
+    "tasks/development.json": {
+      "bytes": 108845,
+      "sha256": "ba6d17336f22f257247856474a9e63a16c2006b9eda02e624b76ab7f30567f3d"
+    },
+    "tasks/evaluation.json": {
+      "bytes": 803852,
+      "sha256": "5eef8563b1fe02f396835386cdb071f7135ce06dc33f4d6fa6cf434a717e244d"
+    },
+    "tasks/manifest.json": {
+      "bytes": 9224,
+      "sha256": "f1efacdb3c30b16caa3a585c58bad2997104893d9f8b298e1b459e038d2ba01a"
+    },
+    "test_environment.py": {
+      "bytes": 5186,
+      "sha256": "02ff29384850cf34c83959157b8208228e15a7256ff4748d857c990b60303b54"
+    },
+    "verify_release.py": {
+      "bytes": 2831,
+      "sha256": "8786131f1c7598f16eb562a8e299fb19239bede3143202357ec8948459eee741"
+    }
+  }
+}

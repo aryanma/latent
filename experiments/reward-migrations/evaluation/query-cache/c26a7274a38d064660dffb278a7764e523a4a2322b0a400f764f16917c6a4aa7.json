@@ -1,0 +1,42 @@
+{
+  "provenance": {
+    "database_sha256": "d15d89cdb068a202b6f2b99342af44dffc1d52545b39ceaf62efdc0ba570101e",
+    "query_sha256": "eb02b32b061dd675e4ee5d903da26125b00334c1294be35b86463f199e3a0d27",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "eb02b32b061dd675e4ee5d903da26125b00334c1294be35b86463f199e3a0d27",
+    "status": "ok",
+    "seconds": 0.00066,
+    "result_sha256": "eed497ad03690943c3e2b38f0743d39c714e45e8f45d73bdaaa8aabc61ccbf52",
+    "rows": 3,
+    "distinct_rows": 3,
+    "preview": [
+      [
+        "POPLATEK MESICNE"
+      ],
+      [
+        "POPLATEK TYDNE"
+      ],
+      [
+        "POPLATEK PO OBRATU"
+      ]
+    ],
+    "columns": [
+      "frequency"
+    ]
+  }
+}

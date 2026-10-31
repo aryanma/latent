@@ -1,0 +1,134 @@
+{
+  "question_id": "1525",
+  "source_database_sha256": "b3d149ad05746dbbe5116e229e17e18f09c39db43cf117d9ef3441753608b691",
+  "source_database_url": "https://bird-bench.oss-cn-beijing.aliyuncs.com/dev.zip",
+  "source_database_release": "BIRD dev_20240627",
+  "old_dataset": "https://huggingface.co/datasets/birdsql/bird_mini_dev/tree/f65faf4ae3b638c1fa6df1d3370c8d92c8366301",
+  "corrected_dataset": "https://huggingface.co/datasets/uiuc-kang-lab/arcwise-plat/tree/8e6eb6e18487a9dabaf761bb9e62b1234e340301",
+  "candidate_provenance": {
+    "model_repository": "mlx-community/Qwen3.6-35B-A3B-4bit",
+    "model_revision": "38740b847e4cb78f352aba30aa41c76e08e6eb46",
+    "prompt_text_sha256": "53479cfee0dacf0c1ac84f62c653000c0ee8b87940b60079bea55958209a54b8",
+    "raw_output_sha256": "e59ca11fdf3c6fa6e967d7666699a96d716e1ff7f27d8676a35a8f2d5deb782a",
+    "raw_record_sha256": "76a8b7c7f9f3fc046e1a92571bd99f0537773e2ad7a64de27f9b393ecbecf003",
+    "preregistration_sha256": "6cb36e883f8c8871df2cf424751ac78865e2ad3f6addf55abe2b0fd2f8edc061"
+  },
+  "queries": {
+    "candidate": "SELECT\n  CAST(SUM(CASE WHEN c.Currency = 'EUR' THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(DISTINCT t.CustomerID) AS percentage\nFROM transactions_1k t\nJOIN customers c ON t.CustomerID = c.CustomerID\nWHERE t.Date = '2012-08-25';",
+    "old_reference": "SELECT CAST(SUM(IIF(T2.Currency = 'EUR', 1, 0)) AS FLOAT) * 100 / COUNT(T1.CustomerID) FROM transactions_1k AS T1 INNER JOIN customers AS T2 ON T1.CustomerID = T2.CustomerID WHERE T1.Date = '2012-08-25'",
+    "new_reference": "SELECT CAST(COUNT(DISTINCT IIF(T2.Currency = 'EUR', T1.CustomerID, NULL)) AS FLOAT) * 100 / COUNT(DISTINCT T1.CustomerID) FROM transactions_1k AS T1 INNER JOIN customers AS T2 ON T1.CustomerID = T2.CustomerID WHERE T1.Date = '2012-08-25'"
+  },
+  "mutation": {
+    "statement": "INSERT INTO transactions_1k (\"TransactionID\",\"Date\",\"Time\",\"CustomerID\",\"CardID\",\"GasStationID\",\"ProductID\",\"Amount\",\"Price\") VALUES (?,?,?,?,?,?,?,?,?)",
+    "parameters": [
+      1001,
+      "2012-08-25",
+      "09:05:00",
+      679,
+      752560,
+      267,
+      2,
+      107,
+      92.26
+    ],
+    "columns": [
+      "TransactionID",
+      "Date",
+      "Time",
+      "CustomerID",
+      "CardID",
+      "GasStationID",
+      "ProductID",
+      "Amount",
+      "Price"
+    ],
+    "source_row": {
+      "TransactionID": 579,
+      "Date": "2012-08-25",
+      "Time": "09:05:00",
+      "CustomerID": 679,
+      "CardID": 752560,
+      "GasStationID": 267,
+      "ProductID": 2,
+      "Amount": 107,
+      "Price": 92.26
+    },
+    "fresh_primary_key": 1001,
+    "foreign_keys_enabled_during_insert": true,
+    "existing_parent_rows": {
+      "CustomerID": 1,
+      "GasStationID": 1,
+      "ProductID": 1
+    },
+    "exact_added_rows": [
+      [
+        1001,
+        "2012-08-25",
+        "09:05:00",
+        679,
+        752560,
+        267,
+        2,
+        107,
+        92.26
+      ]
+    ],
+    "exact_removed_rows": [],
+    "changed_user_tables": [
+      "transactions_1k"
+    ],
+    "internal_autoincrement_sequence_change": [
+      [
+        [
+          "transactions_1k",
+          1000
+        ]
+      ],
+      [
+        [
+          "transactions_1k",
+          1001
+        ]
+      ]
+    ]
+  },
+  "expected_baseline": {
+    "candidate": [
+      [
+        2.7027027027027026
+      ]
+    ],
+    "old_reference": [
+      [
+        1.6470588235294117
+      ]
+    ],
+    "new_reference": [
+      [
+        2.7027027027027026
+      ]
+    ]
+  },
+  "expected_after_insert": {
+    "candidate": [
+      [
+        3.088803088803089
+      ]
+    ],
+    "old_reference": [
+      [
+        1.8779342723004695
+      ]
+    ],
+    "new_reference": [
+      [
+        2.7027027027027026
+      ]
+    ]
+  },
+  "source_witness_results_sha256": "5c1f713f8102f81516f918afd84c1b8c9111c55693cdcd8d390e4df51a2897d3",
+  "source_witness_freeze_sha256": "87ed0c5064cdc39dd741d3a0684456a311cc2ac296be8fa7e7b77fc124ceb6ff",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "attribution": "Original BIRD benchmark data by Jinyang Li, Binyuan Hui, Ge Qu and collaborators; expert-corrected Arcwise-Plat annotations by UIUC Kang Lab (Yuxuan Zhu, Tengjun Jin, Yoojin Choi, Daniel Kang and collaborators). Latent constructs this table/row projection and the documented counterfactual mutation."
+}

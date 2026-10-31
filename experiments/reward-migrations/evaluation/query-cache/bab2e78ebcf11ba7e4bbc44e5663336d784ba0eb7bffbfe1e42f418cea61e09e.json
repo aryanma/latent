@@ -1,0 +1,48 @@
+{
+  "provenance": {
+    "database_sha256": "c98bdb57fe7474da798b407785544b9af0daaad5d61fd21e2a73309493bc1227",
+    "query_sha256": "435f1f359292aab085100b6d2a3c8210a8d88651fad0b38c36c4f20ad0399d4c",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "435f1f359292aab085100b6d2a3c8210a8d88651fad0b38c36c4f20ad0399d4c",
+    "status": "ok",
+    "seconds": 0.095145,
+    "result_sha256": "ba4511f84585163bccc5d8f7a8e1a5b15772c8112e2563b8a8a15f4252de88c1",
+    "rows": 12,
+    "distinct_rows": 12,
+    "preview": [
+      [
+        "Devastazione Solare"
+      ],
+      [
+        "Requisire"
+      ],
+      [
+        "Jokulmorder"
+      ],
+      [
+        "Gufo Gelopiuma"
+      ],
+      [
+        "Araldo di Leshrac"
+      ]
+    ],
+    "columns": [
+      "name"
+    ]
+  }
+}

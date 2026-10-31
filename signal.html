@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>Signal — Latent λ</title>
+<meta name="description" content="Inspect what an RL reward observes. A local task-contract auditor and reproducible counterfactual replay experiment from Latent.">
+<link rel="canonical" href="https://aryanma.github.io/latent/signal.html">
+<meta property="og:title" content="Signal — Latent λ">
+<meta property="og:description" content="Before optimizing a reward, find out what it cannot distinguish.">
+<meta property="og:type" content="website">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./signal/signal.css">
+<script type="module" src="./signal/app.mjs"></script>
+</head>
+<body>
+<main class="instrument">
+<nav class="back" aria-label="Latent pages"><a href="./">latent λ</a> · <a href="./blog.html">Blog</a> · <a href="./reward-boundary.html">Research note</a></nav>
+<header>
+<p class="eyebrow">Experiment 001 · Signal</p>
+<h1>What does the reward measure?</h1>
+<p>A training score can distinguish two database states while ignoring what the user was told. This small experiment makes that boundary visible.</p>
+</header>
+<noscript><p>Read the <a href="./reward-boundary.html">research note</a> or download the <a href="./data/signal/results.json">results</a>.</p></noscript>
+<p id="load-status" role="status" aria-live="polite">Loading the experiment…</p>
+<div id="workspace" hidden>
+<div id="example-choices" class="example-choices" aria-label="Example tasks">
+<button type="button" data-task="1" aria-pressed="true">A refusal</button>
+<button type="button" data-task="19" aria-pressed="false">A cancellation</button>
+<button type="button" data-task="17" aria-pressed="false">Three changes</button>
+</div>
+<h2 id="task-context"></h2>
+<p id="task-goal"></p>
+<div id="replay-content"></div>
+<p class="small evidence-note">Recorded scoring experiments on constructed traces; no model or user simulator was run. <a href="./reward-boundary.html">Method and limitations</a>.</p>
+
+<details class="advanced" id="contract-details">
+<summary>How this task is scored</summary>
+<div id="task-detail"></div>
+</details>
+<details class="advanced">
+<summary>Browse all tasks</summary>
+<div class="task-controls">
+<label for="task-search">Search <input id="task-search" type="search" placeholder="ID or description"></label>
+<label for="task-filter">Filter <select id="task-filter"><option value="all">All tasks</option><option value="empty_communication">Empty communication check</option><option value="ungated_nl">Ungated written assertions</option><option value="unassessed">Unassessed or partial</option></select></label>
+</div>
+<label for="task-select" class="small">Task</label>
+<select id="task-select" class="task-select"></select>
+<p id="no-matches" hidden>No tasks match. Clear the search or change the filter.</p>
+<p id="source-name" class="small"></p>
+<div id="audit-summary" class="small"></div>
+<p class="small">Counts describe configuration, not task correctness.</p>
+</details>
+<details class="advanced">
+<summary>Inspect your own task definitions</summary>
+<p class="small">Local static inspection only. Files stay in this tab. Accepts a τ² task array or <code>{"tasks": […]}</code>, up to 5 MB.</p>
+<label class="file-label">Open JSON <input id="task-file" type="file" accept=".json,application/json"></label>
+<details>
+<summary>Or paste JSON</summary>
+<label for="json-input" class="small">Task definitions</label>
+<textarea id="json-input" rows="6" spellcheck="false" placeholder='[{"id":"example","evaluation_criteria":{"reward_basis":["DB"],"actions":[]}}]'></textarea>
+<button id="inspect-paste" type="button">Inspect</button>
+</details>
+<p id="input-error" class="error" role="alert" hidden></p>
+<div class="actions"><button id="export-json" type="button">Export JSON</button><button id="export-csv" type="button">Export CSV</button><button id="load-example" type="button">Reset example</button></div>
+</details>
+<footer class="method-footer">
+<h2>Why this matters to Latent</h2>
+<p>Specialized models need feedback that reflects the work they are meant to do. This audit tests one part of that system: whether a reward notices a specific change in behavior. It does not demonstrate model improvement.</p>
+<p><a href="./reward-boundary.html">Read the experiment</a> · <a href="./data/signal/reproduction.zip" download>Reproduce it</a> · <a href="https://github.com/aryanma/latent/tree/main/signal">Code</a></p>
+<p class="small">Sierra Research’s τ²-bench, <a href="https://github.com/sierra-research/tau2-bench/tree/da0835f6c67baef58bdda18f2a3b037dfb3a1754">da0835f6c67b</a> · <a href="./data/signal/UPSTREAM-LICENSE.txt">MIT license</a> · <a href="./data/signal/results.json">Results</a> · <a href="./data/signal/manifest.json">Provenance</a>.</p>
+</footer>
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "provenance": {
+    "database_sha256": "92101be6d2a9f6adceea59d38f6d1c556087f9eea1432432a21268cb1348036d",
+    "query_sha256": "28b701e093b890de124ceaece95607857d54f75c5b904e7fd350b555633159d7",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "28b701e093b890de124ceaece95607857d54f75c5b904e7fd350b555633159d7",
+    "status": "ok",
+    "seconds": 0.068121,
+    "result_sha256": "4b7c2d7396e563b1c67a6b7f31fe6bc270ea9e97f38a3faef076749beaecfca3",
+    "rows": 10,
+    "distinct_rows": 10,
+    "preview": [
+      [
+        "i thought of integrating seperetly until 4 m/s, between 4 and 15m/s and over 15m/s, and comparing it to a situation of 100% of the time a turbine working in optimal speed",
+        null
+      ],
+      [
+        "well untill 4 m/s there is no wind generation and the max is 15 m/s, wind stronger than 15 m/s will make the same amount of energy",
+        null
+      ],
+      [
+        "Regarding your question about energy, it's going to be difficult to answer. Do you know anything about your device? Do you know anything of the relationship between wind speed/direction and power? Do you know anything about the layout of the turbines at this particular site since that has a huge impact on the power as you no doubt are aware.",
+        null
+      ],
+      [
+        "note that 'lag' is a term used mainly in analysis of data in time, referring to one thing occurring after another. This isn't a lag - it's perhaps more accurately called a shift - or maybe an offset - but shift is probably more common for distributions, they shift and scale.",
+        null
+      ],
+      [
+        "i tried ploting it with out zero's but still there is a lag",
+        null
+      ]
+    ],
+    "columns": [
+      "Text",
+      "UserDisplayName"
+    ]
+  }
+}

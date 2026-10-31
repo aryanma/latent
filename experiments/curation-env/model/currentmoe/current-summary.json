@@ -1,0 +1,90 @@
+{
+  "submitted_component_failures": {
+    "submitted_and_graded": 47,
+    "not_graded": 1,
+    "coverage_below_one": 16,
+    "label_accuracy_below_one": 36,
+    "unsafe": 16,
+    "nonunique": 18,
+    "unsupported_provenance": 26,
+    "note": "Overlapping counts conditional on actual submit; unfinished episodes have no private component grades."
+  },
+  "paired_worlds": {
+    "pairs": 12,
+    "both_successful": 0,
+    "either_successful": 1
+  },
+  "overall": {
+    "episodes": 48,
+    "successes": 5,
+    "mean_reward": 0.13541666666666666,
+    "steps": 453,
+    "invalid_json": 19,
+    "invalid_actions": 38,
+    "generated_tokens": 38580,
+    "prompt_tokens_total": 1558740,
+    "summed_episode_seconds": 618.3048104180489,
+    "terminations": {
+      "submitted": 47,
+      "budget_exhausted": 1
+    },
+    "inference_errors": 0,
+    "max_prompt_tokens": 7574
+  },
+  "splits": {
+    "composition": {
+      "episodes": 12,
+      "successes": 0,
+      "mean_reward": 0.0625,
+      "steps": 143,
+      "invalid_json": 9,
+      "invalid_actions": 14,
+      "generated_tokens": 11467,
+      "prompt_tokens_total": 559673,
+      "summed_episode_seconds": 208.11043945990968,
+      "terminations": {
+        "submitted": 12
+      },
+      "inference_errors": 0,
+      "max_prompt_tokens": 7574
+    },
+    "policy_shift": {
+      "episodes": 12,
+      "successes": 1,
+      "mean_reward": 0.14583333333333334,
+      "steps": 142,
+      "invalid_json": 9,
+      "invalid_actions": 22,
+      "generated_tokens": 12035,
+      "prompt_tokens_total": 566250,
+      "summed_episode_seconds": 214.59642141719814,
+      "terminations": {
+        "submitted": 11,
+        "budget_exhausted": 1
+      },
+      "inference_errors": 0,
+      "max_prompt_tokens": 6746
+    },
+    "single_or_pair": {
+      "episodes": 24,
+      "successes": 4,
+      "mean_reward": 0.16666666666666666,
+      "steps": 168,
+      "invalid_json": 1,
+      "invalid_actions": 2,
+      "generated_tokens": 15078,
+      "prompt_tokens_total": 432817,
+      "summed_episode_seconds": 195.59794954094104,
+      "terminations": {
+        "submitted": 24
+      },
+      "inference_errors": 0,
+      "max_prompt_tokens": 4295
+    }
+  },
+  "network_attempts": [],
+  "run_manifest_sha256": "46df1e0735377e78a65379a5d035a469f3847d7e6c4e79075b3e2452b384d94d",
+  "driver_sha256": "c2a1b0a623402e9030fb7300919d83fd3dcd341a1cedd0cc279248005e072192",
+  "runtime_sha256": "c46ecfc4f4236e7e3de5d68250badba9e0d317aee45f959e3450ff1593b434f6",
+  "design": "Exploratory2026 newer-architecture baseline added after small-model difficulty; frozen before current-model inference; no prompt selection or model training."
+}

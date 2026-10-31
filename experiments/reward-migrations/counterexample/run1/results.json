@@ -1,0 +1,982 @@
+{
+  "question_id": "1525",
+  "selection": "One post-hoc constructed counterexample selected after inspecting completed migration-study results; not a frequency estimate.",
+  "clock": "2026-10-31 00:00:00",
+  "clock_adapter": "sqlite-fixed-utc-v1",
+  "comparator": "bird-row-set-v1",
+  "source_sha256": "b3d149ad05746dbbe5116e229e17e18f09c39db43cf117d9ef3441753608b691",
+  "counterfactual_sha256": "352b2187645ae1ac8c9e022ce030d7d7174bccf753e0ffead69633d5dcc015ca",
+  "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+  "input_spec_sha256": "83b900009eb6991125c98d00cc1753c75c5df65923863df104271c7034ad4c89",
+  "source_database_unchanged": true,
+  "schema_and_prompt_unchanged": true,
+  "policy_prompt_sha256": "53479cfee0dacf0c1ac84f62c653000c0ee8b87940b60079bea55958209a54b8",
+  "mutation": {
+    "statement": "INSERT INTO transactions_1k (\"TransactionID\",\"Date\",\"Time\",\"CustomerID\",\"CardID\",\"GasStationID\",\"ProductID\",\"Amount\",\"Price\") VALUES (?,?,?,?,?,?,?,?,?)",
+    "parameters": [
+      1001,
+      "2012-08-25",
+      "09:05:00",
+      679,
+      752560,
+      267,
+      2,
+      107,
+      92.26
+    ],
+    "columns": [
+      "TransactionID",
+      "Date",
+      "Time",
+      "CustomerID",
+      "CardID",
+      "GasStationID",
+      "ProductID",
+      "Amount",
+      "Price"
+    ],
+    "source_row": {
+      "TransactionID": 579,
+      "Date": "2012-08-25",
+      "Time": "09:05:00",
+      "CustomerID": 679,
+      "CardID": 752560,
+      "GasStationID": 267,
+      "ProductID": 2,
+      "Amount": 107,
+      "Price": 92.26
+    },
+    "fresh_primary_key": 1001,
+    "foreign_keys_enabled_during_insert": true,
+    "existing_parent_rows": {
+      "CustomerID": 1,
+      "GasStationID": 1,
+      "ProductID": 1
+    },
+    "exact_added_rows": [
+      [
+        1001,
+        "2012-08-25",
+        "09:05:00",
+        679,
+        752560,
+        267,
+        2,
+        107,
+        92.26
+      ]
+    ],
+    "exact_removed_rows": [],
+    "changed_user_tables": [
+      "transactions_1k"
+    ],
+    "internal_autoincrement_sequence_change": [
+      [
+        [
+          "transactions_1k",
+          1000
+        ]
+      ],
+      [
+        [
+          "transactions_1k",
+          1001
+        ]
+      ]
+    ]
+  },
+  "before": {
+    "schema": [
+      [
+        "index",
+        "sqlite_autoindex_customers_1",
+        "customers",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_gasstations_1",
+        "gasstations",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_products_1",
+        "products",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_yearmonth_1",
+        "yearmonth",
+        null
+      ],
+      [
+        "table",
+        "customers",
+        "customers",
+        "CREATE TABLE customers\n(\n    CustomerID INTEGER UNIQUE     not null\n        primary key,\n    Segment    TEXT null,\n    Currency   TEXT null\n)"
+      ],
+      [
+        "table",
+        "gasstations",
+        "gasstations",
+        "CREATE TABLE gasstations\n(\n    GasStationID INTEGER    UNIQUE   not null\n        primary key,\n    ChainID      INTEGER          null,\n    Country      TEXT null,\n    Segment      TEXT null\n)"
+      ],
+      [
+        "table",
+        "products",
+        "products",
+        "CREATE TABLE products\n(\n    ProductID   INTEGER   UNIQUE      not null\n        primary key,\n    Description TEXT null\n)"
+      ],
+      [
+        "table",
+        "sqlite_sequence",
+        "sqlite_sequence",
+        "CREATE TABLE sqlite_sequence(name,seq)"
+      ],
+      [
+        "table",
+        "transactions_1k",
+        "transactions_1k",
+        "CREATE TABLE \"transactions_1k\"\n(\n    TransactionID INTEGER\n        primary key autoincrement,\n    Date          DATE,\n    Time          TEXT,\n    CustomerID    INTEGER,\n    CardID        INTEGER,\n    GasStationID  INTEGER,\n    ProductID     INTEGER,\n    Amount        INTEGER,\n    Price         REAL\n)"
+      ],
+      [
+        "table",
+        "yearmonth",
+        "yearmonth",
+        "CREATE TABLE \"yearmonth\"\n(\n    CustomerID  INTEGER not null\n        references customers\n            on update cascade on delete cascade\n        references customers,\n    Date        TEXT    not null,\n    Consumption REAL,\n    primary key (Date, CustomerID)\n)"
+      ]
+    ],
+    "schema_sha256": "c20240a649830a44a3340dd7edb8f66ef0284d702264f13931379fb6775d516c",
+    "constraints": {
+      "customers": {
+        "table_info": [
+          [
+            0,
+            "CustomerID",
+            "INTEGER",
+            1,
+            null,
+            1
+          ],
+          [
+            1,
+            "Segment",
+            "TEXT",
+            0,
+            null,
+            0
+          ],
+          [
+            2,
+            "Currency",
+            "TEXT",
+            0,
+            null,
+            0
+          ]
+        ],
+        "foreign_keys": [],
+        "indexes": [
+          [
+            0,
+            "sqlite_autoindex_customers_1",
+            1,
+            "u",
+            0
+          ]
+        ]
+      },
+      "gasstations": {
+        "table_info": [
+          [
+            0,
+            "GasStationID",
+            "INTEGER",
+            1,
+            null,
+            1
+          ],
+          [
+            1,
+            "ChainID",
+            "INTEGER",
+            0,
+            null,
+            0
+          ],
+          [
+            2,
+            "Country",
+            "TEXT",
+            0,
+            null,
+            0
+          ],
+          [
+            3,
+            "Segment",
+            "TEXT",
+            0,
+            null,
+            0
+          ]
+        ],
+        "foreign_keys": [],
+        "indexes": [
+          [
+            0,
+            "sqlite_autoindex_gasstations_1",
+            1,
+            "u",
+            0
+          ]
+        ]
+      },
+      "products": {
+        "table_info": [
+          [
+            0,
+            "ProductID",
+            "INTEGER",
+            1,
+            null,
+            1
+          ],
+          [
+            1,
+            "Description",
+            "TEXT",
+            0,
+            null,
+            0
+          ]
+        ],
+        "foreign_keys": [],
+        "indexes": [
+          [
+            0,
+            "sqlite_autoindex_products_1",
+            1,
+            "u",
+            0
+          ]
+        ]
+      },
+      "sqlite_sequence": {
+        "table_info": [
+          [
+            0,
+            "name",
+            "",
+            0,
+            null,
+            0
+          ],
+          [
+            1,
+            "seq",
+            "",
+            0,
+            null,
+            0
+          ]
+        ],
+        "foreign_keys": [],
+        "indexes": []
+      },
+      "transactions_1k": {
+        "table_info": [
+          [
+            0,
+            "TransactionID",
+            "INTEGER",
+            0,
+            null,
+            1
+          ],
+          [
+            1,
+            "Date",
+            "DATE",
+            0,
+            null,
+            0
+          ],
+          [
+            2,
+            "Time",
+            "TEXT",
+            0,
+            null,
+            0
+          ],
+          [
+            3,
+            "CustomerID",
+            "INTEGER",
+            0,
+            null,
+            0
+          ],
+          [
+            4,
+            "CardID",
+            "INTEGER",
+            0,
+            null,
+            0
+          ],
+          [
+            5,
+            "GasStationID",
+            "INTEGER",
+            0,
+            null,
+            0
+          ],
+          [
+            6,
+            "ProductID",
+            "INTEGER",
+            0,
+            null,
+            0
+          ],
+          [
+            7,
+            "Amount",
+            "INTEGER",
+            0,
+            null,
+            0
+          ],
+          [
+            8,
+            "Price",
+            "REAL",
+            0,
+            null,
+            0
+          ]
+        ],
+        "foreign_keys": [],
+        "indexes": []
+      },
+      "yearmonth": {
+        "table_info": [
+          [
+            0,
+            "CustomerID",
+            "INTEGER",
+            1,
+            null,
+            2
+          ],
+          [
+            1,
+            "Date",
+            "TEXT",
+            1,
+            null,
+            1
+          ],
+          [
+            2,
+            "Consumption",
+            "REAL",
+            0,
+            null,
+            0
+          ]
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "customers",
+            "CustomerID",
+            null,
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            1,
+            0,
+            "customers",
+            "CustomerID",
+            null,
+            "CASCADE",
+            "CASCADE",
+            "NONE"
+          ]
+        ],
+        "indexes": [
+          [
+            0,
+            "sqlite_autoindex_yearmonth_1",
+            1,
+            "pk",
+            0
+          ]
+        ]
+      }
+    },
+    "table_contents": {
+      "customers": {
+        "rows": 32461,
+        "ordered_rowid_content_sha256": "b6f17e15cd138dd2b0336513b65fc5fc7e033b36dd83d000e0302b0e17ad8d8f"
+      },
+      "gasstations": {
+        "rows": 5716,
+        "ordered_rowid_content_sha256": "69dc5c651a0e27594c788858fe47f752346ba0dd0c32a1915f63b8f44b0e3ff7"
+      },
+      "products": {
+        "rows": 591,
+        "ordered_rowid_content_sha256": "832fa2833c7b2155561452c015aaac0bcc0ccc4dc79b1a211c5bbcff4f715b1b"
+      },
+      "sqlite_sequence": {
+        "rows": 1,
+        "ordered_rowid_content_sha256": "73e882b7494f926333863263a968dbfe05fa6bb0d940777faee1585df8c43214"
+      },
+      "transactions_1k": {
+        "rows": 1000,
+        "ordered_rowid_content_sha256": "72b887f08c07d4dc4f65109d4901d833b28ad9d08cbf818f7a0080288b346f19"
+      },
+      "yearmonth": {
+        "rows": 383282,
+        "ordered_rowid_content_sha256": "ffe9517dc4f2060ea0ab786a5b23454b85106fc3218060ccadd862f86723628d"
+      }
+    },
+    "ddl": "CREATE TABLE customers\n(\n    CustomerID INTEGER UNIQUE     not null\n        primary key,\n    Segment    TEXT null,\n    Currency   TEXT null\n);\n\nCREATE TABLE gasstations\n(\n    GasStationID INTEGER    UNIQUE   not null\n        primary key,\n    ChainID      INTEGER          null,\n    Country      TEXT null,\n    Segment      TEXT null\n);\n\nCREATE TABLE products\n(\n    ProductID   INTEGER   UNIQUE      not null\n        primary key,\n    Description TEXT null\n);\n\nCREATE TABLE \"transactions_1k\"\n(\n    TransactionID INTEGER\n        primary key autoincrement,\n    Date          DATE,\n    Time          TEXT,\n    CustomerID    INTEGER,\n    CardID        INTEGER,\n    GasStationID  INTEGER,\n    ProductID     INTEGER,\n    Amount        INTEGER,\n    Price         REAL\n);\n\nCREATE TABLE \"yearmonth\"\n(\n    CustomerID  INTEGER not null\n        references customers\n            on update cascade on delete cascade\n        references customers,\n    Date        TEXT    not null,\n    Consumption REAL,\n    primary key (Date, CustomerID)\n);",
+    "ddl_sha256": "dbdfb2fbb9d20e7f2691c93b44bebb9f01b6682f72edfe8e32bb867c388de941",
+    "integrity_check": [
+      [
+        "ok"
+      ]
+    ],
+    "foreign_key_check": [],
+    "date_subset": {
+      "transactions": 425,
+      "distinct_customers": 259,
+      "eur_transactions": 7,
+      "distinct_eur_customers": 7
+    },
+    "sqlite_sequence": [
+      [
+        "transactions_1k",
+        1000
+      ]
+    ]
+  },
+  "after": {
+    "schema": [
+      [
+        "index",
+        "sqlite_autoindex_customers_1",
+        "customers",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_gasstations_1",
+        "gasstations",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_products_1",
+        "products",
+        null
+      ],
+      [
+        "index",
+        "sqlite_autoindex_yearmonth_1",
+        "yearmonth",
+        null
+      ],
+      [
+        "table",
+        "customers",
+        "customers",
+        "CREATE TABLE customers\n(\n    CustomerID INTEGER UNIQUE     not null\n        primary key,\n    Segment    TEXT null,\n    Currency   TEXT null\n)"
+      ],
+      [
+        "table",
+        "gasstations",
+        "gasstations",
+        "CREATE TABLE gasstations\n(\n    GasStationID INTEGER    UNIQUE   not null\n        primary key,\n    ChainID      INTEGER          null,\n    Country      TEXT null,\n    Segment      TEXT null\n)"
+      ],
+      [
+        "table",
+        "products",
+        "products",
+        "CREATE TABLE products\n(\n    ProductID   INTEGER   UNIQUE      not null\n        primary key,\n    Description TEXT null\n)"
+      ],
+      [
+        "table",
+        "sqlite_sequence",
+        "sqlite_sequence",
+        "CREATE TABLE sqlite_sequence(name,seq)"
+      ],
+      [
+        "table",
+        "transactions_1k",
+        "transactions_1k",
+        "CREATE TABLE \"transactions_1k\"\n(\n    TransactionID INTEGER\n        primary key autoincrement,\n    Date          DATE,\n    Time          TEXT,\n    CustomerID    INTEGER,\n    CardID        INTEGER,\n    GasStationID  INTEGER,\n    ProductID     INTEGER,\n    Amount        INTEGER,\n    Price         REAL\n)"
+      ],
+      [
+        "table",
+        "yearmonth",
+        "yearmonth",
+        "CREATE TABLE \"yearmonth\"\n(\n    CustomerID  INTEGER not null\n        references customers\n            on update cascade on delete cascade\n        references customers,\n    Date        TEXT    not null,\n    Consumption REAL,\n    primary key (Date, CustomerID)\n)"
+      ]
+    ],
+    "schema_sha256": "c20240a649830a44a3340dd7edb8f66ef0284d702264f13931379fb6775d516c",
+    "constraints": {
+      "customers": {
+        "table_info": [
+          [
+            0,
+            "CustomerID",
+            "INTEGER",
+            1,
+            null,
+            1
+          ],
+          [
+            1,
+            "Segment",
+            "TEXT",
+            0,
+            null,
+            0
+          ],
+          [
+            2,
+            "Currency",
+            "TEXT",
+            0,
+            null,
+            0
+          ]
+        ],
+        "foreign_keys": [],
+        "indexes": [
+          [
+            0,
+            "sqlite_autoindex_customers_1",
+            1,
+            "u",
+            0
+          ]
+        ]
+      },
+      "gasstations": {
+        "table_info": [
+          [
+            0,
+            "GasStationID",
+            "INTEGER",
+            1,
+            null,
+            1
+          ],
+          [
+            1,
+            "ChainID",
+            "INTEGER",
+            0,
+            null,
+            0
+          ],
+          [
+            2,
+            "Country",
+            "TEXT",
+            0,
+            null,
+            0
+          ],
+          [
+            3,
+            "Segment",
+            "TEXT",
+            0,
+            null,
+            0
+          ]
+        ],
+        "foreign_keys": [],
+        "indexes": [
+          [
+            0,
+            "sqlite_autoindex_gasstations_1",
+            1,
+            "u",
+            0
+          ]
+        ]
+      },
+      "products": {
+        "table_info": [
+          [
+            0,
+            "ProductID",
+            "INTEGER",
+            1,
+            null,
+            1
+          ],
+          [
+            1,
+            "Description",
+            "TEXT",
+            0,
+            null,
+            0
+          ]
+        ],
+        "foreign_keys": [],
+        "indexes": [
+          [
+            0,
+            "sqlite_autoindex_products_1",
+            1,
+            "u",
+            0
+          ]
+        ]
+      },
+      "sqlite_sequence": {
+        "table_info": [
+          [
+            0,
+            "name",
+            "",
+            0,
+            null,
+            0
+          ],
+          [
+            1,
+            "seq",
+            "",
+            0,
+            null,
+            0
+          ]
+        ],
+        "foreign_keys": [],
+        "indexes": []
+      },
+      "transactions_1k": {
+        "table_info": [
+          [
+            0,
+            "TransactionID",
+            "INTEGER",
+            0,
+            null,
+            1
+          ],
+          [
+            1,
+            "Date",
+            "DATE",
+            0,
+            null,
+            0
+          ],
+          [
+            2,
+            "Time",
+            "TEXT",
+            0,
+            null,
+            0
+          ],
+          [
+            3,
+            "CustomerID",
+            "INTEGER",
+            0,
+            null,
+            0
+          ],
+          [
+            4,
+            "CardID",
+            "INTEGER",
+            0,
+            null,
+            0
+          ],
+          [
+            5,
+            "GasStationID",
+            "INTEGER",
+            0,
+            null,
+            0
+          ],
+          [
+            6,
+            "ProductID",
+            "INTEGER",
+            0,
+            null,
+            0
+          ],
+          [
+            7,
+            "Amount",
+            "INTEGER",
+            0,
+            null,
+            0
+          ],
+          [
+            8,
+            "Price",
+            "REAL",
+            0,
+            null,
+            0
+          ]
+        ],
+        "foreign_keys": [],
+        "indexes": []
+      },
+      "yearmonth": {
+        "table_info": [
+          [
+            0,
+            "CustomerID",
+            "INTEGER",
+            1,
+            null,
+            2
+          ],
+          [
+            1,
+            "Date",
+            "TEXT",
+            1,
+            null,
+            1
+          ],
+          [
+            2,
+            "Consumption",
+            "REAL",
+            0,
+            null,
+            0
+          ]
+        ],
+        "foreign_keys": [
+          [
+            0,
+            0,
+            "customers",
+            "CustomerID",
+            null,
+            "NO ACTION",
+            "NO ACTION",
+            "NONE"
+          ],
+          [
+            1,
+            0,
+            "customers",
+            "CustomerID",
+            null,
+            "CASCADE",
+            "CASCADE",
+            "NONE"
+          ]
+        ],
+        "indexes": [
+          [
+            0,
+            "sqlite_autoindex_yearmonth_1",
+            1,
+            "pk",
+            0
+          ]
+        ]
+      }
+    },
+    "table_contents": {
+      "customers": {
+        "rows": 32461,
+        "ordered_rowid_content_sha256": "b6f17e15cd138dd2b0336513b65fc5fc7e033b36dd83d000e0302b0e17ad8d8f"
+      },
+      "gasstations": {
+        "rows": 5716,
+        "ordered_rowid_content_sha256": "69dc5c651a0e27594c788858fe47f752346ba0dd0c32a1915f63b8f44b0e3ff7"
+      },
+      "products": {
+        "rows": 591,
+        "ordered_rowid_content_sha256": "832fa2833c7b2155561452c015aaac0bcc0ccc4dc79b1a211c5bbcff4f715b1b"
+      },
+      "sqlite_sequence": {
+        "rows": 1,
+        "ordered_rowid_content_sha256": "df5f46c48ee5d844db17ebd91031318a9de19fcceeac2544e6e8f1a42e6aad59"
+      },
+      "transactions_1k": {
+        "rows": 1001,
+        "ordered_rowid_content_sha256": "0d600d7ffc3b69993d3ce336981c0ec9bbfa8f47457d317f6ad8b28527b9fa5e"
+      },
+      "yearmonth": {
+        "rows": 383282,
+        "ordered_rowid_content_sha256": "ffe9517dc4f2060ea0ab786a5b23454b85106fc3218060ccadd862f86723628d"
+      }
+    },
+    "ddl": "CREATE TABLE customers\n(\n    CustomerID INTEGER UNIQUE     not null\n        primary key,\n    Segment    TEXT null,\n    Currency   TEXT null\n);\n\nCREATE TABLE gasstations\n(\n    GasStationID INTEGER    UNIQUE   not null\n        primary key,\n    ChainID      INTEGER          null,\n    Country      TEXT null,\n    Segment      TEXT null\n);\n\nCREATE TABLE products\n(\n    ProductID   INTEGER   UNIQUE      not null\n        primary key,\n    Description TEXT null\n);\n\nCREATE TABLE \"transactions_1k\"\n(\n    TransactionID INTEGER\n        primary key autoincrement,\n    Date          DATE,\n    Time          TEXT,\n    CustomerID    INTEGER,\n    CardID        INTEGER,\n    GasStationID  INTEGER,\n    ProductID     INTEGER,\n    Amount        INTEGER,\n    Price         REAL\n);\n\nCREATE TABLE \"yearmonth\"\n(\n    CustomerID  INTEGER not null\n        references customers\n            on update cascade on delete cascade\n        references customers,\n    Date        TEXT    not null,\n    Consumption REAL,\n    primary key (Date, CustomerID)\n);",
+    "ddl_sha256": "dbdfb2fbb9d20e7f2691c93b44bebb9f01b6682f72edfe8e32bb867c388de941",
+    "integrity_check": [
+      [
+        "ok"
+      ]
+    ],
+    "foreign_key_check": [],
+    "date_subset": {
+      "transactions": 426,
+      "distinct_customers": 259,
+      "eur_transactions": 8,
+      "distinct_eur_customers": 7
+    },
+    "sqlite_sequence": [
+      [
+        "transactions_1k",
+        1001
+      ]
+    ]
+  },
+  "before_result": {
+    "executions": {
+      "candidate": {
+        "query_sha256": "e59ca11fdf3c6fa6e967d7666699a96d716e1ff7f27d8676a35a8f2d5deb782a",
+        "status": "ok",
+        "seconds": 0.000575,
+        "result_sha256": "b88ad6c8aee061be565f4aa596084841141f5ee53778093da9bce90965094d6f",
+        "rows": 1,
+        "distinct_rows": 1,
+        "preview": [
+          [
+            2.7027027027027026
+          ]
+        ],
+        "columns": [
+          "percentage"
+        ]
+      },
+      "old_reference": {
+        "query_sha256": "5f1338725c8754d95fb70f846fd34f41a304ca7009af0ae1c2f57ef7f6065cac",
+        "status": "ok",
+        "seconds": 0.000371,
+        "result_sha256": "72f6ab59ec35b3f54d07ec82414d5ea680a93c95c8257beaf72fe54616558194",
+        "rows": 1,
+        "distinct_rows": 1,
+        "preview": [
+          [
+            1.6470588235294117
+          ]
+        ],
+        "columns": [
+          "CAST(SUM(IIF(T2.Currency = 'EUR', 1, 0)) AS FLOAT) * 100 / COUNT(T1.CustomerID)"
+        ]
+      },
+      "new_reference": {
+        "query_sha256": "15ce2e842cf1eda539c4774f804b28f2bf1a80371ee1baa46bfe07e0f0dc3675",
+        "status": "ok",
+        "seconds": 0.000368,
+        "result_sha256": "b88ad6c8aee061be565f4aa596084841141f5ee53778093da9bce90965094d6f",
+        "rows": 1,
+        "distinct_rows": 1,
+        "preview": [
+          [
+            2.7027027027027026
+          ]
+        ],
+        "columns": [
+          "CAST(COUNT(DISTINCT IIF(T2.Currency = 'EUR', T1.CustomerID, NULL)) AS FLOAT) * 100 / COUNT(DISTINCT T1.CustomerID)"
+        ]
+      }
+    },
+    "candidate_old_reward": 0,
+    "candidate_new_reward": 1
+  },
+  "after_result": {
+    "executions": {
+      "candidate": {
+        "query_sha256": "e59ca11fdf3c6fa6e967d7666699a96d716e1ff7f27d8676a35a8f2d5deb782a",
+        "status": "ok",
+        "seconds": 0.00044,
+        "result_sha256": "ced6e2d6a12469218ead6b6f7dfb5564a6de424dc06be09ebd6737c842e075df",
+        "rows": 1,
+        "distinct_rows": 1,
+        "preview": [
+          [
+            3.088803088803089
+          ]
+        ],
+        "columns": [
+          "percentage"
+        ]
+      },
+      "old_reference": {
+        "query_sha256": "5f1338725c8754d95fb70f846fd34f41a304ca7009af0ae1c2f57ef7f6065cac",
+        "status": "ok",
+        "seconds": 0.000355,
+        "result_sha256": "f49f4eee88bfacba678d76224d949d7d5842228bd191171bcea55bf9224cec0e",
+        "rows": 1,
+        "distinct_rows": 1,
+        "preview": [
+          [
+            1.8779342723004695
+          ]
+        ],
+        "columns": [
+          "CAST(SUM(IIF(T2.Currency = 'EUR', 1, 0)) AS FLOAT) * 100 / COUNT(T1.CustomerID)"
+        ]
+      },
+      "new_reference": {
+        "query_sha256": "15ce2e842cf1eda539c4774f804b28f2bf1a80371ee1baa46bfe07e0f0dc3675",
+        "status": "ok",
+        "seconds": 0.000406,
+        "result_sha256": "b88ad6c8aee061be565f4aa596084841141f5ee53778093da9bce90965094d6f",
+        "rows": 1,
+        "distinct_rows": 1,
+        "preview": [
+          [
+            2.7027027027027026
+          ]
+        ],
+        "columns": [
+          "CAST(COUNT(DISTINCT IIF(T2.Currency = 'EUR', T1.CustomerID, NULL)) AS FLOAT) * 100 / COUNT(DISTINCT T1.CustomerID)"
+        ]
+      }
+    },
+    "candidate_old_reward": 0,
+    "candidate_new_reward": 0
+  },
+  "limitations": [
+    "One post-hoc constructed counterfactual; not a model failure frequency estimate.",
+    "All declared SQLite constraints pass; undeclared business rules are not verified.",
+    "No inference is rerun. A recorded fixed query is reexecuted.",
+    "The original policy saw schema, question and evidence only, with no database tools or row samples; identical prompt is established for this one-shot protocol, not arbitrary interactive agents.",
+    "Execution agreement on the original database does not establish semantic equivalence of SQL queries."
+  ],
+  "proof_sha256_excluding_latency": "9ef773e1b04620698747be06b5c10fa5f1dacad3acb262f5a0eca2268b105115",
+  "runtime": {
+    "python": "3.9.6",
+    "sqlite": "3.51.0",
+    "elapsed_seconds": 2.961638,
+    "created_utc": "2026-10-31T10:43:13.267439+00:00"
+  }
+}

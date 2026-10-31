@@ -1,0 +1,72 @@
+{
+  "provenance": {
+    "database_sha256": "986817d793479801ed55133e55aa27e335422c0cd3866b54a3d6317b7c5f09c1",
+    "query_sha256": "a88b7b934d2fd405a0fee78ce91deff7c28bf73d7285a7cea11b304575c365dc",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "a88b7b934d2fd405a0fee78ce91deff7c28bf73d7285a7cea11b304575c365dc",
+    "status": "ok",
+    "seconds": 0.00197,
+    "result_sha256": "f6af3c6ffaa768a79bcc51f3dede031cbeb024294c56813c1cf1205a286bf579",
+    "rows": 6,
+    "distinct_rows": 6,
+    "preview": [
+      [
+        "Alisal High",
+        "777 Williams Road",
+        "Salinas",
+        "CA",
+        "93905-1907"
+      ],
+      [
+        "Everett Alvarez High",
+        "1900 Independence Boulevard",
+        "Salinas",
+        "CA",
+        "93906-5300"
+      ],
+      [
+        "North Salinas High",
+        "55 Kip Drive",
+        "Salinas",
+        "CA",
+        "93906-2908"
+      ],
+      [
+        "Salinas High",
+        "726 South Main Street",
+        "Salinas",
+        "CA",
+        "93901-3243"
+      ],
+      [
+        "North Monterey County High",
+        "13990 Castroville Boulevard",
+        "Castroville",
+        "CA",
+        "95012-9749"
+      ]
+    ],
+    "columns": [
+      "School Name",
+      "Street",
+      "City",
+      "State",
+      "Zip"
+    ]
+  }
+}

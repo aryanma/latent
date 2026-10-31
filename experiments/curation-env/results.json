@@ -1,0 +1,853 @@
+{
+  "analysis_sha256": "3e8e1fc54d58557b011cff1b1d887928bce0e1db73c4d92bd60791816330a21a",
+  "controls": [
+    {
+      "mean_reward": 1.0,
+      "policy": "schema_aware",
+      "successes": 48
+    },
+    {
+      "mean_reward": 0.041666666666666664,
+      "policy": "keep_all",
+      "successes": 0
+    },
+    {
+      "mean_reward": 0.0,
+      "policy": "discard_all",
+      "successes": 0
+    },
+    {
+      "mean_reward": 0.11041666666666666,
+      "policy": "normalized_text_dedup",
+      "successes": 0
+    },
+    {
+      "mean_reward": 0.013888888888888888,
+      "policy": "newest_event",
+      "successes": 0
+    },
+    {
+      "mean_reward": 0.75,
+      "policy": "fixed_authority",
+      "successes": 36
+    }
+  ],
+  "environment_manifest_sha256": "6893521e0391e831b45a414390246e0fb0a06d1c203892b66082a91f8ae22730",
+  "exploratory_current_plan": {
+    "backend": "mlx-lm0.32.2 native qwen3_5_moe text-only loader; vision weights stripped by upstream sanitize; no backend patches",
+    "created_utc": "2026-10-31T03:05:20.972459+00:00",
+    "design": "Final exploratory newer-architecture baseline added after Qwen3-1.7B difficulty and during8Bevaluation; not a pure scaling comparison or preregistered originalcomparison.",
+    "development_smoke": [
+      "clean-0",
+      "labels-1",
+      "versions-5",
+      "composition-7"
+    ],
+    "driver_sha256": "c2a1b0a623402e9030fb7300919d83fd3dcd341a1cedd0cc279248005e072192",
+    "evaluation": "all48 frozen episodes if native backend smoke is operational",
+    "history_truncation": false,
+    "manifest_sha256": "6893521e0391e831b45a414390246e0fb0a06d1c203892b66082a91f8ae22730",
+    "max_context": 32768,
+    "max_generated_tokens_per_episode": 4096,
+    "max_steps": 18,
+    "max_tokens_per_turn": 512,
+    "model": "mlx-community/Qwen3.6-35B-A3B-4bit",
+    "model_created_at": "2026-04-16 16:26:18+00:00",
+    "native_template_verification": "native-template-verification.json",
+    "nonthinking": true,
+    "output_repair": false,
+    "prompt_selection": false,
+    "revision": "38740b847e4cb78f352aba30aa41c76e08e6eb46",
+    "runtime_sha256": "c46ecfc4f4236e7e3de5d68250badba9e0d317aee45f959e3450ff1593b434f6",
+    "seed": 42,
+    "setup_limit": "about15min active investigation; stop on unsupported inference rather than backend development",
+    "status": "frozen before any Qwen3.6 inference",
+    "temperature": 0.0,
+    "training": false,
+    "variant": "v2",
+    "weights_sha256": {
+      "model-00001-of-00004.safetensors": "09f3e6ecb0b7af6e6a38bc8169a134c821b0924c2679b2bb8f4426ad38d032b8",
+      "model-00002-of-00004.safetensors": "31dcdb1c49eebdb1505bd14e3cb33f9cf900bd2546b638f2464694ae763a033f",
+      "model-00003-of-00004.safetensors": "3e66de06a1f03dade16a612a368cfce4a4c9caa4efd7d28185454384082cec03",
+      "model-00004-of-00004.safetensors": "a5d0cf03519c26f8b506df6b0ba60526e5c08c8cea22d0c21ce92950e58a5422"
+    }
+  },
+  "exploratory_scale_plan": {
+    "created_utc": "2026-10-31T02:45:13.935782+00:00",
+    "design": "exploratory scale baseline added after observing1.7B difficulty, not preregistered originalcomparison",
+    "development_smoke": [
+      "clean-0",
+      "labels-1",
+      "versions-5",
+      "composition-7"
+    ],
+    "evaluation": "all48 frozenepisodes",
+    "history_truncation": false,
+    "manifest_sha256": "6893521e0391e831b45a414390246e0fb0a06d1c203892b66082a91f8ae22730",
+    "max_context": 32768,
+    "max_generated_tokens_per_episode": 4096,
+    "max_steps": 18,
+    "max_tokens_per_turn": 512,
+    "model": "Qwen/Qwen3-8B-MLX-4bit",
+    "nonthinking": true,
+    "output_repair": false,
+    "prompt_selection": false,
+    "revision": "383413e909f3bc5303ce195ebbdf0339c5a1a2a3",
+    "runtime_changes": "only model repository, revision, weight hash constants",
+    "runtime_sha256": "cde13b8940386612b091a7e840009b1ad671b0fac0b3eb0e11bc21b7cca9edea",
+    "same_driver_sha256": "c2a1b0a623402e9030fb7300919d83fd3dcd341a1cedd0cc279248005e072192",
+    "seed": 42,
+    "status": "frozen before any8B inference",
+    "temperature": 0.0,
+    "training": false,
+    "variant": "v2",
+    "weights_sha256": "fcc83d7537bee76cc143be3e25f8954b816798f93528103db1cddb02977c5617"
+  },
+  "frozen_comparison_plan": {
+    "baseline_and_adapter_same_harness": true,
+    "driver_sha256": "c2a1b0a623402e9030fb7300919d83fd3dcd341a1cedd0cc279248005e072192",
+    "manifest_sha256": "6893521e0391e831b45a414390246e0fb0a06d1c203892b66082a91f8ae22730",
+    "prompt_variant": "v2",
+    "rationale": "0/4 success for both; v2 mean dev reward 0.25 versus 0.0 and collects meaningful evidence",
+    "runtime_sha256": "d4a20e598ce290cb5a63cb75ce5a7c352598bb4d9e09cb7f2ce13899af531b8e",
+    "training_plan": {
+      "batch_size": 1,
+      "checkpoint": "final-120-only",
+      "dropout": 0.0,
+      "families": [
+        "labels",
+        "duplicates",
+        "permissions",
+        "leakage",
+        "versions",
+        "pair"
+      ],
+      "iterations": 120,
+      "learning_rate": 0.0001,
+      "num_layers": 8,
+      "optimizer": "Adam",
+      "rank": 8,
+      "save_frequency": 40,
+      "scale": 20.0,
+      "seed": 42,
+      "selection_on_evaluation": false,
+      "train_seed_start": 10000,
+      "training_worlds": 96,
+      "validation_batches": 12,
+      "validation_frequency": 20,
+      "validation_seed_start": 20000,
+      "validation_worlds": 12
+    }
+  },
+  "models": {
+    "adapted": {
+      "archive_directory": "model/curation-eval-sft",
+      "both_contracts_solved": 0,
+      "elapsed_episode_seconds": 1065.9025348335272,
+      "episodes": 48,
+      "failure_diagnostics_nonexclusive": {
+        "failed_provenance": 0,
+        "failed_safe": 2,
+        "failed_unique": 3,
+        "incomplete_coverage": 0,
+        "incorrect_retained_labels": 7,
+        "submitted_incomplete": 7,
+        "unsubmitted": 41
+      },
+      "mean_reward": 0.03125,
+      "model": {
+        "adapter_path": "/tmp/latent-local-model-20261030/curation-sft/adapter",
+        "driver_sha256": "c2a1b0a623402e9030fb7300919d83fd3dcd341a1cedd0cc279248005e072192",
+        "environment_manifest_digest": "6893521e0391e831b45a414390246e0fb0a06d1c203892b66082a91f8ae22730",
+        "episode_generation_limit": 4096,
+        "load_seconds": 0.31786425004247576,
+        "max_steps": 18,
+        "model_repository": "Qwen/Qwen3-1.7B-MLX-4bit",
+        "model_revision": "21457c6f51ed54a7c16e988c0844db973815c137",
+        "no_context_truncation": true,
+        "no_output_repair": true,
+        "per_turn_generation_limit": 512,
+        "runtime_sha256": "d4a20e598ce290cb5a63cb75ce5a7c352598bb4d9e09cb7f2ce13899af531b8e",
+        "seed": 42,
+        "source_files": {
+          "latent_curation/__init__.py": "ca454212891c0ec39f572e21a778547bec1be75fe116678373b17a81218ada33",
+          "latent_curation/environment.py": "047c741e5df2fd85ca71fdc7972366091f914a6d7df020a1497c7c73efbfd13f",
+          "tasks/development.json": "ba6d17336f22f257247856474a9e63a16c2006b9eda02e624b76ab7f30567f3d",
+          "tasks/evaluation.json": "5eef8563b1fe02f396835386cdb071f7135ce06dc33f4d6fa6cf434a717e244d",
+          "tasks/manifest.json": "f1efacdb3c30b16caa3a585c58bad2997104893d9f8b298e1b459e038d2ba01a"
+        },
+        "source_split": "evaluation",
+        "system_prompt": "You control the listed tools of a data-curation environment. Follow its contract and finish by calling submit. You have 18 tool calls and 4096 generated tokens total.\nCRITICAL OUTPUT FORMAT: Produce exactly one JSON action and STOP immediately after its closing brace. Do not produce a second action, markdown, reasoning, or a simulated observation. The environment, not you, supplies the next observation. Schema example only: {\"tool\":\"lookup\",\"args\":{\"table\":\"registry\",\"keys\":[\"TICKET_ID_FROM_OBSERVATION\"]}}. The example ID is a placeholder; never send it literally. Invalid JSON is rejected, costs one step, and is not repaired.\nUseful procedure using only visible information:\n1. inspect all candidate rows. Read each row's exact ticket_id and id.\n2. lookup registry using ticket_id keys. Registry records supply case_id, lineage_id, and training_allowed.\n3. lookup evaluation using lineage_id keys. lookup events using case_id keys. These are different key types; copy their exact values from observations. Batch keys when possible.\n4. Exclude disallowed rows, evaluation-overlap lineages, and extra copies of the same lineage. Preserve exactly one representative of every eligible lineage; different lineages may share text.\n5. For each kept row, select the latest APPROVED event from the contract's authority at or before its cutoff. Ignore other authorities, drafts, and later events. Normalize its category through the supplied aliases. Repair only labels needing changes, citing that inspected event's id, never a registry or lineage id. Use only canonical labels.\n6. When all contract conditions are satisfied, submit. check only reports structural information, not the private correct answer.\nReturn only the NEXT single action object now, then stop and wait for the real result.",
+        "task_ids": [
+          "labels-1000",
+          "duplicates-1001",
+          "permissions-1002",
+          "leakage-1003",
+          "versions-1004",
+          "pair-1005",
+          "labels-1006",
+          "duplicates-1007",
+          "permissions-1008",
+          "leakage-1009",
+          "versions-1010",
+          "pair-1011",
+          "labels-1012",
+          "duplicates-1013",
+          "permissions-1014",
+          "leakage-1015",
+          "versions-1016",
+          "pair-1017",
+          "labels-1018",
+          "duplicates-1019",
+          "permissions-1020",
+          "leakage-1021",
+          "versions-1022",
+          "pair-1023",
+          "composition-2000",
+          "composition-2001",
+          "composition-2002",
+          "composition-2003",
+          "composition-2004",
+          "composition-2005",
+          "composition-2006",
+          "composition-2007",
+          "composition-2008",
+          "composition-2009",
+          "composition-2010",
+          "composition-2011",
+          "policy_shift-2000",
+          "policy_shift-2001",
+          "policy_shift-2002",
+          "policy_shift-2003",
+          "policy_shift-2004",
+          "policy_shift-2005",
+          "policy_shift-2006",
+          "policy_shift-2007",
+          "policy_shift-2008",
+          "policy_shift-2009",
+          "policy_shift-2010",
+          "policy_shift-2011"
+        ],
+        "temperature": 0.0,
+        "variant": "v2"
+      },
+      "policy_pairs": 12,
+      "splits": {
+        "composition": {
+          "episodes": 12,
+          "mean_reward": 0.0,
+          "successes": 0
+        },
+        "policy_shift": {
+          "episodes": 12,
+          "mean_reward": 0.0,
+          "successes": 0
+        },
+        "single_or_pair": {
+          "episodes": 24,
+          "mean_reward": 0.0625,
+          "successes": 0
+        }
+      },
+      "successes": 0,
+      "terminations": {
+        "budget_exhausted": 11,
+        "generation_budget_exhausted": 30,
+        "submitted": 7
+      },
+      "totals": {
+        "episodes_with_repeated_lookups": 18,
+        "generation_tokens": 149972,
+        "invalid_action_count": 249,
+        "invalid_json_count": 248,
+        "malformed_json_at_generation_limit": 248,
+        "repeated_identical_successful_lookups": 205,
+        "steps": 598,
+        "turns_hitting_generation_limit": 248
+      }
+    },
+    "base": {
+      "archive_directory": "model/curation-eval-base",
+      "both_contracts_solved": 0,
+      "elapsed_episode_seconds": 234.7041691225022,
+      "episodes": 48,
+      "failure_diagnostics_nonexclusive": {
+        "failed_provenance": 0,
+        "failed_safe": 19,
+        "failed_unique": 19,
+        "incomplete_coverage": 11,
+        "incorrect_retained_labels": 26,
+        "submitted_incomplete": 37,
+        "unsubmitted": 11
+      },
+      "mean_reward": 0.0625,
+      "model": {
+        "adapter_path": null,
+        "driver_sha256": "c2a1b0a623402e9030fb7300919d83fd3dcd341a1cedd0cc279248005e072192",
+        "environment_manifest_digest": "6893521e0391e831b45a414390246e0fb0a06d1c203892b66082a91f8ae22730",
+        "episode_generation_limit": 4096,
+        "load_seconds": 0.2858847921015695,
+        "max_steps": 18,
+        "model_repository": "Qwen/Qwen3-1.7B-MLX-4bit",
+        "model_revision": "21457c6f51ed54a7c16e988c0844db973815c137",
+        "no_context_truncation": true,
+        "no_output_repair": true,
+        "per_turn_generation_limit": 512,
+        "runtime_sha256": "d4a20e598ce290cb5a63cb75ce5a7c352598bb4d9e09cb7f2ce13899af531b8e",
+        "seed": 42,
+        "source_files": {
+          "latent_curation/__init__.py": "ca454212891c0ec39f572e21a778547bec1be75fe116678373b17a81218ada33",
+          "latent_curation/environment.py": "047c741e5df2fd85ca71fdc7972366091f914a6d7df020a1497c7c73efbfd13f",
+          "tasks/development.json": "ba6d17336f22f257247856474a9e63a16c2006b9eda02e624b76ab7f30567f3d",
+          "tasks/evaluation.json": "5eef8563b1fe02f396835386cdb071f7135ce06dc33f4d6fa6cf434a717e244d",
+          "tasks/manifest.json": "f1efacdb3c30b16caa3a585c58bad2997104893d9f8b298e1b459e038d2ba01a"
+        },
+        "source_split": "evaluation",
+        "system_prompt": "You control the listed tools of a data-curation environment. Follow its contract and finish by calling submit. You have 18 tool calls and 4096 generated tokens total.\nCRITICAL OUTPUT FORMAT: Produce exactly one JSON action and STOP immediately after its closing brace. Do not produce a second action, markdown, reasoning, or a simulated observation. The environment, not you, supplies the next observation. Schema example only: {\"tool\":\"lookup\",\"args\":{\"table\":\"registry\",\"keys\":[\"TICKET_ID_FROM_OBSERVATION\"]}}. The example ID is a placeholder; never send it literally. Invalid JSON is rejected, costs one step, and is not repaired.\nUseful procedure using only visible information:\n1. inspect all candidate rows. Read each row's exact ticket_id and id.\n2. lookup registry using ticket_id keys. Registry records supply case_id, lineage_id, and training_allowed.\n3. lookup evaluation using lineage_id keys. lookup events using case_id keys. These are different key types; copy their exact values from observations. Batch keys when possible.\n4. Exclude disallowed rows, evaluation-overlap lineages, and extra copies of the same lineage. Preserve exactly one representative of every eligible lineage; different lineages may share text.\n5. For each kept row, select the latest APPROVED event from the contract's authority at or before its cutoff. Ignore other authorities, drafts, and later events. Normalize its category through the supplied aliases. Repair only labels needing changes, citing that inspected event's id, never a registry or lineage id. Use only canonical labels.\n6. When all contract conditions are satisfied, submit. check only reports structural information, not the private correct answer.\nReturn only the NEXT single action object now, then stop and wait for the real result.",
+        "task_ids": [
+          "labels-1000",
+          "duplicates-1001",
+          "permissions-1002",
+          "leakage-1003",
+          "versions-1004",
+          "pair-1005",
+          "labels-1006",
+          "duplicates-1007",
+          "permissions-1008",
+          "leakage-1009",
+          "versions-1010",
+          "pair-1011",
+          "labels-1012",
+          "duplicates-1013",
+          "permissions-1014",
+          "leakage-1015",
+          "versions-1016",
+          "pair-1017",
+          "labels-1018",
+          "duplicates-1019",
+          "permissions-1020",
+          "leakage-1021",
+          "versions-1022",
+          "pair-1023",
+          "composition-2000",
+          "composition-2001",
+          "composition-2002",
+          "composition-2003",
+          "composition-2004",
+          "composition-2005",
+          "composition-2006",
+          "composition-2007",
+          "composition-2008",
+          "composition-2009",
+          "composition-2010",
+          "composition-2011",
+          "policy_shift-2000",
+          "policy_shift-2001",
+          "policy_shift-2002",
+          "policy_shift-2003",
+          "policy_shift-2004",
+          "policy_shift-2005",
+          "policy_shift-2006",
+          "policy_shift-2007",
+          "policy_shift-2008",
+          "policy_shift-2009",
+          "policy_shift-2010",
+          "policy_shift-2011"
+        ],
+        "temperature": 0.0,
+        "variant": "v2"
+      },
+      "policy_pairs": 12,
+      "splits": {
+        "composition": {
+          "episodes": 12,
+          "mean_reward": 0.0,
+          "successes": 0
+        },
+        "policy_shift": {
+          "episodes": 12,
+          "mean_reward": 0.0,
+          "successes": 0
+        },
+        "single_or_pair": {
+          "episodes": 24,
+          "mean_reward": 0.125,
+          "successes": 0
+        }
+      },
+      "successes": 0,
+      "terminations": {
+        "budget_exhausted": 11,
+        "submitted": 37
+      },
+      "totals": {
+        "episodes_with_repeated_lookups": 8,
+        "generation_tokens": 30612,
+        "invalid_action_count": 46,
+        "invalid_json_count": 6,
+        "malformed_json_at_generation_limit": 0,
+        "repeated_identical_successful_lookups": 25,
+        "steps": 587,
+        "turns_hitting_generation_limit": 0
+      }
+    },
+    "currentmoe": {
+      "archive_directory": "model/currentmoe/curation-eval-base",
+      "both_contracts_solved": 0,
+      "elapsed_episode_seconds": 618.3048104180489,
+      "episodes": 48,
+      "failure_diagnostics_nonexclusive": {
+        "failed_provenance": 26,
+        "failed_safe": 16,
+        "failed_unique": 18,
+        "incomplete_coverage": 16,
+        "incorrect_retained_labels": 36,
+        "submitted_incomplete": 42,
+        "unsubmitted": 1
+      },
+      "mean_reward": 0.13541666666666666,
+      "model": {
+        "adapter_path": null,
+        "driver_sha256": "c2a1b0a623402e9030fb7300919d83fd3dcd341a1cedd0cc279248005e072192",
+        "environment_manifest_digest": "6893521e0391e831b45a414390246e0fb0a06d1c203892b66082a91f8ae22730",
+        "episode_generation_limit": 4096,
+        "load_seconds": 2.3515153330517933,
+        "max_steps": 18,
+        "model_repository": "mlx-community/Qwen3.6-35B-A3B-4bit",
+        "model_revision": "38740b847e4cb78f352aba30aa41c76e08e6eb46",
+        "no_context_truncation": true,
+        "no_output_repair": true,
+        "per_turn_generation_limit": 512,
+        "runtime_sha256": "c46ecfc4f4236e7e3de5d68250badba9e0d317aee45f959e3450ff1593b434f6",
+        "seed": 42,
+        "source_files": {
+          "latent_curation/__init__.py": "ca454212891c0ec39f572e21a778547bec1be75fe116678373b17a81218ada33",
+          "latent_curation/environment.py": "047c741e5df2fd85ca71fdc7972366091f914a6d7df020a1497c7c73efbfd13f",
+          "tasks/development.json": "ba6d17336f22f257247856474a9e63a16c2006b9eda02e624b76ab7f30567f3d",
+          "tasks/evaluation.json": "5eef8563b1fe02f396835386cdb071f7135ce06dc33f4d6fa6cf434a717e244d",
+          "tasks/manifest.json": "f1efacdb3c30b16caa3a585c58bad2997104893d9f8b298e1b459e038d2ba01a"
+        },
+        "source_split": "evaluation",
+        "system_prompt": "You control the listed tools of a data-curation environment. Follow its contract and finish by calling submit. You have 18 tool calls and 4096 generated tokens total.\nCRITICAL OUTPUT FORMAT: Produce exactly one JSON action and STOP immediately after its closing brace. Do not produce a second action, markdown, reasoning, or a simulated observation. The environment, not you, supplies the next observation. Schema example only: {\"tool\":\"lookup\",\"args\":{\"table\":\"registry\",\"keys\":[\"TICKET_ID_FROM_OBSERVATION\"]}}. The example ID is a placeholder; never send it literally. Invalid JSON is rejected, costs one step, and is not repaired.\nUseful procedure using only visible information:\n1. inspect all candidate rows. Read each row's exact ticket_id and id.\n2. lookup registry using ticket_id keys. Registry records supply case_id, lineage_id, and training_allowed.\n3. lookup evaluation using lineage_id keys. lookup events using case_id keys. These are different key types; copy their exact values from observations. Batch keys when possible.\n4. Exclude disallowed rows, evaluation-overlap lineages, and extra copies of the same lineage. Preserve exactly one representative of every eligible lineage; different lineages may share text.\n5. For each kept row, select the latest APPROVED event from the contract's authority at or before its cutoff. Ignore other authorities, drafts, and later events. Normalize its category through the supplied aliases. Repair only labels needing changes, citing that inspected event's id, never a registry or lineage id. Use only canonical labels.\n6. When all contract conditions are satisfied, submit. check only reports structural information, not the private correct answer.\nReturn only the NEXT single action object now, then stop and wait for the real result.",
+        "task_ids": [
+          "labels-1000",
+          "duplicates-1001",
+          "permissions-1002",
+          "leakage-1003",
+          "versions-1004",
+          "pair-1005",
+          "labels-1006",
+          "duplicates-1007",
+          "permissions-1008",
+          "leakage-1009",
+          "versions-1010",
+          "pair-1011",
+          "labels-1012",
+          "duplicates-1013",
+          "permissions-1014",
+          "leakage-1015",
+          "versions-1016",
+          "pair-1017",
+          "labels-1018",
+          "duplicates-1019",
+          "permissions-1020",
+          "leakage-1021",
+          "versions-1022",
+          "pair-1023",
+          "composition-2000",
+          "composition-2001",
+          "composition-2002",
+          "composition-2003",
+          "composition-2004",
+          "composition-2005",
+          "composition-2006",
+          "composition-2007",
+          "composition-2008",
+          "composition-2009",
+          "composition-2010",
+          "composition-2011",
+          "policy_shift-2000",
+          "policy_shift-2001",
+          "policy_shift-2002",
+          "policy_shift-2003",
+          "policy_shift-2004",
+          "policy_shift-2005",
+          "policy_shift-2006",
+          "policy_shift-2007",
+          "policy_shift-2008",
+          "policy_shift-2009",
+          "policy_shift-2010",
+          "policy_shift-2011"
+        ],
+        "temperature": 0.0,
+        "variant": "v2"
+      },
+      "policy_pairs": 12,
+      "splits": {
+        "composition": {
+          "episodes": 12,
+          "mean_reward": 0.0625,
+          "successes": 0
+        },
+        "policy_shift": {
+          "episodes": 12,
+          "mean_reward": 0.14583333333333334,
+          "successes": 1
+        },
+        "single_or_pair": {
+          "episodes": 24,
+          "mean_reward": 0.16666666666666666,
+          "successes": 4
+        }
+      },
+      "successes": 5,
+      "terminations": {
+        "budget_exhausted": 1,
+        "submitted": 47
+      },
+      "totals": {
+        "episodes_with_repeated_lookups": 0,
+        "generation_tokens": 38580,
+        "invalid_action_count": 38,
+        "invalid_json_count": 19,
+        "malformed_json_at_generation_limit": 13,
+        "repeated_identical_successful_lookups": 0,
+        "steps": 453,
+        "turns_hitting_generation_limit": 13
+      }
+    },
+    "scale8b": {
+      "archive_directory": "model/scale8b/curation-eval-base",
+      "both_contracts_solved": 0,
+      "elapsed_episode_seconds": 1338.9045138800284,
+      "episodes": 48,
+      "failure_diagnostics_nonexclusive": {
+        "failed_provenance": 13,
+        "failed_safe": 13,
+        "failed_unique": 8,
+        "incomplete_coverage": 37,
+        "incorrect_retained_labels": 31,
+        "submitted_incomplete": 44,
+        "unsubmitted": 4
+      },
+      "mean_reward": 0.02395833333333333,
+      "model": {
+        "adapter_path": null,
+        "driver_sha256": "c2a1b0a623402e9030fb7300919d83fd3dcd341a1cedd0cc279248005e072192",
+        "environment_manifest_digest": "6893521e0391e831b45a414390246e0fb0a06d1c203892b66082a91f8ae22730",
+        "episode_generation_limit": 4096,
+        "load_seconds": 0.3975627499166876,
+        "max_steps": 18,
+        "model_repository": "Qwen/Qwen3-8B-MLX-4bit",
+        "model_revision": "383413e909f3bc5303ce195ebbdf0339c5a1a2a3",
+        "no_context_truncation": true,
+        "no_output_repair": true,
+        "per_turn_generation_limit": 512,
+        "runtime_sha256": "cde13b8940386612b091a7e840009b1ad671b0fac0b3eb0e11bc21b7cca9edea",
+        "seed": 42,
+        "source_files": {
+          "latent_curation/__init__.py": "ca454212891c0ec39f572e21a778547bec1be75fe116678373b17a81218ada33",
+          "latent_curation/environment.py": "047c741e5df2fd85ca71fdc7972366091f914a6d7df020a1497c7c73efbfd13f",
+          "tasks/development.json": "ba6d17336f22f257247856474a9e63a16c2006b9eda02e624b76ab7f30567f3d",
+          "tasks/evaluation.json": "5eef8563b1fe02f396835386cdb071f7135ce06dc33f4d6fa6cf434a717e244d",
+          "tasks/manifest.json": "f1efacdb3c30b16caa3a585c58bad2997104893d9f8b298e1b459e038d2ba01a"
+        },
+        "source_split": "evaluation",
+        "system_prompt": "You control the listed tools of a data-curation environment. Follow its contract and finish by calling submit. You have 18 tool calls and 4096 generated tokens total.\nCRITICAL OUTPUT FORMAT: Produce exactly one JSON action and STOP immediately after its closing brace. Do not produce a second action, markdown, reasoning, or a simulated observation. The environment, not you, supplies the next observation. Schema example only: {\"tool\":\"lookup\",\"args\":{\"table\":\"registry\",\"keys\":[\"TICKET_ID_FROM_OBSERVATION\"]}}. The example ID is a placeholder; never send it literally. Invalid JSON is rejected, costs one step, and is not repaired.\nUseful procedure using only visible information:\n1. inspect all candidate rows. Read each row's exact ticket_id and id.\n2. lookup registry using ticket_id keys. Registry records supply case_id, lineage_id, and training_allowed.\n3. lookup evaluation using lineage_id keys. lookup events using case_id keys. These are different key types; copy their exact values from observations. Batch keys when possible.\n4. Exclude disallowed rows, evaluation-overlap lineages, and extra copies of the same lineage. Preserve exactly one representative of every eligible lineage; different lineages may share text.\n5. For each kept row, select the latest APPROVED event from the contract's authority at or before its cutoff. Ignore other authorities, drafts, and later events. Normalize its category through the supplied aliases. Repair only labels needing changes, citing that inspected event's id, never a registry or lineage id. Use only canonical labels.\n6. When all contract conditions are satisfied, submit. check only reports structural information, not the private correct answer.\nReturn only the NEXT single action object now, then stop and wait for the real result.",
+        "task_ids": [
+          "labels-1000",
+          "duplicates-1001",
+          "permissions-1002",
+          "leakage-1003",
+          "versions-1004",
+          "pair-1005",
+          "labels-1006",
+          "duplicates-1007",
+          "permissions-1008",
+          "leakage-1009",
+          "versions-1010",
+          "pair-1011",
+          "labels-1012",
+          "duplicates-1013",
+          "permissions-1014",
+          "leakage-1015",
+          "versions-1016",
+          "pair-1017",
+          "labels-1018",
+          "duplicates-1019",
+          "permissions-1020",
+          "leakage-1021",
+          "versions-1022",
+          "pair-1023",
+          "composition-2000",
+          "composition-2001",
+          "composition-2002",
+          "composition-2003",
+          "composition-2004",
+          "composition-2005",
+          "composition-2006",
+          "composition-2007",
+          "composition-2008",
+          "composition-2009",
+          "composition-2010",
+          "composition-2011",
+          "policy_shift-2000",
+          "policy_shift-2001",
+          "policy_shift-2002",
+          "policy_shift-2003",
+          "policy_shift-2004",
+          "policy_shift-2005",
+          "policy_shift-2006",
+          "policy_shift-2007",
+          "policy_shift-2008",
+          "policy_shift-2009",
+          "policy_shift-2010",
+          "policy_shift-2011"
+        ],
+        "temperature": 0.0,
+        "variant": "v2"
+      },
+      "policy_pairs": 12,
+      "splits": {
+        "composition": {
+          "episodes": 12,
+          "mean_reward": 0.020833333333333332,
+          "successes": 0
+        },
+        "policy_shift": {
+          "episodes": 12,
+          "mean_reward": 0.0,
+          "successes": 0
+        },
+        "single_or_pair": {
+          "episodes": 24,
+          "mean_reward": 0.0375,
+          "successes": 0
+        }
+      },
+      "successes": 0,
+      "terminations": {
+        "budget_exhausted": 3,
+        "generation_budget_exhausted": 1,
+        "submitted": 44
+      },
+      "totals": {
+        "episodes_with_repeated_lookups": 0,
+        "generation_tokens": 47992,
+        "invalid_action_count": 53,
+        "invalid_json_count": 1,
+        "malformed_json_at_generation_limit": 1,
+        "repeated_identical_successful_lookups": 0,
+        "steps": 570,
+        "turns_hitting_generation_limit": 1
+      }
+    }
+  },
+  "scope": "Synthetic workflow completion; 48 episodes from 36 worlds. The 12 policy pairs are correlated. One seed per model. No downstream model utility was measured.",
+  "training": {
+    "checkpoints": {
+      "0000040_adapters.safetensors": "eaa4090e0a213b078b5ac2054ca96b1cf3bb8847b88060be2ccac7ee70328b30",
+      "0000080_adapters.safetensors": "b2b2b1ffe9900c40008ca02eed25616b8e9943792873904ec52a2730a88a0619",
+      "0000120_adapters.safetensors": "e51c66146f1d3af7e4712f45ce01853b5f6e96d2b6742a5bb4e4f18bef599054",
+      "adapters.safetensors": "e51c66146f1d3af7e4712f45ce01853b5f6e96d2b6742a5bb4e4f18bef599054"
+    },
+    "elapsed_seconds": 87.46373850002419,
+    "final_checkpoint_sha256": "e51c66146f1d3af7e4712f45ce01853b5f6e96d2b6742a5bb4e4f18bef599054",
+    "iterations": 120,
+    "metrics": [
+      {
+        "elapsed_seconds": 4.448891916079447,
+        "iteration": 0,
+        "kind": "validation",
+        "val_loss": 0.3933238387107849,
+        "val_time": 4.431344709009863
+      },
+      {
+        "elapsed_seconds": 15.318622416001745,
+        "iteration": 10,
+        "iterations_per_second": 0.9222750118855387,
+        "kind": "train",
+        "learning_rate": 9.999999747378752e-05,
+        "peak_memory": 4.704392336,
+        "tokens_per_second": 88.63062864220028,
+        "train_loss": 0.5351404190063477,
+        "trained_tokens": 961
+      },
+      {
+        "elapsed_seconds": 23.034177875029854,
+        "iteration": 19,
+        "kind": "validation",
+        "val_loss": 0.2177540361881256,
+        "val_time": 3.0093965410487726
+      },
+      {
+        "elapsed_seconds": 23.43629800004419,
+        "iteration": 20,
+        "iterations_per_second": 1.9710170970899066,
+        "kind": "train",
+        "learning_rate": 9.999999747378752e-05,
+        "peak_memory": 4.704392336,
+        "tokens_per_second": 157.68136776719254,
+        "train_loss": 0.6557853698730469,
+        "trained_tokens": 1761
+      },
+      {
+        "elapsed_seconds": 28.44152120803483,
+        "iteration": 30,
+        "iterations_per_second": 2.0092600599608614,
+        "kind": "train",
+        "learning_rate": 9.999999747378752e-05,
+        "peak_memory": 4.704540506,
+        "tokens_per_second": 96.84633489011351,
+        "train_loss": 0.2897545337677002,
+        "trained_tokens": 2243
+      },
+      {
+        "elapsed_seconds": 35.03981141606346,
+        "iteration": 39,
+        "kind": "validation",
+        "val_loss": 0.7053509950637817,
+        "val_time": 3.001595708075911
+      },
+      {
+        "elapsed_seconds": 35.72917025000788,
+        "iteration": 40,
+        "iterations_per_second": 2.348020049659593,
+        "kind": "train",
+        "learning_rate": 9.999999747378752e-05,
+        "peak_memory": 4.704540506,
+        "tokens_per_second": 92.98159396651988,
+        "train_loss": 0.36496994495391843,
+        "trained_tokens": 2639
+      },
+      {
+        "elapsed_seconds": 41.09427870810032,
+        "iteration": 50,
+        "iterations_per_second": 1.8783076559528322,
+        "kind": "train",
+        "learning_rate": 9.999999747378752e-05,
+        "peak_memory": 4.704540506,
+        "tokens_per_second": 98.79898270311898,
+        "train_loss": 0.28968091011047364,
+        "trained_tokens": 3165
+      },
+      {
+        "elapsed_seconds": 48.51019979105331,
+        "iteration": 59,
+        "kind": "validation",
+        "val_loss": 0.19612900912761688,
+        "val_time": 2.989177625044249
+      },
+      {
+        "elapsed_seconds": 48.85583304101601,
+        "iteration": 60,
+        "iterations_per_second": 2.102188504154564,
+        "kind": "train",
+        "learning_rate": 9.999999747378752e-05,
+        "peak_memory": 4.704540506,
+        "tokens_per_second": 146.5225387395731,
+        "train_loss": 0.3453589916229248,
+        "trained_tokens": 3862
+      },
+      {
+        "elapsed_seconds": 52.921521625015885,
+        "iteration": 70,
+        "iterations_per_second": 2.479927493525428,
+        "kind": "train",
+        "learning_rate": 9.999999747378752e-05,
+        "peak_memory": 4.704540506,
+        "tokens_per_second": 141.10787438159684,
+        "train_loss": 0.42654943466186523,
+        "trained_tokens": 4431
+      },
+      {
+        "elapsed_seconds": 60.272653166088276,
+        "iteration": 79,
+        "kind": "validation",
+        "val_loss": 0.09005148708820343,
+        "val_time": 2.9923989579547197
+      },
+      {
+        "elapsed_seconds": 60.495298291090876,
+        "iteration": 80,
+        "iterations_per_second": 2.199643170097515,
+        "kind": "train",
+        "learning_rate": 9.999999747378752e-05,
+        "peak_memory": 4.704540506,
+        "tokens_per_second": 160.13402278309908,
+        "train_loss": 0.311061692237854,
+        "trained_tokens": 5159
+      },
+      {
+        "elapsed_seconds": 64.12187191599514,
+        "iteration": 90,
+        "iterations_per_second": 2.7807560191248397,
+        "kind": "train",
+        "learning_rate": 9.999999747378752e-05,
+        "peak_memory": 4.704540506,
+        "tokens_per_second": 131.8078353065174,
+        "train_loss": 0.07559048533439636,
+        "trained_tokens": 5633
+      },
+      {
+        "elapsed_seconds": 71.88319125003181,
+        "iteration": 99,
+        "kind": "validation",
+        "val_loss": 0.13810759782791138,
+        "val_time": 2.971593916998245
+      },
+      {
+        "elapsed_seconds": 72.64514933305327,
+        "iteration": 100,
+        "iterations_per_second": 1.8094340955013488,
+        "kind": "train",
+        "learning_rate": 9.999999747378752e-05,
+        "peak_memory": 4.704540506,
+        "tokens_per_second": 127.5651037328451,
+        "train_loss": 0.3275862216949463,
+        "trained_tokens": 6338
+      },
+      {
+        "elapsed_seconds": 77.61796750000212,
+        "iteration": 110,
+        "iterations_per_second": 2.0199165957403,
+        "kind": "train",
+        "learning_rate": 9.999999747378752e-05,
+        "peak_memory": 4.704540506,
+        "tokens_per_second": 140.18221174437684,
+        "train_loss": 0.09169172644615173,
+        "trained_tokens": 7032
+      },
+      {
+        "elapsed_seconds": 84.170274041011,
+        "iteration": 119,
+        "kind": "validation",
+        "val_loss": 0.07064255326986313,
+        "val_time": 2.9817274579545483
+      },
+      {
+        "elapsed_seconds": 84.47589954105206,
+        "iteration": 120,
+        "iterations_per_second": 2.5991326239637687,
+        "kind": "train",
+        "learning_rate": 9.999999747378752e-05,
+        "peak_memory": 4.704540506,
+        "tokens_per_second": 193.115553960508,
+        "train_loss": 0.030088317394256592,
+        "trained_tokens": 7775
+      },
+      {
+        "elapsed_seconds": 87.45946191600524,
+        "iteration": 120,
+        "kind": "final_validation",
+        "val_loss": 0.07103534042835236
+      }
+    ],
+    "network_attempts": [],
+    "peak_mlx_memory_bytes": 4704540506,
+    "trainable_parameters": 2490368,
+    "training_method": "QLoRA supervised behavior cloning, not reinforcement learning"
+  },
+  "unfinished_rollout_rule": "Token-budget exhaustion without submission receives harness score zero, not a graded dataset score.",
+  "version": 1
+}

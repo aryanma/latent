@@ -1,0 +1,39 @@
+{
+  "all_outputs_byte_identical": true,
+  "audit_script_sha256": "99803ad1554614acbd0b03d11161f274f6ff0135d14d8397181497ec4d8ee213",
+  "files": {
+    "eligible-tasks.json": {
+      "byte_identical": true,
+      "bytes": 115193,
+      "sha256": "47db2081243fafcdfd8555b0e0ef79ea4c1323c2694db915a3d9e54f38e95e9a"
+    },
+    "results.json": {
+      "byte_identical": true,
+      "bytes": 350875,
+      "sha256": "6afe548871f662e2e7a3de4c51e5bff4af725767fe84f898da19ac121e9d3b2c"
+    },
+    "source-manifest.json": {
+      "byte_identical": true,
+      "bytes": 1603,
+      "sha256": "c6f9f7d0041aa7a1fe5bfd9c20700fdf302faee7f4e987a0205722951b6ca147"
+    },
+    "summary.json": {
+      "byte_identical": true,
+      "bytes": 7532,
+      "sha256": "57f338b7f097cc20173df233d5ac31c9f6ea78c6eec87df7d986513f074306a9"
+    },
+    "trajectory-evidence.json": {
+      "byte_identical": true,
+      "bytes": 1928025,
+      "sha256": "70f7453a7ed8b02e379df5863b07e91e7c0e3b91fe335bcf5c5af6475828c4e0"
+    }
+  },
+  "independent_process_runs": 2,
+  "model_calls_in_scoring": 0,
+  "network_attempts_during_imports_and_scoring": 0,
+  "scored_probes_per_run": 247,
+  "scoring_exceptions": 0,
+  "tool_execution_errors": 0,
+  "total_scored_probes": 494,
+  "upstream_worktree_clean": true
+}

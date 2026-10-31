@@ -1,0 +1,44 @@
+{
+  "files": {
+    "MODEL-LICENSE": {
+      "sha256": "50cbab8a892c5f2993b8c7351a99182507472def3b1374558308605d99b86b32",
+      "bytes": 11343
+    },
+    "README.md": {
+      "sha256": "5996b0afd39faa8fe2b4bf3334d1ee8c5f2d4c674335635e942ca933963cac7a",
+      "bytes": 5789
+    },
+    "model-manifest.json": {
+      "sha256": "69eb165dd787bae7f15f2a4f4bfc1269b6f5fcb2af71df0d41923dd6a4bc662a",
+      "bytes": 2589
+    },
+    "protocol.py": {
+      "sha256": "6f13095662d614f5802ce7d472246edf113aa180326b66f42678bdb8039f89cc",
+      "bytes": 944
+    },
+    "requirements-prepare.lock.txt": {
+      "sha256": "6f1a786d02e95d29fba3f742d9f702a64b565065cdce5d91ed8d68eb95d4ea5b",
+      "bytes": 519
+    },
+    "requirements.lock.txt": {
+      "sha256": "4f51e8a5bafd11bc0ba078f2c8ca835a924b95269c35d898b927b1da43631187",
+      "bytes": 564
+    },
+    "rerun.py": {
+      "sha256": "32c728848e2c974a4c4a62e3859c1d261939533ccbd71f0b2caeb1690ebfc7f5",
+      "bytes": 19053
+    },
+    "runtime-source-pins.json": {
+      "sha256": "879125affa953097d4db25deb66ae9b31b614cca8f42c479fa1a9ec870d38ad9",
+      "bytes": 537
+    },
+    "source-pins.json": {
+      "sha256": "13e32e9acf8fdbe98380ff1f260d46e420fa122adce3de1004c32cdd68abad79",
+      "bytes": 4335
+    },
+    "validation-report.json": {
+      "sha256": "68e1d3250001447cf1d0b765f6bb7823c02fee1d3f39394c93d07467e5806b3e",
+      "bytes": 1038
+    }
+  }
+}

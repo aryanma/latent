@@ -1,0 +1,2868 @@
+{
+  "format": "latent-sql-input-cohort/v1",
+  "method": "join legacy question_id; require byte-exact Python string equality for db_id, question, evidence; no null/empty normalization",
+  "order": "ascending numeric legacy question_id",
+  "old_path": "bird-mini-dev-previous/mini_dev_sqlite.json",
+  "old_sha256": "88ceb0710163cae46a256ecea8f0a8c98286599530b60587fda5c3cfe57d45d2",
+  "new_path": "arcwise-plat-hf/arcwise_plat_sql_only_with_diff.json",
+  "new_sha256": "010c91bf9c06730769877df700c2ce79c88f242041f46f3089de49a3ed402a2c",
+  "count": 357,
+  "rows": [
+    {
+      "question_id": "5",
+      "db_id": "california_schools",
+      "old_row_index": 438,
+      "new_row_index": 438,
+      "input_contract_sha256": "5cb2e94767c18201a3d0d95210e3ab8f1075909a8582410edb0ba628e64b5a12",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "24",
+      "db_id": "california_schools",
+      "old_row_index": 443,
+      "new_row_index": 443,
+      "input_contract_sha256": "6f89f9be20c0ae625c3b7443be7125960e86decafcdce7c0e7646c8733f5b4cd",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "26",
+      "db_id": "california_schools",
+      "old_row_index": 445,
+      "new_row_index": 445,
+      "input_contract_sha256": "b3ee5d9769ed6d3fac2978f356253ca84016416a62f68f87e1a1f59ae7498ef8",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "36",
+      "db_id": "california_schools",
+      "old_row_index": 451,
+      "new_row_index": 451,
+      "input_contract_sha256": "887c14d08115d4b91255cfbdd6f4283eda93537b1b63b6882ca602b028605f2d",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "39",
+      "db_id": "california_schools",
+      "old_row_index": 452,
+      "new_row_index": 452,
+      "input_contract_sha256": "728eb43d2eeb2c533d4e8553a4f2b08eda4b23d3fcfc925210cccf69398270e8",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "40",
+      "db_id": "california_schools",
+      "old_row_index": 453,
+      "new_row_index": 453,
+      "input_contract_sha256": "bc83a450bdda53c1b3f49ade0073a1a08eae3c2f9e778600764da7deb4e1b576",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "45",
+      "db_id": "california_schools",
+      "old_row_index": 455,
+      "new_row_index": 455,
+      "input_contract_sha256": "8de6fb2ae90feed197871cee5a0359bf9804a2d3b82efff7b549579da788ff34",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "46",
+      "db_id": "california_schools",
+      "old_row_index": 456,
+      "new_row_index": 456,
+      "input_contract_sha256": "c72f6e4780c43967862ec2cd0a78ef3250c3e661e88b8acb04cef8a71ee6974d",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "47",
+      "db_id": "california_schools",
+      "old_row_index": 457,
+      "new_row_index": 457,
+      "input_contract_sha256": "e32703e8a638649a01296ee84638175445a133815d228cc353333fb5290f3fe2",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "48",
+      "db_id": "california_schools",
+      "old_row_index": 458,
+      "new_row_index": 458,
+      "input_contract_sha256": "7236e22bf59a7641b826ccdd6e485968f5b0c4c38694a41cd24873e15b572e56",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "50",
+      "db_id": "california_schools",
+      "old_row_index": 459,
+      "new_row_index": 459,
+      "input_contract_sha256": "05b4529aef98adc7c2f14c73890e6d3b5acbcdf5273095c7fb35ed7453fba40d",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "79",
+      "db_id": "california_schools",
+      "old_row_index": 463,
+      "new_row_index": 463,
+      "input_contract_sha256": "1c28427db2e30764be9ab9c27ab34fec47913175651f1456adc34abf7903ebf9",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "82",
+      "db_id": "california_schools",
+      "old_row_index": 464,
+      "new_row_index": 464,
+      "input_contract_sha256": "e2a612563c329f868173eb965421f2100c891a8e2337f75a19a3f4cfcb48496d",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "89",
+      "db_id": "financial",
+      "old_row_index": 468,
+      "new_row_index": 468,
+      "input_contract_sha256": "cd22df96f525ad346ae1699677bc400c7f7a6616cab65da4c54a697a32bbb3af",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "92",
+      "db_id": "financial",
+      "old_row_index": 469,
+      "new_row_index": 469,
+      "input_contract_sha256": "1a52fd61b952d4b6e7cbb12fde60150e3cf54af31077d3a01abcf0629018dab5",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "93",
+      "db_id": "financial",
+      "old_row_index": 470,
+      "new_row_index": 470,
+      "input_contract_sha256": "4a556575e7f1cdefa4f2a684d041223fa227af9293d92b4a166e62e33a3fb313",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "98",
+      "db_id": "financial",
+      "old_row_index": 473,
+      "new_row_index": 473,
+      "input_contract_sha256": "0f6fc9b34ba38ef29ae08345fea5409e9ee7fb67c7b56747d721fadb05552101",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "99",
+      "db_id": "financial",
+      "old_row_index": 474,
+      "new_row_index": 474,
+      "input_contract_sha256": "7b651e6075e7d68f547b839d130ab816d739ea0d04973b68b9f42249d628e54a",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "100",
+      "db_id": "financial",
+      "old_row_index": 475,
+      "new_row_index": 475,
+      "input_contract_sha256": "8423d9ee6fa786f25238f1a3d55b9236713b6f93e49ef3eb86970e3beed692fc",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "112",
+      "db_id": "financial",
+      "old_row_index": 476,
+      "new_row_index": 476,
+      "input_contract_sha256": "15efc3b901ede82b547487549e4de87dbda60cee6e572633a1b5a181ed314148",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "115",
+      "db_id": "financial",
+      "old_row_index": 477,
+      "new_row_index": 477,
+      "input_contract_sha256": "819d1b58b6524a2b43854255e82a0543b885bba700337aab6ffbe5d5ab4043b7",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "116",
+      "db_id": "financial",
+      "old_row_index": 478,
+      "new_row_index": 478,
+      "input_contract_sha256": "d3db111eaffe7096933a8cd03422185f6241b43cafe428bce0d4b19416e88a1d",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "117",
+      "db_id": "financial",
+      "old_row_index": 479,
+      "new_row_index": 479,
+      "input_contract_sha256": "938c7d2c671ba57807164c19ddb8e175eda4a0aab4eab74811c355edf9c22ff2",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "118",
+      "db_id": "financial",
+      "old_row_index": 480,
+      "new_row_index": 480,
+      "input_contract_sha256": "161afd164d4a8d5753873558836b082994434afcc7b9b076ec6898b6ce0e4802",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "136",
+      "db_id": "financial",
+      "old_row_index": 483,
+      "new_row_index": 483,
+      "input_contract_sha256": "ca9440d7ea9581409711f85e0e857ec6f83bdee37ea966d5eab6859fc322b7bd",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "137",
+      "db_id": "financial",
+      "old_row_index": 485,
+      "new_row_index": 484,
+      "input_contract_sha256": "34df464f6241cf7ae3023bb59b77976dae5c9e0b95eb9d72990227a7fe87e02e",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "138",
+      "db_id": "financial",
+      "old_row_index": 486,
+      "new_row_index": 485,
+      "input_contract_sha256": "162d8c79c1be1ede17252ba5a664567cea92bfb468206c1484002bfecbb00a09",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "149",
+      "db_id": "financial",
+      "old_row_index": 488,
+      "new_row_index": 488,
+      "input_contract_sha256": "0de56343c79225f9b3f588fb8a99840f81dad45bcb80fecd66c8e0863107c1f6",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "159",
+      "db_id": "financial",
+      "old_row_index": 490,
+      "new_row_index": 490,
+      "input_contract_sha256": "ca1153bc541c29958ba5fea73a16d756925a5f3e84978c7d7b66738e8b329828",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "173",
+      "db_id": "financial",
+      "old_row_index": 493,
+      "new_row_index": 493,
+      "input_contract_sha256": "0ab3542f4f94846786050d853addec6d73d24beef09e23a85e8822b3e0e709e0",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "186",
+      "db_id": "financial",
+      "old_row_index": 494,
+      "new_row_index": 494,
+      "input_contract_sha256": "70aa964289cc06d35150703d9b2555d6c866d9e000d8f24714c8b3fa12649b1b",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "192",
+      "db_id": "financial",
+      "old_row_index": 496,
+      "new_row_index": 496,
+      "input_contract_sha256": "7702abdca7e70fe122f1f1bf7619e7417c235e318f9b66330d8e2af183078a52",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "194",
+      "db_id": "financial",
+      "old_row_index": 497,
+      "new_row_index": 497,
+      "input_contract_sha256": "152235a637bb6d8fe1d033994dcdc2a6cf12c6169b5be9c76d4ee14d9e4dc3a3",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "195",
+      "db_id": "toxicology",
+      "old_row_index": 398,
+      "new_row_index": 398,
+      "input_contract_sha256": "eeefadc7b950f058f80d51c68624fc036157c834f7bb2c91c776016c852427f7",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "200",
+      "db_id": "toxicology",
+      "old_row_index": 401,
+      "new_row_index": 401,
+      "input_contract_sha256": "a2dc951b955b3c4c2a60cb4e5e0d572f6177e1225371ff7a15c35dfd1df6907b",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "206",
+      "db_id": "toxicology",
+      "old_row_index": 403,
+      "new_row_index": 403,
+      "input_contract_sha256": "9ef66b35b6f17f0578661a91bb121c181b26041f79c356a94fbc75d5ada632ed",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "207",
+      "db_id": "toxicology",
+      "old_row_index": 404,
+      "new_row_index": 404,
+      "input_contract_sha256": "1c3b0bde7fbec0b3104d7ad9eef243c3c2c7625480133dddc013b06b42b9fcdd",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "212",
+      "db_id": "toxicology",
+      "old_row_index": 406,
+      "new_row_index": 406,
+      "input_contract_sha256": "c3ef9dc321dc5676e3e48ca972bfe883a741ad264e06b92fa68e8314a63e1593",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "213",
+      "db_id": "toxicology",
+      "old_row_index": 407,
+      "new_row_index": 407,
+      "input_contract_sha256": "b77014e4155ce542d5cc0ba8cc92ac5841c51dd0c9991aa2542b7d220e141e7d",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "218",
+      "db_id": "toxicology",
+      "old_row_index": 409,
+      "new_row_index": 409,
+      "input_contract_sha256": "8c718bb91a4521114555ea2e67e5a9c37bce73e9a9c56d9eca3024aae24fc51a",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "220",
+      "db_id": "toxicology",
+      "old_row_index": 411,
+      "new_row_index": 411,
+      "input_contract_sha256": "990cd5fd9cd0b9aad9be9d6d65239032a8ad0003640c21b02f77c77c2f283a58",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "226",
+      "db_id": "toxicology",
+      "old_row_index": 412,
+      "new_row_index": 412,
+      "input_contract_sha256": "590f058aeddc79346a2874aa5ce6b69ae6160231203f4472ea3df6053a4ccf94",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "227",
+      "db_id": "toxicology",
+      "old_row_index": 413,
+      "new_row_index": 413,
+      "input_contract_sha256": "ca12fe613f9a16a4b72c0053694d0d23573430b15e9a5b08e1186ba5042e85d6",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "228",
+      "db_id": "toxicology",
+      "old_row_index": 414,
+      "new_row_index": 414,
+      "input_contract_sha256": "eab0282a5fc8776a3dda99b435fbf7068829800fc7742d61e2ee5bc409ebb086",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "232",
+      "db_id": "toxicology",
+      "old_row_index": 417,
+      "new_row_index": 417,
+      "input_contract_sha256": "2d6dbbab9833cea194733a2a5c296efe0654555c05f84f5a4c646b1711b265ac",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "234",
+      "db_id": "toxicology",
+      "old_row_index": 418,
+      "new_row_index": 418,
+      "input_contract_sha256": "d4074082be29f3b8d1828db9cf3a0e1b306efe34222cf953ea16fa32ab316e20",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "236",
+      "db_id": "toxicology",
+      "old_row_index": 419,
+      "new_row_index": 419,
+      "input_contract_sha256": "ee8dca59494aac842d0e609e23c5c59d5b5a3e7778fb7abfee7adf74aabed72b",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "239",
+      "db_id": "toxicology",
+      "old_row_index": 420,
+      "new_row_index": 420,
+      "input_contract_sha256": "a2cc0f1c7afd98cff902307611b16bbf676a0c5ef56a62a9080d1b48e9291889",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "240",
+      "db_id": "toxicology",
+      "old_row_index": 421,
+      "new_row_index": 421,
+      "input_contract_sha256": "c05fbe4c5b74c325621da9d2942526aff4e54ab2062f2e4d3ddb9b2987cc671d",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "242",
+      "db_id": "toxicology",
+      "old_row_index": 422,
+      "new_row_index": 422,
+      "input_contract_sha256": "0c8674dd9f1db4ee6c0b25996b914f102edd245ac2645613cac46430753009fb",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "243",
+      "db_id": "toxicology",
+      "old_row_index": 423,
+      "new_row_index": 423,
+      "input_contract_sha256": "dd56cbc6466bc9ad3c65cbc07219bd8f7f738837edef1afe4590798fbe620fde",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "245",
+      "db_id": "toxicology",
+      "old_row_index": 425,
+      "new_row_index": 425,
+      "input_contract_sha256": "777a81e085deab63adb11d08ce88802a29e7f055b1ab6a72c451c50c489bf833",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "253",
+      "db_id": "toxicology",
+      "old_row_index": 429,
+      "new_row_index": 429,
+      "input_contract_sha256": "131f3cfe4ea6afafef3deeec4dab69d7881ce39cb4fd25c3aa7628aa16402e44",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "255",
+      "db_id": "toxicology",
+      "old_row_index": 430,
+      "new_row_index": 430,
+      "input_contract_sha256": "695d464d3770e084f4322f409b551af779c0f90d9a71d4730f12628879688258",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "260",
+      "db_id": "toxicology",
+      "old_row_index": 431,
+      "new_row_index": 431,
+      "input_contract_sha256": "32f2d23ae0c4476a273ee3286f02e5fcd271e86e310af1e7aefefd00f99ee1af",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "263",
+      "db_id": "toxicology",
+      "old_row_index": 432,
+      "new_row_index": 432,
+      "input_contract_sha256": "ae23739b6b7ec091e414e3fbacec5dcde676fd5c5c70e11665b9325033fd0671",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "268",
+      "db_id": "toxicology",
+      "old_row_index": 433,
+      "new_row_index": 433,
+      "input_contract_sha256": "4677d83bc62eb3243f2f7643689d572eb6ed401efc6b8b64525ccdf088592a73",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "282",
+      "db_id": "toxicology",
+      "old_row_index": 436,
+      "new_row_index": 436,
+      "input_contract_sha256": "d4d1f721167f4f36848eb5520aebc4d36a22a4c05434c76727544ffb46590b38",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "327",
+      "db_id": "toxicology",
+      "old_row_index": 437,
+      "new_row_index": 437,
+      "input_contract_sha256": "d6ee74900ff067f16949d0df7761aaad8d474bfd42d6b649667d80a519db1ae6",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "345",
+      "db_id": "card_games",
+      "old_row_index": 349,
+      "new_row_index": 349,
+      "input_contract_sha256": "36bfd89a479be7d630b5571fa460e8fb1572662dc67ae119baf1284d5b7e0817",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "346",
+      "db_id": "card_games",
+      "old_row_index": 350,
+      "new_row_index": 350,
+      "input_contract_sha256": "be3b05ffd3d99781fe610c8a1847e7811be49dab13cca5fd7c1ed509d6a2c135",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "347",
+      "db_id": "card_games",
+      "old_row_index": 351,
+      "new_row_index": 351,
+      "input_contract_sha256": "bda24b09ce8336a7fb6a106b324f58ca56f45b7620447df72d17af901af75de3",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "352",
+      "db_id": "card_games",
+      "old_row_index": 353,
+      "new_row_index": 353,
+      "input_contract_sha256": "60d245ac356c012e13b6f2f550aa050cb797c63dcfc9ead48e0419911cf7f442",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "356",
+      "db_id": "card_games",
+      "old_row_index": 354,
+      "new_row_index": 354,
+      "input_contract_sha256": "c71449b9b2611ac26069f1ddafe33334eddbb7134a8c0f5421dbc9dd00c0d54a",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "358",
+      "db_id": "card_games",
+      "old_row_index": 355,
+      "new_row_index": 355,
+      "input_contract_sha256": "e6a3353dec536b22a1fed335632ab025beac71e5ffd291e28a1d6e16551a9b36",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "366",
+      "db_id": "card_games",
+      "old_row_index": 356,
+      "new_row_index": 356,
+      "input_contract_sha256": "640fba1e3ac29045640c0621cced6b4e4bb25a0c8d99bae96bcbe0184f25dc0b",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "368",
+      "db_id": "card_games",
+      "old_row_index": 357,
+      "new_row_index": 357,
+      "input_contract_sha256": "8f9780293d8917b7a40bf2b61d4d0f1a58d8cc05a156eafe3809b9ca149a147f",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "377",
+      "db_id": "card_games",
+      "old_row_index": 359,
+      "new_row_index": 359,
+      "input_contract_sha256": "ee1dbe11099769e783fae6f18b66d13668e87a10de8f06a67ad5eab46733f672",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "379",
+      "db_id": "card_games",
+      "old_row_index": 360,
+      "new_row_index": 360,
+      "input_contract_sha256": "97b2ea4d38fff49702244549af2036fb5290c098ab55d4668a42fcbc79cafcea",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "383",
+      "db_id": "card_games",
+      "old_row_index": 361,
+      "new_row_index": 361,
+      "input_contract_sha256": "4e664d31867de4ce906dfa9befefd59ab791a4f6b69ea8c007a37a4ddcdc55aa",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "391",
+      "db_id": "card_games",
+      "old_row_index": 362,
+      "new_row_index": 362,
+      "input_contract_sha256": "334e12c02c95e30c296f447fe1458ae55125342eef3f0ad1c3eec4ba67d63305",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "397",
+      "db_id": "card_games",
+      "old_row_index": 363,
+      "new_row_index": 363,
+      "input_contract_sha256": "6282dece152f728d195af9e6a4683dab2e56c335e39ac22b012d6e021c6cc477",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "405",
+      "db_id": "card_games",
+      "old_row_index": 365,
+      "new_row_index": 365,
+      "input_contract_sha256": "648d27ab1956508286b4df1cd3cd5713d1184cc18d0936e47a8577b3c05d724d",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "407",
+      "db_id": "card_games",
+      "old_row_index": 366,
+      "new_row_index": 366,
+      "input_contract_sha256": "610c257e49b88c6d3bc87c3509430052aee4ea076150f3b855c7a120c8e22206",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "409",
+      "db_id": "card_games",
+      "old_row_index": 368,
+      "new_row_index": 368,
+      "input_contract_sha256": "5f370f4a26057707cb7321fb9bc69cc978ad850e15def84218344bd4e4addec3",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "414",
+      "db_id": "card_games",
+      "old_row_index": 370,
+      "new_row_index": 370,
+      "input_contract_sha256": "38fa0a1e54587af651da7771f0f01b9f99d5a1cffc3fcfecd0f88d386a0efe63",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "415",
+      "db_id": "card_games",
+      "old_row_index": 371,
+      "new_row_index": 371,
+      "input_contract_sha256": "8acff7313e7668592ca758b1b889f3a8e255625b75dbf588fae17f090d016809",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "416",
+      "db_id": "card_games",
+      "old_row_index": 372,
+      "new_row_index": 372,
+      "input_contract_sha256": "eb9336f8ec23fe56cb5789a2f194bd78379b4ee29870ee415266e258b001e2b8",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "422",
+      "db_id": "card_games",
+      "old_row_index": 373,
+      "new_row_index": 373,
+      "input_contract_sha256": "569ba721b8b9b8875495445a30e341a528547e73b91009348bd2119a05019969",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "427",
+      "db_id": "card_games",
+      "old_row_index": 375,
+      "new_row_index": 375,
+      "input_contract_sha256": "08390fd3ffe57c6f6d7c5aa2cd2baf7875c69cf3f58a279ebc9ebbc37c19ee88",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "440",
+      "db_id": "card_games",
+      "old_row_index": 376,
+      "new_row_index": 376,
+      "input_contract_sha256": "8d7659813045cb72a156ed2748cf60f77a8360c2b25e5bc9ad80eaa436db3803",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "459",
+      "db_id": "card_games",
+      "old_row_index": 377,
+      "new_row_index": 377,
+      "input_contract_sha256": "9568faf73b2f1d0fa6f3ddbdcd58bc9f805e6b05cdedc6ecf2bc61cccf1e8944",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "462",
+      "db_id": "card_games",
+      "old_row_index": 378,
+      "new_row_index": 378,
+      "input_contract_sha256": "94bd81cb863330166279ea951c2acf846903ff9a75ff8ca3993b4bf7d7872248",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "466",
+      "db_id": "card_games",
+      "old_row_index": 380,
+      "new_row_index": 380,
+      "input_contract_sha256": "ee45bea131a207184768f0908c4dbee58c09c1c9c3e8ae139783d5a9e14ebb98",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "468",
+      "db_id": "card_games",
+      "old_row_index": 381,
+      "new_row_index": 381,
+      "input_contract_sha256": "a8a9818eadc3f15c97f45b27fab365aabe887d2143cbd78ab48adea94f25ff9a",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "472",
+      "db_id": "card_games",
+      "old_row_index": 383,
+      "new_row_index": 383,
+      "input_contract_sha256": "a724595e7389801b58b68fdbf97e96fa49a5bb2a523e819fb8e85537e89b4d26",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "474",
+      "db_id": "card_games",
+      "old_row_index": 385,
+      "new_row_index": 385,
+      "input_contract_sha256": "8880da8ee2b7eaa981231bf10bfb21d6b157928a820b43b5eba6465081a3f6fb",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "477",
+      "db_id": "card_games",
+      "old_row_index": 386,
+      "new_row_index": 386,
+      "input_contract_sha256": "4b83e50dc37f09b43307c9feff73fd0779cb3e69fe4f933c70fa2fb3e0bcb7dd",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "479",
+      "db_id": "card_games",
+      "old_row_index": 387,
+      "new_row_index": 387,
+      "input_contract_sha256": "87966c4a91210f3a47c0abc0dfb1d44602fbd1081d829877fbef3813389fa92c",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "480",
+      "db_id": "card_games",
+      "old_row_index": 388,
+      "new_row_index": 388,
+      "input_contract_sha256": "a1ff12a094ee1388943057da4cd876f4aa443686e01074988141ba1e02c41266",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "483",
+      "db_id": "card_games",
+      "old_row_index": 389,
+      "new_row_index": 389,
+      "input_contract_sha256": "a4a6cb20a0936e1d6486da17cf42d1cbaa9f259f2dd920c44e2cdb18800cd60d",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "484",
+      "db_id": "card_games",
+      "old_row_index": 390,
+      "new_row_index": 390,
+      "input_contract_sha256": "527285702fcc54ef29df5b1f2eda5ebe3a5dd59def4d27ff3635a30a36a8b502",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "486",
+      "db_id": "card_games",
+      "old_row_index": 391,
+      "new_row_index": 391,
+      "input_contract_sha256": "266fba5b6a99af92f29393cc26c9bbb04bdc2b5ebaaacb88b7fb2cb6ea4bc9a3",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "487",
+      "db_id": "card_games",
+      "old_row_index": 392,
+      "new_row_index": 392,
+      "input_contract_sha256": "3cb9d138e3926bebf4b4213bc5c086fe7e6b9856ea59fbc52b5bf5cfb793bc60",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "518",
+      "db_id": "card_games",
+      "old_row_index": 393,
+      "new_row_index": 393,
+      "input_contract_sha256": "d0672b7d5384ef50b1aaaeb69b3bfbe5e7505de1ffa3be52f6b74369bbbe401b",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "522",
+      "db_id": "card_games",
+      "old_row_index": 394,
+      "new_row_index": 394,
+      "input_contract_sha256": "b51e61e19f79a7f7d4e118072af4de68947187dff8b08838c8eb49a7df2fe000",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "528",
+      "db_id": "card_games",
+      "old_row_index": 395,
+      "new_row_index": 395,
+      "input_contract_sha256": "8a4a3ddef695476e52c8932968e0685ed775ade641a518e7d82efcae451d082a",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "531",
+      "db_id": "codebase_community",
+      "old_row_index": 297,
+      "new_row_index": 297,
+      "input_contract_sha256": "6498ce7f74e3b2de008df431b447e9b8cfc30e2596abd53b0c6ca413640cf5fa",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "532",
+      "db_id": "codebase_community",
+      "old_row_index": 298,
+      "new_row_index": 298,
+      "input_contract_sha256": "94dae625141e473ab2f88f05ecd70f003a6138a7cbb021446f136dd47ab0e690",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "537",
+      "db_id": "codebase_community",
+      "old_row_index": 301,
+      "new_row_index": 301,
+      "input_contract_sha256": "81e54fad511886e33f6e938e6c23d78c7692144276236843ffaec11d7dae03dc",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "539",
+      "db_id": "codebase_community",
+      "old_row_index": 300,
+      "new_row_index": 300,
+      "input_contract_sha256": "7e30d5c49a60dd738b2e749969f4831b52c641de63327a4bf24c702e04d8b994",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "544",
+      "db_id": "codebase_community",
+      "old_row_index": 302,
+      "new_row_index": 302,
+      "input_contract_sha256": "0236cd28dd17b6e555f0a095746ed0dffd48a1fe07966461f46ddfad5e30df0e",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "547",
+      "db_id": "codebase_community",
+      "old_row_index": 303,
+      "new_row_index": 303,
+      "input_contract_sha256": "9557c0d89684fa5b7509f172791bf6b44ebafc9c38475fdfa5d6a8dd22ac37de",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "549",
+      "db_id": "codebase_community",
+      "old_row_index": 304,
+      "new_row_index": 304,
+      "input_contract_sha256": "1cee01d3b17742fa7cc700af3be81cb450b8db04280e08f060f1e753b95a3bba",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "555",
+      "db_id": "codebase_community",
+      "old_row_index": 305,
+      "new_row_index": 305,
+      "input_contract_sha256": "149925e4739b108a17f02820011401585593c938ad0ba710b940f182f4a87c9d",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "557",
+      "db_id": "codebase_community",
+      "old_row_index": 306,
+      "new_row_index": 306,
+      "input_contract_sha256": "e29c071ae2044bca43c5aa27e842d398b8093e91b422c53e969d3aa2122ceaa7",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "563",
+      "db_id": "codebase_community",
+      "old_row_index": 307,
+      "new_row_index": 307,
+      "input_contract_sha256": "80d3747f41ed70463a6d713b953e89b256e6f0ad3496d39d3a538eb1475a7b02",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "567",
+      "db_id": "codebase_community",
+      "old_row_index": 309,
+      "new_row_index": 309,
+      "input_contract_sha256": "464fd88cf0a5cbe9577d8f7b8ce94a44c66c4904ddf3f4ff7c76a881e256a2b0",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "568",
+      "db_id": "codebase_community",
+      "old_row_index": 310,
+      "new_row_index": 310,
+      "input_contract_sha256": "48905e1d49ebb621d470340c5dd5c6ced04292c1a9be46db47fd1f01b973fec0",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "571",
+      "db_id": "codebase_community",
+      "old_row_index": 311,
+      "new_row_index": 311,
+      "input_contract_sha256": "b63ea00731f1af7401ac5aabb7ff51ab10d55f6c7f791065f474d71f464b2891",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "572",
+      "db_id": "codebase_community",
+      "old_row_index": 312,
+      "new_row_index": 312,
+      "input_contract_sha256": "000bd46c5dc36ed861ab6214f9e9a20d84bb7fbeebdf3f7bb5a76abdbccb7fde",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "573",
+      "db_id": "codebase_community",
+      "old_row_index": 313,
+      "new_row_index": 313,
+      "input_contract_sha256": "ecd3adacce08dec8e7b3aa86d42bd647632a583f780d892c3ffb0f1438221d38",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "576",
+      "db_id": "codebase_community",
+      "old_row_index": 314,
+      "new_row_index": 314,
+      "input_contract_sha256": "11e9412b303afc98e409677289531c6afca7b649d4aa1342679834037fa8627f",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "578",
+      "db_id": "codebase_community",
+      "old_row_index": 315,
+      "new_row_index": 315,
+      "input_contract_sha256": "d882205c684c9cd2443d084427bd9c55b2ee59ba2f5b5c00c8f1228718a2c288",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "581",
+      "db_id": "codebase_community",
+      "old_row_index": 316,
+      "new_row_index": 316,
+      "input_contract_sha256": "503d7f656008eb2be98a8777885e58a8f7495e0703678543cb21cbf118cdbc76",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "586",
+      "db_id": "codebase_community",
+      "old_row_index": 318,
+      "new_row_index": 318,
+      "input_contract_sha256": "7e4c655dc5ca7e34f87d5696e7d902f1a51c279e8980e2f8200aa3b70493e979",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "587",
+      "db_id": "codebase_community",
+      "old_row_index": 319,
+      "new_row_index": 319,
+      "input_contract_sha256": "4d52e30371d22e5870b8a00d172cdaa2f8c001e9159ffe00a88a4a45cfd3daa6",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "592",
+      "db_id": "codebase_community",
+      "old_row_index": 320,
+      "new_row_index": 320,
+      "input_contract_sha256": "c7e9fe3805e3e89e13771cce147c3314afb5f2eb3fcddffb8972f7636633fd75",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "598",
+      "db_id": "codebase_community",
+      "old_row_index": 322,
+      "new_row_index": 322,
+      "input_contract_sha256": "22d20ec4bb33f95663ff04acbed9f2e43587ac404afca006dc4effb00eccfbbf",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "604",
+      "db_id": "codebase_community",
+      "old_row_index": 323,
+      "new_row_index": 323,
+      "input_contract_sha256": "76779d13da4983220ab56a77b7094abfcfcb2d2e2e8fb427418132f44789e29d",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "629",
+      "db_id": "codebase_community",
+      "old_row_index": 324,
+      "new_row_index": 324,
+      "input_contract_sha256": "0a448d42ddb266abc5b19e24c3dacca659ffc4c5e4e6391633db9f8ef1a4e177",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "633",
+      "db_id": "codebase_community",
+      "old_row_index": 325,
+      "new_row_index": 325,
+      "input_contract_sha256": "4313a8c58a5d6d27009a679ab916d617d06baec1d137dbffa21245c6b12559fc",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "639",
+      "db_id": "codebase_community",
+      "old_row_index": 328,
+      "new_row_index": 328,
+      "input_contract_sha256": "f59cad5fa4dc5052cc34a586235fe1c83cdc72ce5eef1c86438142eb741e30b4",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "640",
+      "db_id": "codebase_community",
+      "old_row_index": 329,
+      "new_row_index": 329,
+      "input_contract_sha256": "ed77bf235565d07132bc4a52e19390fc3175e1ca16008b8d96c6422a10d5733b",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "665",
+      "db_id": "codebase_community",
+      "old_row_index": 330,
+      "new_row_index": 330,
+      "input_contract_sha256": "8e3edf79d637df54e16f96d27c1b649f6d73609f146673bf3f569d969d6a6167",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "669",
+      "db_id": "codebase_community",
+      "old_row_index": 331,
+      "new_row_index": 331,
+      "input_contract_sha256": "dcc2000dcfb6c49c780fb80e940493aa54b511f17ab6c83d11336bcb160e78f8",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "671",
+      "db_id": "codebase_community",
+      "old_row_index": 332,
+      "new_row_index": 332,
+      "input_contract_sha256": "04876a5bf9eeab6f232b2bf79b646cf53b03e62fa65b4ea9db8da4994b271908",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "678",
+      "db_id": "codebase_community",
+      "old_row_index": 334,
+      "new_row_index": 334,
+      "input_contract_sha256": "fa5dae1df5f7baf87ed25fb97fc4ef688256f1f404a5f6d05221eb7af3a8f1dd",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "682",
+      "db_id": "codebase_community",
+      "old_row_index": 335,
+      "new_row_index": 335,
+      "input_contract_sha256": "69d9eb46199e1b909317f4270c9adfcb910eb58531f4ce4191fc8de14752faca",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "685",
+      "db_id": "codebase_community",
+      "old_row_index": 337,
+      "new_row_index": 337,
+      "input_contract_sha256": "b6c5c8e2964ea893b996a5da1d0af8dd125aa7a419ddf60afbd0876d62a7b3f1",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "687",
+      "db_id": "codebase_community",
+      "old_row_index": 338,
+      "new_row_index": 338,
+      "input_contract_sha256": "3289721879ea19c1a73e105f02ae7ce84be8ca5d3730add37781ad5a384bbe9f",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "694",
+      "db_id": "codebase_community",
+      "old_row_index": 339,
+      "new_row_index": 339,
+      "input_contract_sha256": "75ab83d92936a4c00f50f596cc7100cdf719f19b9cd4ac71fd7d0b810a0a9c40",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "701",
+      "db_id": "codebase_community",
+      "old_row_index": 340,
+      "new_row_index": 340,
+      "input_contract_sha256": "cbec1d6868048610d29cdacb9716f2d927cd62833f4b310b4e963af87fd01959",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "704",
+      "db_id": "codebase_community",
+      "old_row_index": 341,
+      "new_row_index": 341,
+      "input_contract_sha256": "8638d03b805e318369dc891a68a8148222208b582afe3f880dd31c5a73b695ba",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "705",
+      "db_id": "codebase_community",
+      "old_row_index": 342,
+      "new_row_index": 342,
+      "input_contract_sha256": "d00c6d4553b6231ef3d0cf9a2ffebf2e8840927096621b4c9a4b67cdee370c4e",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "707",
+      "db_id": "codebase_community",
+      "old_row_index": 343,
+      "new_row_index": 343,
+      "input_contract_sha256": "756542b36098f7e64651aea88a7171e1d302a85a59a79cc4fbb3560aab8eeba4",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "710",
+      "db_id": "codebase_community",
+      "old_row_index": 344,
+      "new_row_index": 344,
+      "input_contract_sha256": "f677ff6ebf69968d149c5cf68e025e24eac86092c0d459789d5931912bce3410",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "717",
+      "db_id": "superhero",
+      "old_row_index": 239,
+      "new_row_index": 239,
+      "input_contract_sha256": "845e55891c664796c1f5bdfc370401c42a575019aabc70ad8531ae501c1d3e44",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "719",
+      "db_id": "superhero",
+      "old_row_index": 246,
+      "new_row_index": 246,
+      "input_contract_sha256": "b3b36ece408e22282993c2f71149c861b8b227a89bad4a3297d5796cb459be17",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "723",
+      "db_id": "superhero",
+      "old_row_index": 247,
+      "new_row_index": 247,
+      "input_contract_sha256": "5ae2ad610029c131fa3ff77db4717be572122e10b6a40cb4d0d8d2c9a5105f96",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "724",
+      "db_id": "superhero",
+      "old_row_index": 248,
+      "new_row_index": 248,
+      "input_contract_sha256": "6b9f6ed11d94f4a39fa8579c5cb06ff6a97300e93e000a9ec911f983f84194fb",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "726",
+      "db_id": "superhero",
+      "old_row_index": 249,
+      "new_row_index": 249,
+      "input_contract_sha256": "95471ed7232bc06a1cecb53bc1b973644187211d8f307eedd9e04edaaa9c2f6e",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "730",
+      "db_id": "superhero",
+      "old_row_index": 251,
+      "new_row_index": 251,
+      "input_contract_sha256": "ce6e39c3b73fc103f4cefee303aa781a9f3f1681b31ff0d69f6135cbf8d702ca",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "732",
+      "db_id": "superhero",
+      "old_row_index": 252,
+      "new_row_index": 252,
+      "input_contract_sha256": "8bfd61f4338167c45511b696421c359c2cb3f698e06b1bf58c1c0a27eb5be5af",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "733",
+      "db_id": "superhero",
+      "old_row_index": 253,
+      "new_row_index": 253,
+      "input_contract_sha256": "64238a640621f4b6af9cd25ab09919ad7060ea1b434121f123e56c664e31b5cb",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "736",
+      "db_id": "superhero",
+      "old_row_index": 254,
+      "new_row_index": 254,
+      "input_contract_sha256": "83d409ffbb4022234f41e39e4440d7f025ed45c0ec09f1008f0986dc324cba73",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "737",
+      "db_id": "superhero",
+      "old_row_index": 255,
+      "new_row_index": 255,
+      "input_contract_sha256": "49be4ec601f5a42d8cd1cdc41836ee4c53a4f759a55a13ab42c45c0fea724f15",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "738",
+      "db_id": "superhero",
+      "old_row_index": 256,
+      "new_row_index": 256,
+      "input_contract_sha256": "159f46d0d15e86c256396c6475be5afdeee8862abc773af558ced654a45fa0df",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "739",
+      "db_id": "superhero",
+      "old_row_index": 257,
+      "new_row_index": 257,
+      "input_contract_sha256": "3c775977b3fe607bf2362e76b7072c25278bf094116e279c45934e59a5727f14",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "740",
+      "db_id": "superhero",
+      "old_row_index": 258,
+      "new_row_index": 258,
+      "input_contract_sha256": "2179db9aa8a2ca7d2d2f9f7c33a3d02f538aa5de78d195cb00e6186d758ccfe4",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "743",
+      "db_id": "superhero",
+      "old_row_index": 259,
+      "new_row_index": 259,
+      "input_contract_sha256": "724388025a9f328306132011dbb237d134e438fc911bc0ec0e9f80565d50c38f",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "744",
+      "db_id": "superhero",
+      "old_row_index": 260,
+      "new_row_index": 260,
+      "input_contract_sha256": "c5c8a23852652d5251a475caef32397b1677ca0a182096f182196f076c33242c",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "745",
+      "db_id": "superhero",
+      "old_row_index": 261,
+      "new_row_index": 261,
+      "input_contract_sha256": "26b80b8a33e51addbaeabb607635d33d6f5432ae2e2dcfcc0389295aeb87137e",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "747",
+      "db_id": "superhero",
+      "old_row_index": 262,
+      "new_row_index": 262,
+      "input_contract_sha256": "a54e0d2026dccd32c41eda7686a3bb32cb2ba15c453ffb0cd53a2d09319386b1",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "750",
+      "db_id": "superhero",
+      "old_row_index": 263,
+      "new_row_index": 263,
+      "input_contract_sha256": "a5abb81caba8ed56d942ffe0798139e6f8bcfada624fdfaa2d8dbe9a5b686d14",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "753",
+      "db_id": "superhero",
+      "old_row_index": 265,
+      "new_row_index": 265,
+      "input_contract_sha256": "ce086bf274ba90e95b9839c0e88185494557e40f5d69ecfe3f6f5fecee28fce4",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "758",
+      "db_id": "superhero",
+      "old_row_index": 266,
+      "new_row_index": 266,
+      "input_contract_sha256": "19c078050cd46892a2fd9445d4407abf71792104a366af3e550aa4f4dbaf7b4c",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "760",
+      "db_id": "superhero",
+      "old_row_index": 267,
+      "new_row_index": 267,
+      "input_contract_sha256": "a66a0e7d25bf05f5c000f6ffdecce62164a7792d661bf8d8678ddd926318afff",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "761",
+      "db_id": "superhero",
+      "old_row_index": 268,
+      "new_row_index": 268,
+      "input_contract_sha256": "6d93caedd07526bc6436b78499926c3bf03906c2188b74cf6585815a0bc86d85",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "764",
+      "db_id": "superhero",
+      "old_row_index": 269,
+      "new_row_index": 269,
+      "input_contract_sha256": "3aff3c3d8113b1f0374645b5d3d932bd0cab4cf4cae88587d5a54fcd554e6e74",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "765",
+      "db_id": "superhero",
+      "old_row_index": 270,
+      "new_row_index": 270,
+      "input_contract_sha256": "7508cfdd3cb9718ee001526d508ee3a13c22c502e06a93d7969838903e6a9b0b",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "769",
+      "db_id": "superhero",
+      "old_row_index": 272,
+      "new_row_index": 272,
+      "input_contract_sha256": "431d83cb2062a4b79e729c28d79525ab6b45c615649f60c2b18fe6997543201b",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "772",
+      "db_id": "superhero",
+      "old_row_index": 273,
+      "new_row_index": 273,
+      "input_contract_sha256": "73c04c1eae325d636b079f5b0a67b46cbbbe40b4650fea5d39883572e5e4af8a",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "773",
+      "db_id": "superhero",
+      "old_row_index": 274,
+      "new_row_index": 274,
+      "input_contract_sha256": "81e40f7a5e7046a30fcab89bce1c32a65cbe0581cff2b543d429d4116482990b",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "775",
+      "db_id": "superhero",
+      "old_row_index": 275,
+      "new_row_index": 275,
+      "input_contract_sha256": "45ba206af5ad3852d20fc64e139139d92cab10537f6fb9ef87cdc40cf4d30be9",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "779",
+      "db_id": "superhero",
+      "old_row_index": 276,
+      "new_row_index": 276,
+      "input_contract_sha256": "57da06c0fbc0563f2cb750e1d183d03879ee0a064e810fc4324711a616a915ab",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "781",
+      "db_id": "superhero",
+      "old_row_index": 277,
+      "new_row_index": 277,
+      "input_contract_sha256": "1bc45d5fddf2a14d92961a2dbe1c74c1ecccbee4554a37cf941361203fd12464",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "782",
+      "db_id": "superhero",
+      "old_row_index": 278,
+      "new_row_index": 278,
+      "input_contract_sha256": "91e2f00c78cf3e7eeae12850b3d5ab3e7aaf67dce2b474e1f6173c0088f2c42a",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "785",
+      "db_id": "superhero",
+      "old_row_index": 279,
+      "new_row_index": 279,
+      "input_contract_sha256": "c067e653856fd66980188e95d2d3ef9ee6321c5bd03309adc9d40e22988f9bf5",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "786",
+      "db_id": "superhero",
+      "old_row_index": 280,
+      "new_row_index": 280,
+      "input_contract_sha256": "6a0b95ad63ca34bb4f8d3c5c00fdacd0b33c3ca7457fde0f3f8340f952a15f01",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "790",
+      "db_id": "superhero",
+      "old_row_index": 282,
+      "new_row_index": 282,
+      "input_contract_sha256": "fe7652f0d516dd0e77fdf2bb07d764fe147ac72e6683e6b856409d54bd31f1ee",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "791",
+      "db_id": "superhero",
+      "old_row_index": 283,
+      "new_row_index": 283,
+      "input_contract_sha256": "91219714856dae43343104576f1f538d14375316fa5287078fa6eefe4642ccf5",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "792",
+      "db_id": "superhero",
+      "old_row_index": 284,
+      "new_row_index": 284,
+      "input_contract_sha256": "f1a00190bbd695fa5ec1dcbddfe54358d8f9b44b92bad7829c2136091844c1a0",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "794",
+      "db_id": "superhero",
+      "old_row_index": 285,
+      "new_row_index": 285,
+      "input_contract_sha256": "f9d0de5c0614b0885353899054326398c5dc54ade4c70bb0dc808939c1ab7f6d",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "796",
+      "db_id": "superhero",
+      "old_row_index": 286,
+      "new_row_index": 286,
+      "input_contract_sha256": "114f5c34a3c1ceaeecb2b665db614e6e18b6b82d9c7ec096a19ab9d4d8882905",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "797",
+      "db_id": "superhero",
+      "old_row_index": 287,
+      "new_row_index": 287,
+      "input_contract_sha256": "2b2c32d4398d0854ef4612e7112d78dbda5896f3041d081040243300a19941fd",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "798",
+      "db_id": "superhero",
+      "old_row_index": 288,
+      "new_row_index": 288,
+      "input_contract_sha256": "2906cf038a15b7f2282f8091089b38bd479de3d69e8845be1bcce101ac04aec4",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "800",
+      "db_id": "superhero",
+      "old_row_index": 289,
+      "new_row_index": 289,
+      "input_contract_sha256": "bc579158c4dc77c1d7f2e262068504f8165ceff64ee8f76fb88f14f88482b107",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "806",
+      "db_id": "superhero",
+      "old_row_index": 291,
+      "new_row_index": 291,
+      "input_contract_sha256": "2ff14c4542cb9c66c36e8ea819295c8b8a4c0f27ffea8932dec6709a9b8a9eb5",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "819",
+      "db_id": "superhero",
+      "old_row_index": 292,
+      "new_row_index": 292,
+      "input_contract_sha256": "5077c8c56cbc3a9aed21f6ee8655b0fc771d98d7027bac66f6ba3069283baae4",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "822",
+      "db_id": "superhero",
+      "old_row_index": 293,
+      "new_row_index": 293,
+      "input_contract_sha256": "928148377bc0e052107fca9e11977da84c84547d78cf0552e11bfb78ac2593e5",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "824",
+      "db_id": "superhero",
+      "old_row_index": 294,
+      "new_row_index": 294,
+      "input_contract_sha256": "2814f4c29a036a1752f657d50dd3389fd5ce6a060251ed3dca6ad09b9a1f74b5",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "825",
+      "db_id": "superhero",
+      "old_row_index": 295,
+      "new_row_index": 295,
+      "input_contract_sha256": "bc4eac655f615cb4e0673675528d1623308a7791530748fa9f778b75aedcfa8b",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "829",
+      "db_id": "superhero",
+      "old_row_index": 296,
+      "new_row_index": 296,
+      "input_contract_sha256": "a2ea058ab9503d39c5fe2bf5ec272d15735e629c6cd93e2c4d251da8f4a182f7",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "846",
+      "db_id": "formula_1",
+      "old_row_index": 179,
+      "new_row_index": 179,
+      "input_contract_sha256": "7c6c33fabf93aeaf2e089d76824553ed3f67bc48d0842911af57322a52bd6734",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "847",
+      "db_id": "formula_1",
+      "old_row_index": 180,
+      "new_row_index": 180,
+      "input_contract_sha256": "1b02b8802ebb787f882962cd709ea0ac7383d6060c9507d283bcecf84ad408f9",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "850",
+      "db_id": "formula_1",
+      "old_row_index": 181,
+      "new_row_index": 181,
+      "input_contract_sha256": "3fab48f6da89e88bc95a1cdb7b1fcc0cf6531eb8e6a6ab43169d7ba711e0c4cd",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "854",
+      "db_id": "formula_1",
+      "old_row_index": 182,
+      "new_row_index": 182,
+      "input_contract_sha256": "0424e697f7b162637bee5d75076e1fa44c47b74e5f6bb81469f6f695ac98faac",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "857",
+      "db_id": "formula_1",
+      "old_row_index": 183,
+      "new_row_index": 183,
+      "input_contract_sha256": "360b208feac5e93d7cbf10640286c2383203f2a2e49b67f3b5fa5e48668f16f1",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "859",
+      "db_id": "formula_1",
+      "old_row_index": 184,
+      "new_row_index": 184,
+      "input_contract_sha256": "68e5bb5636e07465bc607d3f7fbc116d2d185e73bff18b92f0211776a34172e4",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "861",
+      "db_id": "formula_1",
+      "old_row_index": 185,
+      "new_row_index": 185,
+      "input_contract_sha256": "00a8b817ee8f287afa7ed803ed2ba4a6466f6d3248779ddabeba4e9ef288b8e1",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "862",
+      "db_id": "formula_1",
+      "old_row_index": 186,
+      "new_row_index": 186,
+      "input_contract_sha256": "97dab342cb588369b22d6f5c3cf8739890d8b308077c1358045e0135ddd97cdf",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "868",
+      "db_id": "formula_1",
+      "old_row_index": 189,
+      "new_row_index": 189,
+      "input_contract_sha256": "7228fee4f2d3f8caa78ea1bc15d881d9b52c7be0fbe33831b8d142f810b568c4",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "869",
+      "db_id": "formula_1",
+      "old_row_index": 190,
+      "new_row_index": 190,
+      "input_contract_sha256": "53775efe8c31dbb7357056b7493f2d9922f514cfa0cbdfc7abebec73df998c5f",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "872",
+      "db_id": "formula_1",
+      "old_row_index": 191,
+      "new_row_index": 191,
+      "input_contract_sha256": "cb190314202aee8698d3c3e57e10f319426b1c52f7e950c9e8b2a6d75a2bec52",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "875",
+      "db_id": "formula_1",
+      "old_row_index": 192,
+      "new_row_index": 192,
+      "input_contract_sha256": "642d4f21fd7903d22400f25845b6344bea853ce7848a6643eb06170ed7f126e5",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "877",
+      "db_id": "formula_1",
+      "old_row_index": 193,
+      "new_row_index": 193,
+      "input_contract_sha256": "049a60918887c8451040d444ea442c1f5cc01733b2235e60689828991dd14957",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "879",
+      "db_id": "formula_1",
+      "old_row_index": 194,
+      "new_row_index": 194,
+      "input_contract_sha256": "96fa4bd9c954e3ce965a47542369e148e14695bcdf38551f3709722c1ec2030b",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "880",
+      "db_id": "formula_1",
+      "old_row_index": 195,
+      "new_row_index": 195,
+      "input_contract_sha256": "6520b5ce4349dcef8951bffc957c890dd95866db53ee3b2da2dde3e6efb66dde",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "884",
+      "db_id": "formula_1",
+      "old_row_index": 197,
+      "new_row_index": 197,
+      "input_contract_sha256": "f64923800ae4793f8e735e5cad25b9eb1f8105149d394dcf5cbe2615263a2f21",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "895",
+      "db_id": "formula_1",
+      "old_row_index": 200,
+      "new_row_index": 200,
+      "input_contract_sha256": "3265a2c85c9edbde1287f596fb928e913c0a6374546b75a25a7745118e4c6f62",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "897",
+      "db_id": "formula_1",
+      "old_row_index": 202,
+      "new_row_index": 202,
+      "input_contract_sha256": "bc0f63ffd9958559c7be52af306a18f5fa48ad59dcba48c5c99ae6c828331864",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "898",
+      "db_id": "formula_1",
+      "old_row_index": 203,
+      "new_row_index": 203,
+      "input_contract_sha256": "a72b8e7349875a9c7144be3cca1663313e4f265eb198ed816e059d89daa3e185",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "901",
+      "db_id": "formula_1",
+      "old_row_index": 204,
+      "new_row_index": 204,
+      "input_contract_sha256": "d6fa815e5e6d6bfdaaa8fbff90c143f571587920299563df832a06b1c293db01",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "909",
+      "db_id": "formula_1",
+      "old_row_index": 208,
+      "new_row_index": 208,
+      "input_contract_sha256": "6e8a32cc49105503104c1ca41a9f6b968b68a25c9e0846e57a551dcee42aad53",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "910",
+      "db_id": "formula_1",
+      "old_row_index": 209,
+      "new_row_index": 209,
+      "input_contract_sha256": "d02a603c093c425902dfd36b2cf9dd2d365e5c0b5261075d37a3a7fa32957582",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "912",
+      "db_id": "formula_1",
+      "old_row_index": 210,
+      "new_row_index": 210,
+      "input_contract_sha256": "5ab34a95f5d202e7f16d468b75d9910f633e6c4a669ae1c6d36327d34c4769d6",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "915",
+      "db_id": "formula_1",
+      "old_row_index": 211,
+      "new_row_index": 211,
+      "input_contract_sha256": "e9768ab6f3cea57c4af23da95b48dee4421f72ef5837ab999238bbb9e80f0ee3",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "931",
+      "db_id": "formula_1",
+      "old_row_index": 214,
+      "new_row_index": 214,
+      "input_contract_sha256": "39ceb2ef7bfd12c76788fb73db997d5e28ea07115a9a3e1ea68caef9fc3a2929",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "933",
+      "db_id": "formula_1",
+      "old_row_index": 215,
+      "new_row_index": 215,
+      "input_contract_sha256": "56d7eebd78721973b85016e75bd203bc95543c0932280bc3c40ec5fe0c0f2577",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "937",
+      "db_id": "formula_1",
+      "old_row_index": 216,
+      "new_row_index": 216,
+      "input_contract_sha256": "3d7264984232170711e6ef787be645583349acc5b4a040f6f93ae11faff025e0",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "940",
+      "db_id": "formula_1",
+      "old_row_index": 217,
+      "new_row_index": 217,
+      "input_contract_sha256": "afd97b82d56698f28af825bb235b79b9e31b47598a19cd3fca41133f38ba211a",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "945",
+      "db_id": "formula_1",
+      "old_row_index": 219,
+      "new_row_index": 219,
+      "input_contract_sha256": "3db0ce4cc65595d4832c8f20eddba523111cfb26401018b1db088638122f3d93",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "948",
+      "db_id": "formula_1",
+      "old_row_index": 220,
+      "new_row_index": 220,
+      "input_contract_sha256": "ae3e2ab69d40c1ea4b9ae607fe87366856c63ceb1660dd5f51d7acc1b071e8bd",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "951",
+      "db_id": "formula_1",
+      "old_row_index": 222,
+      "new_row_index": 222,
+      "input_contract_sha256": "9d3e3edeed9c55d98db1c1775b5e037ea76268757386ceafce799ed2c4a5f59a",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "960",
+      "db_id": "formula_1",
+      "old_row_index": 226,
+      "new_row_index": 226,
+      "input_contract_sha256": "4399c2f57af939026767264ddcd16585c146e60984e451adb42ba58124101442",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "963",
+      "db_id": "formula_1",
+      "old_row_index": 228,
+      "new_row_index": 228,
+      "input_contract_sha256": "b4046175c91cf5fe233e84b19b6856a4cca60f6d7f5541ae7365cb673f8e467a",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "964",
+      "db_id": "formula_1",
+      "old_row_index": 229,
+      "new_row_index": 229,
+      "input_contract_sha256": "765753d3edae34411ea845eee6f95b8d26246c5099f4ce23a5f9b98a8a2e0f86",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "971",
+      "db_id": "formula_1",
+      "old_row_index": 231,
+      "new_row_index": 231,
+      "input_contract_sha256": "665bc84b9e5b226cfd415e0a0460dcda48987925f2857166b879d1fb7e97f3ff",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "972",
+      "db_id": "formula_1",
+      "old_row_index": 232,
+      "new_row_index": 232,
+      "input_contract_sha256": "da33f15c7a209baa19e68fe7588ab68341be327651df5824d2e85a215b7cabec",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "977",
+      "db_id": "formula_1",
+      "old_row_index": 233,
+      "new_row_index": 233,
+      "input_contract_sha256": "d80d47d9a47478e1079548ab2d3270b270219540cb824a46c7bdb3d08712ae45",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "981",
+      "db_id": "formula_1",
+      "old_row_index": 235,
+      "new_row_index": 235,
+      "input_contract_sha256": "8a560b9a1340f95115e1081f55ff4d3b862fc596cd4f417e22a6531f35c58dcc",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "988",
+      "db_id": "formula_1",
+      "old_row_index": 236,
+      "new_row_index": 236,
+      "input_contract_sha256": "c83a074d71db123dc1ced2a7a7a2441614472f48bbbecb6fbc3aebb44074de46",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "990",
+      "db_id": "formula_1",
+      "old_row_index": 238,
+      "new_row_index": 238,
+      "input_contract_sha256": "a86294be74f13b116dcb91c3f6f4fb5595442a643b41a2bec06af8474df2b1a8",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1001",
+      "db_id": "formula_1",
+      "old_row_index": 241,
+      "new_row_index": 241,
+      "input_contract_sha256": "62a4358957d616eacc5c4ad328f414756ec34f45a79b1c3a6d2acb61f5c254b5",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1002",
+      "db_id": "formula_1",
+      "old_row_index": 242,
+      "new_row_index": 242,
+      "input_contract_sha256": "542f1f537696cbad02628aee3e1f19b7a94788e4a6588c32967be38ee2feeb57",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1025",
+      "db_id": "european_football_2",
+      "old_row_index": 128,
+      "new_row_index": 128,
+      "input_contract_sha256": "ba6a119e2f19176732bfb18deb95d8be28941617833ad89c332b5d002dd295a0",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1028",
+      "db_id": "european_football_2",
+      "old_row_index": 129,
+      "new_row_index": 129,
+      "input_contract_sha256": "ad08a1b0621f031c2b4461de8dc88d373fd99ff6ad01ef0c9a056481a890f839",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1029",
+      "db_id": "european_football_2",
+      "old_row_index": 130,
+      "new_row_index": 130,
+      "input_contract_sha256": "cc07cba7af8343c452861963f2d6bccfd9de2c34488d6c7d96e7b0d594d0a358",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1030",
+      "db_id": "european_football_2",
+      "old_row_index": 131,
+      "new_row_index": 131,
+      "input_contract_sha256": "c3657b8afd237a9fc50fb51309307033944448443a44fb7eaf38d0b6253b715b",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1037",
+      "db_id": "european_football_2",
+      "old_row_index": 136,
+      "new_row_index": 136,
+      "input_contract_sha256": "0174e5e281e46f4980033748ef21a83628da8b3e9ecfdceb1eaf250b0b4c3ee0",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1039",
+      "db_id": "european_football_2",
+      "old_row_index": 137,
+      "new_row_index": 137,
+      "input_contract_sha256": "981e20902d9597de225a3c8d46c0432f3405d729c4acff1b603d2fa1a465614f",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1040",
+      "db_id": "european_football_2",
+      "old_row_index": 138,
+      "new_row_index": 138,
+      "input_contract_sha256": "883af098337c74bbe17ea005d17bc315212db8ed754323db40804bfc3eb3bd7c",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1042",
+      "db_id": "european_football_2",
+      "old_row_index": 139,
+      "new_row_index": 139,
+      "input_contract_sha256": "a51cec355903f6f7774455556ff43c1f1a52d0901a25d6a2e48554db4b1f861d",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1044",
+      "db_id": "european_football_2",
+      "old_row_index": 140,
+      "new_row_index": 140,
+      "input_contract_sha256": "df9a5a0645f7ed0f1703213a32e002002990b9612da8232afc93105ae29cba8a",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1048",
+      "db_id": "european_football_2",
+      "old_row_index": 141,
+      "new_row_index": 141,
+      "input_contract_sha256": "68a07e29000447171b473c75f9a41ebd3f14b22ae3ffd1fc63486a8e887d9ba7",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1057",
+      "db_id": "european_football_2",
+      "old_row_index": 142,
+      "new_row_index": 142,
+      "input_contract_sha256": "0ad805c013f3a09aa7e91562494bedf07d441d35b78f7b120b11d2a97c06e8a9",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1068",
+      "db_id": "european_football_2",
+      "old_row_index": 144,
+      "new_row_index": 144,
+      "input_contract_sha256": "2cd62ef25fbaa2d643cd286aaad7530e06119b5f1b61cdb3efe2b76875cb62c9",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1076",
+      "db_id": "european_football_2",
+      "old_row_index": 145,
+      "new_row_index": 145,
+      "input_contract_sha256": "03e6b6f0090215667cfbea071e4098485abc3a7aa9540ef90d4cebbae0e6d30d",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1078",
+      "db_id": "european_football_2",
+      "old_row_index": 146,
+      "new_row_index": 146,
+      "input_contract_sha256": "8f15deb3d28a227328c4ebb495502bd4f9064690be02b0c76944c5bcf0fa0ad7",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1079",
+      "db_id": "european_football_2",
+      "old_row_index": 147,
+      "new_row_index": 147,
+      "input_contract_sha256": "ff66f70634279e8dad529e10ef9f4b78af1c2a30322594c312f1fb6f53b35736",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1080",
+      "db_id": "european_football_2",
+      "old_row_index": 148,
+      "new_row_index": 148,
+      "input_contract_sha256": "17653bcbbe9d20ec7ad5a2457bc32782db2aad31b7a3db7c13b583887592fbf9",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1084",
+      "db_id": "european_football_2",
+      "old_row_index": 149,
+      "new_row_index": 149,
+      "input_contract_sha256": "9fb435360ad5737792cc5cc09f5c3a83e460b5982eb1f950ad470d26647598af",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1088",
+      "db_id": "european_football_2",
+      "old_row_index": 150,
+      "new_row_index": 150,
+      "input_contract_sha256": "c09e4af0d5e2ba55bcf50114804225ff5dd5a81ceffa2254d2dae2f9abb37506",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1096",
+      "db_id": "european_football_2",
+      "old_row_index": 154,
+      "new_row_index": 154,
+      "input_contract_sha256": "f7380225a65051a09447a48e77c70154ec6c10eea078857480a3d50292bcb1ba",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1098",
+      "db_id": "european_football_2",
+      "old_row_index": 155,
+      "new_row_index": 155,
+      "input_contract_sha256": "7d188b7437b7e93a7a1d0671cd33225382a5acb8c06f1c19f32abe7d7ab2f26f",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1102",
+      "db_id": "european_football_2",
+      "old_row_index": 156,
+      "new_row_index": 156,
+      "input_contract_sha256": "ea13c39a203522adfa803de46fbaccdee43d5ecd30bdcd88aaab9bde6d24b189",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1103",
+      "db_id": "european_football_2",
+      "old_row_index": 157,
+      "new_row_index": 157,
+      "input_contract_sha256": "b574c4f9834c249300454020d160e59126aa69af5534b4605ba81b21286ae102",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1105",
+      "db_id": "european_football_2",
+      "old_row_index": 158,
+      "new_row_index": 158,
+      "input_contract_sha256": "a8bd2b67888564ad42b5494181a534faba710a242487019bc9ce317d74de1063",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1107",
+      "db_id": "european_football_2",
+      "old_row_index": 159,
+      "new_row_index": 159,
+      "input_contract_sha256": "fdca4814c9b3dfb964f5b4f18b4ea4f9e95c0b17ac541da0b6b4843e1a20c692",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1110",
+      "db_id": "european_football_2",
+      "old_row_index": 160,
+      "new_row_index": 160,
+      "input_contract_sha256": "f0fa2dc00b6765a85f266b005280e4bf43e6d4579a91ca971327a64ef7cbf440",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1113",
+      "db_id": "european_football_2",
+      "old_row_index": 161,
+      "new_row_index": 161,
+      "input_contract_sha256": "d5352ce1a4d57d066f8c3a69ee630b212367dc582cbac390b07f43c907580402",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1114",
+      "db_id": "european_football_2",
+      "old_row_index": 162,
+      "new_row_index": 162,
+      "input_contract_sha256": "4c9678d943f6ed58bc4a56541a7327593a978294d7b57dd52cd4f9f30619a846",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1115",
+      "db_id": "european_football_2",
+      "old_row_index": 163,
+      "new_row_index": 163,
+      "input_contract_sha256": "253cf69c7da6771b9868e9d1c3cb3794a2df4d0bcd8397bf974e75fa0bdd9755",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1122",
+      "db_id": "european_football_2",
+      "old_row_index": 165,
+      "new_row_index": 165,
+      "input_contract_sha256": "6550c524556baa0739256d28a9eae3aa2bbdcd72ee109f4ee75fff42488aa91c",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1124",
+      "db_id": "european_football_2",
+      "old_row_index": 166,
+      "new_row_index": 166,
+      "input_contract_sha256": "1e9478e6ae44230705e32e769978c024519470cf5f541c13a5f3850b8a34122d",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1130",
+      "db_id": "european_football_2",
+      "old_row_index": 167,
+      "new_row_index": 167,
+      "input_contract_sha256": "934f24194271f29b17faa2200942ff7ac274e54fcf06b0df0176ccee353d7d0a",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1136",
+      "db_id": "european_football_2",
+      "old_row_index": 171,
+      "new_row_index": 171,
+      "input_contract_sha256": "e8178218cf79b680fe89f2922f023b9a05e9f873659d096f8740383286d55481",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1139",
+      "db_id": "european_football_2",
+      "old_row_index": 172,
+      "new_row_index": 172,
+      "input_contract_sha256": "3573caa1bf61cb57fddf829d2c023e4fc7f802437de0caf0117d2b952259ae69",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1145",
+      "db_id": "european_football_2",
+      "old_row_index": 175,
+      "new_row_index": 175,
+      "input_contract_sha256": "7cff70505c73bb3baf43baae4c5033a4c5e96064be4b20ca1efcaea81a46af64",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1146",
+      "db_id": "european_football_2",
+      "old_row_index": 176,
+      "new_row_index": 176,
+      "input_contract_sha256": "1474409f6c0c9d0d0d551075ccef3fcbfc764df75e1d3f89c48cf40df428c30b",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1147",
+      "db_id": "european_football_2",
+      "old_row_index": 177,
+      "new_row_index": 177,
+      "input_contract_sha256": "4209235bd08dcc3e77ccb600542378d71ebacc12f5833080acf89919dcb00f41",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1149",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 78,
+      "new_row_index": 78,
+      "input_contract_sha256": "91599b589f4bbabfb0b7a46dff190179bab877ccbe715b1cd064294358648b3d",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1150",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 79,
+      "new_row_index": 79,
+      "input_contract_sha256": "b1de87c63aa1060f9141c3ca3d8def7ddee1114739c5c377468018eb58618803",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1153",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 81,
+      "new_row_index": 81,
+      "input_contract_sha256": "76a5b0f874a84f10d4adc866ee007d85b58b057ba4ea585df61c57776662c983",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1155",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 82,
+      "new_row_index": 82,
+      "input_contract_sha256": "3c3f135a7f2e42e2ee15a6da5f7ab3e7b786894269e0181cc323ded37482b8b4",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1156",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 83,
+      "new_row_index": 83,
+      "input_contract_sha256": "999ee60f974ad497117f8f09d44bdf28151ae24649cdb786651914288a6e91ef",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1157",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 84,
+      "new_row_index": 84,
+      "input_contract_sha256": "61302b37334e1efa999acaf06b0de6ee3c2c90a025538441afd0b0ca302376ee",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1162",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 85,
+      "new_row_index": 85,
+      "input_contract_sha256": "86422dab4ac9809de71e5f2319310fcce0865f3c186f77296cbefe138ea14067",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1164",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 86,
+      "new_row_index": 86,
+      "input_contract_sha256": "43982908e556baa1a22c23ae3fcc8c2e87af0a688e7cdb3492e0c25289490c4e",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1169",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 89,
+      "new_row_index": 89,
+      "input_contract_sha256": "e4d0a2e7077406443aabbc65d158c971cb39510cca4a989a4e26462a614180c9",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1179",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 92,
+      "new_row_index": 92,
+      "input_contract_sha256": "f45f0a862f695739dec9e164d8bb08c2b01fd6230781408a177b05b12954a13e",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1187",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 94,
+      "new_row_index": 94,
+      "input_contract_sha256": "98dce282c9f885f5a546a95bd03d9b290eab1f75fecfc9b90c49e018580baa81",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1192",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 96,
+      "new_row_index": 96,
+      "input_contract_sha256": "78f2289a7110d025a98f77c499782433a7432c5436e8b10aef28afd03e181744",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1195",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 97,
+      "new_row_index": 97,
+      "input_contract_sha256": "f280ea01a09849491a1c7dd322558574285fa65c151ae98c65049c3af4da375d",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1208",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 101,
+      "new_row_index": 101,
+      "input_contract_sha256": "266adee314b9c6f1e33b342ce68d5124e243995f4222bc150725ecaf7befafa9",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1209",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 102,
+      "new_row_index": 102,
+      "input_contract_sha256": "518785f62178c99bdd256deac35ad0b6886f550538abfedf31d2eeb2f995f9ac",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1220",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 103,
+      "new_row_index": 103,
+      "input_contract_sha256": "45cc295b339806727c611089a94f63692b085065150a45059d62ee98cd6ac746",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1225",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 104,
+      "new_row_index": 104,
+      "input_contract_sha256": "805aa9178dd6a97f771006125022a9b94a07838b7b4eeb125fb00b3099c126c9",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1229",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 106,
+      "new_row_index": 106,
+      "input_contract_sha256": "6c2cdb3b200d5fbc2d5e05247e984389b6639fd4bb0e52a9661c84f722664195",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1231",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 107,
+      "new_row_index": 107,
+      "input_contract_sha256": "52e7676fbf1204d4f507d253693df34e9e2a6aab256ca132cb193d6f2d850ddc",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1238",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 110,
+      "new_row_index": 110,
+      "input_contract_sha256": "ac75ede89be797471889c8575196a402fa05ec65fdd03fa32ff43ba9b587155f",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1251",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 116,
+      "new_row_index": 116,
+      "input_contract_sha256": "598f0c726d8fbd13a6d35643a277893889f8d0329048cfcb0fdce2d8bc67a444",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1252",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 117,
+      "new_row_index": 117,
+      "input_contract_sha256": "1078eb3035a1c30e57d467f473c3a3c8d2b5677ebaef19c45d0b026d2a2ba3f6",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1255",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 119,
+      "new_row_index": 119,
+      "input_contract_sha256": "81fc79825c9e134259c7b8c02028bd6563e84d28c779a8e976c8a0a0df8dcb7a",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1256",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 120,
+      "new_row_index": 120,
+      "input_contract_sha256": "7f6a45de88bbd5a9d560f98937cb890ae3f97336f283e0672972425aed578de5",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1265",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 122,
+      "new_row_index": 122,
+      "input_contract_sha256": "9b2d505ef9fa1a3d04e1928c27abae0398938515f57a807fb95665e4c7390532",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1267",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 123,
+      "new_row_index": 123,
+      "input_contract_sha256": "e0f8a1ec13a36d7d3e6cc5732d39957acab3ba2a48590dc59fa8044e6b479fcc",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1270",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 124,
+      "new_row_index": 124,
+      "input_contract_sha256": "2ddb5416c91175ba5b1a7c310e4145fe67dfd30829be6758d3b3adb989e862ca",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1281",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 126,
+      "new_row_index": 126,
+      "input_contract_sha256": "7b7ec8594988d83a3cb31e150ceea826cd36553e20e57dd5c85206e08cd29df1",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1302",
+      "db_id": "thrombosis_prediction",
+      "old_row_index": 127,
+      "new_row_index": 127,
+      "input_contract_sha256": "afc5127e40ed3b16fa82c6ace1f68d6c723b28b6d697474a0b70e773d7745cee",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1312",
+      "db_id": "student_club",
+      "old_row_index": 30,
+      "new_row_index": 30,
+      "input_contract_sha256": "8c930b6983b8f3b84165154b593c1ec782f4fc85446834e1c15641ce7c57dcf7",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1317",
+      "db_id": "student_club",
+      "old_row_index": 31,
+      "new_row_index": 31,
+      "input_contract_sha256": "402efd7ac8136a6240131db2e1b304804716eba3048f91cbf39064123625bf46",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1322",
+      "db_id": "student_club",
+      "old_row_index": 32,
+      "new_row_index": 32,
+      "input_contract_sha256": "0470cf1a4a8c019cabd140b2fc444e9952fc496a58192ec2edad40dd5889ba21",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1323",
+      "db_id": "student_club",
+      "old_row_index": 33,
+      "new_row_index": 33,
+      "input_contract_sha256": "a6381d302adf383c26be663cc2f49794ee7e10592f1cbdfb87f198eabc7151fb",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1331",
+      "db_id": "student_club",
+      "old_row_index": 34,
+      "new_row_index": 34,
+      "input_contract_sha256": "c674912f5f23595fdc8e0e9936e123c03644e4f9aa01ed45aefa7274171d5473",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1334",
+      "db_id": "student_club",
+      "old_row_index": 35,
+      "new_row_index": 35,
+      "input_contract_sha256": "7f86eb015f18bdd77503454d545bbebd8ad7febab2ae2fff9a5a9f667e8379bd",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1339",
+      "db_id": "student_club",
+      "old_row_index": 37,
+      "new_row_index": 37,
+      "input_contract_sha256": "2d62a61ec0496fd40867a10889e2b1524cbd705bb28202a7ebbfbbb2dfdbbf76",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1340",
+      "db_id": "student_club",
+      "old_row_index": 38,
+      "new_row_index": 38,
+      "input_contract_sha256": "223cc492cd7aa7c310aac65c39f5864017e87d533f63fcc0ccff4d6b61d3c284",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1344",
+      "db_id": "student_club",
+      "old_row_index": 39,
+      "new_row_index": 39,
+      "input_contract_sha256": "bdf1833d777bbf8f75e665416c49d95e0cb0dd5bac363aeb4c31d32288f818cb",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1346",
+      "db_id": "student_club",
+      "old_row_index": 40,
+      "new_row_index": 40,
+      "input_contract_sha256": "a5bab053f6302d1a2e03b43bd2ee1dbf21e333c3f8aeb34076c8739cb770cfed",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1350",
+      "db_id": "student_club",
+      "old_row_index": 41,
+      "new_row_index": 41,
+      "input_contract_sha256": "8469546b88582205870bf8dd127b3dba0e0324c613d1ed7d087db8f064a3e484",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1351",
+      "db_id": "student_club",
+      "old_row_index": 42,
+      "new_row_index": 42,
+      "input_contract_sha256": "5e13a360145a08969d70c2e7e7b40de9bd76f50800cce014056a8b59afd14292",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1352",
+      "db_id": "student_club",
+      "old_row_index": 43,
+      "new_row_index": 43,
+      "input_contract_sha256": "ccf62507b7d62d7e6a8efb1f0e1eea9de240051bfdd88e84db9bce9006a0fb63",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1356",
+      "db_id": "student_club",
+      "old_row_index": 44,
+      "new_row_index": 44,
+      "input_contract_sha256": "5396e5f3547948577b945c64997377ae7213fc6e912016ac40b454e6757c2d8f",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1357",
+      "db_id": "student_club",
+      "old_row_index": 45,
+      "new_row_index": 45,
+      "input_contract_sha256": "88a04ff8bf24a797b25a1d9cbd7fbf332bf7ba4d13c2964a44d37bd778fac85a",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1359",
+      "db_id": "student_club",
+      "old_row_index": 46,
+      "new_row_index": 46,
+      "input_contract_sha256": "2c0a6b0a53e100b04e5c1517aadb0dd926271c791ade55035758d094a632300d",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1361",
+      "db_id": "student_club",
+      "old_row_index": 47,
+      "new_row_index": 47,
+      "input_contract_sha256": "764f42dfb24a840f1c020d2290e1b709ae2c44f7b035406db16fee005aac78fa",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1362",
+      "db_id": "student_club",
+      "old_row_index": 48,
+      "new_row_index": 48,
+      "input_contract_sha256": "c1eaa7ec2ad9d818fe4fdee4b9a8e301e0971d809a261cba611287218648d8b3",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1368",
+      "db_id": "student_club",
+      "old_row_index": 49,
+      "new_row_index": 49,
+      "input_contract_sha256": "0af59cd40cfc7d80ca3a38e7f74d767d4b01d7fb8a3b55d10af269141ad996ac",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1371",
+      "db_id": "student_club",
+      "old_row_index": 50,
+      "new_row_index": 50,
+      "input_contract_sha256": "002d2829db33951c30c806089b6549fa4fce7d8bc37488b65c804a76ed8e0466",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1375",
+      "db_id": "student_club",
+      "old_row_index": 51,
+      "new_row_index": 51,
+      "input_contract_sha256": "765237f452981a798bb588977ac27f4862ca1006fda870d9147bea1c51d94912",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1376",
+      "db_id": "student_club",
+      "old_row_index": 52,
+      "new_row_index": 52,
+      "input_contract_sha256": "2a61a1caf701226a283899e86be5c9d621ee3f83a43e04f2a3ba69f29feaf499",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1378",
+      "db_id": "student_club",
+      "old_row_index": 53,
+      "new_row_index": 53,
+      "input_contract_sha256": "fe464d9f4748f6c7c8b1f5a93dd5dce6239186c4b6c9479efbde5ac0b10502e8",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1380",
+      "db_id": "student_club",
+      "old_row_index": 54,
+      "new_row_index": 54,
+      "input_contract_sha256": "b347aa523645eb6b8437ba1361f906688bd826fae86a77ad7ad06c0df7053775",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1381",
+      "db_id": "student_club",
+      "old_row_index": 55,
+      "new_row_index": 55,
+      "input_contract_sha256": "d82b4a9ecba13cee88c81bf3f6356de5b875972b5bd8ffed018b0fbc38bd84f9",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1387",
+      "db_id": "student_club",
+      "old_row_index": 56,
+      "new_row_index": 56,
+      "input_contract_sha256": "c218ffc84c712e5fc6bc532e1e3c918adb64b4963b92e3096e0c8e8963a9d2f6",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1390",
+      "db_id": "student_club",
+      "old_row_index": 58,
+      "new_row_index": 58,
+      "input_contract_sha256": "e0ce129ad6588c76348c5490bc784bbbf2c84433a24d6cb0aeb054410846df1b",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1392",
+      "db_id": "student_club",
+      "old_row_index": 59,
+      "new_row_index": 59,
+      "input_contract_sha256": "2ddf885185c9ec924e9ae0bcec8ef46d6fdcdae4d3ba11cd121e5ad107686e7f",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1394",
+      "db_id": "student_club",
+      "old_row_index": 60,
+      "new_row_index": 60,
+      "input_contract_sha256": "65d0ff7f2076514e5fa25c3a13cedf345b00bb95a9a8e5e1a839865527904a4e",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1398",
+      "db_id": "student_club",
+      "old_row_index": 61,
+      "new_row_index": 61,
+      "input_contract_sha256": "8e11df4f10c2f03d4fce7334cd2889aa337ea52118f95b980196d19e23b7d216",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1401",
+      "db_id": "student_club",
+      "old_row_index": 63,
+      "new_row_index": 63,
+      "input_contract_sha256": "eec492ac9a0a2402613ac20af2b93f16c17ad2277afca20c563e4a5d4f0990e0",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1403",
+      "db_id": "student_club",
+      "old_row_index": 64,
+      "new_row_index": 64,
+      "input_contract_sha256": "8cbaeaafc781cff123cd8d1b9ab25c89a0b64d2668eaea588e5a89531e04b929",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1409",
+      "db_id": "student_club",
+      "old_row_index": 67,
+      "new_row_index": 67,
+      "input_contract_sha256": "93428163e1cd5d55554b4a66fa3cd4c6227e0e1e6ecc285451f7084a8fc0d05c",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1410",
+      "db_id": "student_club",
+      "old_row_index": 68,
+      "new_row_index": 68,
+      "input_contract_sha256": "de3cada904b36733e4440932b74612e1e311b00c8d231726dfeedc97b60f1891",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1411",
+      "db_id": "student_club",
+      "old_row_index": 69,
+      "new_row_index": 69,
+      "input_contract_sha256": "4e20d5b27bffdda1d3210fd596416e50142c7c04c732e1b7649424c9b0604040",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1422",
+      "db_id": "student_club",
+      "old_row_index": 70,
+      "new_row_index": 70,
+      "input_contract_sha256": "cff02509726b764679e27d008b3459c31a2b8db1528164ed626b9dc41335da8f",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1426",
+      "db_id": "student_club",
+      "old_row_index": 71,
+      "new_row_index": 71,
+      "input_contract_sha256": "54b4d7a62acda3778df8f78afd7b190b7c5d2c3b07ca0001a77d80ecc814fdc3",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1427",
+      "db_id": "student_club",
+      "old_row_index": 72,
+      "new_row_index": 72,
+      "input_contract_sha256": "4e063c8b3a55102f0332a06e5721b41d5a76c396aaee6fcc1752a64ca9972eb2",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1432",
+      "db_id": "student_club",
+      "old_row_index": 73,
+      "new_row_index": 73,
+      "input_contract_sha256": "ce4bac041f4155cfd115d0053f8f300fb181055806c5a1c706699bfbbc682d32",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1435",
+      "db_id": "student_club",
+      "old_row_index": 74,
+      "new_row_index": 74,
+      "input_contract_sha256": "734d80d67d38d9c2b2e640f9ce852ff3a4eda54accaa902165bae1c770027ff4",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1457",
+      "db_id": "student_club",
+      "old_row_index": 75,
+      "new_row_index": 75,
+      "input_contract_sha256": "5d49e514fe59f731de8bd826b2e58509488b5527c254da3871c6b50fad4a2be5",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1460",
+      "db_id": "student_club",
+      "old_row_index": 76,
+      "new_row_index": 76,
+      "input_contract_sha256": "9aece57699ab6b63e503d5a057d35692868d5976147053138f20aabe91161fad",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1464",
+      "db_id": "student_club",
+      "old_row_index": 77,
+      "new_row_index": 77,
+      "input_contract_sha256": "820d54ad42f2ed0a397f94ea50b99765c74304f5db0f2e141a2ff7ed41ccca7c",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1471",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 0,
+      "new_row_index": 0,
+      "input_contract_sha256": "c2ce0ff4f10253e224b45294a342ffe45cfe3db179702337bce9a062e6482ab9",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1472",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 1,
+      "new_row_index": 1,
+      "input_contract_sha256": "710f08ec7d203b36e32ea7389b110b9a4939a89cf541eb3264095c4de1199ffd",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1476",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 3,
+      "new_row_index": 3,
+      "input_contract_sha256": "0fb3b612e0e282cb8267074466cf041a238ff530975351e9091d4ab062cc9edd",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1479",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 4,
+      "new_row_index": 4,
+      "input_contract_sha256": "a3110f3978b47daf832f25af9be169fc58bb11d3dc2db179bfc10206b248e86b",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1480",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 5,
+      "new_row_index": 5,
+      "input_contract_sha256": "ac6508ae36a61f0c0f282e61f3e7748f1d68ff111bcca2f5be1cb27031f0e3bb",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1481",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 6,
+      "new_row_index": 6,
+      "input_contract_sha256": "486ceb1cc6b7c8598e61c712804416a0462225eee6e835085360b3dde74144b3",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1483",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 8,
+      "new_row_index": 8,
+      "input_contract_sha256": "621065b2a9ae097170121f1ed5e3cc54ca4c26ed708591dc674e6c053e02751a",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1484",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 9,
+      "new_row_index": 9,
+      "input_contract_sha256": "1c4c2c22cd98087358ac6dcc60be7efc31e9a118f42baed26d307df73e3f7d46",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1486",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 10,
+      "new_row_index": 10,
+      "input_contract_sha256": "e9d06c481174560972374bb0edaa123ce6a99d0338da4edb9c6192b573e15cc9",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1490",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 11,
+      "new_row_index": 11,
+      "input_contract_sha256": "aed10c14801299864e3b785bb1fbd5eb272fd7109c223abcaf8169c697798617",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1493",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 12,
+      "new_row_index": 12,
+      "input_contract_sha256": "8041ec510f1bd1b75ac49f9e3d49b795a4491e4978bbba9a0183a7338b061e6c",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1498",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 13,
+      "new_row_index": 13,
+      "input_contract_sha256": "637eca01e7c537d313a0d538c2148fa1565a47982a2cec58b180865b4d22bc35",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1505",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 16,
+      "new_row_index": 16,
+      "input_contract_sha256": "96739e9e14a66b022f3cfa427de3d3cdf26350ba8e548dafecd99553c5526e45",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1506",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 17,
+      "new_row_index": 17,
+      "input_contract_sha256": "271c23edf23b07d0829f514d60fc9ca651267f199c0bb10fd6f4b6b7988dde8b",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1509",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 19,
+      "new_row_index": 19,
+      "input_contract_sha256": "7a95b79491074fdfe74675cde7e0bf19238e9d2d0685f6383479a3525a073333",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1514",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 20,
+      "new_row_index": 20,
+      "input_contract_sha256": "222b37a96fb8265158ff41c914dcdea7c0e8dbc3b60eb965fcf9e51f45131eb8",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1515",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 21,
+      "new_row_index": 21,
+      "input_contract_sha256": "7b7aa6dc2fc2c721576b09c21401a0069672e74d207661709b875711e3337f76",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1521",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 22,
+      "new_row_index": 22,
+      "input_contract_sha256": "99c3635a37f227f6669350efc198732182541f3a943f9ae0912cb7e2e6d8603f",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1524",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 23,
+      "new_row_index": 23,
+      "input_contract_sha256": "c7277e1d6af7225e6cf6d8f7a2d47f8df5581a3b07af8fb912979f0e57705b45",
+      "reference_sql_bytes_changed": false
+    },
+    {
+      "question_id": "1525",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 24,
+      "new_row_index": 24,
+      "input_contract_sha256": "87a3d6d9def6e231fa0f610fb9c15ce521e976d130d278b18de51147a62eb904",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1526",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 25,
+      "new_row_index": 25,
+      "input_contract_sha256": "aa03a1f174eb8034b40176a7c86da9fd88df6375de135d2721d6583f5878b5cd",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1531",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 28,
+      "new_row_index": 28,
+      "input_contract_sha256": "6f057d594f766856ebba2744bc5bb7ca2e53dc7357a898622875cdcefe58e1ab",
+      "reference_sql_bytes_changed": true
+    },
+    {
+      "question_id": "1533",
+      "db_id": "debit_card_specializing",
+      "old_row_index": 29,
+      "new_row_index": 29,
+      "input_contract_sha256": "caecbed40013ca00c74fa73164ec4d6efd29d655ca08a41d8471b0334d758387",
+      "reference_sql_bytes_changed": false
+    }
+  ]
+}

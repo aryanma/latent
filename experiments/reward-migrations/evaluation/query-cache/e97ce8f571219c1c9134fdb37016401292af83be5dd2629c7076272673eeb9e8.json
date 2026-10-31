@@ -1,0 +1,27 @@
+{
+  "provenance": {
+    "database_sha256": "b3d149ad05746dbbe5116e229e17e18f09c39db43cf117d9ef3441753608b691",
+    "query_sha256": "2325e1f19f58a299459c11718d229e413da06160f56e06a3c0c21f22c53574b3",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "2325e1f19f58a299459c11718d229e413da06160f56e06a3c0c21f22c53574b3",
+    "status": "sql_error",
+    "seconds": 8.9e-05,
+    "error": "near \"```sql\nSELECT\n    SUM(CASE WHEN Consumption > 528.3 THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS percentage\nFROM yearmonth\nWHERE Date = '201202';\n```\": syntax error",
+    "denied": []
+  }
+}

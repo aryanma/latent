@@ -1,0 +1,14 @@
+{
+  "archive": {
+    "bytes": 2834906,
+    "sha256": "5f193669e634ee2f9a0dfe99d944f710e4661c901fb60351286361b54ea422df",
+    "path": "reproduction.zip"
+  },
+  "manifest": {
+    "bytes": 247394,
+    "sha256": "3bb94e300e9556f433e7c04ab268fdbb7eff6c4290d75fa1df7019d2eef2cfc7",
+    "path": "../../experiments/reward-migrations/ARTIFACTS.json"
+  },
+  "files": 1299,
+  "uncompressed_bytes": 17793147
+}

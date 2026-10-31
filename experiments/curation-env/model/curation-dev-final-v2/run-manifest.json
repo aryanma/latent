@@ -1,0 +1,30 @@
+{
+  "driver_sha256": "e010046201b2c2a23bfb2584c47c2aa6e600eccb8d78c8a5cab80294d0dcbc1c",
+  "environment_manifest_digest": "6893521e0391e831b45a414390246e0fb0a06d1c203892b66082a91f8ae22730",
+  "episode_generation_limit": 4096,
+  "load_seconds": 0.29097791598178446,
+  "max_steps": 18,
+  "model_repository": "Qwen/Qwen3-1.7B-MLX-4bit",
+  "model_revision": "21457c6f51ed54a7c16e988c0844db973815c137",
+  "no_context_truncation": true,
+  "no_output_repair": true,
+  "per_turn_generation_limit": 512,
+  "runtime_sha256": "54ed9a667239c75bcd95a57b0c22aef00883f1144a6dd89f5c4ed2c537eee3d9",
+  "seed": 42,
+  "source_files": {
+    "latent_curation/__init__.py": "ca454212891c0ec39f572e21a778547bec1be75fe116678373b17a81218ada33",
+    "latent_curation/environment.py": "047c741e5df2fd85ca71fdc7972366091f914a6d7df020a1497c7c73efbfd13f",
+    "tasks/development.json": "ba6d17336f22f257247856474a9e63a16c2006b9eda02e624b76ab7f30567f3d",
+    "tasks/manifest.json": "f1efacdb3c30b16caa3a585c58bad2997104893d9f8b298e1b459e038d2ba01a"
+  },
+  "source_split": "development",
+  "system_prompt": "You control the listed tools of a data-curation environment. Follow its contract and finish by calling submit. You have 18 tool calls and 4096 generated tokens total.\nCRITICAL OUTPUT FORMAT: Produce exactly one JSON action and STOP immediately after its closing brace. Do not produce a second action, markdown, reasoning, or a simulated observation. The environment, not you, supplies the next observation. Schema example only: {\"tool\":\"lookup\",\"args\":{\"table\":\"registry\",\"keys\":[\"TICKET_ID_FROM_OBSERVATION\"]}}. The example ID is a placeholder; never send it literally. Invalid JSON is rejected, costs one step, and is not repaired.\nUseful procedure using only visible information:\n1. inspect all candidate rows. Read each row's exact ticket_id and id.\n2. lookup registry using ticket_id keys. Registry records supply case_id, lineage_id, and training_allowed.\n3. lookup evaluation using lineage_id keys. lookup events using case_id keys. These are different key types; copy their exact values from observations. Batch keys when possible.\n4. Exclude disallowed rows, evaluation-overlap lineages, and extra copies of the same lineage. Preserve exactly one representative of every eligible lineage; different lineages may share text.\n5. For each kept row, select the latest APPROVED event from the contract's authority at or before its cutoff. Ignore other authorities, drafts, and later events. Normalize its category through the supplied aliases. Repair only labels needing changes, citing that inspected event's id, never a registry or lineage id. Use only canonical labels.\n6. When all contract conditions are satisfied, submit. check only reports structural information, not the private correct answer.\nReturn only the NEXT single action object now, then stop and wait for the real result.",
+  "task_ids": [
+    "clean-0",
+    "labels-1",
+    "versions-5",
+    "composition-7"
+  ],
+  "temperature": 0.0,
+  "variant": "v2"
+}

@@ -1,0 +1,40 @@
+{
+  "provenance": {
+    "database_sha256": "eb89bcfe97eefa386a27904ec5aa15159811a7eac894ec659a36e48fa9f76b77",
+    "query_sha256": "ab71fe3ebd75199acd12af1d6fe523ffff366ec366ed67eea97bf4fa83594e2c",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "ab71fe3ebd75199acd12af1d6fe523ffff366ec366ed67eea97bf4fa83594e2c",
+    "status": "ok",
+    "seconds": 0.000119,
+    "result_sha256": "77b7e7bcdda16568e825d0af89314e22b26abe9288f91518eaee936e43e05f79",
+    "rows": 1,
+    "distinct_rows": 1,
+    "preview": [
+      [
+        "Sacha",
+        "Harrison",
+        866.25
+      ]
+    ],
+    "columns": [
+      "first_name",
+      "last_name",
+      "total_cost"
+    ]
+  }
+}

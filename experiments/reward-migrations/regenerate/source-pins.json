@@ -1,0 +1,91 @@
+{
+  "old": {
+    "repository": "birdsql/bird_mini_dev",
+    "revision": "f65faf4ae3b638c1fa6df1d3370c8d92c8366301",
+    "path": "bird-mini-dev-previous/mini_dev_sqlite.json",
+    "sha256": "88ceb0710163cae46a256ecea8f0a8c98286599530b60587fda5c3cfe57d45d2",
+    "license": "CC-BY-SA-4.0"
+  },
+  "new": {
+    "repository": "uiuc-kang-lab/arcwise-plat",
+    "revision": "8e6eb6e18487a9dabaf761bb9e62b1234e340301",
+    "configuration": "sql_only",
+    "path": "arcwise-plat-hf/arcwise_plat_sql_only_with_diff.json",
+    "sha256": "010c91bf9c06730769877df700c2ce79c88f242041f46f3089de49a3ed402a2c",
+    "license": "CC-BY-SA-4.0"
+  },
+  "databases": [
+    {
+      "path": "bird-dev/dev_20240627/dev_databases/california_schools/california_schools.sqlite",
+      "bytes": 11116544,
+      "sha256": "986817d793479801ed55133e55aa27e335422c0cd3866b54a3d6317b7c5f09c1"
+    },
+    {
+      "path": "bird-dev/dev_20240627/dev_databases/card_games/card_games.sqlite",
+      "bytes": 261820416,
+      "sha256": "c98bdb57fe7474da798b407785544b9af0daaad5d61fd21e2a73309493bc1227"
+    },
+    {
+      "path": "bird-dev/dev_20240627/dev_databases/codebase_community/codebase_community.sqlite",
+      "bytes": 481419264,
+      "sha256": "92101be6d2a9f6adceea59d38f6d1c556087f9eea1432432a21268cb1348036d"
+    },
+    {
+      "path": "bird-dev/dev_20240627/dev_databases/debit_card_specializing/debit_card_specializing.sqlite",
+      "bytes": 34635776,
+      "sha256": "b3d149ad05746dbbe5116e229e17e18f09c39db43cf117d9ef3441753608b691"
+    },
+    {
+      "path": "bird-dev/dev_20240627/dev_databases/european_football_2/european_football_2.sqlite",
+      "bytes": 597754880,
+      "sha256": "e4d361dbeec6591a4b315877c0c481da05c8ff5a3d389b34d6e17b6f15bee4e0"
+    },
+    {
+      "path": "bird-dev/dev_20240627/dev_databases/financial/financial.sqlite",
+      "bytes": 71294976,
+      "sha256": "d15d89cdb068a202b6f2b99342af44dffc1d52545b39ceaf62efdc0ba570101e"
+    },
+    {
+      "path": "bird-dev/dev_20240627/dev_databases/formula_1/formula_1.sqlite",
+      "bytes": 22360064,
+      "sha256": "17185981cd747f6cdc374cb02a6096db3130e6ec2ddc582fe1686a28fb4c4c8a"
+    },
+    {
+      "path": "bird-dev/dev_20240627/dev_databases/student_club/student_club.sqlite",
+      "bytes": 2641920,
+      "sha256": "eb89bcfe97eefa386a27904ec5aa15159811a7eac894ec659a36e48fa9f76b77"
+    },
+    {
+      "path": "bird-dev/dev_20240627/dev_databases/superhero/superhero.sqlite",
+      "bytes": 237568,
+      "sha256": "75e94a2c3236ee3bb2c01fb97a1c4b4c1c269bcefd4eab1d04be323d2d0825b1"
+    },
+    {
+      "path": "bird-dev/dev_20240627/dev_databases/thrombosis_prediction/thrombosis_prediction.sqlite",
+      "bytes": 7327744,
+      "sha256": "e7e16d74b4731b4b8d33fdbe8c29cd5622620788ce8d1f335631f65fc7cf1db9"
+    },
+    {
+      "path": "bird-dev/dev_20240627/dev_databases/toxicology/toxicology.sqlite",
+      "bytes": 2678784,
+      "sha256": "f5fa7f21af1ad878ff8fef1b0582b8cb2d7ed63dbac65ff16d2ba05667650c5b"
+    }
+  ],
+  "expected_count": 357,
+  "expected_prompt_file_sha256": "c9d7171beb7b87b7f7eba5226b87e128f7f1aaa4d43f3a15ea0f9c8efc843121",
+  "expected_cohort_file_sha256": "57692c9fef4c89feac11c59d63efea2357d9571ce41a3ac1ca01687024c074b2",
+  "expected_ddl_sha256": {
+    "california_schools": "a1f071ec3f932c32c269194db306efb1061e04697188627b28698876c6495ac5",
+    "card_games": "697728f558f6b34096320df5bcb26db0bc2803bd0e95143d2a7113f8db53e5a3",
+    "codebase_community": "bebf73bbcf5ccd899b48e67fd32dbb147f38303fde4cad6bd2c2f32638794605",
+    "debit_card_specializing": "dbdfb2fbb9d20e7f2691c93b44bebb9f01b6682f72edfe8e32bb867c388de941",
+    "european_football_2": "64f33be04dbb4090405176999709f3b0cf99f77153d407c30e123727de782eaa",
+    "financial": "3d121964edc96eec9fef639a32658c85423c54e830eaad6e17c6db6c4bf278d8",
+    "formula_1": "c06790e48ea5458ff58c8c4b944b6e148b3352d5b6a046cb02bebab1055e0ff6",
+    "student_club": "28f1373eff32b0fe9ed5d9e766560e31167046dafa19b0d042cdcf1b6430192a",
+    "superhero": "f22e7c0619b2bdfbd42fd7e3c9864c4052b1149763aab0222b0d7e214fe9e26a",
+    "thrombosis_prediction": "d75df0537b9feec98a8018cd42da48ebf2d7f849151d998141d17466fcfc72f0",
+    "toxicology": "ac7c31c0f1944db0a6eda2c595e243d1e18e50a668e0717457cd1861f4719cd5"
+  },
+  "original_preregistration_sha256": "6cb36e883f8c8871df2cf424751ac78865e2ad3f6addf55abe2b0fd2f8edc061"
+}

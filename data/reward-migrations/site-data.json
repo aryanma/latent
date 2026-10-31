@@ -1,0 +1,398 @@
+{
+  "cases": [
+    {
+      "id": "1322",
+      "label": "Counting events",
+      "paraphrase": "Count meetings attended by more than ten club members.",
+      "old_explanation": "The archived query returns four rows containing 1, one per qualifying event. Under result-set comparison, those rows collapse to {1}. The model’s answer, {4}, is rejected.",
+      "new_explanation": "The revised query counts the qualifying events and returns {4}. The exact same model answer is now accepted.",
+      "candidate_sql": "SELECT COUNT(*)\nFROM (\n    SELECT e.event_id\n    FROM event e\n    JOIN attendance a ON e.event_id = a.link_to_event\n    WHERE e.type = 'Meeting'\n    GROUP BY e.event_id\n    HAVING COUNT(a.link_to_member) > 10\n) AS meetings_with_many_attendees;",
+      "old_sql": "SELECT COUNT(DISTINCT T1.event_id) FROM event AS T1 INNER JOIN attendance AS T2 ON T1.event_id = T2.link_to_event WHERE T1.type = 'Meeting' GROUP BY T1.event_id HAVING COUNT(T2.link_to_event) > 10",
+      "new_sql": "SELECT COUNT(*) FROM (SELECT T1.event_name FROM event AS T1 INNER JOIN attendance AS T2 ON T1.event_id = T2.link_to_event WHERE T1.type = 'Meeting' GROUP BY T1.event_id HAVING COUNT(T2.link_to_event) > 10)",
+      "old_reward": 0,
+      "new_reward": 1,
+      "old_execution": {
+        "query_sha256": "3c721c2c24d80107e1ff5783f4685f50f17f1dfd64a39f153e25fcd08e06046e",
+        "status": "ok",
+        "seconds": 0.000162,
+        "result_sha256": "4d05bf3777a487bb0e1f4f8440e4572681bf91bccc03a500ee80ad884bfd8f8f",
+        "rows": 4,
+        "distinct_rows": 1,
+        "preview": [
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "columns": [
+          "COUNT(DISTINCT T1.event_id)"
+        ]
+      },
+      "new_execution": {
+        "query_sha256": "9e766f2061069e0bf3d82fb371519d90158908d9ebfe053ab8728a4f74901627",
+        "status": "ok",
+        "seconds": 0.000134,
+        "result_sha256": "4676b7f476145962987e5c44237fd18287957b427d7207ddc3590a6b2cf1b0c4",
+        "rows": 1,
+        "distinct_rows": 1,
+        "preview": [
+          [
+            4
+          ]
+        ],
+        "columns": [
+          "COUNT(*)"
+        ]
+      },
+      "candidate_execution": {
+        "query_sha256": "8cb76e9f5edb333b603ebe85dff17aa9980f2bd52636feb8da774995819deeec",
+        "status": "ok",
+        "seconds": 0.000132,
+        "result_sha256": "4676b7f476145962987e5c44237fd18287957b427d7207ddc3590a6b2cf1b0c4",
+        "rows": 1,
+        "distinct_rows": 1,
+        "preview": [
+          [
+            4
+          ]
+        ],
+        "columns": [
+          "COUNT(*)"
+        ]
+      }
+    },
+    {
+      "id": "115",
+      "label": "Sorting numbers",
+      "paraphrase": "For the most populous district in south Bohemia, what percentage of clients are male?",
+      "old_explanation": "Population is stored as text. The model and archived reference both select 93,931 ahead of 177,686. Their matching result, 44.262295%, is accepted.",
+      "new_explanation": "The revised reference sorts population numerically. It selects the district with 177,686 inhabitants and returns 40%. The unchanged model answer is now rejected.",
+      "candidate_sql": "SELECT\n  SUM(CASE WHEN c.gender = 'M' THEN 1 ELSE 0 END) * 100.0 / COUNT(c.client_id) AS percentage\nFROM client c\nJOIN district d ON c.district_id = d.district_id\nWHERE d.A3 = 'south Bohemia'\n  AND d.A4 = (\n    SELECT MAX(A4)\n    FROM district\n    WHERE A3 = 'south Bohemia'\n  );",
+      "old_sql": "SELECT CAST(SUM(T1.gender = 'M') AS REAL) * 100 / COUNT(T1.client_id) FROM client AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id WHERE T2.A3 = 'south Bohemia' GROUP BY T2.A4 ORDER BY T2.A4 DESC LIMIT 1",
+      "new_sql": "SELECT CAST(SUM(T1.gender = 'M') AS REAL) * 100 / COUNT(T1.client_id) FROM client AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id WHERE T2.A3 = 'south Bohemia' GROUP BY T2.A4 ORDER BY CAST(T2.A4 AS INTEGER) DESC LIMIT 1",
+      "old_reward": 1,
+      "new_reward": 0,
+      "old_execution": {
+        "query_sha256": "c9f1f4404fc92cd2f73445b7bd3c5a1283ec95621529c0bf6fe8af797f65213c",
+        "status": "ok",
+        "seconds": 0.000582,
+        "result_sha256": "8625abaaf645039a28d32a63e47a37f1ca0f8bb74eb7294d4432730da2726032",
+        "rows": 1,
+        "distinct_rows": 1,
+        "preview": [
+          [
+            44.26229508196721
+          ]
+        ],
+        "columns": [
+          "CAST(SUM(T1.gender = 'M') AS REAL) * 100 / COUNT(T1.client_id)"
+        ]
+      },
+      "new_execution": {
+        "query_sha256": "6a58b82909adf7d860c5f1f3fca368b8393062c6dc9709cb918a6c1b30c9fc42",
+        "status": "ok",
+        "seconds": 0.000573,
+        "result_sha256": "d429aa4f7dcc3f714174667df33c74f96ff2cf39258e2f808ef44a98f5b9b408",
+        "rows": 1,
+        "distinct_rows": 1,
+        "preview": [
+          [
+            40.0
+          ]
+        ],
+        "columns": [
+          "CAST(SUM(T1.gender = 'M') AS REAL) * 100 / COUNT(T1.client_id)"
+        ]
+      },
+      "candidate_execution": {
+        "query_sha256": "0f2c5d291a731514da2180502cf1324290f1ea83bf83fc211b8de27195c7f74d",
+        "status": "ok",
+        "seconds": 0.000583,
+        "result_sha256": "8625abaaf645039a28d32a63e47a37f1ca0f8bb74eb7294d4432730da2726032",
+        "rows": 1,
+        "distinct_rows": 1,
+        "preview": [
+          [
+            44.26229508196721
+          ]
+        ],
+        "columns": [
+          "percentage"
+        ]
+      }
+    }
+  ],
+  "browser": {
+    "format": "latent-browser-sql-witness/v1",
+    "question_id": "1525",
+    "fixture": {
+      "file": "browser-fixture.sqlite",
+      "bytes": 90112,
+      "sha256": "dff0b68502a0af068bfe6d980b84631a7f364f4504170f8d99a8d16a6fddbdff"
+    },
+    "source": {
+      "database_sha256": "b3d149ad05746dbbe5116e229e17e18f09c39db43cf117d9ef3441753608b691",
+      "url": "https://bird-bench.oss-cn-beijing.aliyuncs.com/dev.zip",
+      "release": "BIRD dev_20240627",
+      "row_counts": {
+        "customers": 32461,
+        "transactions_1k": 1000
+      }
+    },
+    "projection": {
+      "queries": {
+        "customers": "SELECT * FROM customers WHERE CustomerID IN (SELECT CustomerID FROM transactions_1k) ORDER BY CustomerID",
+        "transactions_1k": "SELECT * FROM transactions_1k ORDER BY TransactionID"
+      },
+      "row_counts": {
+        "customers": 517,
+        "transactions_1k": 1000
+      },
+      "ordered_row_hashes": {
+        "customers": "e10abd38d104ecd32acf3b41574b1d59ecc806af3ea43a443a90efd5bde21b5d",
+        "transactions_1k": "3441aa8e1e7f3ebe253e043ae0e2e29c06898ea9fbe667e4701c830c8f83f6c9"
+      },
+      "original_create_table_sql": {
+        "customers": "CREATE TABLE customers\n(\n    CustomerID INTEGER UNIQUE     not null\n        primary key,\n    Segment    TEXT null,\n    Currency   TEXT null\n)",
+        "transactions_1k": "CREATE TABLE \"transactions_1k\"\n(\n    TransactionID INTEGER\n        primary key autoincrement,\n    Date          DATE,\n    Time          TEXT,\n    CustomerID    INTEGER,\n    CardID        INTEGER,\n    GasStationID  INTEGER,\n    ProductID     INTEGER,\n    Amount        INTEGER,\n    Price         REAL\n)"
+      },
+      "declared_constraints": {
+        "customers": {
+          "columns": [
+            [
+              0,
+              "CustomerID",
+              "INTEGER",
+              1,
+              null,
+              1
+            ],
+            [
+              1,
+              "Segment",
+              "TEXT",
+              0,
+              null,
+              0
+            ],
+            [
+              2,
+              "Currency",
+              "TEXT",
+              0,
+              null,
+              0
+            ]
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            [
+              0,
+              "sqlite_autoindex_customers_1",
+              1,
+              "u",
+              0
+            ]
+          ]
+        },
+        "transactions_1k": {
+          "columns": [
+            [
+              0,
+              "TransactionID",
+              "INTEGER",
+              0,
+              null,
+              1
+            ],
+            [
+              1,
+              "Date",
+              "DATE",
+              0,
+              null,
+              0
+            ],
+            [
+              2,
+              "Time",
+              "TEXT",
+              0,
+              null,
+              0
+            ],
+            [
+              3,
+              "CustomerID",
+              "INTEGER",
+              0,
+              null,
+              0
+            ],
+            [
+              4,
+              "CardID",
+              "INTEGER",
+              0,
+              null,
+              0
+            ],
+            [
+              5,
+              "GasStationID",
+              "INTEGER",
+              0,
+              null,
+              0
+            ],
+            [
+              6,
+              "ProductID",
+              "INTEGER",
+              0,
+              null,
+              0
+            ],
+            [
+              7,
+              "Amount",
+              "INTEGER",
+              0,
+              null,
+              0
+            ],
+            [
+              8,
+              "Price",
+              "REAL",
+              0,
+              null,
+              0
+            ]
+          ],
+          "foreign_keys": [],
+          "indexes": []
+        }
+      },
+      "all_transactions_preserved": true,
+      "all_referenced_customers_preserved": true,
+      "omitted_customers": 31944,
+      "omitted_user_tables": [
+        "gasstations",
+        "products",
+        "yearmonth"
+      ],
+      "internal_table": "sqlite_sequence is required by the unchanged AUTOINCREMENT declaration"
+    },
+    "queries": {
+      "candidate": "SELECT\n  CAST(SUM(CASE WHEN c.Currency = 'EUR' THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(DISTINCT t.CustomerID) AS percentage\nFROM transactions_1k t\nJOIN customers c ON t.CustomerID = c.CustomerID\nWHERE t.Date = '2012-08-25';",
+      "old_reference": "SELECT CAST(SUM(IIF(T2.Currency = 'EUR', 1, 0)) AS FLOAT) * 100 / COUNT(T1.CustomerID) FROM transactions_1k AS T1 INNER JOIN customers AS T2 ON T1.CustomerID = T2.CustomerID WHERE T1.Date = '2012-08-25'",
+      "new_reference": "SELECT CAST(COUNT(DISTINCT IIF(T2.Currency = 'EUR', T1.CustomerID, NULL)) AS FLOAT) * 100 / COUNT(DISTINCT T1.CustomerID) FROM transactions_1k AS T1 INNER JOIN customers AS T2 ON T1.CustomerID = T2.CustomerID WHERE T1.Date = '2012-08-25'"
+    },
+    "baseline_results": {
+      "candidate": [
+        [
+          2.7027027027027026
+        ]
+      ],
+      "old_reference": [
+        [
+          1.6470588235294117
+        ]
+      ],
+      "new_reference": [
+        [
+          2.7027027027027026
+        ]
+      ]
+    },
+    "after_insert_results": {
+      "candidate": [
+        [
+          3.088803088803089
+        ]
+      ],
+      "old_reference": [
+        [
+          1.8779342723004695
+        ]
+      ],
+      "new_reference": [
+        [
+          2.7027027027027026
+        ]
+      ]
+    },
+    "mutation": {
+      "statement": "INSERT INTO transactions_1k (\"TransactionID\",\"Date\",\"Time\",\"CustomerID\",\"CardID\",\"GasStationID\",\"ProductID\",\"Amount\",\"Price\") VALUES (?,?,?,?,?,?,?,?,?)",
+      "parameters": [
+        1001,
+        "2012-08-25",
+        "09:05:00",
+        679,
+        752560,
+        267,
+        2,
+        107,
+        92.26
+      ]
+    },
+    "constraints_before": {
+      "integrity_check": [
+        [
+          "ok"
+        ]
+      ],
+      "foreign_key_check": [],
+      "tables": [
+        "customers",
+        "sqlite_sequence",
+        "transactions_1k"
+      ],
+      "transaction_count": 1000,
+      "customer_count": 517
+    },
+    "constraints_after_insert": {
+      "integrity_check": [
+        [
+          "ok"
+        ]
+      ],
+      "foreign_key_check": [],
+      "tables": [
+        "customers",
+        "sqlite_sequence",
+        "transactions_1k"
+      ],
+      "transaction_count": 1001,
+      "customer_count": 517
+    },
+    "source_unchanged": true,
+    "baseline_fixture_unchanged_after_test": true,
+    "full_database_witness_results_sha256": "5c1f713f8102f81516f918afd84c1b8c9111c55693cdcd8d390e4df51a2897d3",
+    "matches_full_database_baseline_and_mutated_witness": true,
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "created_utc": "2026-10-31T10:50:40.257673+00:00"
+    },
+    "creator_sha256": "dccb8bf2de18fba31cfbd472b14f18139af0e5cd7c3ebb35e6caf03f04e3f6c2",
+    "inputs_sha256": "b233007fff2378dff9c382d646666015186a20e26d5fbd6cf3057028f0a07abb",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Original BIRD benchmark data by Jinyang Li, Binyuan Hui, Ge Qu and collaborators; expert-corrected Arcwise-Plat annotations by UIUC Kang Lab (Yuxuan Zhu, Tengjun Jin, Yoojin Choi, Daniel Kang and collaborators). Latent constructs this table/row projection and the documented counterfactual mutation.",
+    "changes_notice": "Projection to two original user tables; all1000 transactions retained and only their517 referenced customers retained. No retained cell values or CREATE TABLE declarations changed. Counterfactual insertion is optional and separately documented.",
+    "limitations": [
+      "Preserves the three provided queries and this documented insertion, not arbitrary SQL over all original data.",
+      "Queries counting all original customers or using omitted tables are not equivalent on this fixture.",
+      "This single post-hoc counterexample is not a model failure-frequency estimate."
+    ]
+  }
+}

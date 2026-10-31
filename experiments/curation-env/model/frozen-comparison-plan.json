@@ -1,0 +1,36 @@
+{
+  "manifest_sha256": "6893521e0391e831b45a414390246e0fb0a06d1c203892b66082a91f8ae22730",
+  "prompt_variant": "v2",
+  "rationale": "0/4 success for both; v2 mean dev reward 0.25 versus 0.0 and collects meaningful evidence",
+  "driver_sha256": "c2a1b0a623402e9030fb7300919d83fd3dcd341a1cedd0cc279248005e072192",
+  "runtime_sha256": "d4a20e598ce290cb5a63cb75ce5a7c352598bb4d9e09cb7f2ce13899af531b8e",
+  "baseline_and_adapter_same_harness": true,
+  "training_plan": {
+    "training_worlds": 96,
+    "train_seed_start": 10000,
+    "validation_worlds": 12,
+    "validation_seed_start": 20000,
+    "families": [
+      "labels",
+      "duplicates",
+      "permissions",
+      "leakage",
+      "versions",
+      "pair"
+    ],
+    "iterations": 120,
+    "rank": 8,
+    "learning_rate": 0.0001,
+    "num_layers": 8,
+    "batch_size": 1,
+    "scale": 20.0,
+    "dropout": 0.0,
+    "optimizer": "Adam",
+    "seed": 42,
+    "checkpoint": "final-120-only",
+    "validation_frequency": 20,
+    "validation_batches": 12,
+    "save_frequency": 40,
+    "selection_on_evaluation": false
+  }
+}

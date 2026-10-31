@@ -1,0 +1,38 @@
+{
+  "provenance": {
+    "database_sha256": "986817d793479801ed55133e55aa27e335422c0cd3866b54a3d6317b7c5f09c1",
+    "query_sha256": "e428c0517d5a2961cd8e3a71384bb86a7fcb090674f98ad6e4d6d0a25eb37e75",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "e428c0517d5a2961cd8e3a71384bb86a7fcb090674f98ad6e4d6d0a25eb37e75",
+    "status": "ok",
+    "seconds": 0.00399,
+    "result_sha256": "90d740b97d8ac6e0acc4e13d366b1c7e9f317dd52fb61a06621282816e30cbac",
+    "rows": 1,
+    "distinct_rows": 1,
+    "preview": [
+      [
+        "Michelle",
+        "King"
+      ]
+    ],
+    "columns": [
+      "AdmFName1",
+      "AdmLName1"
+    ]
+  }
+}

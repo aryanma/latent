@@ -1,0 +1,17 @@
+{
+  "mode": "smoke",
+  "completed": 2,
+  "generated": 2,
+  "errors": 0,
+  "length_limited": 0,
+  "total_input_tokens": 2360,
+  "total_output_tokens": 107,
+  "total_generation_seconds": 2.3676202489295974,
+  "total_wall_seconds_including_load": 4.960998666938394,
+  "network_attempts": [],
+  "finished_utc": "2026-10-31T10:26:40.520589+00:00",
+  "case_files": {
+    "5": "5ff06ef5339075d9e6b90d7739193fdc3773e007cbca4ec2f1b6aa477bf52361",
+    "24": "d2466a1d74b74e8e3744fb9f7e9a44168cb1de5fc0790ebe6d95f09dda22276e"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "provenance": {
+    "database_sha256": "17185981cd747f6cdc374cb02a6096db3130e6ec2ddc582fe1686a28fb4c4c8a",
+    "query_sha256": "705975bf7a1544616d11993f9aeaeadae5edacb78fe75646ff6fcfe99e599c50",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "705975bf7a1544616d11993f9aeaeadae5edacb78fe75646ff6fcfe99e599c50",
+    "status": "ok",
+    "seconds": 0.000435,
+    "result_sha256": "bce27b863be3a08950a355ce6f307d8b86dc392e844f4e9508831d2677272963",
+    "rows": 1,
+    "distinct_rows": 1,
+    "preview": [
+      [
+        2017,
+        "Australian Grand Prix",
+        "2017-03-26",
+        "05:00:00"
+      ]
+    ],
+    "columns": [
+      "year",
+      "name",
+      "date",
+      "time"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "fine_tune_type": "lora",
+  "num_layers": 8,
+  "lora_parameters": {
+    "rank": 8,
+    "scale": 20.0,
+    "dropout": 0.0
+  },
+  "model_repository": "Qwen/Qwen3-1.7B-MLX-4bit",
+  "model_revision": "21457c6f51ed54a7c16e988c0844db973815c137",
+  "batch_size": 1,
+  "iters": 120,
+  "learning_rate": 0.0001,
+  "optimizer": "Adam",
+  "optimizer_defaults": {
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "bias_correction": false
+  },
+  "max_seq_length": 4096,
+  "grad_checkpoint": true,
+  "seed": 42,
+  "steps_per_eval": 20,
+  "validation_completed_updates": [
+    0,
+    19,
+    39,
+    59,
+    79,
+    99,
+    119,
+    120
+  ],
+  "val_batches": 12,
+  "steps_per_save": 40,
+  "steps_per_report": 10,
+  "selection": "final iteration120, no heldout selection",
+  "loss": "only action JSON and EOS, prompt and padding excluded",
+  "source_sha256": "047c741e5df2fd85ca71fdc7972366091f914a6d7df020a1497c7c73efbfd13f",
+  "data_manifest_sha256": "379f0d9dec63b47251193112d3d5fe5a7b6c84a117666ac00f492a54466e4777",
+  "script_sha256": "d5b80ed54e77f7880e7b7b54f37b294669feced7fd244d8c9a0d22ccab93386a",
+  "network_disabled": true
+}

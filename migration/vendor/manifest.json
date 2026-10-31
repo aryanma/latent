@@ -1,0 +1,22 @@
+{
+  "package": "sql.js",
+  "version": "1.15.2",
+  "license": "MIT",
+  "registry_tarball": "https://registry.npmjs.org/sql.js/-/sql.js-1.15.2.tgz",
+  "registry_integrity": "sha512-ZmMYFsZPZWDKIJUh3A5rdnpRV3hB/r7AijwAzSzLnfv/9CSx4obUmDtA8brAjWJWjGtUVh43nIEJ+6nl6HuOUg==",
+  "tarball_sha256": "74fbdd373ad7eb2bbe74c7807581c1c39e424ee53ed95042a02208cbc96d72fd",
+  "files": {
+    "LICENSE-sql.js": {
+      "bytes": 2199,
+      "sha256": "60a3f6e4d7b29b4321359e683b36cf198d24f58e24582070f56e6fa89d5ee2be"
+    },
+    "sql-wasm.js": {
+      "bytes": 47441,
+      "sha256": "b46d4bddfdde8a787fc4764bd0a405cdfdf96fbd77e6a4e95446106826ecfa47"
+    },
+    "sql-wasm.wasm": {
+      "bytes": 685235,
+      "sha256": "0dfeecda2070b36da0cd4f6afa250af9453de528a983770f85b13d5d6b667572"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "files": [
+    {
+      "path": "browser-fixture.sqlite",
+      "bytes": 90112,
+      "sha256": "dff0b68502a0af068bfe6d980b84631a7f364f4504170f8d99a8d16a6fddbdff"
+    },
+    {
+      "path": "browser-fixture.manifest.json",
+      "bytes": 7629,
+      "sha256": "b641757de4723e73707be5f799885a17d3669e8fba8787eb40a3cdc516336b71"
+    },
+    {
+      "path": "create_fixture.py",
+      "bytes": 9391,
+      "sha256": "dccb8bf2de18fba31cfbd472b14f18139af0e5cd7c3ebb35e6caf03f04e3f6c2"
+    },
+    {
+      "path": "fixture-inputs.json",
+      "bytes": 4380,
+      "sha256": "b233007fff2378dff9c382d646666015186a20e26d5fbd6cf3057028f0a07abb"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4149,
+      "sha256": "8c715c050b2a43ce7bc8204f6a9091255c89c79ba08c50561e69279c281ed306"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 310,
+      "sha256": "57f1b665e63b3a57320fb597d795ace6b6ae52b6da3d629f31f9ca5a13698c5c"
+    }
+  ],
+  "excluded": [
+    "independent-rebuild.sqlite",
+    "independent-rebuild.manifest.json",
+    "rebuild-output.json"
+  ]
+}

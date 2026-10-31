@@ -1,0 +1,7 @@
+{
+  "independent_rebuild_byte_identical": true,
+  "fixture_sha256": "dff0b68502a0af068bfe6d980b84631a7f364f4504170f8d99a8d16a6fddbdff",
+  "fixture_bytes": 90112,
+  "earlier_witness_freeze_unchanged": true,
+  "earlier_witness_freeze_sha256": "87ed0c5064cdc39dd741d3a0684456a311cc2ac296be8fa7e7b77fc124ceb6ff"
+}

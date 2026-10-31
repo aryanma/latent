@@ -1,0 +1,27 @@
+{
+  "provenance": {
+    "database_sha256": "b3d149ad05746dbbe5116e229e17e18f09c39db43cf117d9ef3441753608b691",
+    "query_sha256": "1e17f93b7c8920eaf0cfb3f833f811e6ae4245db88e60462632afdb6ad39df9c",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "1e17f93b7c8920eaf0cfb3f833f811e6ae4245db88e60462632afdb6ad39df9c",
+    "status": "sql_error",
+    "seconds": 0.000423,
+    "error": "near \"```sql\nWITH lowest_consumption AS (\n    SELECT\n        y.CustomerID,\n        y.Date,\n        y.Consumption,\n        c.Segment,\n        c.Currency,\n        ROW_NUMBER() OVER (PARTITION BY c.Segment ORDER BY y.Consumption ASC) as rn\n    FROM yearmonth y\n    JOIN customers c ON y.CustomerID = c.CustomerID\n    WHERE y.Date BETWEEN '201301' AND '201312'\n      AND c.Currency = 'CZK'\n),\nannual_avg AS (\n    SELECT\n        Segment,\n        AVG(Consumption) as avg_consumption\n    FROM lowest_consump",
+    "denied": []
+  }
+}

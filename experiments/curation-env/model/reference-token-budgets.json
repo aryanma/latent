@@ -1,0 +1,708 @@
+{
+  "model_tokenizer": "pinned Qwen3-1.7B-MLX-4bit",
+  "episodes": [
+    {
+      "task_id": "labels-1000",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        89,
+        86,
+        76,
+        213,
+        10
+      ],
+      "total_action_tokens": 484
+    },
+    {
+      "task_id": "duplicates-1001",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        122,
+        88,
+        79,
+        49,
+        10
+      ],
+      "total_action_tokens": 358
+    },
+    {
+      "task_id": "permissions-1002",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        88,
+        91,
+        83,
+        25,
+        10
+      ],
+      "total_action_tokens": 307
+    },
+    {
+      "task_id": "leakage-1003",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        83,
+        94,
+        87,
+        26,
+        10
+      ],
+      "total_action_tokens": 310
+    },
+    {
+      "task_id": "versions-1004",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        88,
+        91,
+        86,
+        113,
+        10
+      ],
+      "total_action_tokens": 398
+    },
+    {
+      "task_id": "pair-1005",
+      "steps": 7,
+      "per_action_tokens": [
+        10,
+        115,
+        87,
+        83,
+        48,
+        209,
+        10
+      ],
+      "total_action_tokens": 562
+    },
+    {
+      "task_id": "labels-1006",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        87,
+        91,
+        81,
+        210,
+        10
+      ],
+      "total_action_tokens": 489
+    },
+    {
+      "task_id": "duplicates-1007",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        120,
+        92,
+        81,
+        46,
+        10
+      ],
+      "total_action_tokens": 359
+    },
+    {
+      "task_id": "permissions-1008",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        87,
+        94,
+        89,
+        24,
+        10
+      ],
+      "total_action_tokens": 314
+    },
+    {
+      "task_id": "leakage-1009",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        80,
+        90,
+        83,
+        26,
+        10
+      ],
+      "total_action_tokens": 299
+    },
+    {
+      "task_id": "versions-1010",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        88,
+        93,
+        76,
+        110,
+        10
+      ],
+      "total_action_tokens": 387
+    },
+    {
+      "task_id": "pair-1011",
+      "steps": 7,
+      "per_action_tokens": [
+        10,
+        119,
+        90,
+        81,
+        48,
+        214,
+        10
+      ],
+      "total_action_tokens": 572
+    },
+    {
+      "task_id": "labels-1012",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        85,
+        94,
+        83,
+        204,
+        10
+      ],
+      "total_action_tokens": 486
+    },
+    {
+      "task_id": "duplicates-1013",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        118,
+        90,
+        88,
+        50,
+        10
+      ],
+      "total_action_tokens": 366
+    },
+    {
+      "task_id": "permissions-1014",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        84,
+        91,
+        84,
+        25,
+        10
+      ],
+      "total_action_tokens": 304
+    },
+    {
+      "task_id": "leakage-1015",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        83,
+        86,
+        79,
+        25,
+        10
+      ],
+      "total_action_tokens": 293
+    },
+    {
+      "task_id": "versions-1016",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        79,
+        91,
+        88,
+        114,
+        10
+      ],
+      "total_action_tokens": 392
+    },
+    {
+      "task_id": "pair-1017",
+      "steps": 7,
+      "per_action_tokens": [
+        10,
+        123,
+        94,
+        86,
+        50,
+        211,
+        10
+      ],
+      "total_action_tokens": 584
+    },
+    {
+      "task_id": "labels-1018",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        84,
+        93,
+        86,
+        214,
+        10
+      ],
+      "total_action_tokens": 497
+    },
+    {
+      "task_id": "duplicates-1019",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        119,
+        95,
+        84,
+        49,
+        10
+      ],
+      "total_action_tokens": 367
+    },
+    {
+      "task_id": "permissions-1020",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        89,
+        89,
+        88,
+        27,
+        10
+      ],
+      "total_action_tokens": 313
+    },
+    {
+      "task_id": "leakage-1021",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        86,
+        94,
+        87,
+        28,
+        10
+      ],
+      "total_action_tokens": 315
+    },
+    {
+      "task_id": "versions-1022",
+      "steps": 6,
+      "per_action_tokens": [
+        10,
+        84,
+        90,
+        80,
+        111,
+        10
+      ],
+      "total_action_tokens": 385
+    },
+    {
+      "task_id": "pair-1023",
+      "steps": 7,
+      "per_action_tokens": [
+        10,
+        117,
+        89,
+        86,
+        47,
+        217,
+        10
+      ],
+      "total_action_tokens": 576
+    },
+    {
+      "task_id": "composition-2000",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        120,
+        87,
+        84,
+        25,
+        28,
+        50,
+        146,
+        10
+      ],
+      "total_action_tokens": 560
+    },
+    {
+      "task_id": "composition-2001",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        122,
+        84,
+        89,
+        38,
+        40,
+        27,
+        147,
+        10
+      ],
+      "total_action_tokens": 567
+    },
+    {
+      "task_id": "composition-2002",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        115,
+        94,
+        87,
+        38,
+        28,
+        35,
+        146,
+        10
+      ],
+      "total_action_tokens": 563
+    },
+    {
+      "task_id": "composition-2003",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        120,
+        92,
+        89,
+        39,
+        28,
+        37,
+        149,
+        10
+      ],
+      "total_action_tokens": 574
+    },
+    {
+      "task_id": "composition-2004",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        122,
+        93,
+        86,
+        26,
+        38,
+        37,
+        147,
+        10
+      ],
+      "total_action_tokens": 569
+    },
+    {
+      "task_id": "composition-2005",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        117,
+        93,
+        88,
+        27,
+        25,
+        50,
+        151,
+        10
+      ],
+      "total_action_tokens": 571
+    },
+    {
+      "task_id": "composition-2006",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        118,
+        81,
+        88,
+        36,
+        37,
+        23,
+        145,
+        10
+      ],
+      "total_action_tokens": 548
+    },
+    {
+      "task_id": "composition-2007",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        118,
+        95,
+        84,
+        26,
+        27,
+        50,
+        147,
+        10
+      ],
+      "total_action_tokens": 567
+    },
+    {
+      "task_id": "composition-2008",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        116,
+        86,
+        85,
+        26,
+        38,
+        38,
+        143,
+        10
+      ],
+      "total_action_tokens": 552
+    },
+    {
+      "task_id": "composition-2009",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        118,
+        92,
+        85,
+        24,
+        40,
+        39,
+        146,
+        10
+      ],
+      "total_action_tokens": 564
+    },
+    {
+      "task_id": "composition-2010",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        116,
+        91,
+        84,
+        38,
+        27,
+        38,
+        147,
+        10
+      ],
+      "total_action_tokens": 561
+    },
+    {
+      "task_id": "composition-2011",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        116,
+        89,
+        83,
+        26,
+        28,
+        47,
+        150,
+        10
+      ],
+      "total_action_tokens": 559
+    },
+    {
+      "task_id": "policy_shift-2000",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        120,
+        87,
+        84,
+        25,
+        28,
+        50,
+        75,
+        10
+      ],
+      "total_action_tokens": 489
+    },
+    {
+      "task_id": "policy_shift-2001",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        122,
+        84,
+        89,
+        38,
+        40,
+        27,
+        46,
+        10
+      ],
+      "total_action_tokens": 466
+    },
+    {
+      "task_id": "policy_shift-2002",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        115,
+        94,
+        87,
+        38,
+        28,
+        35,
+        80,
+        10
+      ],
+      "total_action_tokens": 497
+    },
+    {
+      "task_id": "policy_shift-2003",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        120,
+        92,
+        89,
+        39,
+        28,
+        37,
+        115,
+        10
+      ],
+      "total_action_tokens": 540
+    },
+    {
+      "task_id": "policy_shift-2004",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        122,
+        93,
+        86,
+        26,
+        38,
+        37,
+        80,
+        10
+      ],
+      "total_action_tokens": 502
+    },
+    {
+      "task_id": "policy_shift-2005",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        117,
+        93,
+        88,
+        27,
+        25,
+        50,
+        45,
+        10
+      ],
+      "total_action_tokens": 465
+    },
+    {
+      "task_id": "policy_shift-2006",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        118,
+        81,
+        88,
+        36,
+        37,
+        23,
+        112,
+        10
+      ],
+      "total_action_tokens": 515
+    },
+    {
+      "task_id": "policy_shift-2007",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        118,
+        95,
+        84,
+        26,
+        27,
+        50,
+        110,
+        10
+      ],
+      "total_action_tokens": 530
+    },
+    {
+      "task_id": "policy_shift-2008",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        116,
+        86,
+        85,
+        26,
+        38,
+        38,
+        113,
+        10
+      ],
+      "total_action_tokens": 522
+    },
+    {
+      "task_id": "policy_shift-2009",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        118,
+        92,
+        85,
+        24,
+        40,
+        39,
+        43,
+        10
+      ],
+      "total_action_tokens": 461
+    },
+    {
+      "task_id": "policy_shift-2010",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        116,
+        91,
+        84,
+        38,
+        27,
+        38,
+        81,
+        10
+      ],
+      "total_action_tokens": 495
+    },
+    {
+      "task_id": "policy_shift-2011",
+      "steps": 9,
+      "per_action_tokens": [
+        10,
+        116,
+        89,
+        83,
+        26,
+        28,
+        47,
+        45,
+        10
+      ],
+      "total_action_tokens": 454
+    }
+  ],
+  "max_single_action_tokens": 217,
+  "max_episode_action_tokens": 584,
+  "note": "Reference action JSON plus EOS counts, not measured model generations; demonstrations fit all frozen action/token budgets."
+}

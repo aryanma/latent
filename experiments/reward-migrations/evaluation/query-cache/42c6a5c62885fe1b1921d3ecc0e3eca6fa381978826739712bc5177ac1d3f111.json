@@ -1,0 +1,36 @@
+{
+  "provenance": {
+    "database_sha256": "75e94a2c3236ee3bb2c01fb97a1c4b4c1c269bcefd4eab1d04be323d2d0825b1",
+    "query_sha256": "15b0369d4f81e94ed858ce08ee717b4923ce1e9ba5748b5ceee1e231e3495f74",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "15b0369d4f81e94ed858ce08ee717b4923ce1e9ba5748b5ceee1e231e3495f74",
+    "status": "ok",
+    "seconds": 0.000166,
+    "result_sha256": "ef24484d3d8988496021a20e79db31f7b70a205143ff06ad5f87f7949d8b579f",
+    "rows": 1,
+    "distinct_rows": 1,
+    "preview": [
+      [
+        -163
+      ]
+    ],
+    "columns": [
+      "SUM(CASE WHEN T2.publisher_name = 'DC Comics' THEN 1 ELSE 0 END) - SUM(CASE WHEN T2.publisher_name = 'Marvel Comics' THEN 1 ELSE 0 END)"
+    ]
+  }
+}

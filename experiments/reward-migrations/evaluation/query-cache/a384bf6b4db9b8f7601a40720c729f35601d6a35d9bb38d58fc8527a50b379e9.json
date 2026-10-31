@@ -1,0 +1,38 @@
+{
+  "provenance": {
+    "database_sha256": "75e94a2c3236ee3bb2c01fb97a1c4b4c1c269bcefd4eab1d04be323d2d0825b1",
+    "query_sha256": "5325fbdc5944e220083c3dd060d7799e821c9aacaf5c47725683fe683cdcd8ed",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "5325fbdc5944e220083c3dd060d7799e821c9aacaf5c47725683fe683cdcd8ed",
+    "status": "ok",
+    "seconds": 0.000198,
+    "result_sha256": "5a3f3ba7f3980b7f1d2248fcabde2c6d3c08bb9f8735849873bac7955d11e22e",
+    "rows": 1,
+    "distinct_rows": 1,
+    "preview": [
+      [
+        28.60998650472335,
+        118
+      ]
+    ],
+    "columns": [
+      "percentage",
+      "marvel_bad_count"
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "registered_utc": "2026-10-31T10:26:24.215442+00:00",
+  "study": "Fresh fixed-policy SQL candidates for an observed-input-compatible reference migration",
+  "population": {
+    "n": 357,
+    "order": "ascending numeric original question_id",
+    "inclusion": "Exact string question/evidence and database ID agreement in pinned archived MiniDev and HF Arcwise-Plat sql_only. Null and empty evidence are distinct. No reference-SQL condition in selection."
+  },
+  "model": {
+    "repository": "mlx-community/Qwen3.6-35B-A3B-4bit",
+    "revision": "38740b847e4cb78f352aba30aa41c76e08e6eb46",
+    "runtime": "existing MLX-LM 0.32.2 text-only qwen3_5_moe implementation",
+    "model_manifest_path": "/tmp/latent-currentmoe-20261030/model-manifest.json",
+    "model_manifest_sha256": "69eb165dd787bae7f15f2a4f4bfc1269b6f5fcb2af71df0d41923dd6a4bc662a"
+  },
+  "generation": {
+    "one_candidate_per_case": true,
+    "seed": 42,
+    "temperature": 0.0,
+    "enable_thinking": false,
+    "max_output_tokens": 1024,
+    "max_input_plus_output_tokens": 32768,
+    "tokenization": "Native pinned chat template with add_generation_prompt=True, enable_thinking=False, preserve_thinking=False; exact input IDs passed to stream_generate",
+    "truncation": "None; over-context cases are recorded errors and remain in denominator",
+    "repair": "None",
+    "retry": "None",
+    "selection": "None",
+    "tools": "None",
+    "database_access": "Read-only table DDL during preparation only; no row values; no candidate execution by inference driver"
+  },
+  "smoke": {
+    "cases": "First two ascending cohort IDs",
+    "purpose": "Loading, exact token accounting and output format/termination only; no scoring or reward inspection",
+    "full_run": "Regenerate both as part of the full unchanged357-case run; smoke results never substitute full results",
+    "amendment_rule": "Any loader bug must be fixed and recorded before full run. No prompt tuning from correctness or reward."
+  },
+  "outputs": {
+    "exact_rendered_prompts": true,
+    "actual_input_token_ids": true,
+    "actual_generated_token_ids_including_terminal_eos_if_sampled": true,
+    "all_raw_text": true,
+    "per_case_budgets_errors_runtime": true,
+    "network": "Audit hook blocks sockets; model loading offline",
+    "reward_blind": "This driver never reads either reference SQL during inference and never scores output. The preparation stage reads source JSON but selects only public fields for prompts."
+  },
+  "limitations": [
+    "One greedy candidate per task; not an estimate across sampling seeds.",
+    "No inference tool access, repair loop or database value samples.",
+    "4-bit local quantized model; not the full-precision or hosted model.",
+    "Evaluation-only reference migration: no training and no new-policy performance claim."
+  ],
+  "frozen_files": {
+    "protocol.py": "6f13095662d614f5802ce7d472246edf113aa180326b66f42678bdb8039f89cc",
+    "prepare_inputs.py": "2a35f63d791ca7110e6c0c4656b4355ded45276f37dbfcdb0727767ffbf9695a",
+    "run_inference.py": "bb6b01110c6688f017f1fd36b32ab5ea8e70d4f88bc4dfd9c3ae810545420c32",
+    "cohort.json": "57692c9fef4c89feac11c59d63efea2357d9571ce41a3ac1ca01687024c074b2",
+    "schemas.json": "c18dcd059c5edeea16c0b19bb4f01f7b1ce8c98a7a1e06f4f8aca57928d6a5bf",
+    "prompts.json": "c9d7171beb7b87b7f7eba5226b87e128f7f1aaa4d43f3a15ea0f9c8efc843121",
+    "input-manifest.json": "75a0f104d6e2a8b69cfba1bdab0fb27e0230356d5b417ca768eefa6e4ad952fd"
+  }
+}

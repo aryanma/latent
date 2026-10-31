@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Curation-0 — Latent λ</title>
+<meta name="description" content="A working RL environment for preparing training data: source-backed label repair, lineage leakage, permissions, and coverage.">
+<link rel="canonical" href="https://aryanma.github.io/latent/curation.html">
+<meta property="og:title" content="Curation-0 — Latent λ"><meta property="og:type" content="website">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./curation/curation.css">
+<script type="module" src="./curation/app.mjs"></script>
+</head>
+<body><main>
+<nav class="back" aria-label="Latent pages"><a href="./">latent λ</a> · <a href="./blog.html">Blog</a> · <a href="./curation-environment.html">Research note</a></nav>
+<p class="eyebrow">Experiment 002</p>
+<h1>Curation-0</h1>
+<p>Prepare a training dataset: repair labels from source evidence, exclude evaluation overlap, and preserve every eligible case. Each action runs inside a stateful RL environment with an executable success criterion.</p>
+<p class="small">Synthetic records · local execution · <a href="https://github.com/aryanma/latent/tree/main/experiments/curation-env">Python environment</a></p>
+<p id="loading" role="status" aria-live="polite">Loading the environment…</p>
+<noscript><p>The <a href="./curation-environment.html">research note</a> and <a href="https://github.com/aryanma/latent/tree/main/experiments/curation-env">source code</a> are available without JavaScript.</p></noscript>
+<div id="playground" hidden>
+<section aria-labelledby="policy-heading">
+<h2 id="policy-heading">Same records. Different policy.</h2>
+<p id="scenario-description">Two sources disagree. The contract determines which one to trust. Switching the authority below changes the correct labels while keeping every record and source event the same.</p>
+<div id="policy-choices" class="choices" aria-label="Source authority">
+<button type="button" data-task="composition-2000" aria-pressed="true">Case resolution</button>
+<button type="button" data-task="policy_shift-2000" aria-pressed="false">Human review</button>
+</div>
+<p id="pair-return" hidden><button type="button" class="quiet" data-task="composition-2000">Return to the policy-change example</button></p>
+<p id="contract-summary"></p>
+<p id="evidence-example" class="small"></p>
+<div class="run-controls">
+<button id="run-reference" type="button">Run reference policy</button>
+<button id="run-scale" type="button" disabled>Replay 8B model</button>
+<button id="reset" type="button" class="quiet">Reset</button>
+</div>
+<p id="run-context" class="small">The reference is a deterministic program that follows the declared schema and rules. Model buttons replay recorded runs; no model runs in your browser.</p>
+<p id="status" role="status" aria-live="polite"></p>
+<div id="score"></div>
+<div class="table-wrap"><table>
+<caption id="dataset-caption">Candidate training records</caption>
+<thead><tr><th scope="col">Record</th><th scope="col">Original label</th><th scope="col">Current label</th><th scope="col">Decision</th></tr></thead>
+<tbody id="rows"></tbody>
+</table></div>
+<p class="small">Record IDs are abbreviated for display. Full IDs and evidence are in the trajectory.</p>
+</section>
+
+<details class="advanced"><summary>Compare model runs</summary>
+<p class="small">The 1.7B runs compare the same model before and after a fixed 120-update LoRA warm-start. Every model uses the same task and action/token budgets. The research note reports the complete evaluation.</p>
+<div class="run-controls"><button id="run-model" type="button" disabled>Replay 1.7B base</button><button id="run-adapted" type="button" disabled>Replay 1.7B adapted</button><button id="run-scale-secondary" type="button" disabled hidden>Replay 8B model</button></div>
+<p class="small"><button type="button" class="quiet" data-task="policy_shift-2004">Inspect a completed curation run</button> · <a href="./curation-environment.html">All measured results</a></p>
+</details>
+<details class="advanced"><summary>Try the tools yourself</summary>
+<p class="small">Reset, inspect the rows, look up their sources, then make edits and submit. Each action consumes one of 18 steps. Final grading runs only on submission.</p>
+<div class="run-controls"><button id="inspect" type="button">Inspect rows</button><button id="sources" type="button">Inspect all sources</button><button id="discard" type="button">Discard every row</button><button id="submit" type="button">Submit dataset</button></div>
+<label for="action-input">Action JSON</label>
+<textarea id="action-input" rows="4" spellcheck="false">{"tool":"inspect","args":{}}</textarea>
+<button id="step" type="button">Execute action</button>
+<pre id="observation">No action yet.</pre>
+</details>
+<details class="advanced"><summary>Contract and source records</summary><div id="contract"></div><pre id="source-records"></pre></details>
+<details class="advanced"><summary>Trajectory and final dataset</summary>
+<p class="small">Every action is replayed through the browser environment. The Python runtime is used for the measured experiments. Reference and model outcomes are checked for parity.</p>
+<button id="export" type="button">Download trajectory</button><pre id="trajectory"></pre>
+</details>
+<footer>
+<h2>Why this is part of Latent</h2>
+<p>Owning a specialized model means owning the process that improves it. This experiment turns one data workflow into repeatable tasks, executable feedback, and training trajectories.</p>
+<p><a href="./curation-environment.html">Read the experiment</a> · <a href="./data/curation/reproduction.zip" download>Reproduce it</a></p>
+<p class="small">The fixtures are synthetic. This prototype measures completion of their declared contracts; downstream value of the curated data is a separate question.</p>
+</footer>
+</div>
+</main></body></html>

@@ -1,0 +1,32 @@
+{
+  "checked_utc": "2026-10-31T10:27:03.160467+00:00",
+  "format_checks": [
+    {
+      "question_id": "5",
+      "generated": true,
+      "starts_select_or_with": true,
+      "has_markdown_fence": false,
+      "finish_reason": "stop",
+      "terminal_eos_recorded": true,
+      "token_count_matches": true,
+      "seconds": 1.7180164579767734,
+      "output_tokens": 44
+    },
+    {
+      "question_id": "24",
+      "generated": true,
+      "starts_select_or_with": true,
+      "has_markdown_fence": false,
+      "finish_reason": "stop",
+      "terminal_eos_recorded": true,
+      "token_count_matches": true,
+      "seconds": 0.6496037909528241,
+      "output_tokens": 63
+    }
+  ],
+  "reward_or_correctness_checks": false,
+  "prompt_or_driver_changes_after_smoke": false,
+  "full_run_decision": "Proceed with frozen protocol. Both smoke cases will be regenerated in full run.",
+  "seconds_per_case": 1.1838101244647987,
+  "observed_total_output_tokens_per_second": 45.19305832443981
+}

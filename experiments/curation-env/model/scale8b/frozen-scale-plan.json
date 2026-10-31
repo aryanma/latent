@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-10-31T02:45:13.935782+00:00",
+  "status": "frozen before any8B inference",
+  "design": "exploratory scale baseline added after observing1.7B difficulty, not preregistered originalcomparison",
+  "model": "Qwen/Qwen3-8B-MLX-4bit",
+  "revision": "383413e909f3bc5303ce195ebbdf0339c5a1a2a3",
+  "weights_sha256": "fcc83d7537bee76cc143be3e25f8954b816798f93528103db1cddb02977c5617",
+  "variant": "v2",
+  "same_driver_sha256": "c2a1b0a623402e9030fb7300919d83fd3dcd341a1cedd0cc279248005e072192",
+  "runtime_sha256": "cde13b8940386612b091a7e840009b1ad671b0fac0b3eb0e11bc21b7cca9edea",
+  "runtime_changes": "only model repository, revision, weight hash constants",
+  "manifest_sha256": "6893521e0391e831b45a414390246e0fb0a06d1c203892b66082a91f8ae22730",
+  "development_smoke": [
+    "clean-0",
+    "labels-1",
+    "versions-5",
+    "composition-7"
+  ],
+  "evaluation": "all48 frozenepisodes",
+  "max_steps": 18,
+  "max_tokens_per_turn": 512,
+  "max_generated_tokens_per_episode": 4096,
+  "max_context": 32768,
+  "temperature": 0.0,
+  "seed": 42,
+  "nonthinking": true,
+  "output_repair": false,
+  "history_truncation": false,
+  "prompt_selection": false,
+  "training": false
+}

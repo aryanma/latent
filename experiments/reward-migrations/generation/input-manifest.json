@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-10-31T10:25:52.943282+00:00",
+  "old_dataset": {
+    "repository": "birdsql/bird_mini_dev",
+    "revision": "f65faf4ae3b638c1fa6df1d3370c8d92c8366301",
+    "path": "/tmp/latent-reward-migration-20261031/bird-mini-dev-previous/mini_dev_sqlite.json",
+    "sha256": "88ceb0710163cae46a256ecea8f0a8c98286599530b60587fda5c3cfe57d45d2",
+    "license": "CC-BY-SA-4.0"
+  },
+  "new_dataset": {
+    "repository": "uiuc-kang-lab/arcwise-plat",
+    "revision": "8e6eb6e18487a9dabaf761bb9e62b1234e340301",
+    "configuration": "sql_only",
+    "path": "/tmp/latent-reward-migration-20261031/arcwise-plat-hf/arcwise_plat_sql_only_with_diff.json",
+    "sha256": "010c91bf9c06730769877df700c2ce79c88f242041f46f3089de49a3ed402a2c",
+    "license": "CC-BY-SA-4.0"
+  },
+  "cohort_rule": "Same stringified legacy question_id, db_id, and byte-identical question and evidence strings; null is not empty string. Ascending numeric legacy ID. No reference SQL used in selection.",
+  "cases": 357,
+  "files": {
+    "cohort.json": "57692c9fef4c89feac11c59d63efea2357d9571ce41a3ac1ca01687024c074b2",
+    "schemas.json": "c18dcd059c5edeea16c0b19bb4f01f7b1ce8c98a7a1e06f4f8aca57928d6a5bf",
+    "prompts.json": "c9d7171beb7b87b7f7eba5226b87e128f7f1aaa4d43f3a15ea0f9c8efc843121",
+    "protocol.py": "6f13095662d614f5802ce7d472246edf113aa180326b66f42678bdb8039f89cc",
+    "prepare_inputs.py": "2a35f63d791ca7110e6c0c4656b4355ded45276f37dbfcdb0727767ffbf9695a"
+  },
+  "max_input_tokens": 2410,
+  "min_input_tokens": 366,
+  "total_input_tokens": 375557,
+  "context_budget_exceeded_cases": [],
+  "native_template_tokenization_verified_for_every_prompt": true,
+  "template_sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259",
+  "tokenizer_sha256": "87a7830d63fcf43bf241c3c5242e96e62dd3fdc29224ca26fed8ea333db72de4",
+  "sqlite_version": "3.47.1",
+  "python": "3.12.11 (main, Jun  4 2025, 17:42:58) [Clang 20.1.4 ]"
+}

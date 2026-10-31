@@ -1,0 +1,10 @@
+{
+  "cases": 357,
+  "artifact_files_checked": 379,
+  "artifact_freeze_sha256": "0818a16cf6538b0d72a0c6d5bbf4c90592a1546c91e2abfdb1838fedc0c6074e",
+  "predictions_sha256": "c2bf6344a213feeca8a76384847a669431a21895c098398ff1b30f01439a1a61",
+  "same_messages_under_both_task_versions": true,
+  "all_raw_outputs_preserved": true,
+  "all_database_hashes_match": true,
+  "prompt_and_token_artifacts_bound_to_candidates": true
+}

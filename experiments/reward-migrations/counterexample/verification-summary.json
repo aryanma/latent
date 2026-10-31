@@ -1,0 +1,36 @@
+{
+  "case": "1525",
+  "runs": 2,
+  "both_runs_pass_all_assertions": true,
+  "proof_sha256_excluding_latency": "9ef773e1b04620698747be06b5c10fa5f1dacad3acb262f5a0eca2268b105115",
+  "counterfactual_database_sha256": "352b2187645ae1ac8c9e022ce030d7d7174bccf753e0ffead69633d5dcc015ca",
+  "identical_proof_fingerprints": true,
+  "byte_identical_counterfactual_databases": true,
+  "source_database_sha256": "b3d149ad05746dbbe5116e229e17e18f09c39db43cf117d9ef3441753608b691",
+  "candidate_before": [
+    [
+      2.7027027027027026
+    ]
+  ],
+  "candidate_after": [
+    [
+      3.088803088803089
+    ]
+  ],
+  "revised_reference_before": [
+    [
+      2.7027027027027026
+    ]
+  ],
+  "revised_reference_after": [
+    [
+      2.7027027027027026
+    ]
+  ],
+  "candidate_reward_before": 1,
+  "candidate_reward_after": 0,
+  "run_elapsed_seconds": [
+    2.961638,
+    2.828875
+  ]
+}

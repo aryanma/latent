@@ -1,0 +1,15 @@
+{
+  "checked_utc": "2026-10-31T10:45:41.091269+00:00",
+  "inference_run": false,
+  "cpu_preparation_cases": 357,
+  "exact_original_prompt_file_sha256": "c9d7171beb7b87b7f7eba5226b87e128f7f1aaa4d43f3a15ea0f9c8efc843121",
+  "exact_original_cohort_file_sha256": "57692c9fef4c89feac11c59d63efea2357d9571ce41a3ac1ca01687024c074b2",
+  "all_original_source_database_hashes_checked": true,
+  "native_template_tokenization_checked_for_every_case": true,
+  "syntax_compilation_passed": true,
+  "portable_driver_sha256": "32c728848e2c974a4c4a62e3859c1d261939533ccbd71f0b2caeb1690ebfc7f5",
+  "protocol_identical_to_original": true,
+  "original_artifact_freeze_unchanged": true,
+  "inference_backend_validation": "Not executed in portable CLI. Same native load/stream_generate/sampler/token capture calls as original frozen run. CPU preflight and syntax only.",
+  "post_cpu_preparation_changes": "Added fail-closed checks for missing runtime source files and post-inference code/input hash verification; generation and preparation logic unchanged."
+}

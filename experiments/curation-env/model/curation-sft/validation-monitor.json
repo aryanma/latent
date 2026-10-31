@@ -1,0 +1,62 @@
+[
+  {
+    "task_id": "labels-20000",
+    "step": 3,
+    "token_count": 2170
+  },
+  {
+    "task_id": "duplicates-20001",
+    "step": 2,
+    "token_count": 1871
+  },
+  {
+    "task_id": "permissions-20002",
+    "step": 2,
+    "token_count": 1641
+  },
+  {
+    "task_id": "leakage-20003",
+    "step": 1,
+    "token_count": 1164
+  },
+  {
+    "task_id": "versions-20004",
+    "step": 6,
+    "token_count": 4020
+  },
+  {
+    "task_id": "pair-20005",
+    "step": 5,
+    "token_count": 3445
+  },
+  {
+    "task_id": "labels-20006",
+    "step": 6,
+    "token_count": 3279
+  },
+  {
+    "task_id": "duplicates-20007",
+    "step": 1,
+    "token_count": 1163
+  },
+  {
+    "task_id": "permissions-20008",
+    "step": 2,
+    "token_count": 1634
+  },
+  {
+    "task_id": "leakage-20009",
+    "step": 3,
+    "token_count": 2157
+  },
+  {
+    "task_id": "versions-20010",
+    "step": 3,
+    "token_count": 2178
+  },
+  {
+    "task_id": "pair-20011",
+    "step": 5,
+    "token_count": 3439
+  }
+]

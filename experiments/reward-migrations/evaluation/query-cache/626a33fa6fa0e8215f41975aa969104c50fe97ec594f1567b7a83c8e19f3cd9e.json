@@ -1,0 +1,60 @@
+{
+  "provenance": {
+    "database_sha256": "e7e16d74b4731b4b8d33fdbe8c29cd5622620788ce8d1f335631f65fc7cf1db9",
+    "query_sha256": "4ce56d5a2620a6a46c98e937fc69ca902994ae7b19302be1a37034ec9b9a14ed",
+    "executor_sha256": "2d3733f209125643b2d76282385360dcad0ac927385db512ea6e0d6fd317f8b2",
+    "sqlite_version": "3.51.0",
+    "comparator": "bird-row-set-v1",
+    "runtime": {
+      "sqlite_version": "3.51.0",
+      "sqlite_source_id": "2025-06-12 13:14:41 f0ca7bba1c5e232e5d279fad6338121ab55af0c8c68c84cdfb18ba5114dcaapl",
+      "compile_options_sha256": "6180af0b3a6558bfed6a8e33424239257baf5a4e2ecb19508cbf623cda152c0f",
+      "python": "3.9.6",
+      "machine": "arm64"
+    },
+    "clock": "2026-10-31 00:00:00",
+    "clock_adapter": "sqlite-fixed-utc-v1",
+    "timeout_seconds": 60.0,
+    "max_rows": 100000
+  },
+  "execution": {
+    "query_sha256": "4ce56d5a2620a6a46c98e937fc69ca902994ae7b19302be1a37034ec9b9a14ed",
+    "status": "ok",
+    "seconds": 0.000909,
+    "result_sha256": "c8b3c626438381fce74ce21bd7fc5d0ceddba1d256f50dee836c427d1548a17f",
+    "rows": 20,
+    "distinct_rows": 20,
+    "preview": [
+      [
+        27654,
+        "F",
+        "1936-03-25"
+      ],
+      [
+        444499,
+        "M",
+        "1954-01-24"
+      ],
+      [
+        912147,
+        "F",
+        "1975-02-17"
+      ],
+      [
+        1138737,
+        "F",
+        "1965-11-18"
+      ],
+      [
+        1185720,
+        "F",
+        "1953-10-12"
+      ]
+    ],
+    "columns": [
+      "ID",
+      "SEX",
+      "Birthday"
+    ]
+  }
+}

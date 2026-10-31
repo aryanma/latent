@@ -1,0 +1,11 @@
+{
+  "task": "illustrative:sql-task",
+  "observation": "6d8bc08652516720bd3109e6cd975a82b674090f419dc5b01486dcdd48daa718",
+  "world": "0ff1322166ff4f47f7a14c15ba16d8707262fac9da92914b75dc8daea20ac091",
+  "interface": "bdf8b641bdb4cf8437a8d49768c17ee3572653b510f8116dfd500dfc04fb30a7",
+  "grader": "df57573211f6a1601955a2ce4f6fccf0734ef5c0ccce40030e7ab7e92fc6dee0",
+  "terminal_private_reward": true,
+  "lineage_verified": true,
+  "policy": "5b9a632ae5eba8314b97de9a306d0e407054851e5bef1bc6fcf526d5559d7cc5",
+  "world_visible_to_policy": false
+}

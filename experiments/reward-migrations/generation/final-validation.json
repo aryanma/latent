@@ -1,0 +1,45 @@
+{
+  "verified_utc": "2026-10-31T10:30:49.393801+00:00",
+  "cases": 357,
+  "full_cohort_all_cases_included": true,
+  "frozen_code_and_inputs_unchanged": true,
+  "runtime_sources_unchanged": true,
+  "database_bytes_and_ddl_revalidated": true,
+  "all_rendered_prompts_reconstructed_identically": true,
+  "all_actual_input_tokens_match_frozen_tokens": true,
+  "all_output_token_counts_match": true,
+  "all_output_tokens_decode_to_raw_text": true,
+  "terminal_eos_excluded_from_raw_text_but_retained_in_output_ids": true,
+  "network_attempts": [],
+  "candidate_extraction": "Identity: generated raw_output unchanged; explicit inference error -> null. No trimming, fence stripping, normalization, execution, or repair.",
+  "smoke_full_comparison": [
+    {
+      "question_id": "5",
+      "identical_input_tokens": true,
+      "identical_output_tokens": true,
+      "identical_raw_output": true
+    },
+    {
+      "question_id": "24",
+      "identical_input_tokens": true,
+      "identical_output_tokens": true,
+      "identical_raw_output": true
+    }
+  ],
+  "summary": {
+    "mode": "full",
+    "completed": 357,
+    "generated": 357,
+    "errors": 0,
+    "length_limited": 0,
+    "total_input_tokens": 375557,
+    "total_output_tokens": 19369,
+    "total_generation_seconds": 211.65388042095583,
+    "total_wall_seconds_including_load": 215.43885499995667,
+    "network_attempts": [],
+    "finished_utc": "2026-10-31T10:30:46.490661+00:00"
+  },
+  "candidates_sha256": "c2bf6344a213feeca8a76384847a669431a21895c098398ff1b30f01439a1a61",
+  "exporter_sha256": "bb2f2e636c39eba61900b586ee198af265a463c0cbf8d9c0d8365635479635d6",
+  "preregistration_sha256": "6cb36e883f8c8871df2cf424751ac78865e2ad3f6addf55abe2b0fd2f8edc061"
+}
